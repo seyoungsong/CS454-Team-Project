@@ -3,31 +3,17 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from pprint import pprint
-from xml.etree.ElementTree import Element
 
+clover_xml_files = glob.glob(f"clover/*.xml")
+clover_xml_files.sort()
 
-def flatten(t):
-    return [item for sublist in t for item in sublist]
-
-
-def pp(root: Element):
-    for e in root:
-        d = [e.tag, e.attrib]
-        pprint(d)
-
-
-data_dir = "clover_by_test"
-xml_files = glob.glob(f"{data_dir}/*.xml")
-xml_files.sort()
-
-
-output = {}
-for xml_file in xml_files:
-    test_name = Path(xml_file).stem.replace("clover_", "")
-    tree = ET.parse(xml_file)
+coverage_by_test = {}
+for clover_xml_file in clover_xml_files:
+    test_name = Path(clover_xml_file).stem.replace("clover_", "")
+    tree = ET.parse(clover_xml_file)
     root = tree.getroot()
     project = root[0]
-    code_coverage = {}
+    coverage = {}
     for package in project:
         files = [e for e in package if e.tag == "file"]
         for file in files:
@@ -44,9 +30,8 @@ for xml_file in xml_files:
                     nums.append(f"{num}F")
             if nums:
                 nums.sort()
-                code_coverage[file_name] = nums
-    output[test_name] = code_coverage
+                coverage[file_name] = nums
+    coverage_by_test[test_name] = coverage
 
-
-with open("code_coverage_by_test.json", "w") as f:
-    json.dump(output, f, indent=4)
+with open("coverage_by_test.json", "w") as f:
+    json.dump(coverage_by_test, f, indent=4, sort_keys=True)

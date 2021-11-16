@@ -24,11 +24,13 @@ def main():
     )
 
     cmds = [
-        f"mvn clean clover:setup -Dtest={test_class}#{method} test clover:aggregate clover:clover && cp target/site/clover/clover.xml ./clover_by_test/clover_{test_class}_{method}.xml"
+        f"mvn clean clover:setup -Dtest={test_class}#{method} test clover:aggregate clover:clover && cp target/site/clover/clover.xml ./clover_collection/clover_{test_class}_{method}.xml"
         for test_class, method in signatures
     ]
 
-    with open("cmds.txt", "w") as f:
+    cmds.sort()
+
+    with open("mvn_cmds.txt", "w") as f:
         f.write("\n".join(cmds))
 
     print("Done")

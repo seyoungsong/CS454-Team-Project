@@ -28,6 +28,10 @@ sloc src/test # TLOC
 cp /opt/homebrew/Cellar/maven/3.8.3/libexec/conf/settings.xml ~/.m2/
 code ~/.m2/settings.xml
 mvn clean clover:setup test clover:aggregate clover:clover
+mvn -Dtest=EthernetAddressTest test
+mvn -Dtest=EthernetAddressTest#testAsByteArray test
+
+mvn clean clover:setup -Dtest=EthernetAddressTest#testAsByteArray test clover:aggregate clover:clover
 
 xmlto txt target/site/clover/clover.xml
 ```

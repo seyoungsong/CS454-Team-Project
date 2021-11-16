@@ -4,32 +4,32 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from pprint import pprint
 
-full_xml = "clover.xml"
-full_root = ET.parse(full_xml).getroot()
-clover_xml_files = glob.glob(f"clover/*.xml")
-clover_xml_files.sort()
+full_clover_xml = "clover.xml"
+full_clover_root = ET.parse(full_clover_xml).getroot()
+unit_clover_xmls = glob.glob(f"clover/*.xml")
+unit_clover_xmls.sort()
 
 
-coverage_and_duration_by_test = {}
-for clover_xml_file in clover_xml_files:
-    test_name = Path(clover_xml_file).stem.replace("clover_", "")
-    test_method_name = test_name.split("_")[1]
+data = []
+for unit_clover_xml in unit_clover_xmls:
+    unit_test_name = Path(unit_clover_xml).stem.replace("clover_", "")
+    class_name, method_name = unit_test_name.split("_")
 
-    tree = ET.parse(clover_xml_file)
+    tree = ET.parse(unit_clover_xml)
     root = tree.getroot()
 
-    duration = max(
+    time_duration = max(
         [
             float(e.attrib["testduration"])
-            for e in full_root.findall("./testproject/package/file/line")
+            for e in full_clover_root.findall("./testproject/package/file/line")
             if "testduration" in e.attrib
             and "signature" in e.attrib
-            and test_method_name == e.attrib["signature"].split("() : ")[0]
+            and method_name == e.attrib["signature"].split("() : ")[0]
         ]
     )
 
     project = root[0]
-    coverage = {}
+    code_coverage = {}
     for package in project:
         files = [e for e in package if e.tag == "file"]
         for file in files:
@@ -46,11 +46,14 @@ for clover_xml_file in clover_xml_files:
                     nums.append(f"{num}F")
             if nums:
                 nums.sort()
-                coverage[file_name] = nums
-    coverage_and_duration_by_test[test_name] = {
-        "duration": duration,
-        "coverage": coverage,
-    }
+                code_coverage[file_name] = nums
+    data.append(
+        {
+            "name": unit_test_name,
+            "time": time_duration,
+            "coverage": code_coverage,
+        }
+    )
 
-with open("coverage_by_test.json", "w") as f:
-    json.dump(coverage_and_duration_by_test, f, indent=4, sort_keys=True)
+with open("data.json", "w") as f:
+    json.dump(data, f, indent=4)

@@ -19,7 +19,7 @@
 
 https://github.com/cowtowncoder/java-uuid-generator
 
-## Programs
+## How do static and dynamic test case prioritization techniques perform on modern software systems? An extensive study on GitHub projects.
 
 geojson-jackson
 statsd-jvm-profiler
@@ -79,6 +79,63 @@ asterisk-java
 ews-java-api
 commons-lang
 joda-time
+
+## Parallel Test Prioritization
+
+assertj-core
+asterisk-java
+asterisk-java-v2
+blueflood
+camel-core
+chukwa
+commons-dbcp
+commons-io
+commons-math
+commons-pool
+disklrucache
+ews-java-api
+gdx-artemis-master
+gson-fire
+gson-fire-v2
+hbase-1.2.2
+hivemall
+jackson-core
+jackson-datatype-guava
+jackson-datatype-guava-v2
+jactor
+jasmine-maven-plugin
+java-apns
+java-uuid-generator
+javapoet
+jopt-simple
+joss
+jsprit
+jumblr
+la4j
+la4j-v2
+lambdaj-master
+languagetool
+lanterna
+lastcalc-0.1
+low-gc-membuffers
+mapdb-mapdb-1.0.9
+metrics-core
+nv-websocket-client
+opentripplanner-otp-0.20.0
+protoparser
+raml-java-parser
+raml-java-parser-master
+redline-smalltalk
+redline-smalltalk-master
+restcountries
+roaringbitmap
+rome-1.5.0
+scribe-java
+spring-retry
+stream-lib
+streamex
+vraptor-archive
+webbit
 
 ## References
 

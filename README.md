@@ -47,7 +47,7 @@ Before you get started, add this to your `.m2/settings.xml` file so you can refe
 
 ```xml
 <pluginGroups>
-    <pluginGroup>org.openclover</pluginGroup>
+  <pluginGroup>org.openclover</pluginGroup>
 </pluginGroups>
 ```
 
@@ -92,8 +92,18 @@ sloc src/test # TLOC
 # run clover (you will have to run it twice for the first time)
 mvn clean clover:setup test clover:aggregate clover:clover
 
+# copy the folder
+cp -R target/site/clover ./clover
+
+# open report in web browser (you can check the time duration of each test)
+open target/site/clover/index.html
+open clover/index.html
+
 # run clover for 1 unit test
-mvn clean clover:setup -Dtest=EthernetAddressTest#testAsByteArray test clover:aggregate clover:clover
+mvn clean clover:setup -Dtest=UUIDGeneratorTest#testGenerateNameBasedUUIDNameSpaceAndName test clover:aggregate clover:clover
+
+# copy
+cp target/site/clover/clover.xml clover_unit.xml
 ```
 
 ## References

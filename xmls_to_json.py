@@ -10,7 +10,7 @@ clover_xml_files = glob.glob(f"clover/*.xml")
 clover_xml_files.sort()
 
 
-coverage_by_test = {}
+coverage_and_duration_by_test = {}
 for clover_xml_file in clover_xml_files:
     test_name = Path(clover_xml_file).stem.replace("clover_", "")
     test_method_name = test_name.split("_")[1]
@@ -18,7 +18,7 @@ for clover_xml_file in clover_xml_files:
     tree = ET.parse(clover_xml_file)
     root = tree.getroot()
 
-    test_duration = max(
+    duration = max(
         [
             float(e.attrib["testduration"])
             for e in full_root.findall("./testproject/package/file/line")
@@ -47,7 +47,10 @@ for clover_xml_file in clover_xml_files:
             if nums:
                 nums.sort()
                 coverage[file_name] = nums
-    coverage_by_test[test_name] = coverage
+    coverage_and_duration_by_test[test_name] = {
+        "duration": duration,
+        "coverage": coverage,
+    }
 
 with open("coverage_by_test.json", "w") as f:
-    json.dump(coverage_by_test, f, indent=4, sort_keys=True)
+    json.dump(coverage_and_duration_by_test, f, indent=4, sort_keys=True)

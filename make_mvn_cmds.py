@@ -6,11 +6,6 @@ def flatten(t):
     return [item for sublist in t for item in sublist]
 
 
-def pp(root: Element):
-    for child in root:
-        print(child.tag, child.attrib)
-
-
 def main():
     tree = ET.parse("clover.xml")
     coverage = tree.getroot()

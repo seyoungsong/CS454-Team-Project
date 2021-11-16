@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-from xml.etree.ElementTree import Element
 
 
 def flatten(t):
@@ -12,7 +11,7 @@ def main():
     testproject = coverage[1]
     package = testproject[1]
     files = [e for e in package if e.tag == "file"]
-    signatures = flatten(
+    test_list = flatten(
         [
             [
                 (f.attrib["name"].split(".java")[0], d["signature"].split("() : ")[0])
@@ -22,17 +21,13 @@ def main():
             for f in files
         ]
     )
-
-    cmds = [
-        f"mvn clean clover:setup -Dtest={test_class}#{method} test clover:aggregate clover:clover && cp target/site/clover/clover.xml ./clover_collection/clover_{test_class}_{method}.xml"
-        for test_class, method in signatures
+    mvn_cmds = [
+        f"mvn clean clover:setup -Dtest={class_name}#{method_name} test clover:aggregate clover:clover && cp target/site/clover/clover.xml ./clover_collection/clover_{class_name}_{method_name}.xml"
+        for class_name, method_name in test_list
     ]
-
-    cmds.sort()
-
-    with open("mvn_cmds.txt", "w") as f:
-        f.write("\n".join(cmds))
-
+    mvn_cmds.sort()
+    with open("mvn_cmds.sh", "w") as f:
+        f.write("\n".join(mvn_cmds))
     print("Done")
 
 

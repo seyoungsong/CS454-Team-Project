@@ -9,6 +9,19 @@
 
 https://github.com/cowtowncoder/java-uuid-generator
 
+```
+brew install openjdk@11
+brew install --ignore-dependencies maven
+export JAVA_HOME=`/usr/libexec/java_home`
+
+git clone https://github.com/cowtowncoder/java-uuid-generator.git
+git checkout tags/java-uuid-generator-4.0.1
+mvn clean
+mvn test
+mvn package
+java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
+```
+
 ## References
 
 [1] Z. Li, M. Harman, and R. M. Hierons, “Search Algorithms for Regression Test Case Prioritization,” IIEEE Trans. Software Eng., vol. 33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.

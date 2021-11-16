@@ -137,6 +137,59 @@ streamex
 vraptor-archive
 webbit
 
+## Optimizing Test Prioritization via Test Distribution Analysis
+
+assertj-core
+asterisk-java
+Camel-Core
+Chukwa
+Commons-Pool
+gson-￿re 895
+HBase
+jasmine-maven-plugin
+java-apns
+LastCalc
+MapDB
+OpenTripPlanner
+PHP
+vraptor-archive
+blueflood
+cloudhopper-smpp
+commons-dbcp
+commons-email
+commons-math
+commons-io
+cucumber-reporting
+ddd-cqrs-sample
+dictomaton
+DotCi
+ews-java-api
+exp4j
+gdx-artemis
+geo
+geohash-java
+hivemall
+HTTP-Proxy-Servlet
+jackson-core
+jackson-datatype-guava
+jopt-simple
+joss
+jsprit
+la4j
+lambdaj
+languagetool
+metrics-core
+raml-java-parser
+redline-smalltalk
+RoaringBitmap
+rome
+scribe-java
+spring-data-solr
+spring-retry
+stream-lib
+tamper
+webbit
+
 ## References
 
 [1] Z. Li, M. Harman, and R. M. Hierons, “Search Algorithms for Regression Test Case Prioritization,” IIEEE Trans. Software Eng., vol. 33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.

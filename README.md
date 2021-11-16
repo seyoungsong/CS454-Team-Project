@@ -1,21 +1,35 @@
 # CS454 Team Project
 
 - [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
-- [JUnit](https://junit.org/junit5/): testing framework
+- [OpenClover](https://openclover.org/doc/manual/latest/maven--user-guide.html): code coverage
+- [sloc](https://github.com/flosse/sloc): simple tool to count SLOC (source lines of code)
 - [PIT](http://pitest.org/): generate mutation faults
-- [Clover](https://confluence.atlassian.com/clover/basic-usage-588579892.html): dynamic coverage
-- [OpenClover](https://openclover.org/doc/manual/latest/maven--quick-start-guide.html)
-- [bcel](http://commons.apache.org/proper/commons-bcel/): static coverage
-- [sloc](https://github.com/flosse/sloc): basic information
+- [Java Uuid Generator (JUG)](https://github.com/cowtowncoder/java-uuid-generator)
 
-https://github.com/cowtowncoder/java-uuid-generator
+## Prerequisites
 
-```
+- `yarn`
+
+## Install
+
+```bash
+# install OpenJDK 11
 brew install openjdk@11
-brew install --ignore-dependencies maven
-export JAVA_HOME=`/usr/libexec/java_home`
-yarn global add sloc
+sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+java -version # openjdk version "11.0.12"
 
+# install Maven
+echo "export JAVA_HOME=$(/usr/libexec/java_home)" >> ~/.zshrc
+brew install --ignore-dependencies maven
+mvn --version # Apache Maven 3.8.3
+
+# install sloc
+yarn global add sloc
+```
+
+## Usage
+
+```bash
 git clone --depth 1 --branch java-uuid-generator-4.0.1 https://github.com/cowtowncoder/java-uuid-generator.git
 mvn clean
 mvn test
@@ -32,8 +46,6 @@ mvn -Dtest=EthernetAddressTest test
 mvn -Dtest=EthernetAddressTest#testAsByteArray test
 
 mvn clean clover:setup -Dtest=EthernetAddressTest#testAsByteArray test clover:aggregate clover:clover
-
-xmlto txt target/site/clover/clover.xml
 ```
 
 ```xml

@@ -97,7 +97,7 @@ cp -R target/site/clover ./clover
 
 # open report in web browser (you can check the time duration of each test)
 open target/site/clover/index.html
-open clover/index.html
+open clover/index.html  # cd ~/java-uuid-generator
 code clover/clover.xml
 
 # run clover for 1 unit test

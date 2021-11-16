@@ -6,7 +6,7 @@ def flatten(t):
 
 
 def main():
-    tree = ET.parse("clover.xml")
+    tree = ET.parse("clover/clover.xml")
     coverage = tree.getroot()
     testproject = coverage[1]
     package = testproject[1]

@@ -5,9 +5,9 @@ from pathlib import Path
 
 
 def main():
-    full_clover_xml = "clover.xml"
+    full_clover_xml = "clover/clover.xml"
     full_clover_root = ET.parse(full_clover_xml).getroot()
-    
+
     unit_clover_xmls = glob.glob(f"clover_collection/*.xml")
     unit_clover_xmls.sort()
 

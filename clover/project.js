@@ -1,0 +1,2 @@
+processClover (  {"children":["test/","com/fasterxml/uuid/","com/fasterxml/uuid/ext/","com/fasterxml/uuid/impl/","perf/"],"name":"Clover database 화 11월 16 2021 22:01:58 KST","stats":{"AvgMethodComplexity":2.9357798,"Complexity":320,"ErroneousTests":0,"FailingTests":0,"FilteredElements":0,"PassingTests":0,"PcErroneousTests":-1,"PcFailingTests":-1,"PcPassingTests":-1,"TestExecutionTime":0,"Tests":0,"TotalChildren":5,"TotalPercentageCovered":44.561687,"TotalStatements":827,"UncoveredElements":683},"title":"Java UUID Generator 4.0.1"}
+ ); 

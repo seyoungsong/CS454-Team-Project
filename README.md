@@ -51,15 +51,18 @@ Before you get started, add this to your `.m2/settings.xml` file so you can refe
 </pluginGroups>
 ```
 
-## Example Usage
+## Example
 
 ```bash
 # download example project from github (java-uuid-generator)
 git clone --depth 1 --branch java-uuid-generator-4.0.1 https://github.com/cowtowncoder/java-uuid-generator.git
+rm -rf java-uuid-generator/.git
+cd java-uuid-generator
+git init . && git add . && git commit -m "init"
 
 # check maven
 mvn clean
-mvn test
+mvn test # you may have to remove some lines from the source to disable false alarms.
 
 # check maven single test
 mvn -Dtest=EthernetAddressTest#testAsByteArray test
@@ -86,7 +89,7 @@ sloc src/test # TLOC
 ```
 
 ```bash
-# run clover
+# run clover (you will have to run it twice for the first time)
 mvn clean clover:setup test clover:aggregate clover:clover
 
 # run clover for 1 unit test

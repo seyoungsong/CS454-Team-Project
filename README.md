@@ -22,8 +22,14 @@ mvn test
 mvn package
 java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
 
-sloc src/main
+sloc src/main # SLOC
+sloc src/test # TLOC
+
+mvn test
 ```
+
+https://search.maven.org/search?q=g:org.jacoco%20a:jacoco-maven-plugin
+https://www.eclemma.org/jacoco/trunk/doc/maven.html
 
 ## References
 

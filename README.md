@@ -3,7 +3,7 @@
 - [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 - [JUnit](https://junit.org/junit5/): testing framework
 - [PIT](http://pitest.org/): generate mutation faults
-- [Clover](https://bitbucket.org/atlassian/clover/src/master/): dynamic coverage
+- [Clover](https://confluence.atlassian.com/clover/basic-usage-588579892.html): dynamic coverage
 - [bcel](http://commons.apache.org/proper/commons-bcel/): static coverage
 - [sloc](https://github.com/flosse/sloc): basic information
 
@@ -26,6 +26,8 @@ sloc src/main # SLOC
 sloc src/test # TLOC
 
 mvn test
+
+mvn help:describe -Dplugin=org.jacoco:jacoco-maven-plugin -Ddetail
 ```
 
 https://search.maven.org/search?q=g:org.jacoco%20a:jacoco-maven-plugin

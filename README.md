@@ -6,10 +6,6 @@
 - [PIT](http://pitest.org/): generate mutation faults
 - [Java Uuid Generator (JUG)](https://github.com/cowtowncoder/java-uuid-generator)
 
-## Prerequisites
-
-- `yarn`
-
 ## Install
 
 ```bash
@@ -24,6 +20,7 @@ brew install --ignore-dependencies maven
 mvn --version # Apache Maven 3.8.3
 
 # install sloc
+brew install yarn
 yarn global add sloc
 sloc --version # 0.2.1
 ```
@@ -89,7 +86,7 @@ sloc src/test # TLOC
 ```
 
 ```bash
-# run clover (you will have to run it twice for the first time)
+# run full clover (you will have to run it twice for the first time)
 mvn clean clover:setup test clover:aggregate clover:clover
 
 # copy the folder
@@ -103,8 +100,8 @@ code clover/clover.xml
 # run clover for 1 unit test
 mvn clean clover:setup -Dtest=UUIDGeneratorTest#testGenerateNameBasedUUIDNameSpaceAndName test clover:aggregate clover:clover
 
-# copy
-cp target/site/clover/clover.xml clover_unit.xml
+# run clover for each test method
+bash mvn_cmds.sh
 ```
 
 ## References

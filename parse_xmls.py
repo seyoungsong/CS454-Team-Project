@@ -2,13 +2,12 @@ import glob
 import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from pprint import pprint
 
 
 def main():
-
     full_clover_xml = "clover.xml"
     full_clover_root = ET.parse(full_clover_xml).getroot()
+    
     unit_clover_xmls = glob.glob(f"clover/*.xml")
     unit_clover_xmls.sort()
 

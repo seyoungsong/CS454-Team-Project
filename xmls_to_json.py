@@ -29,7 +29,7 @@ for unit_clover_xml in unit_clover_xmls:
     )
 
     project = root[0]
-    code_coverage = {}
+    code_coverage = []
     for package in project:
         files = [e for e in package if e.tag == "file"]
         for file in files:
@@ -46,7 +46,7 @@ for unit_clover_xml in unit_clover_xmls:
                     nums.append(f"{num}F")
             if nums:
                 nums.sort()
-                code_coverage[file_name] = nums
+                code_coverage.append({"file": file_name, "lines": nums})
     data.append(
         {
             "name": unit_test_name,

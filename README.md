@@ -25,35 +25,72 @@ mvn --version # Apache Maven 3.8.3
 
 # install sloc
 yarn global add sloc
+sloc --version # 0.2.1
 ```
 
-## Usage
+- [Configuring Clover's short name in `.m2/settings.xml`](https://openclover.org/doc/manual/latest/maven--basic-usage.html)
+
+If `.m2/settings.xml` file doesn't exist in user home, copy it from maven home.
 
 ```bash
+mvn --version  # Maven home: /opt/homebrew/Cellar/maven/3.8.3/libexec
+cp /opt/homebrew/Cellar/maven/3.8.3/libexec/conf/settings.xml ~/.m2/
+```
+
+Open your `.m2/settings.xml` file in vscode.
+
+```
+code ~/.m2/settings.xml
+```
+
+Before you get started, add this to your `.m2/settings.xml` file so you can reference Clover by its short name `clover`.
+
+```xml
+<pluginGroups>
+    <pluginGroup>org.openclover</pluginGroup>
+</pluginGroups>
+```
+
+## Example Usage
+
+```bash
+# download example project from github (java-uuid-generator)
 git clone --depth 1 --branch java-uuid-generator-4.0.1 https://github.com/cowtowncoder/java-uuid-generator.git
+
+# check maven
 mvn clean
 mvn test
+
+# check maven single test
+mvn -Dtest=EthernetAddressTest#testAsByteArray test
+
+# check java
 mvn package
 java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
 
+# check sloc
 sloc src/main # SLOC
 sloc src/test # TLOC
-
-cp /opt/homebrew/Cellar/maven/3.8.3/libexec/conf/settings.xml ~/.m2/
-code ~/.m2/settings.xml
-mvn clean clover:setup test clover:aggregate clover:clover
-mvn -Dtest=EthernetAddressTest test
-mvn -Dtest=EthernetAddressTest#testAsByteArray test
-
-mvn clean clover:setup -Dtest=EthernetAddressTest#testAsByteArray test clover:aggregate clover:clover
 ```
+
+[Installing Clover in pom.xml](https://openclover.org/doc/manual/latest/maven--basic-usage.html)
+
+[Clover Maven Plugin Version](https://search.maven.org/artifact/org.openclover/clover-maven-plugin)
 
 ```xml
 <plugin>
-  <groupId>com.atlassian.maven.plugins</groupId>
-  <artifactId>clover-maven-plugin</artifactId>
-  <version>4.1.2</version>
+    <groupId>org.openclover</groupId>
+    <artifactId>clover-maven-plugin</artifactId>
+    <version>4.4.1</version>
 </plugin>
+```
+
+```bash
+# run clover
+mvn clean clover:setup test clover:aggregate clover:clover
+
+# run clover for 1 unit test
+mvn clean clover:setup -Dtest=EthernetAddressTest#testAsByteArray test clover:aggregate clover:clover
 ```
 
 ## References

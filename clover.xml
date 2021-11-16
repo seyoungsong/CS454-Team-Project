@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637060905825" clover="4.4.1">
-   <project name="Java UUID Generator 4.0.1" timestamp="1637060902072">
-      <metrics coveredelements="552" complexity="320" loc="3195" methods="109" classes="21" statements="827" packages="5" coveredconditionals="121" coveredmethods="69" elements="1232" ncloc="1572" files="20" conditionals="296" coveredstatements="362" />
+<coverage generated="1637067723566" clover="4.4.1">
+   <project name="Java UUID Generator 4.0.1" timestamp="1637067719915">
+      <metrics coveredelements="549" complexity="320" loc="3195" methods="109" classes="21" statements="827" packages="5" coveredconditionals="120" coveredmethods="69" elements="1232" ncloc="1572" files="20" conditionals="296" coveredstatements="360" />
       <package name="test">
          <metrics coveredelements="0" complexity="2" loc="46" methods="1" classes="1" statements="13" coveredconditionals="0" coveredmethods="0" elements="14" ncloc="27" files="1" conditionals="0" coveredstatements="0" />
          <file path="/Users/seyoung/java-uuid-generator/src/main/java/test/FileSyncTest.java" name="FileSyncTest.java">
@@ -26,7 +26,7 @@
          </file>
       </package>
       <package name="com.fasterxml.uuid">
-         <metrics coveredelements="330" complexity="172" loc="1739" methods="54" classes="11" statements="432" coveredconditionals="84" coveredmethods="44" elements="662" ncloc="799" files="11" conditionals="176" coveredstatements="202" />
+         <metrics coveredelements="327" complexity="172" loc="1739" methods="54" classes="11" statements="432" coveredconditionals="83" coveredmethods="44" elements="662" ncloc="799" files="11" conditionals="176" coveredstatements="200" />
          <file path="/Users/seyoung/java-uuid-generator/src/main/java/com/fasterxml/uuid/EthernetAddress.java" name="EthernetAddress.java">
             <metrics coveredelements="200" coveredconditionals="57" complexity="63" loc="499" coveredmethods="22" methods="23" elements="211" classes="1" ncloc="234" statements="126" conditionals="62" coveredstatements="121" />
             <class name="EthernetAddress">
@@ -562,9 +562,9 @@
             <line complexity="1" visibility="protected" signature="UUIDGenerator()" num="36" count="9" type="method" />
          </file>
          <file path="/Users/seyoung/java-uuid-generator/src/main/java/com/fasterxml/uuid/UUIDTimer.java" name="UUIDTimer.java">
-            <metrics coveredelements="53" coveredconditionals="7" complexity="22" loc="408" coveredmethods="6" methods="7" elements="102" classes="1" ncloc="130" statements="71" conditionals="24" coveredstatements="40" />
+            <metrics coveredelements="50" coveredconditionals="6" complexity="22" loc="408" coveredmethods="6" methods="7" elements="102" classes="1" ncloc="130" statements="71" conditionals="24" coveredstatements="38" />
             <class name="UUIDTimer">
-               <metrics coveredelements="53" coveredconditionals="7" complexity="22" coveredmethods="6" methods="7" elements="102" statements="71" conditionals="24" coveredstatements="40" />
+               <metrics coveredelements="50" coveredconditionals="6" complexity="22" coveredmethods="6" methods="7" elements="102" statements="71" conditionals="24" coveredstatements="38" />
             </class>
             <line complexity="1" visibility="public" signature="UUIDTimer(Random,TimestampSynchronizer)" num="173" count="3" type="method" />
             <line num="175" count="3" type="stmt" />
@@ -590,14 +590,14 @@
             <line complexity="8" visibility="public" signature="getTimestamp() : long" num="243" count="30006" type="method" />
             <line num="245" count="30006" type="stmt" />
             <line num="249" count="30006" type="stmt" />
-            <line falsecount="30004" truecount="2" num="249" type="cond" />
-            <line num="250" count="2" type="stmt" />
-            <line num="252" count="2" type="stmt" />
+            <line falsecount="30006" truecount="0" num="249" type="cond" />
+            <line num="250" count="0" type="stmt" />
+            <line num="252" count="0" type="stmt" />
             <line num="259" count="30006" type="stmt" />
-            <line falsecount="13" truecount="29993" num="259" type="cond" />
-            <line num="263" count="29993" type="stmt" />
-            <line falsecount="0" truecount="29993" num="263" type="cond" />
-            <line num="264" count="29993" type="stmt" />
+            <line falsecount="15" truecount="29991" num="259" type="cond" />
+            <line num="263" count="29991" type="stmt" />
+            <line falsecount="0" truecount="29991" num="263" type="cond" />
+            <line num="264" count="29991" type="stmt" />
             <line num="266" count="0" type="stmt" />
             <line num="267" count="0" type="stmt" />
             <line num="268" count="0" type="stmt" />
@@ -606,7 +606,7 @@
             <line num="284" count="0" type="stmt" />
             <line falsecount="0" truecount="0" num="284" type="cond" />
             <line num="285" count="0" type="stmt" />
-            <line num="293" count="13" type="stmt" />
+            <line num="293" count="15" type="stmt" />
             <line num="296" count="30006" type="stmt" />
             <line num="302" count="30006" type="stmt" />
             <line falsecount="30006" truecount="0" num="302" type="cond" />
@@ -1225,14 +1225,14 @@
          </file>
       </package>
    </project>
-   <testproject name="Java UUID Generator 4.0.1" timestamp="1637060902072">
+   <testproject name="Java UUID Generator 4.0.1" timestamp="1637067719915">
       <metrics coveredelements="1123" complexity="221" loc="3691" methods="93" classes="8" statements="1015" packages="1" coveredconditionals="105" coveredmethods="87" elements="1220" ncloc="2401" files="6" conditionals="112" coveredstatements="931" />
       <package name="com.fasterxml.uuid">
          <metrics coveredelements="1123" complexity="221" loc="3691" methods="93" classes="8" statements="1015" coveredconditionals="105" coveredmethods="87" elements="1220" ncloc="2401" files="6" conditionals="112" coveredstatements="931" />
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/EthernetAddressTest.java" name="EthernetAddressTest.java">
             <metrics coveredelements="393" coveredconditionals="17" complexity="83" loc="1491" coveredmethods="29" methods="30" elements="441" classes="1" ncloc="1074" statements="393" conditionals="18" coveredstatements="347" />
             <class name="EthernetAddressTest">
-               <metrics coveredelements="393" complexity="83" methods="30" testruns="18" statements="393" coveredconditionals="17" coveredmethods="29" elements="441" testfailures="0" testduration="0.008" conditionals="18" coveredstatements="347" testpasses="18" />
+               <metrics coveredelements="393" complexity="83" methods="30" testruns="18" statements="393" coveredconditionals="17" coveredmethods="29" elements="441" testfailures="0" testduration="0.012" conditionals="18" coveredstatements="347" testpasses="18" />
             </class>
             <line complexity="1" visibility="public" signature="EthernetAddressTest(java.lang.String)" num="170" count="18" type="method" />
             <line num="172" count="18" type="stmt" />
@@ -1598,7 +1598,7 @@
             <line num="1291" count="1" type="stmt" />
             <line num="1293" count="1" type="stmt" />
             <line num="1295" count="1" type="stmt" />
-            <line complexity="1" visibility="public" signature="testFromInterface() : void" num="1305" testsuccess="true" count="1" testduration="0.008" type="method" />
+            <line complexity="1" visibility="public" signature="testFromInterface() : void" num="1305" testsuccess="true" count="1" testduration="0.012" type="method" />
             <line num="1307" count="1" type="stmt" />
             <line num="1308" count="1" type="stmt" />
             <line num="1309" count="1" type="stmt" />
@@ -1670,9 +1670,9 @@
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/SimpleGenerationTest.java" name="SimpleGenerationTest.java">
             <metrics coveredelements="5" coveredconditionals="0" complexity="1" loc="18" coveredmethods="1" methods="1" elements="5" classes="1" ncloc="13" statements="4" conditionals="0" coveredstatements="4" />
             <class name="SimpleGenerationTest">
-               <metrics coveredelements="5" complexity="1" methods="1" testruns="1" statements="4" coveredconditionals="0" coveredmethods="1" elements="5" testfailures="0" testduration="0.002" conditionals="0" coveredstatements="4" testpasses="1" />
+               <metrics coveredelements="5" complexity="1" methods="1" testruns="1" statements="4" coveredconditionals="0" coveredmethods="1" elements="5" testfailures="0" testduration="0.0" conditionals="0" coveredstatements="4" testpasses="1" />
             </class>
-            <line complexity="1" visibility="public" signature="testIssue5() : void" num="9" testsuccess="true" count="1" testduration="0.002" type="method" />
+            <line complexity="1" visibility="public" signature="testIssue5() : void" num="9" testsuccess="true" count="1" testduration="0.0" type="method" />
             <line num="11" count="1" type="stmt" />
             <line num="12" count="1" type="stmt" />
             <line num="15" count="1" type="stmt" />
@@ -1681,7 +1681,7 @@
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/UUIDComparatorTest.java" name="UUIDComparatorTest.java">
             <metrics coveredelements="48" coveredconditionals="4" complexity="6" loc="103" coveredmethods="3" methods="3" elements="52" classes="1" ncloc="67" statements="43" conditionals="6" coveredstatements="41" />
             <class name="UUIDComparatorTest">
-               <metrics coveredelements="48" complexity="6" methods="3" testruns="3" statements="43" coveredconditionals="4" coveredmethods="3" elements="52" testfailures="0" testduration="0.0" conditionals="6" coveredstatements="41" testpasses="3" />
+               <metrics coveredelements="48" complexity="6" methods="3" testruns="3" statements="43" coveredconditionals="4" coveredmethods="3" elements="52" testfailures="0" testduration="0.001" conditionals="6" coveredstatements="41" testpasses="3" />
             </class>
             <line complexity="1" visibility="public" signature="testIntComp() : void" num="24" testsuccess="true" count="1" testduration="0.0" type="method" />
             <line num="26" count="1" type="stmt" />
@@ -1715,7 +1715,7 @@
             <line num="64" count="1" type="stmt" />
             <line num="65" count="1" type="stmt" />
             <line num="66" count="1" type="stmt" />
-            <line complexity="4" visibility="public" signature="testSorting() : void" num="72" testsuccess="true" count="1" testduration="0.0" type="method" />
+            <line complexity="4" visibility="public" signature="testSorting() : void" num="72" testsuccess="true" count="1" testduration="0.001" type="method" />
             <line num="74" count="1" type="stmt" />
             <line num="84" count="1" type="stmt" />
             <line num="85" count="1" type="stmt" />
@@ -1736,7 +1736,7 @@
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/UUIDGeneratorTest.java" name="UUIDGeneratorTest.java">
             <metrics coveredelements="201" coveredconditionals="42" complexity="40" loc="574" coveredmethods="15" methods="17" elements="210" classes="2" ncloc="290" statements="149" conditionals="44" coveredstatements="144" />
             <class name="UUIDGeneratorTest">
-               <metrics coveredelements="199" complexity="38" methods="15" testruns="6" statements="147" coveredconditionals="42" coveredmethods="14" elements="206" testfailures="0" testduration="0.20199999999999999" conditionals="44" coveredstatements="143" testpasses="6" />
+               <metrics coveredelements="199" complexity="38" methods="15" testruns="6" statements="147" coveredconditionals="42" coveredmethods="14" elements="206" testfailures="0" testduration="0.275" conditionals="44" coveredstatements="143" testpasses="6" />
             </class>
             <class name="UUIDGeneratorTest.ReverseOrderUUIDComparator">
                <metrics coveredelements="2" coveredconditionals="0" complexity="2" coveredmethods="1" methods="2" elements="4" statements="2" conditionals="0" coveredstatements="1" />
@@ -1748,7 +1748,7 @@
             <line num="55" count="1" type="stmt" />
             <line complexity="1" visibility="public" signature="main(String[]) : void" num="58" count="0" type="method" />
             <line num="60" count="0" type="stmt" />
-            <line complexity="3" visibility="public" signature="testGetDummyAddress() : void" num="67" testsuccess="true" count="1" testduration="0.006" type="method" />
+            <line complexity="3" visibility="public" signature="testGetDummyAddress() : void" num="67" testsuccess="true" count="1" testduration="0.008" type="method" />
             <line num="78" count="1" type="stmt" />
             <line num="82" count="1" type="stmt" />
             <line num="83" count="1" type="stmt" />
@@ -1760,7 +1760,7 @@
             <line num="90" count="10000" type="stmt" />
             <line num="92" count="10000" type="stmt" />
             <line num="100" count="10000" type="stmt" />
-            <line complexity="2" visibility="public" signature="testGenerateRandomBasedUUID() : void" num="110" testsuccess="true" count="1" testduration="0.019" type="method" />
+            <line complexity="2" visibility="public" signature="testGenerateRandomBasedUUID() : void" num="110" testsuccess="true" count="1" testduration="0.031" type="method" />
             <line num="116" count="1" type="stmt" />
             <line num="120" count="1" type="stmt" />
             <line num="123" count="1" type="stmt" />
@@ -1769,7 +1769,7 @@
             <line num="128" count="1" type="stmt" />
             <line num="131" count="1" type="stmt" />
             <line num="137" count="1" type="stmt" />
-            <line complexity="2" visibility="public" signature="testGenerateTimeBasedUUID() : void" num="144" testsuccess="true" count="1" testduration="0.023" type="method" />
+            <line complexity="2" visibility="public" signature="testGenerateTimeBasedUUID() : void" num="144" testsuccess="true" count="1" testduration="0.014" type="method" />
             <line num="150" count="1" type="stmt" />
             <line num="158" count="1" type="stmt" />
             <line num="161" count="1" type="stmt" />
@@ -1781,8 +1781,7 @@
             <line num="175" count="1" type="stmt" />
             <line num="178" count="1" type="stmt" />
             <line num="181" count="1" type="stmt" />
-            <line num="184" count="1" type="stmt" />
-            <line complexity="2" visibility="public" signature="testGenerateTimeBasedUUIDWithEthernetAddress() : void" num="191" testsuccess="true" count="1" testduration="0.027" type="method" />
+            <line complexity="2" visibility="public" signature="testGenerateTimeBasedUUIDWithEthernetAddress() : void" num="191" testsuccess="true" count="1" testduration="0.057" type="method" />
             <line num="195" count="1" type="stmt" />
             <line num="199" count="1" type="stmt" />
             <line num="207" count="1" type="stmt" />
@@ -1795,8 +1794,9 @@
             <line num="224" count="1" type="stmt" />
             <line num="227" count="1" type="stmt" />
             <line num="230" count="1" type="stmt" />
+            <line num="233" count="1" type="stmt" />
             <line num="236" count="1" type="stmt" />
-            <line complexity="5" visibility="public" signature="testGenerateNameBasedUUIDNameSpaceAndName() : void" num="243" testsuccess="true" count="1" testduration="0.081" type="method" />
+            <line complexity="5" visibility="public" signature="testGenerateNameBasedUUIDNameSpaceAndName() : void" num="243" testsuccess="true" count="1" testduration="0.118" type="method" />
             <line num="249" count="1" type="stmt" />
             <line num="251" count="1" type="stmt" />
             <line num="254" count="1" type="stmt" />
@@ -1828,7 +1828,7 @@
             <line num="308" count="1" type="stmt" />
             <line num="309" count="1" type="stmt" />
             <line num="312" count="1" type="stmt" />
-            <line complexity="6" visibility="public" signature="testGenerateNameBasedUUIDNameSpaceNameAndMessageDigest() : void" num="320" testsuccess="true" count="1" testduration="0.046" type="method" />
+            <line complexity="6" visibility="public" signature="testGenerateNameBasedUUIDNameSpaceNameAndMessageDigest() : void" num="320" testsuccess="true" count="1" testduration="0.047" type="method" />
             <line num="322" count="1" type="stmt" />
             <line num="323" count="1" type="stmt" />
             <line num="325" count="1" type="stmt" />
@@ -1933,7 +1933,7 @@
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/UUIDTest.java" name="UUIDTest.java">
             <metrics coveredelements="358" coveredconditionals="24" complexity="62" loc="1116" coveredmethods="25" methods="26" elements="384" classes="1" ncloc="716" statements="334" conditionals="24" coveredstatements="309" />
             <class name="UUIDTest">
-               <metrics coveredelements="358" complexity="62" methods="26" testruns="15" statements="334" coveredconditionals="24" coveredmethods="25" elements="384" testfailures="0" testduration="0.005" conditionals="24" coveredstatements="309" testpasses="15" />
+               <metrics coveredelements="358" complexity="62" methods="26" testruns="15" statements="334" coveredconditionals="24" coveredmethods="25" elements="384" testfailures="0" testduration="0.006" conditionals="24" coveredstatements="309" testpasses="15" />
             </class>
             <line complexity="1" visibility="public" signature="UUIDTest(java.lang.String)" num="40" count="15" type="method" />
             <line num="42" count="15" type="stmt" />
@@ -1958,7 +1958,7 @@
             <line num="104" count="1" type="stmt" />
             <line num="109" count="1" type="stmt" />
             <line num="110" count="1" type="stmt" />
-            <line complexity="3" visibility="public" signature="testStringUUIDConstructor() : void" num="118" testsuccess="true" count="1" testduration="0.0" type="method" />
+            <line complexity="3" visibility="public" signature="testStringUUIDConstructor() : void" num="118" testsuccess="true" count="1" testduration="0.001" type="method" />
             <line num="121" count="1" type="stmt" />
             <line num="123" count="1" type="stmt" />
             <line num="124" count="0" type="stmt" />
@@ -2073,7 +2073,7 @@
             <line num="363" count="1" type="stmt" />
             <line num="364" count="1" type="stmt" />
             <line num="365" count="1" type="stmt" />
-            <line complexity="1" visibility="public" signature="testGetNullUUID() : void" num="371" testsuccess="true" count="1" testduration="0.0" type="method" />
+            <line complexity="1" visibility="public" signature="testGetNullUUID() : void" num="371" testsuccess="true" count="1" testduration="0.001" type="method" />
             <line num="373" count="1" type="stmt" />
             <line num="374" count="1" type="stmt" />
             <line num="377" count="1" type="stmt" />
@@ -2081,7 +2081,7 @@
             <line num="382" count="1" type="stmt" />
             <line num="385" count="1" type="stmt" />
             <line num="387" count="1" type="stmt" />
-            <line complexity="1" visibility="public" signature="testGetType() : void" num="394" testsuccess="true" count="1" testduration="0.001" type="method" />
+            <line complexity="1" visibility="public" signature="testGetType() : void" num="394" testsuccess="true" count="1" testduration="0.0" type="method" />
             <line num="400" count="1" type="stmt" />
             <line num="401" count="1" type="stmt" />
             <line num="403" count="1" type="stmt" />
@@ -2138,7 +2138,7 @@
             <line num="556" count="1" type="stmt" />
             <line num="558" count="1" type="stmt" />
             <line num="560" count="1" type="stmt" />
-            <line complexity="9" visibility="public" signature="testToByteArrayDest() : void" num="567" testsuccess="true" count="1" testduration="0.002" type="method" />
+            <line complexity="9" visibility="public" signature="testToByteArrayDest() : void" num="567" testsuccess="true" count="1" testduration="0.003" type="method" />
             <line num="570" count="1" type="stmt" />
             <line num="574" count="1" type="stmt" />
             <line num="576" count="1" type="stmt" />
@@ -2178,7 +2178,7 @@
             <line num="655" count="1" type="stmt" />
             <line falsecount="1" truecount="9" num="655" type="cond" />
             <line num="657" count="9" type="stmt" />
-            <line complexity="17" visibility="public" signature="testToByteArrayDestOffset() : void" num="667" testsuccess="true" count="1" testduration="0.001" type="method" />
+            <line complexity="17" visibility="public" signature="testToByteArrayDestOffset() : void" num="667" testsuccess="true" count="1" testduration="0.0" type="method" />
             <line num="670" count="1" type="stmt" />
             <line num="673" count="1" type="stmt" />
             <line num="675" count="1" type="stmt" />
@@ -2311,7 +2311,7 @@
          <file path="/Users/seyoung/java-uuid-generator/src/test/java/com/fasterxml/uuid/UUIDTimerTest.java" name="UUIDTimerTest.java">
             <metrics coveredelements="118" coveredconditionals="18" complexity="29" loc="389" coveredmethods="14" methods="16" elements="128" classes="2" ncloc="241" statements="92" conditionals="20" coveredstatements="86" />
             <class name="UUIDTimerTest">
-               <metrics coveredelements="116" complexity="27" methods="14" testruns="3" statements="90" coveredconditionals="18" coveredmethods="13" elements="124" testfailures="0" testduration="0.043000000000000003" conditionals="20" coveredstatements="85" testpasses="3" />
+               <metrics coveredelements="116" complexity="27" methods="14" testruns="3" statements="90" coveredconditionals="18" coveredmethods="13" elements="124" testfailures="0" testduration="0.046" conditionals="20" coveredstatements="85" testpasses="3" />
             </class>
             <class name="UUIDTimerTest.ReverseOrderUUIDTimerLongComparator">
                <metrics coveredelements="2" coveredconditionals="0" complexity="2" coveredmethods="1" methods="2" elements="4" statements="2" conditionals="0" coveredstatements="1" />
@@ -2323,7 +2323,7 @@
             <line num="54" count="1" type="stmt" />
             <line complexity="1" visibility="public" signature="main(String[]) : void" num="57" count="0" type="method" />
             <line num="59" count="0" type="stmt" />
-            <line complexity="2" visibility="public" signature="testSecureRandomUUIDTimerConstructor() : void" num="69" testsuccess="true" count="1" testduration="0.01" type="method" />
+            <line complexity="2" visibility="public" signature="testSecureRandomUUIDTimerConstructor() : void" num="69" testsuccess="true" count="1" testduration="0.013" type="method" />
             <line num="72" count="1" type="stmt" />
             <line num="73" count="1" type="stmt" />
             <line num="75" count="0" type="stmt" />
@@ -2332,7 +2332,7 @@
             <line num="85" count="1" type="stmt" />
             <line num="86" count="1" type="stmt" />
             <line num="88" count="1" type="stmt" />
-            <line complexity="5" visibility="public" signature="testGetTimestamp() : void" num="99" testsuccess="true" count="1" testduration="0.032" type="method" />
+            <line complexity="5" visibility="public" signature="testGetTimestamp() : void" num="99" testsuccess="true" count="1" testduration="0.033" type="method" />
             <line num="102" count="1" type="stmt" />
             <line num="105" count="1" type="stmt" />
             <line num="106" count="1" type="stmt" />
@@ -2362,7 +2362,7 @@
             <line num="175" count="1" type="stmt" />
             <line num="178" count="1" type="stmt" />
             <line num="181" count="1" type="stmt" />
-            <line complexity="1" visibility="public" signature="testGetTimestampReproducible() : void" num="189" testsuccess="true" count="1" testduration="0.001" type="method" />
+            <line complexity="1" visibility="public" signature="testGetTimestampReproducible() : void" num="189" testsuccess="true" count="1" testduration="0.0" type="method" />
             <line num="191" count="1" type="stmt" />
             <line num="192" count="1" type="stmt" />
             <line num="194" count="1" type="stmt" />

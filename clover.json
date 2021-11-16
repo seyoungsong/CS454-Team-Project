@@ -1920,7 +1920,7 @@
             "count": "1",
             "num": "1305",
             "signature": "testFromInterface() : void",
-            "testduration": "0.008",
+            "testduration": "0.012",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2302,7 +2302,7 @@
             "count": "1",
             "num": "9",
             "signature": "testIssue5() : void",
-            "testduration": "0.002",
+            "testduration": "0.0",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2504,7 +2504,7 @@
             "count": "1",
             "num": "72",
             "signature": "testSorting() : void",
-            "testduration": "0.0",
+            "testduration": "0.001",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2643,7 +2643,7 @@
             "count": "1",
             "num": "67",
             "signature": "testGetDummyAddress() : void",
-            "testduration": "0.006",
+            "testduration": "0.008",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2710,7 +2710,7 @@
             "count": "1",
             "num": "110",
             "signature": "testGenerateRandomBasedUUID() : void",
-            "testduration": "0.019",
+            "testduration": "0.031",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2761,7 +2761,7 @@
             "count": "1",
             "num": "144",
             "signature": "testGenerateTimeBasedUUID() : void",
-            "testduration": "0.023",
+            "testduration": "0.014",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2823,16 +2823,11 @@
             "type": "stmt"
         },
         {
-            "count": "1",
-            "num": "184",
-            "type": "stmt"
-        },
-        {
             "complexity": "2",
             "count": "1",
             "num": "191",
             "signature": "testGenerateTimeBasedUUIDWithEthernetAddress() : void",
-            "testduration": "0.027",
+            "testduration": "0.057",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -2900,6 +2895,11 @@
         },
         {
             "count": "1",
+            "num": "233",
+            "type": "stmt"
+        },
+        {
+            "count": "1",
             "num": "236",
             "type": "stmt"
         },
@@ -2908,7 +2908,7 @@
             "count": "1",
             "num": "243",
             "signature": "testGenerateNameBasedUUIDNameSpaceAndName() : void",
-            "testduration": "0.081",
+            "testduration": "0.118",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -3077,7 +3077,7 @@
             "count": "1",
             "num": "320",
             "signature": "testGenerateNameBasedUUIDNameSpaceNameAndMessageDigest() : void",
-            "testduration": "0.046",
+            "testduration": "0.047",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -3760,7 +3760,7 @@
             "count": "1",
             "num": "118",
             "signature": "testStringUUIDConstructor() : void",
-            "testduration": "0.0",
+            "testduration": "0.001",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -4355,7 +4355,7 @@
             "count": "1",
             "num": "371",
             "signature": "testGetNullUUID() : void",
-            "testduration": "0.0",
+            "testduration": "0.001",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -4400,7 +4400,7 @@
             "count": "1",
             "num": "394",
             "signature": "testGetType() : void",
-            "testduration": "0.001",
+            "testduration": "0.0",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -4708,7 +4708,7 @@
             "count": "1",
             "num": "567",
             "signature": "testToByteArrayDest() : void",
-            "testduration": "0.002",
+            "testduration": "0.003",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -4917,7 +4917,7 @@
             "count": "1",
             "num": "667",
             "signature": "testToByteArrayDestOffset() : void",
-            "testduration": "0.001",
+            "testduration": "0.0",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -5652,7 +5652,7 @@
             "count": "1",
             "num": "69",
             "signature": "testSecureRandomUUIDTimerConstructor() : void",
-            "testduration": "0.01",
+            "testduration": "0.013",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -5702,7 +5702,7 @@
             "count": "1",
             "num": "99",
             "signature": "testGetTimestamp() : void",
-            "testduration": "0.032",
+            "testduration": "0.033",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"
@@ -5859,7 +5859,7 @@
             "count": "1",
             "num": "189",
             "signature": "testGetTimestampReproducible() : void",
-            "testduration": "0.001",
+            "testduration": "0.0",
             "testsuccess": "true",
             "type": "method",
             "visibility": "public"

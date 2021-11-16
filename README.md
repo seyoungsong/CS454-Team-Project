@@ -19,6 +19,67 @@
 
 https://github.com/cowtowncoder/java-uuid-generator
 
+## Programs
+
+geojson-jackson
+statsd-jvm-profiler
+stateless4j
+jarchivelib
+JSONassert
+java-faker
+jackson-datatype-joda
+Java-apns
+pusher-websocket-java
+gson-fire
+jackson-datatype-guava
+dictomaton
+jackson-uuid-generator
+JAdventure
+exp4j
+jumblr
+efflux
+metrics-core
+low-gc-membuffers
+xembly
+scribe-java
+jpush-api-java-client
+gdx-artemis
+protoparser
+commons-cli
+mp3agic
+webbit
+RestFixture
+LastCalc
+jackson-dataformat-csv
+skype-java-api
+lambdaj
+jackson-dataformat-xml
+jopt-simple
+jline2
+javapoet
+Liqp
+cassandra-reaper
+JSqlParser
+raml-java-parser
+redline-smalltalk
+user-agent-utils
+javaewah
+jsoup-learning
+wsc
+rome
+JActor
+RoaringBitmap
+JavaFastPFOR
+jprotobuf
+worldguard
+commons-jxpath
+commons-io
+nodebox
+asterisk-java
+ews-java-api
+commons-lang
+joda-time
+
 ## References
 
 [1] Z. Li, M. Harman, and R. M. Hierons, “Search Algorithms for Regression Test Case Prioritization,” IIEEE Trans. Software Eng., vol. 33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.

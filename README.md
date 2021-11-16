@@ -84,7 +84,6 @@ joda-time
 
 assertj-core
 asterisk-java
-asterisk-java-v2
 blueflood
 camel-core
 chukwa
@@ -96,12 +95,10 @@ disklrucache
 ews-java-api
 gdx-artemis-master
 gson-fire
-gson-fire-v2
-hbase-1.2.2
+hbase
 hivemall
 jackson-core
 jackson-datatype-guava
-jackson-datatype-guava-v2
 jactor
 jasmine-maven-plugin
 java-apns
@@ -112,16 +109,15 @@ joss
 jsprit
 jumblr
 la4j
-la4j-v2
 lambdaj-master
 languagetool
 lanterna
-lastcalc-0.1
+lastcalc
 low-gc-membuffers
-mapdb-mapdb-1.0.9
+mapdb-mapdb
 metrics-core
 nv-websocket-client
-opentripplanner-otp-0.20.0
+opentripplanner-otp
 protoparser
 raml-java-parser
 raml-java-parser-master
@@ -129,7 +125,7 @@ redline-smalltalk
 redline-smalltalk-master
 restcountries
 roaringbitmap
-rome-1.5.0
+rome
 scribe-java
 spring-retry
 stream-lib
@@ -144,7 +140,7 @@ asterisk-java
 Camel-Core
 Chukwa
 Commons-Pool
-gson-￿re 895
+gson-fire
 HBase
 jasmine-maven-plugin
 java-apns

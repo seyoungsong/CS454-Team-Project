@@ -4,6 +4,7 @@
 - [JUnit](https://junit.org/junit5/): testing framework
 - [PIT](http://pitest.org/): generate mutation faults
 - [Clover](https://confluence.atlassian.com/clover/basic-usage-588579892.html): dynamic coverage
+- [OpenClover](https://openclover.org/doc/manual/latest/maven--quick-start-guide.html)
 - [bcel](http://commons.apache.org/proper/commons-bcel/): static coverage
 - [sloc](https://github.com/flosse/sloc): basic information
 
@@ -15,8 +16,7 @@ brew install --ignore-dependencies maven
 export JAVA_HOME=`/usr/libexec/java_home`
 yarn global add sloc
 
-git clone https://github.com/cowtowncoder/java-uuid-generator.git
-git checkout tags/java-uuid-generator-4.0.1
+git clone --depth 1 --branch java-uuid-generator-4.0.1 https://github.com/cowtowncoder/java-uuid-generator.git
 mvn clean
 mvn test
 mvn package
@@ -25,13 +25,20 @@ java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
 sloc src/main # SLOC
 sloc src/test # TLOC
 
-mvn test
+cp /opt/homebrew/Cellar/maven/3.8.3/libexec/conf/settings.xml ~/.m2/
+code ~/.m2/settings.xml
+mvn clean clover:setup test clover:aggregate clover:clover
 
-mvn help:describe -Dplugin=org.jacoco:jacoco-maven-plugin -Ddetail
+xmlto txt target/site/clover/clover.xml
 ```
 
-https://search.maven.org/search?q=g:org.jacoco%20a:jacoco-maven-plugin
-https://www.eclemma.org/jacoco/trunk/doc/maven.html
+```xml
+<plugin>
+  <groupId>com.atlassian.maven.plugins</groupId>
+  <artifactId>clover-maven-plugin</artifactId>
+  <version>4.1.2</version>
+</plugin>
+```
 
 ## References
 

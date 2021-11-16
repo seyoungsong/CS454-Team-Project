@@ -89,7 +89,7 @@ sloc src/test # TLOC
 # run full clover (you will have to run it twice for the first time)
 mvn clean clover:setup test clover:aggregate clover:clover
 
-# copy the folder
+# copy the folder to root dir
 cp -R target/site/clover ./clover
 
 # open report in web browser (you can check the time duration of each test)

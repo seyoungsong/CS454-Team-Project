@@ -1,11 +1,11 @@
 # CS454 Team Project
 
 - [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
-- JUnit: testing framework
-- PIT: generate mutation faults
-- Clover: dynamic coverage
-- bcel: static coverage
-- SLOC: basic information
+- [JUnit](https://junit.org/junit5/): testing framework
+- [PIT](http://pitest.org/): generate mutation faults
+- [Clover](https://bitbucket.org/atlassian/clover/src/master/): dynamic coverage
+- [bcel](http://commons.apache.org/proper/commons-bcel/): static coverage
+- [sloc](https://github.com/flosse/sloc): basic information
 
 https://github.com/cowtowncoder/java-uuid-generator
 
@@ -13,6 +13,7 @@ https://github.com/cowtowncoder/java-uuid-generator
 brew install openjdk@11
 brew install --ignore-dependencies maven
 export JAVA_HOME=`/usr/libexec/java_home`
+yarn global add sloc
 
 git clone https://github.com/cowtowncoder/java-uuid-generator.git
 git checkout tags/java-uuid-generator-4.0.1
@@ -20,6 +21,8 @@ mvn clean
 mvn test
 mvn package
 java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
+
+sloc src/main
 ```
 
 ## References

@@ -361,9 +361,10 @@ def geneticAlgorithm():
             test_idx = test_seq[i]
             test_seq[i] = test_name_list[test_idx]
 
-    print(best_individual)
-    print(best_fitness)
+    print()
+    return best_individual, best_fitness
 
 
-
-geneticAlgorithm()
+answer = geneticAlgorithm()
+print(answer[0])
+print(answer[1])

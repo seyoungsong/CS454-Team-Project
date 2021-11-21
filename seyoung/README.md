@@ -1,4 +1,4 @@
-# CS454 Team Project
+# CS454 Team Project - Seyoung Song
 
 - [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 - [OpenClover](https://openclover.org/doc/manual/latest/maven--user-guide.html): code coverage

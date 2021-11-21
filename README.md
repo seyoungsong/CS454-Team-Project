@@ -1,4 +1,4 @@
-# CS454 Team Project
+# CS454 Team Project - Team 6
 
 TODO
 

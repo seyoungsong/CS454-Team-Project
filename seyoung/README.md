@@ -1,12 +1,11 @@
-# CS454 Team Project - Seyoung Song
+# CS454 Team Project - Data Collection by Seyoung Song
 
+## Dependencies: OpenJDK, Maven, sloc, OpenClover
+
+- [OpenJDK 11](https://adoptium.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 - [Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
-- [OpenClover](https://openclover.org/doc/manual/latest/maven--user-guide.html): code coverage
-- [sloc](https://github.com/flosse/sloc): simple tool to count SLOC (source lines of code)
-- [PIT](http://pitest.org/): generate mutation faults
-- [Java Uuid Generator (JUG)](https://github.com/cowtowncoder/java-uuid-generator)
-
-## Install
+  - [Running a Single Test](https://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html)
+- [sloc](https://github.com/flosse/sloc)
 
 ```bash
 # install OpenJDK 11
@@ -17,30 +16,27 @@ java -version # openjdk version "11.0.12"
 # install Maven
 echo "export JAVA_HOME=$(/usr/libexec/java_home)" >> ~/.zshrc
 brew install --ignore-dependencies maven
-mvn --version # Apache Maven 3.8.3
+mvn --version # Apache Maven 3.8.4
 
-# install sloc
+# install sloc (and yarn)
 brew install yarn
+yarn --version # 1.22.17
 yarn global add sloc
 sloc --version # 0.2.1
 ```
 
-- [Configuring Clover's short name in `.m2/settings.xml`](https://openclover.org/doc/manual/latest/maven--basic-usage.html)
-
-If `.m2/settings.xml` file doesn't exist in user home, copy it from maven home.
+- [OpenClover for Maven: User's Guide](https://openclover.org/doc/manual/latest/maven--user-guide.html)
+  - [Configuring Clover's short name in `.m2/settings.xml`](https://openclover.org/doc/manual/latest/maven--basic-usage.html)
 
 ```bash
-mvn --version  # Maven home: /opt/homebrew/Cellar/maven/3.8.3/libexec
-cp /opt/homebrew/Cellar/maven/3.8.3/libexec/conf/settings.xml ~/.m2/
-```
+# copy settings.xml from maven home to user home
+mvn --version  # Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+mkdir -p ~/.m2
+cp /opt/homebrew/Cellar/maven/3.8.4/libexec/conf/settings.xml ~/.m2/
 
-Open your `.m2/settings.xml` file in vscode.
-
-```
+# open `~/.m2/settings.xml` file in vscode.
 code ~/.m2/settings.xml
 ```
-
-Before you get started, add this to your `.m2/settings.xml` file so you can reference Clover by its short name `clover`.
 
 ```xml
 <pluginGroups>
@@ -48,66 +44,62 @@ Before you get started, add this to your `.m2/settings.xml` file so you can refe
 </pluginGroups>
 ```
 
-## Example
+## Clone the subject repository from GitHub
+
+- [Search GitHub](https://github.com/search)
+
+TODO: git clone latest tag
 
 ```bash
-# download example project from github (java-uuid-generator)
-git clone --depth 1 --branch java-uuid-generator-4.0.1 https://github.com/cowtowncoder/java-uuid-generator.git
-rm -rf java-uuid-generator/.git
-cd java-uuid-generator
-git init . && git add . && git commit -m "init"
+# download a java program from github
+rm -rf repo
+git clone --depth 1 --recursive https://github.com/cowtowncoder/java-uuid-generator repo
+rm -rf repo/.git
 
-# check maven
-mvn clean
-mvn test # you may have to remove some lines from the source to disable false alarms.
+# make sure maven works
+mvn --file repo/pom.xml --fail-never clean test
 
-# check maven single test
-mvn -Dtest=EthernetAddressTest#testAsByteArray test
-
-# check java
-mvn package
-java -cp target/java-uuid-generator-4.0.1.jar com.fasterxml.uuid.Jug r
-
-# check sloc
-sloc src/main # SLOC
-sloc src/test # TLOC
+# run sloc
+sloc --format cli-table repo > sloc.txt # SLOC
 ```
 
-[Installing Clover in pom.xml](https://openclover.org/doc/manual/latest/maven--basic-usage.html)
-
-[Clover Maven Plugin Version](https://search.maven.org/artifact/org.openclover/clover-maven-plugin)
-
-```xml
-<plugin>
-    <groupId>org.openclover</groupId>
-    <artifactId>clover-maven-plugin</artifactId>
-    <version>4.4.1</version>
-</plugin>
-```
+## Run OpenClover
 
 ```bash
-# run full clover (you will have to run it twice for the first time)
-mvn clean clover:setup test clover:aggregate clover:clover
+# run clover, ignoring failures, without generating HTML
+mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
 
-# copy the folder to root dir
-cp -R target/site/clover ./clover
+# copy clover.xml to root
+cp repo/target/site/clover/clover.xml ./clover.xml
 
-# open report in web browser (you can check the time duration of each test)
-open target/site/clover/index.html
-open clover/index.html  # cd ~/java-uuid-generator
-code clover/clover.xml
+# identify unit tests from clover.xml and make commands.sh
+python identify_tests.py
 
-# run clover for 1 unit test
-mvn clean clover:setup -Dtest=UUIDGeneratorTest#testGenerateNameBasedUUIDNameSpaceAndName test clover:aggregate clover:clover
+# run clover for single tests
+rm -rf clover
+mkdir -p clover
+bash commands.sh
 
-# run clover for each test method
-bash mvn_cmds.sh
+# parse xml files to make data.json
+python parse_data.py
 ```
 
-## References
+## Extra
 
-[1] Z. Li, M. Harman, and R. M. Hierons, “Search Algorithms for Regression Test Case Prioritization,” IIEEE Trans. Software Eng., vol. 33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.
+```bash
+git clone --depth 1 --recursive https://github.com/rometools/rome repo
 
-[2] Q. Luo, K. Moran, L. Zhang, and D. Poshyvanyk, “How Do Static and Dynamic Test Case Prioritization Techniques Perform on Modern Software Systems? An Extensive Study on GitHub Projects,” IIEEE Trans. Software Eng., vol. 45, no. 11, pp. 1054–1080, Nov. 2019, doi: 10.1109/TSE.2018.2822270.
+# full clover
+mvn --file repo/pom.xml --fail-never clean clover:setup test clover:aggregate clover:clover
 
-[3] J. Zhou, J. Chen, and D. Hao, “Parallel Test Prioritization,” ACM Trans. Softw. Eng. Methodol., vol. 31, no. 1, Sep. 2021, doi: 10.1145/3471906.
+# (option) open report in web browser
+open repo/target/site/clover/index.html
+code repo/target/site/clover/clover.xml
+
+# to run clover for 1 unit test
+mvn --file repo/pom.xml clean clover:setup -Dtest=com.rometools.certiorem.hub.ControllerTest#testSubscribe test clover:aggregate clover:clover -Dmaven.clover.generateHtml=false --fail-never
+
+# copy (unit) clover.xml to clover dir
+mkdir -p ./clover
+cp repo/target/site/clover/clover.xml ./clover/clover#com.rometools.certiorem.hub#ControllerTest#testSubscribe.xml
+```

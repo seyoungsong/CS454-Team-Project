@@ -1,0 +1,255 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/cowtowncoder/java-uuid-generator repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.fasterxml.uuid:java-uuid-generator >---------------
+[INFO] Building Java UUID Generator 4.0.2-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ java-uuid-generator ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-java) @ java-uuid-generator ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ java-uuid-generator ---
+[INFO] Source directory: /Users/seyoung/data/repo/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ java-uuid-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ java-uuid-generator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 23 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ java-uuid-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ java-uuid-generator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ java-uuid-generator ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.uuid.UUIDTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.uuid.UUIDTest
+[INFO] Running com.fasterxml.uuid.UUIDComparatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.uuid.UUIDComparatorTest
+[INFO] Running com.fasterxml.uuid.UUIDTimerTest
+[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -516888785070127290, last 0
+[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -516888785070127290, last 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.fasterxml.uuid.UUIDTimerTest
+[INFO] Running com.fasterxml.uuid.EthernetAddressTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.uuid.EthernetAddressTest
+[INFO] Running com.fasterxml.uuid.UUIDGeneratorTest
+[main] WARN com.fasterxml.uuid.UUIDTimer - Timestamp over-run: need to reinitialize random sequence
+[main] WARN com.fasterxml.uuid.UUIDTimer - Timestamp over-run: need to reinitialize random sequence
+[ERROR] Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.173 s <<< FAILURE! - in com.fasterxml.uuid.UUIDGeneratorTest
+[ERROR] testGenerateTimeBasedUUIDWithEthernetAddress(com.fasterxml.uuid.UUIDGeneratorTest)  Time elapsed: 0.022 s  <<< FAILURE!
+junit.framework.AssertionFailedError: UUID timestamp: 1637953695633 was not before the end time: 1637953695632
+	at com.fasterxml.uuid.UUIDGeneratorTest.checkUUIDArrayForCorrectCreationTime(UUIDGeneratorTest.java:539)
+	at com.fasterxml.uuid.UUIDGeneratorTest.testGenerateTimeBasedUUIDWithEthernetAddress(UUIDGeneratorTest.java:230)
+
+[ERROR] testGenerateTimeBasedUUID(com.fasterxml.uuid.UUIDGeneratorTest)  Time elapsed: 0.025 s  <<< FAILURE!
+junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not before the end time: 1637953695737
+	at com.fasterxml.uuid.UUIDGeneratorTest.checkUUIDArrayForCorrectCreationTime(UUIDGeneratorTest.java:539)
+	at com.fasterxml.uuid.UUIDGeneratorTest.testGenerateTimeBasedUUID(UUIDGeneratorTest.java:181)
+
+[INFO] Running com.fasterxml.uuid.SimpleGenerationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.uuid.SimpleGenerationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   UUIDGeneratorTest.testGenerateTimeBasedUUID:181->checkUUIDArrayForCorrectCreationTime:539 UUID timestamp: 1637953695738 was not before the end time: 1637953695737
+[ERROR]   UUIDGeneratorTest.testGenerateTimeBasedUUIDWithEthernetAddress:230->checkUUIDArrayForCorrectCreationTime:539 UUID timestamp: 1637953695633 was not before the end time: 1637953695632
+[INFO] 
+[ERROR] Tests run: 46, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.528 s
+[INFO] Finished at: 2021-11-27T04:08:16+09:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project java-uuid-generator: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/seyoung/data/repo/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[INFO] Build failures were ignored.
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.fasterxml.uuid:java-uuid-generator >---------------
+[INFO] Building Java UUID Generator 4.0.2-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ java-uuid-generator ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ java-uuid-generator ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 23 files (5 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 6 files (1 package).
+[INFO] 46 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-java) @ java-uuid-generator ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ java-uuid-generator ---
+[INFO] Source directory: /Users/seyoung/data/repo/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ java-uuid-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ java-uuid-generator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 23 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ java-uuid-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ java-uuid-generator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ java-uuid-generator ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.uuid.UUIDTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in com.fasterxml.uuid.UUIDTest
+[INFO] Running com.fasterxml.uuid.UUIDComparatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.uuid.UUIDComparatorTest
+[INFO] Running com.fasterxml.uuid.UUIDTimerTest
+[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -4688798631642329565, last 0
+[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -4688798631642329565, last 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.uuid.UUIDTimerTest
+[INFO] Running com.fasterxml.uuid.EthernetAddressTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.uuid.EthernetAddressTest
+[INFO] Running com.fasterxml.uuid.UUIDGeneratorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.259 s - in com.fasterxml.uuid.UUIDGeneratorTest
+[INFO] Running com.fasterxml.uuid.SimpleGenerationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.uuid.SimpleGenerationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 46, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ---------------< com.fasterxml.uuid:java-uuid-generator >---------------
+[INFO] Building Java UUID Generator 4.0.2-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ java-uuid-generator ---
+[INFO] 
+[INFO] ---------------< com.fasterxml.uuid:java-uuid-generator >---------------
+[INFO] Building Java UUID Generator 4.0.2-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ java-uuid-generator ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8701403944045024977resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.168 s
+[INFO] Finished at: 2021-11-27T04:08:21+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/46] com.fasterxml.uuid.EthernetAddressTest#testAsByteArray
+[test][2/46] com.fasterxml.uuid.EthernetAddressTest#testBogus
+[test][3/46] com.fasterxml.uuid.EthernetAddressTest#testByteArrayEthernetAddressConstructor
+[test][4/46] com.fasterxml.uuid.EthernetAddressTest#testClone
+[test][5/46] com.fasterxml.uuid.EthernetAddressTest#testCompareTo
+[test][6/46] com.fasterxml.uuid.EthernetAddressTest#testEquals
+[test][7/46] com.fasterxml.uuid.EthernetAddressTest#testFromInterface
+[test][8/46] com.fasterxml.uuid.EthernetAddressTest#testLongEthernetAddressConstructor
+[test][9/46] com.fasterxml.uuid.EthernetAddressTest#testStringEthernetAddressConstructor
+[test][10/46] com.fasterxml.uuid.EthernetAddressTest#testToByteArray
+[test][11/46] com.fasterxml.uuid.EthernetAddressTest#testToByteArrayDest
+[test][12/46] com.fasterxml.uuid.EthernetAddressTest#testToByteArrayDestOffset
+[test][13/46] com.fasterxml.uuid.EthernetAddressTest#testToLong
+[test][14/46] com.fasterxml.uuid.EthernetAddressTest#testToString
+[test][15/46] com.fasterxml.uuid.EthernetAddressTest#testValueOfByteArray
+[test][16/46] com.fasterxml.uuid.EthernetAddressTest#testValueOfIntArray
+[test][17/46] com.fasterxml.uuid.EthernetAddressTest#testValueOfLong
+[test][18/46] com.fasterxml.uuid.EthernetAddressTest#testValueOfString
+[test][19/46] com.fasterxml.uuid.SimpleGenerationTest#testIssue5
+[test][20/46] com.fasterxml.uuid.UUIDComparatorTest#testIntComp
+[test][21/46] com.fasterxml.uuid.UUIDComparatorTest#testLongComp
+[test][22/46] com.fasterxml.uuid.UUIDComparatorTest#testSorting
+[test][23/46] com.fasterxml.uuid.UUIDGeneratorTest#testGenerateNameBasedUUIDNameSpaceAndName
+[test][24/46] com.fasterxml.uuid.UUIDGeneratorTest#testGenerateNameBasedUUIDNameSpaceNameAndMessageDigest
+[test][25/46] com.fasterxml.uuid.UUIDGeneratorTest#testGenerateRandomBasedUUID
+[test][26/46] com.fasterxml.uuid.UUIDGeneratorTest#testGenerateTimeBasedUUID
+[test][27/46] com.fasterxml.uuid.UUIDGeneratorTest#testGenerateTimeBasedUUIDWithEthernetAddress
+[test][28/46] com.fasterxml.uuid.UUIDGeneratorTest#testGetDummyAddress
+[test][29/46] com.fasterxml.uuid.UUIDTest#testAsByteArray
+[test][30/46] com.fasterxml.uuid.UUIDTest#testByteArrayUUIDConstructor
+[test][31/46] com.fasterxml.uuid.UUIDTest#testCompareTo
+[test][32/46] com.fasterxml.uuid.UUIDTest#testDefaultUUIDConstructor
+[test][33/46] com.fasterxml.uuid.UUIDTest#testEquals
+[test][34/46] com.fasterxml.uuid.UUIDTest#testGetNullUUID
+[test][35/46] com.fasterxml.uuid.UUIDTest#testGetType
+[test][36/46] com.fasterxml.uuid.UUIDTest#testHashCode
+[test][37/46] com.fasterxml.uuid.UUIDTest#testIsNullUUID
+[test][38/46] com.fasterxml.uuid.UUIDTest#testStringUUIDConstructor
+[test][39/46] com.fasterxml.uuid.UUIDTest#testToByteArray
+[test][40/46] com.fasterxml.uuid.UUIDTest#testToByteArrayDest
+[test][41/46] com.fasterxml.uuid.UUIDTest#testToByteArrayDestOffset
+[test][42/46] com.fasterxml.uuid.UUIDTest#testToString
+[test][43/46] com.fasterxml.uuid.UUIDTest#testValueOfString
+[test][44/46] com.fasterxml.uuid.UUIDTimerTest#testGetTimestamp
+[test][45/46] com.fasterxml.uuid.UUIDTimerTest#testGetTimestampReproducible
+[test][46/46] com.fasterxml.uuid.UUIDTimerTest#testSecureRandomUUIDTimerConstructor
+[main][14/14] python parse_data.py
+  0%|          | 0/46 [00:00<?, ?it/s] 59%|█████▊    | 27/46 [00:00<00:00, 266.65it/s]100%|██████████| 46/46 [00:00<00:00, 270.54it/s]
+Done.

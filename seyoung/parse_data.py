@@ -1,5 +1,7 @@
 import glob
 import json
+import platform
+import subprocess
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
@@ -126,42 +128,99 @@ def get_data(xmls: list[str]):
     return data
 
 
-def get_iso_time():
+def iso_time():
     KST = pytz.timezone("Asia/Seoul")
     t = datetime.now(timezone.utc).replace(microsecond=0).astimezone(KST).isoformat()
     return t
 
 
-def get_info(clover_xml: str):
+def iso_fromtimestamp(timestamp: int):
+    KST = pytz.timezone("Asia/Seoul")
+    s = datetime.fromtimestamp(timestamp, KST).isoformat()
+    return s
+
+
+def get_info(clover_xml: str, git_log: str):
+
+    log = Path(git_log).read_text()
+    github_url, commit_timestamp, commit_hash = [
+        s.strip() for s in log.strip().split("\n")
+    ]
+    github_url = github_url.rstrip("/").lower()
+    commit_url = f"{github_url}/tree/{commit_hash}"
+    commit_timestamp = int(commit_timestamp)
+    commit_datetime = iso_fromtimestamp(commit_timestamp)
+
+    dev_name, repo_name = github_url.replace("https://github.com/", "").split("/")
+    filename = f"{dev_name}_{repo_name}.json"
+
     root = ET.parse(clover_xml).getroot()
     project, testproject = root
     project_name = project.attrib["name"]
-    project_slug = slugify(project_name)
-    project_metrics = project.find("./metrics").attrib
-    testproject_metrics = testproject.find("./metrics").attrib
+    metrics_project = project.find("./metrics").attrib
+    metrics_testproject = testproject.find("./metrics").attrib
+
+    platform_str = platform.platform()
+    java_str = (
+        subprocess.check_output(["java", "-version"], stderr=subprocess.STDOUT)
+        .decode("utf8")
+        .strip()
+        .split("\n")[0]
+    )
+    maven_str = (
+        subprocess.check_output(["mvn", "--version"], stderr=subprocess.STDOUT)
+        .decode("utf8")
+        .strip()
+        .split("\n")[0]
+    )
+
     metadata = {
-        "name": project_name,
-        "slug": project_slug,
-        "project_metrics": project_metrics,
-        "test_metrics": testproject_metrics,
+        # project name
+        "project": project_name,
+        "filename": filename,
+        # github: url, dev, repo
+        "github": {
+            "url": github_url,
+            "dev": dev_name,
+            "repo": repo_name,
+        },
+        # env: platform, java version, maven version
+        "env": {
+            "platform": platform_str,
+            "java": java_str,
+            "maven": maven_str,
+        },
+        # commit: url, hash, time
+        "commit": {
+            "datetime": commit_datetime,
+            "url": commit_url,
+            "hash": commit_hash,
+            "timestamp": commit_timestamp,
+        },
+        # metrics: project, test
+        "metrics": {
+            "project": metrics_project,
+            "testproject": metrics_testproject,
+        },
     }
+
     return metadata
 
 
 def main():
     clover_xml = "clover.xml"
-    info = get_info(clover_xml)
+    git_log = "git.log"
+    info = get_info(clover_xml, git_log)
 
-    xmls = glob.glob("clover/*.xml")
-    xmls.sort()
+    xmls = sorted(glob.glob("clover/*.xml"))
     data = get_data(xmls)
 
+    filename = info["filename"]
     output = {"info": info, "data": data}
 
-    data_dir = Path("data")
-    data_dir.mkdir(exist_ok=True)
-    slug = info["slug"]
-    write_json(f"{data_dir}/{slug}.json", output)
+    output_dir = Path("data")
+    output_dir.mkdir(exist_ok=True)
+    write_json(f"{output_dir}/{filename}", output)
 
     print("Done.")
 

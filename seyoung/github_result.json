@@ -1,0 +1,425 @@
+[
+  {
+    "subject": "assertj-core",
+    "search": "https://github.com/search?l=Java&o=desc&q=assertj-core&s=stars&type=Repositories",
+    "url": "https://github.com/assertj/assertj-core"
+  },
+  {
+    "subject": "asterisk-java",
+    "search": "https://github.com/search?l=Java&o=desc&q=asterisk-java&s=stars&type=Repositories",
+    "url": "https://github.com/asterisk-java/asterisk-java"
+  },
+  {
+    "subject": "blueflood",
+    "search": "https://github.com/search?l=Java&o=desc&q=blueflood&s=stars&type=Repositories",
+    "url": "https://github.com/rackerlabs/blueflood"
+  },
+  {
+    "subject": "camel-core",
+    "search": "https://github.com/search?l=Java&o=desc&q=camel-core&s=stars&type=Repositories",
+    "url": "https://github.com/apache/camel"
+  },
+  {
+    "subject": "cassandra-reaper",
+    "search": "https://github.com/search?l=Java&o=desc&q=cassandra-reaper&s=stars&type=Repositories",
+    "url": "https://github.com/thelastpickle/cassandra-reaper"
+  },
+  {
+    "subject": "chukwa",
+    "search": "https://github.com/search?l=Java&o=desc&q=chukwa&s=stars&type=Repositories",
+    "url": "https://github.com/apache/chukwa"
+  },
+  {
+    "subject": "commons-cli",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-cli&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-cli"
+  },
+  {
+    "subject": "commons-dbcp",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-dbcp&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-dbcp"
+  },
+  {
+    "subject": "commons-io",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-io&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-io"
+  },
+  {
+    "subject": "commons-jxpath",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-jxpath&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-jxpath"
+  },
+  {
+    "subject": "commons-lang",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-lang&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-lang"
+  },
+  {
+    "subject": "commons-math",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-math&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-math"
+  },
+  {
+    "subject": "commons-pool",
+    "search": "https://github.com/search?l=Java&o=desc&q=commons-pool&s=stars&type=Repositories",
+    "url": "https://github.com/apache/commons-pool"
+  },
+  {
+    "subject": "dictomaton",
+    "search": "https://github.com/search?l=Java&o=desc&q=dictomaton&s=stars&type=Repositories",
+    "url": "https://github.com/danieldk/dictomaton"
+  },
+  {
+    "subject": "disklrucache",
+    "search": "https://github.com/search?l=Java&o=desc&q=disklrucache&s=stars&type=Repositories",
+    "url": "https://github.com/JakeWharton/DiskLruCache"
+  },
+  {
+    "subject": "efflux",
+    "search": "https://github.com/search?l=Java&o=desc&q=efflux&s=stars&type=Repositories",
+    "url": "https://github.com/jonbo372/efflux"
+  },
+  {
+    "subject": "ews-java-api",
+    "search": "https://github.com/search?l=Java&o=desc&q=ews-java-api&s=stars&type=Repositories",
+    "url": "https://github.com/OfficeDev/ews-java-api"
+  },
+  {
+    "subject": "exp4j",
+    "search": "https://github.com/search?l=Java&o=desc&q=exp4j&s=stars&type=Repositories",
+    "url": "https://github.com/fasseg/exp4j"
+  },
+  {
+    "subject": "gdx-artemis",
+    "search": "https://github.com/search?l=Java&o=desc&q=gdx-artemis&s=stars&type=Repositories",
+    "url": "https://github.com/apotapov/gdx-artemis"
+  },
+  {
+    "subject": "geojson-jackson",
+    "search": "https://github.com/search?l=Java&o=desc&q=geojson-jackson&s=stars&type=Repositories",
+    "url": "https://github.com/opendatalab-de/geojson-jackson"
+  },
+  {
+    "subject": "gson-fire",
+    "search": "https://github.com/search?l=Java&o=desc&q=gson-fire&s=stars&type=Repositories",
+    "url": "https://github.com/julman99/gson-fire"
+  },
+  {
+    "subject": "hbase",
+    "search": "https://github.com/search?l=Java&o=desc&q=hbase&s=stars&type=Repositories",
+    "url": "https://github.com/apache/hbase"
+  },
+  {
+    "subject": "hivemall",
+    "search": "https://github.com/search?l=Java&o=desc&q=hivemall&s=stars&type=Repositories",
+    "url": "https://github.com/apache/incubator-hivemall"
+  },
+  {
+    "subject": "jackson-core",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-core&s=stars&type=Repositories",
+    "url": "https://github.com/FasterXML/jackson-core"
+  },
+  {
+    "subject": "jackson-dataformat-csv",
+    "memo": "(DEPRECATED) -- moved under: FasterXML/jackson-dataformats-text",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-dataformat-csv&s=stars&type=Repositories",
+    "url": "https://github.com/FasterXML/jackson-dataformats-text"
+  },
+  {
+    "subject": "jackson-dataformat-xml",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-dataformat-xml&s=stars&type=Repositories",
+    "url": "https://github.com/FasterXML/jackson-dataformat-xml"
+  },
+  {
+    "subject": "jackson-datatype-guava",
+    "memo": "(DEPRECATED) -- moved under `jackson-datatypes-collections`",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-datatype-guava&s=stars&type=Repositories",
+    "url": "https://github.com/FasterXML/jackson-datatypes-collections"
+  },
+  {
+    "subject": "jackson-datatype-joda",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-datatype-joda&s=stars&type=Repositories",
+    "url": "https://github.com/FasterXML/jackson-datatype-joda"
+  },
+  {
+    "subject": "jackson-uuid-generator",
+    "search": "https://github.com/search?l=Java&o=desc&q=jackson-uuid-generator&s=stars&type=Repositories",
+    "url": "?"
+  },
+  {
+    "subject": "jactor",
+    "search": "https://github.com/search?l=Java&o=desc&q=jactor&s=stars&type=Repositories",
+    "url": "https://github.com/laforge49/JActor"
+  },
+  {
+    "subject": "jadventure",
+    "search": "https://github.com/search?l=Java&o=desc&q=jadventure&s=stars&type=Repositories",
+    "url": "https://github.com/Progether/JAdventure"
+  },
+  {
+    "subject": "jarchivelib",
+    "search": "https://github.com/search?l=Java&o=desc&q=jarchivelib&s=stars&type=Repositories",
+    "url": "https://github.com/thrau/jarchivelib"
+  },
+  {
+    "subject": "jasmine-maven-plugin",
+    "search": "https://github.com/search?l=Java&o=desc&q=jasmine-maven-plugin&s=stars&type=Repositories",
+    "url": "https://github.com/searls/jasmine-maven-plugin"
+  },
+  {
+    "subject": "java-apns",
+    "memo": "Warning: Apple will no longer support the legacy binary protocol after March 31, 2021.",
+    "search": "https://github.com/search?l=Java&o=desc&q=java-apns&s=stars&type=Repositories",
+    "url": "?"
+  },
+  {
+    "subject": "java-faker",
+    "search": "https://github.com/search?l=Java&o=desc&q=java-faker&s=stars&type=Repositories",
+    "url": "https://github.com/DiUS/java-faker"
+  },
+  {
+    "subject": "java-uuid-generator",
+    "search": "https://github.com/search?l=Java&o=desc&q=java-uuid-generator&s=stars&type=Repositories",
+    "url": "https://github.com/cowtowncoder/java-uuid-generator"
+  },
+  {
+    "subject": "javaewah",
+    "search": "https://github.com/search?l=Java&o=desc&q=javaewah&s=stars&type=Repositories",
+    "url": "https://github.com/lemire/javaewah"
+  },
+  {
+    "subject": "javafastpfor",
+    "search": "https://github.com/search?l=Java&o=desc&q=javafastpfor&s=stars&type=Repositories",
+    "url": "https://github.com/lemire/JavaFastPFOR"
+  },
+  {
+    "subject": "javapoet",
+    "search": "https://github.com/search?l=Java&o=desc&q=javapoet&s=stars&type=Repositories",
+    "url": "https://github.com/square/javapoet"
+  },
+  {
+    "subject": "jline2",
+    "search": "https://github.com/search?l=Java&o=desc&q=jline2&s=stars&type=Repositories",
+    "url": "https://github.com/jline/jline2"
+  },
+  {
+    "subject": "joda-time",
+    "search": "https://github.com/search?l=Java&o=desc&q=joda-time&s=stars&type=Repositories",
+    "url": "https://github.com/JodaOrg/joda-time"
+  },
+  {
+    "subject": "jopt-simple",
+    "search": "https://github.com/search?l=Java&o=desc&q=jopt-simple&s=stars&type=Repositories",
+    "url": "https://github.com/jopt-simple/jopt-simple"
+  },
+  {
+    "subject": "joss",
+    "search": "https://github.com/search?l=Java&o=desc&q=joss&s=stars&type=Repositories",
+    "url": "https://github.com/javaswift/joss"
+  },
+  {
+    "subject": "jprotobuf",
+    "search": "https://github.com/search?l=Java&o=desc&q=jprotobuf&s=stars&type=Repositories",
+    "url": "https://github.com/jhunters/jprotobuf"
+  },
+  {
+    "subject": "jpush-api-java-client",
+    "search": "https://github.com/search?l=Java&o=desc&q=jpush-api-java-client&s=stars&type=Repositories",
+    "url": "https://github.com/jpush/jpush-api-java-client"
+  },
+  {
+    "subject": "jsonassert",
+    "search": "https://github.com/search?l=Java&o=desc&q=jsonassert&s=stars&type=Repositories",
+    "url": "https://github.com/skyscreamer/JSONassert"
+  },
+  {
+    "subject": "jsoup-learning",
+    "search": "https://github.com/search?l=Java&o=desc&q=jsoup-learning&s=stars&type=Repositories",
+    "url": "https://github.com/code4craft/jsoup-learning"
+  },
+  {
+    "subject": "jsprit",
+    "search": "https://github.com/search?l=Java&o=desc&q=jsprit&s=stars&type=Repositories",
+    "url": "https://github.com/graphhopper/jsprit"
+  },
+  {
+    "subject": "jsqlparser",
+    "search": "https://github.com/search?l=Java&o=desc&q=jsqlparser&s=stars&type=Repositories",
+    "url": "https://github.com/JSQLParser/JSqlParser"
+  },
+  {
+    "subject": "jumblr",
+    "search": "https://github.com/search?l=Java&o=desc&q=jumblr&s=stars&type=Repositories",
+    "url": "https://github.com/tumblr/jumblr"
+  },
+  {
+    "subject": "la4j",
+    "search": "https://github.com/search?l=Java&o=desc&q=la4j&s=stars&type=Repositories",
+    "url": "https://github.com/vkostyukov/la4j"
+  },
+  {
+    "subject": "lambdaj",
+    "search": "https://github.com/search?l=Java&o=desc&q=lambdaj&s=stars&type=Repositories",
+    "url": "https://github.com/mariofusco/lambdaj"
+  },
+  {
+    "subject": "languagetool",
+    "search": "https://github.com/search?l=Java&o=desc&q=languagetool&s=stars&type=Repositories",
+    "url": "https://github.com/languagetool-org/languagetool"
+  },
+  {
+    "subject": "lanterna",
+    "search": "https://github.com/search?l=Java&o=desc&q=lanterna&s=stars&type=Repositories",
+    "url": "https://github.com/mabe02/lanterna"
+  },
+  {
+    "subject": "lastcalc",
+    "search": "https://github.com/search?l=Java&o=desc&q=lastcalc&s=stars&type=Repositories",
+    "url": "https://github.com/sanity/LastCalc"
+  },
+  {
+    "subject": "liqp",
+    "search": "https://github.com/search?l=Java&o=desc&q=liqp&s=stars&type=Repositories",
+    "url": "https://github.com/bkiers/Liqp"
+  },
+  {
+    "subject": "low-gc-membuffers",
+    "search": "https://github.com/search?l=Java&o=desc&q=low-gc-membuffers&s=stars&type=Repositories",
+    "url": "https://github.com/cowtowncoder/low-gc-membuffers"
+  },
+  {
+    "subject": "mapdb-mapdb",
+    "search": "https://github.com/search?l=Java&o=desc&q=mapdb-mapdb&s=stars&type=Repositories",
+    "url": "https://github.com/jankotek/mapdb"
+  },
+  {
+    "subject": "metrics-core",
+    "search": "https://github.com/search?l=Java&o=desc&q=metrics-core&s=stars&type=Repositories",
+    "url": "https://github.com/avaje-metrics/metrics"
+  },
+  {
+    "subject": "mp3agic",
+    "search": "https://github.com/search?l=Java&o=desc&q=mp3agic&s=stars&type=Repositories",
+    "url": "https://github.com/mpatric/mp3agic"
+  },
+  {
+    "subject": "nodebox",
+    "search": "https://github.com/search?l=Java&o=desc&q=nodebox&s=stars&type=Repositories",
+    "url": "https://github.com/nodebox/nodebox"
+  },
+  {
+    "subject": "nv-websocket-client",
+    "search": "https://github.com/search?l=Java&o=desc&q=nv-websocket-client&s=stars&type=Repositories",
+    "url": "https://github.com/TakahikoKawasaki/nv-websocket-client"
+  },
+  {
+    "subject": "opentripplanner-otp",
+    "search": "https://github.com/search?l=Java&o=desc&q=opentripplanner-otp&s=stars&type=Repositories",
+    "url": "?"
+  },
+  {
+    "subject": "protoparser",
+    "search": "https://github.com/search?l=Java&o=desc&q=protoparser&s=stars&type=Repositories",
+    "url": "https://github.com/square/protoparser"
+  },
+  {
+    "subject": "pusher-websocket-java",
+    "search": "https://github.com/search?l=Java&o=desc&q=pusher-websocket-java&s=stars&type=Repositories",
+    "url": "https://github.com/pusher/pusher-websocket-java"
+  },
+  {
+    "subject": "raml-java-parser",
+    "search": "https://github.com/search?l=Java&o=desc&q=raml-java-parser&s=stars&type=Repositories",
+    "url": "https://github.com/raml-org/raml-java-parser"
+  },
+  {
+    "subject": "redline-smalltalk",
+    "search": "https://github.com/search?l=Java&o=desc&q=redline-smalltalk&s=stars&type=Repositories",
+    "url": "https://github.com/bulenkov/RedlineSmalltalk"
+  },
+  {
+    "subject": "restcountries",
+    "search": "https://github.com/search?l=Java&o=desc&q=restcountries&s=stars&type=Repositories",
+    "url": "https://github.com/apilayer/restcountries"
+  },
+  {
+    "subject": "restfixture",
+    "search": "https://github.com/search?l=Java&o=desc&q=restfixture&s=stars&type=Repositories",
+    "url": "https://github.com/smartrics/RestFixture"
+  },
+  {
+    "subject": "roaringbitmap",
+    "search": "https://github.com/search?l=Java&o=desc&q=roaringbitmap&s=stars&type=Repositories",
+    "url": "https://github.com/RoaringBitmap/RoaringBitmap"
+  },
+  {
+    "subject": "rome",
+    "search": "https://github.com/search?l=Java&o=desc&q=rome&s=stars&type=Repositories",
+    "url": "https://github.com/rometools/rome"
+  },
+  {
+    "subject": "scribe-java",
+    "search": "https://github.com/search?l=Java&o=desc&q=scribe-java&s=stars&type=Repositories",
+    "url": "https://github.com/scribejava/scribejava"
+  },
+  {
+    "subject": "skype-java-api",
+    "search": "https://github.com/search?l=Java&o=desc&q=skype-java-api&s=stars&type=Repositories",
+    "url": "https://github.com/taksan/skype-java-api"
+  },
+  {
+    "subject": "spring-retry",
+    "search": "https://github.com/search?l=Java&o=desc&q=spring-retry&s=stars&type=Repositories",
+    "url": "https://github.com/spring-projects/spring-retry"
+  },
+  {
+    "subject": "stateless4j",
+    "search": "https://github.com/search?l=Java&o=desc&q=stateless4j&s=stars&type=Repositories",
+    "url": "https://github.com/stateless4j/stateless4j"
+  },
+  {
+    "subject": "statsd-jvm-profiler",
+    "search": "https://github.com/search?l=Java&o=desc&q=statsd-jvm-profiler&s=stars&type=Repositories",
+    "url": "https://github.com/etsy/statsd-jvm-profiler"
+  },
+  {
+    "subject": "stream-lib",
+    "search": "https://github.com/search?l=Java&o=desc&q=stream-lib&s=stars&type=Repositories",
+    "url": "https://github.com/addthis/stream-lib"
+  },
+  {
+    "subject": "streamex",
+    "search": "https://github.com/search?l=Java&o=desc&q=streamex&s=stars&type=Repositories",
+    "url": "https://github.com/amaembo/streamex"
+  },
+  {
+    "subject": "user-agent-utils",
+    "search": "https://github.com/search?l=Java&o=desc&q=user-agent-utils&s=stars&type=Repositories",
+    "url": "https://github.com/HaraldWalker/user-agent-utils"
+  },
+  {
+    "subject": "vraptor-archive",
+    "search": "https://github.com/search?l=Java&o=desc&q=vraptor-archive&s=stars&type=Repositories",
+    "url": "https://github.com/caelum/vraptor4"
+  },
+  {
+    "subject": "webbit",
+    "search": "https://github.com/search?l=Java&o=desc&q=webbit&s=stars&type=Repositories",
+    "url": "https://github.com/webbit/webbit"
+  },
+  {
+    "subject": "worldguard",
+    "search": "https://github.com/search?l=Java&o=desc&q=worldguard&s=stars&type=Repositories",
+    "url": "https://github.com/EngineHub/WorldGuard"
+  },
+  {
+    "subject": "wsc",
+    "search": "https://github.com/search?l=Java&o=desc&q=wsc&s=stars&type=Repositories",
+    "url": "https://github.com/forcedotcom/wsc"
+  },
+  {
+    "subject": "xembly",
+    "search": "https://github.com/search?l=Java&o=desc&q=xembly&s=stars&type=Repositories",
+    "url": "https://github.com/yegor256/xembly"
+  }
+]

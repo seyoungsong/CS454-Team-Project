@@ -1,0 +1,409 @@
+[
+  {
+    "subject": "stream-lib",
+    "url": "https://github.com/addthis/stream-lib",
+    "idx": 0
+  },
+  {
+    "subject": "streamex",
+    "url": "https://github.com/amaembo/streamex",
+    "idx": 1
+  },
+  {
+    "subject": "camel-core",
+    "url": "https://github.com/apache/camel",
+    "idx": 2
+  },
+  {
+    "subject": "chukwa",
+    "url": "https://github.com/apache/chukwa",
+    "idx": 3
+  },
+  {
+    "subject": "commons-cli",
+    "url": "https://github.com/apache/commons-cli",
+    "idx": 4
+  },
+  {
+    "subject": "commons-dbcp",
+    "url": "https://github.com/apache/commons-dbcp",
+    "idx": 5
+  },
+  {
+    "subject": "commons-io",
+    "url": "https://github.com/apache/commons-io",
+    "idx": 6
+  },
+  {
+    "subject": "commons-jxpath",
+    "url": "https://github.com/apache/commons-jxpath",
+    "idx": 7
+  },
+  {
+    "subject": "commons-lang",
+    "url": "https://github.com/apache/commons-lang",
+    "idx": 8
+  },
+  {
+    "subject": "commons-math",
+    "url": "https://github.com/apache/commons-math",
+    "idx": 9
+  },
+  {
+    "subject": "commons-pool",
+    "url": "https://github.com/apache/commons-pool",
+    "idx": 10
+  },
+  {
+    "subject": "hbase",
+    "url": "https://github.com/apache/hbase",
+    "idx": 11
+  },
+  {
+    "subject": "hivemall",
+    "url": "https://github.com/apache/incubator-hivemall",
+    "idx": 12
+  },
+  {
+    "subject": "restcountries",
+    "url": "https://github.com/apilayer/restcountries",
+    "idx": 13
+  },
+  {
+    "subject": "gdx-artemis",
+    "url": "https://github.com/apotapov/gdx-artemis",
+    "idx": 14
+  },
+  {
+    "subject": "assertj-core",
+    "url": "https://github.com/assertj/assertj-core",
+    "idx": 15
+  },
+  {
+    "subject": "asterisk-java",
+    "url": "https://github.com/asterisk-java/asterisk-java",
+    "idx": 16
+  },
+  {
+    "subject": "metrics-core",
+    "url": "https://github.com/avaje-metrics/metrics",
+    "idx": 17
+  },
+  {
+    "subject": "liqp",
+    "url": "https://github.com/bkiers/liqp",
+    "idx": 18
+  },
+  {
+    "subject": "redline-smalltalk",
+    "url": "https://github.com/bulenkov/redlinesmalltalk",
+    "idx": 19
+  },
+  {
+    "subject": "vraptor-archive",
+    "url": "https://github.com/caelum/vraptor4",
+    "idx": 20
+  },
+  {
+    "subject": "jsoup-learning",
+    "url": "https://github.com/code4craft/jsoup-learning",
+    "idx": 21
+  },
+  {
+    "subject": "java-uuid-generator",
+    "url": "https://github.com/cowtowncoder/java-uuid-generator",
+    "idx": 22
+  },
+  {
+    "subject": "low-gc-membuffers",
+    "url": "https://github.com/cowtowncoder/low-gc-membuffers",
+    "idx": 23
+  },
+  {
+    "subject": "dictomaton",
+    "url": "https://github.com/danieldk/dictomaton",
+    "idx": 24
+  },
+  {
+    "subject": "java-faker",
+    "url": "https://github.com/dius/java-faker",
+    "idx": 25
+  },
+  {
+    "subject": "worldguard",
+    "url": "https://github.com/enginehub/worldguard",
+    "idx": 26
+  },
+  {
+    "subject": "statsd-jvm-profiler",
+    "url": "https://github.com/etsy/statsd-jvm-profiler",
+    "idx": 27
+  },
+  {
+    "subject": "exp4j",
+    "url": "https://github.com/fasseg/exp4j",
+    "idx": 28
+  },
+  {
+    "subject": "jackson-core",
+    "url": "https://github.com/fasterxml/jackson-core",
+    "idx": 29
+  },
+  {
+    "subject": "jackson-dataformat-xml",
+    "url": "https://github.com/fasterxml/jackson-dataformat-xml",
+    "idx": 30
+  },
+  {
+    "subject": "jackson-dataformat-csv",
+    "memo": "(DEPRECATED) -- moved under: FasterXML/jackson-dataformats-text",
+    "url": "https://github.com/fasterxml/jackson-dataformats-text",
+    "idx": 31
+  },
+  {
+    "subject": "jackson-datatype-joda",
+    "url": "https://github.com/fasterxml/jackson-datatype-joda",
+    "idx": 32
+  },
+  {
+    "subject": "jackson-datatype-guava",
+    "memo": "(DEPRECATED) -- moved under `jackson-datatypes-collections`",
+    "url": "https://github.com/fasterxml/jackson-datatypes-collections",
+    "idx": 33
+  },
+  {
+    "subject": "wsc",
+    "url": "https://github.com/forcedotcom/wsc",
+    "idx": 34
+  },
+  {
+    "subject": "jsprit",
+    "url": "https://github.com/graphhopper/jsprit",
+    "idx": 35
+  },
+  {
+    "subject": "user-agent-utils",
+    "url": "https://github.com/haraldwalker/user-agent-utils",
+    "idx": 36
+  },
+  {
+    "subject": "disklrucache",
+    "url": "https://github.com/jakewharton/disklrucache",
+    "idx": 37
+  },
+  {
+    "subject": "mapdb-mapdb",
+    "url": "https://github.com/jankotek/mapdb",
+    "idx": 38
+  },
+  {
+    "subject": "joss",
+    "url": "https://github.com/javaswift/joss",
+    "idx": 39
+  },
+  {
+    "subject": "jprotobuf",
+    "url": "https://github.com/jhunters/jprotobuf",
+    "idx": 40
+  },
+  {
+    "subject": "jline2",
+    "url": "https://github.com/jline/jline2",
+    "idx": 41
+  },
+  {
+    "subject": "joda-time",
+    "url": "https://github.com/jodaorg/joda-time",
+    "idx": 42
+  },
+  {
+    "subject": "efflux",
+    "url": "https://github.com/jonbo372/efflux",
+    "idx": 43
+  },
+  {
+    "subject": "jopt-simple",
+    "url": "https://github.com/jopt-simple/jopt-simple",
+    "idx": 44
+  },
+  {
+    "subject": "jpush-api-java-client",
+    "url": "https://github.com/jpush/jpush-api-java-client",
+    "idx": 45
+  },
+  {
+    "subject": "jsqlparser",
+    "url": "https://github.com/jsqlparser/jsqlparser",
+    "idx": 46
+  },
+  {
+    "subject": "gson-fire",
+    "url": "https://github.com/julman99/gson-fire",
+    "idx": 47
+  },
+  {
+    "subject": "jactor",
+    "url": "https://github.com/laforge49/jactor",
+    "idx": 48
+  },
+  {
+    "subject": "languagetool",
+    "url": "https://github.com/languagetool-org/languagetool",
+    "idx": 49
+  },
+  {
+    "subject": "javaewah",
+    "url": "https://github.com/lemire/javaewah",
+    "idx": 50
+  },
+  {
+    "subject": "javafastpfor",
+    "url": "https://github.com/lemire/javafastpfor",
+    "idx": 51
+  },
+  {
+    "subject": "lanterna",
+    "url": "https://github.com/mabe02/lanterna",
+    "idx": 52
+  },
+  {
+    "subject": "lambdaj",
+    "url": "https://github.com/mariofusco/lambdaj",
+    "idx": 53
+  },
+  {
+    "subject": "mp3agic",
+    "url": "https://github.com/mpatric/mp3agic",
+    "idx": 54
+  },
+  {
+    "subject": "nodebox",
+    "url": "https://github.com/nodebox/nodebox",
+    "idx": 55
+  },
+  {
+    "subject": "ews-java-api",
+    "url": "https://github.com/officedev/ews-java-api",
+    "idx": 56
+  },
+  {
+    "subject": "geojson-jackson",
+    "url": "https://github.com/opendatalab-de/geojson-jackson",
+    "idx": 57
+  },
+  {
+    "subject": "jadventure",
+    "url": "https://github.com/progether/jadventure",
+    "idx": 58
+  },
+  {
+    "subject": "pusher-websocket-java",
+    "url": "https://github.com/pusher/pusher-websocket-java",
+    "idx": 59
+  },
+  {
+    "subject": "blueflood",
+    "url": "https://github.com/rackerlabs/blueflood",
+    "idx": 60
+  },
+  {
+    "subject": "raml-java-parser",
+    "url": "https://github.com/raml-org/raml-java-parser",
+    "idx": 61
+  },
+  {
+    "subject": "roaringbitmap",
+    "url": "https://github.com/roaringbitmap/roaringbitmap",
+    "idx": 62
+  },
+  {
+    "subject": "rome",
+    "url": "https://github.com/rometools/rome",
+    "idx": 63
+  },
+  {
+    "subject": "lastcalc",
+    "url": "https://github.com/sanity/lastcalc",
+    "idx": 64
+  },
+  {
+    "subject": "scribe-java",
+    "url": "https://github.com/scribejava/scribejava",
+    "idx": 65
+  },
+  {
+    "subject": "jasmine-maven-plugin",
+    "url": "https://github.com/searls/jasmine-maven-plugin",
+    "idx": 66
+  },
+  {
+    "subject": "jsonassert",
+    "url": "https://github.com/skyscreamer/jsonassert",
+    "idx": 67
+  },
+  {
+    "subject": "restfixture",
+    "url": "https://github.com/smartrics/restfixture",
+    "idx": 68
+  },
+  {
+    "subject": "spring-retry",
+    "url": "https://github.com/spring-projects/spring-retry",
+    "idx": 69
+  },
+  {
+    "subject": "javapoet",
+    "url": "https://github.com/square/javapoet",
+    "idx": 70
+  },
+  {
+    "subject": "protoparser",
+    "url": "https://github.com/square/protoparser",
+    "idx": 71
+  },
+  {
+    "subject": "stateless4j",
+    "url": "https://github.com/stateless4j/stateless4j",
+    "idx": 72
+  },
+  {
+    "subject": "nv-websocket-client",
+    "url": "https://github.com/takahikokawasaki/nv-websocket-client",
+    "idx": 73
+  },
+  {
+    "subject": "skype-java-api",
+    "url": "https://github.com/taksan/skype-java-api",
+    "idx": 74
+  },
+  {
+    "subject": "cassandra-reaper",
+    "url": "https://github.com/thelastpickle/cassandra-reaper",
+    "idx": 75
+  },
+  {
+    "subject": "jarchivelib",
+    "url": "https://github.com/thrau/jarchivelib",
+    "idx": 76
+  },
+  {
+    "subject": "jumblr",
+    "url": "https://github.com/tumblr/jumblr",
+    "idx": 77
+  },
+  {
+    "subject": "la4j",
+    "url": "https://github.com/vkostyukov/la4j",
+    "idx": 78
+  },
+  {
+    "subject": "webbit",
+    "url": "https://github.com/webbit/webbit",
+    "idx": 79
+  },
+  {
+    "subject": "xembly",
+    "url": "https://github.com/yegor256/xembly",
+    "idx": 80
+  }
+]

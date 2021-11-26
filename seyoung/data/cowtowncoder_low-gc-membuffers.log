@@ -1,0 +1,328 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/cowtowncoder/low-gc-membuffers repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.pom
+Progress (1): 2.7/4.7 kBProgress (1): 4.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.pom (4.7 kB at 4.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/bndlib/2.3.0/bndlib-2.3.0.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/bndlib/2.3.0/bndlib-2.3.0.pom (1.4 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/parent/2.3.0/parent-2.3.0.pom
+Progress (1): 2.7/4.1 kBProgress (1): 4.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/parent/2.3.0/parent-2.3.0.pom (4.1 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.1/org.osgi.core-4.3.1.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.1/org.osgi.core-4.3.1.pom (1.4 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.7/maven-core-2.0.7.pom
+Progress (1): 2.7/6.7 kBProgress (1): 5.5/6.7 kBProgress (1): 6.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.7/maven-core-2.0.7.pom (6.7 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.7/maven-plugin-parameter-documenter-2.0.7.pom
+Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.7/maven-plugin-parameter-documenter-2.0.7.pom (1.9 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.7/maven-reporting-api-2.0.7.pom
+Progress (1): 1.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.7/maven-reporting-api-2.0.7.pom (1.8 kB at 6.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.0.7/maven-reporting-2.0.7.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting/2.0.7/maven-reporting-2.0.7.pom (1.4 kB at 5.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.7/maven-error-diagnostics-2.0.7.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.7/maven-error-diagnostics-2.0.7.pom (1.7 kB at 6.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.7/maven-plugin-descriptor-2.0.7.pom
+Progress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.7/maven-plugin-descriptor-2.0.7.pom (2.0 kB at 7.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.7/maven-monitor-2.0.7.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.7/maven-monitor-2.0.7.pom (1.3 kB at 4.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom
+Progress (1): 2.7/4.5 kBProgress (1): 4.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom (4.5 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom
+Progress (1): 2.7/2.8 kBProgress (1): 2.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom (2.8 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom (1.7 kB at 6.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/bndlib/2.3.0/bndlib-2.3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.1/org.osgi.core-4.3.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.7/maven-core-2.0.7.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.7/maven-plugin-parameter-documenter-2.0.7.jar
+Progress (1): 2.7/176 kBProgress (1): 5.5/176 kBProgress (1): 8.2/176 kBProgress (1): 11/176 kB Progress (1): 14/176 kBProgress (1): 18/176 kBProgress (1): 22/176 kBProgress (1): 26/176 kBProgress (1): 30/176 kBProgress (1): 34/176 kBProgress (1): 38/176 kBProgress (1): 42/176 kBProgress (1): 46/176 kBProgress (1): 51/176 kBProgress (1): 55/176 kBProgress (1): 59/176 kBProgress (1): 63/176 kBProgress (1): 67/176 kBProgress (1): 71/176 kBProgress (1): 75/176 kBProgress (1): 79/176 kBProgress (1): 83/176 kBProgress (1): 87/176 kBProgress (1): 92/176 kBProgress (1): 96/176 kBProgress (1): 100/176 kBProgress (1): 104/176 kBProgress (1): 108/176 kBProgress (1): 112/176 kBProgress (1): 116/176 kBProgress (1): 120/176 kBProgress (1): 124/176 kBProgress (1): 128/176 kBProgress (2): 128/176 kB | 2.7/153 kBProgress (2): 132/176 kB | 2.7/153 kBProgress (3): 132/176 kB | 2.7/153 kB | 2.7/21 kBProgress (3): 132/176 kB | 5.5/153 kB | 2.7/21 kBProgress (3): 137/176 kB | 5.5/153 kB | 2.7/21 kBProgress (3): 137/176 kB | 5.5/153 kB | 5.5/21 kBProgress (3): 137/176 kB | 8.2/153 kB | 5.5/21 kBProgress (3): 141/176 kB | 8.2/153 kB | 5.5/21 kBProgress (3): 141/176 kB | 11/153 kB | 5.5/21 kB Progress (3): 141/176 kB | 11/153 kB | 8.2/21 kBProgress (3): 145/176 kB | 11/153 kB | 8.2/21 kBProgress (3): 145/176 kB | 11/153 kB | 11/21 kB Progress (3): 145/176 kB | 14/153 kB | 11/21 kBProgress (3): 145/176 kB | 14/153 kB | 14/21 kBProgress (3): 145/176 kB | 16/153 kB | 14/21 kBProgress (3): 145/176 kB | 16/153 kB | 16/21 kBProgress (4): 145/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MBProgress (4): 149/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MBProgress (4): 153/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MBProgress (4): 157/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MBProgress (4): 161/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MBProgress (5): 161/176 kB | 16/153 kB | 16/21 kB | 0/1.8 MB | 2.7/350 kBProgress (5): 161/176 kB | 19/153 kB | 16/21 kB | 0/1.8 MB | 2.7/350 kBProgress (5): 161/176 kB | 19/153 kB | 16/21 kB | 0/1.8 MB | 5.5/350 kBProgress (5): 161/176 kB | 19/153 kB | 16/21 kB | 0/1.8 MB | 8.2/350 kBProgress (5): 161/176 kB | 19/153 kB | 19/21 kB | 0/1.8 MB | 8.2/350 kBProgress (5): 161/176 kB | 19/153 kB | 19/21 kB | 0/1.8 MB | 11/350 kB Progress (5): 161/176 kB | 19/153 kB | 19/21 kB | 0/1.8 MB | 14/350 kBProgress (5): 161/176 kB | 22/153 kB | 19/21 kB | 0/1.8 MB | 14/350 kBProgress (5): 161/176 kB | 22/153 kB | 21 kB | 0/1.8 MB | 14/350 kB   Progress (5): 161/176 kB | 22/153 kB | 21 kB | 0/1.8 MB | 16/350 kBProgress (5): 161/176 kB | 22/153 kB | 21 kB | 0/1.8 MB | 16/350 kBProgress (5): 161/176 kB | 22/153 kB | 21 kB | 0/1.8 MB | 19/350 kBProgress (5): 161/176 kB | 25/153 kB | 21 kB | 0/1.8 MB | 19/350 kBProgress (5): 161/176 kB | 25/153 kB | 21 kB | 0/1.8 MB | 22/350 kBProgress (5): 161/176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 22/350 kBProgress (5): 165/176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 22/350 kBProgress (5): 165/176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 25/350 kBProgress (5): 169/176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 25/350 kBProgress (5): 173/176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 25/350 kBProgress (5): 176 kB | 27/153 kB | 21 kB | 0/1.8 MB | 25/350 kB    Progress (5): 176 kB | 30/153 kB | 21 kB | 0/1.8 MB | 25/350 kBProgress (5): 176 kB | 30/153 kB | 21 kB | 0/1.8 MB | 27/350 kBProgress (5): 176 kB | 30/153 kB | 21 kB | 0/1.8 MB | 27/350 kBProgress (5): 176 kB | 30/153 kB | 21 kB | 0/1.8 MB | 30/350 kBProgress (5): 176 kB | 33/153 kB | 21 kB | 0/1.8 MB | 30/350 kBProgress (5): 176 kB | 33/153 kB | 21 kB | 0/1.8 MB | 33/350 kBProgress (5): 176 kB | 36/153 kB | 21 kB | 0/1.8 MB | 33/350 kBProgress (5): 176 kB | 36/153 kB | 21 kB | 0/1.8 MB | 36/350 kBProgress (5): 176 kB | 36/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 38/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 38/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 41/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 44/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 47/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 49/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 49/153 kB | 21 kB | 0/1.8 MB | 38/350 kBProgress (5): 176 kB | 49/153 kB | 21 kB | 0/1.8 MB | 41/350 kBProgress (5): 176 kB | 52/153 kB | 21 kB | 0/1.8 MB | 41/350 kBProgress (5): 176 kB | 52/153 kB | 21 kB | 0/1.8 MB | 41/350 kBProgress (5): 176 kB | 55/153 kB | 21 kB | 0/1.8 MB | 41/350 kBProgress (5): 176 kB | 55/153 kB | 21 kB | 0/1.8 MB | 44/350 kBProgress (5): 176 kB | 55/153 kB | 21 kB | 0/1.8 MB | 47/350 kBProgress (5): 176 kB | 58/153 kB | 21 kB | 0/1.8 MB | 47/350 kBProgress (5): 176 kB | 58/153 kB | 21 kB | 0/1.8 MB | 49/350 kBProgress (5): 176 kB | 60/153 kB | 21 kB | 0/1.8 MB | 49/350 kBProgress (5): 176 kB | 60/153 kB | 21 kB | 0/1.8 MB | 52/350 kBProgress (5): 176 kB | 63/153 kB | 21 kB | 0/1.8 MB | 52/350 kB                                                               Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.7/maven-plugin-parameter-documenter-2.0.7.jar (21 kB at 35 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.7/maven-reporting-api-2.0.7.jar
+Progress (4): 176 kB | 66/153 kB | 0/1.8 MB | 52/350 kBProgress (4): 176 kB | 66/153 kB | 0/1.8 MB | 55/350 kBProgress (4): 176 kB | 66/153 kB | 0.1/1.8 MB | 55/350 kBProgress (4): 176 kB | 66/153 kB | 0.1/1.8 MB | 58/350 kB                                                         Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.5.3/maven-bundle-plugin-2.5.3.jar (176 kB at 295 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.7/maven-error-diagnostics-2.0.7.jar
+Progress (3): 66/153 kB | 0.1/1.8 MB | 60/350 kBProgress (3): 66/153 kB | 0.1/1.8 MB | 60/350 kBProgress (3): 66/153 kB | 0.1/1.8 MB | 63/350 kBProgress (3): 66/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 70/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 74/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 78/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 82/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 82/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 82/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 86/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 90/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 94/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 66/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 70/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 70/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 74/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 78/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 78/350 kBProgress (3): 99/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 103/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 107/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 111/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 82/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 86/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 90/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 94/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 99/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 103/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 107/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 111/350 kBProgress (3): 115/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 119/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 123/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 127/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 131/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 131/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 131/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 135/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 140/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 144/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 148/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 152/153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 115/350 kB    Progress (3): 153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 115/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 119/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 123/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 127/350 kBProgress (3): 153 kB | 0.1/1.8 MB | 131/350 kBProgress (4): 153 kB | 0.1/1.8 MB | 131/350 kB | 2.7/9.9 kBProgress (4): 153 kB | 0.1/1.8 MB | 131/350 kB | 5.5/9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 131/350 kB | 5.5/9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 131/350 kB | 5.5/9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 131/350 kB | 8.2/9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 131/350 kB | 9.9 kB    Progress (4): 153 kB | 0.2/1.8 MB | 135/350 kB | 9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 135/350 kB | 9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 140/350 kB | 9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 144/350 kB | 9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 144/350 kB | 9.9 kBProgress (4): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kBProgress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 4.1/14 kBProgress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 8.2/14 kBProgress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 12/14 kB Progress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 14 kB   Progress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 148/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 152/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 156/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 160/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 164/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 168/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 172/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 176/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 180/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 185/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 189/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 193/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 197/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 201/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 205/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 209/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 213/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 217/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 221/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 226/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 230/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.2/1.8 MB | 234/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 234/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 234/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 234/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 234/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 238/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 242/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 246/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 250/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 250/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 250/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 250/350 kB | 9.9 kB | 14 kBProgress (5): 153 kB | 0.3/1.8 MB | 250/350 kB | 9.9 kB | 14 kB                                                               Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.7/maven-core-2.0.7.jar (153 kB at 181 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.7/maven-plugin-descriptor-2.0.7.jar
+Progress (4): 0.3/1.8 MB | 254/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 258/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 262/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 267/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 267/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 267/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 267/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 267/350 kB | 9.9 kB | 14 kBProgress (4): 0.3/1.8 MB | 271/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 271/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 275/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 279/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 279/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 283/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 283/350 kB | 9.9 kB | 14 kBProgress (4): 0.4/1.8 MB | 283/350 kB | 9.9 kB | 14 kB                                                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.7/maven-reporting-api-2.0.7.jar (9.9 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.7/maven-monitor-2.0.7.jar
+Progress (3): 0.4/1.8 MB | 287/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 291/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 295/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 299/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 299/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 299/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 299/350 kB | 14 kBProgress (3): 0.4/1.8 MB | 299/350 kB | 14 kB                                             Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.7/maven-error-diagnostics-2.0.7.jar (14 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+Progress (2): 0.4/1.8 MB | 303/350 kBProgress (2): 0.4/1.8 MB | 307/350 kBProgress (2): 0.4/1.8 MB | 312/350 kBProgress (2): 0.4/1.8 MB | 316/350 kBProgress (2): 0.4/1.8 MB | 316/350 kBProgress (2): 0.4/1.8 MB | 316/350 kBProgress (2): 0.4/1.8 MB | 316/350 kBProgress (2): 0.4/1.8 MB | 316/350 kBProgress (2): 0.4/1.8 MB | 320/350 kBProgress (2): 0.4/1.8 MB | 324/350 kBProgress (2): 0.4/1.8 MB | 328/350 kBProgress (2): 0.4/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 332/350 kBProgress (2): 0.5/1.8 MB | 336/350 kBProgress (2): 0.5/1.8 MB | 340/350 kBProgress (2): 0.5/1.8 MB | 344/350 kBProgress (2): 0.5/1.8 MB | 348/350 kBProgress (2): 0.5/1.8 MB | 350 kB    Progress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.5/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.6/1.8 MB | 350 kBProgress (2): 0.7/1.8 MB | 350 kBProgress (2): 0.7/1.8 MB | 350 kBProgress (2): 0.7/1.8 MB | 350 kBProgress (3): 0.7/1.8 MB | 350 kB | 4.1/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 4.1/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 8.2/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 8.2/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 12/37 kB Progress (3): 0.7/1.8 MB | 350 kB | 16/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 16/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 16/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 20/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 20/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 25/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 25/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 29/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 33/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 37/37 kBProgress (3): 0.7/1.8 MB | 350 kB | 37 kB   Progress (3): 0.7/1.8 MB | 350 kB | 37 kBProgress (3): 0.7/1.8 MB | 350 kB | 37 kBProgress (3): 0.7/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (3): 0.8/1.8 MB | 350 kB | 37 kBProgress (4): 0.8/1.8 MB | 350 kB | 37 kB | 2.7/10 kBProgress (4): 0.8/1.8 MB | 350 kB | 37 kB | 2.7/10 kBProgress (4): 0.8/1.8 MB | 350 kB | 37 kB | 2.7/10 kBProgress (4): 0.8/1.8 MB | 350 kB | 37 kB | 5.5/10 kBProgress (4): 0.8/1.8 MB | 350 kB | 37 kB | 5.5/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 5.5/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 5.5/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 5.5/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 8.2/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 8.2/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 8.2/10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB    Progress (4): 0.9/1.8 MB | 350 kB | 37 kB | 10 kBProgress (4): 0.9/1.8 MB | 350 kB | 37 kB | 10 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 4.1/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 4.1/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 4.1/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 8.2/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 12/22 kB Progress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 16/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 16/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 16/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 20/22 kBProgress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kB   Progress (5): 0.9/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.0/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.1/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kBProgress (5): 1.1/1.8 MB | 350 kB | 37 kB | 10 kB | 22 kB                                                         Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.1/org.osgi.core-4.3.1.jar (350 kB at 338 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar
+Progress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.1/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.2/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.3/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.4/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kBProgress (4): 1.5/1.8 MB | 37 kB | 10 kB | 22 kB                                                Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.7/maven-plugin-descriptor-2.0.7.jar (37 kB at 33 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar
+Progress (3): 1.5/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.6/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.7/1.8 MB | 10 kB | 22 kBProgress (3): 1.8/1.8 MB | 10 kB | 22 kBProgress (3): 1.8/1.8 MB | 10 kB | 22 kBProgress (3): 1.8/1.8 MB | 10 kB | 22 kBProgress (3): 1.8/1.8 MB | 10 kB | 22 kBProgress (3): 1.8 MB | 10 kB | 22 kB                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar (22 kB at 19 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.7/maven-monitor-2.0.7.jar (10 kB at 8.8 kB/s)
+Progress (2): 1.8 MB | 4.1/184 kBProgress (2): 1.8 MB | 8.2/184 kBProgress (2): 1.8 MB | 12/184 kB Progress (2): 1.8 MB | 16/184 kBProgress (2): 1.8 MB | 20/184 kBProgress (2): 1.8 MB | 25/184 kBProgress (2): 1.8 MB | 29/184 kBProgress (2): 1.8 MB | 33/184 kBProgress (2): 1.8 MB | 37/184 kBProgress (2): 1.8 MB | 41/184 kBProgress (2): 1.8 MB | 45/184 kBProgress (2): 1.8 MB | 49/184 kBProgress (2): 1.8 MB | 53/184 kBProgress (2): 1.8 MB | 57/184 kBProgress (2): 1.8 MB | 61/184 kBProgress (2): 1.8 MB | 66/184 kBProgress (2): 1.8 MB | 70/184 kBProgress (2): 1.8 MB | 74/184 kBProgress (2): 1.8 MB | 78/184 kBProgress (2): 1.8 MB | 82/184 kBProgress (2): 1.8 MB | 86/184 kBProgress (2): 1.8 MB | 90/184 kBProgress (2): 1.8 MB | 94/184 kBProgress (2): 1.8 MB | 98/184 kBProgress (2): 1.8 MB | 102/184 kBProgress (2): 1.8 MB | 106/184 kBProgress (2): 1.8 MB | 111/184 kBProgress (2): 1.8 MB | 115/184 kBProgress (2): 1.8 MB | 119/184 kBProgress (2): 1.8 MB | 123/184 kBProgress (2): 1.8 MB | 127/184 kBProgress (2): 1.8 MB | 131/184 kBProgress (2): 1.8 MB | 135/184 kBProgress (2): 1.8 MB | 139/184 kBProgress (2): 1.8 MB | 143/184 kBProgress (2): 1.8 MB | 147/184 kBProgress (2): 1.8 MB | 152/184 kBProgress (2): 1.8 MB | 156/184 kBProgress (2): 1.8 MB | 160/184 kBProgress (2): 1.8 MB | 164/184 kBProgress (2): 1.8 MB | 168/184 kBProgress (2): 1.8 MB | 172/184 kBProgress (2): 1.8 MB | 176/184 kBProgress (2): 1.8 MB | 180/184 kBProgress (2): 1.8 MB | 184/184 kBProgress (2): 1.8 MB | 184 kB    Progress (3): 1.8 MB | 184 kB | 4.1/58 kBProgress (3): 1.8 MB | 184 kB | 8.2/58 kBProgress (3): 1.8 MB | 184 kB | 12/58 kB Progress (3): 1.8 MB | 184 kB | 16/58 kBProgress (3): 1.8 MB | 184 kB | 20/58 kBProgress (3): 1.8 MB | 184 kB | 25/58 kBProgress (3): 1.8 MB | 184 kB | 29/58 kBProgress (3): 1.8 MB | 184 kB | 33/58 kB                                        Downloaded from central: https://repo.maven.apache.org/maven2/biz/aQute/bnd/bndlib/2.3.0/bndlib-2.3.0.jar (1.8 MB at 1.4 MB/s)
+Progress (2): 184 kB | 37/58 kBProgress (2): 184 kB | 41/58 kBProgress (2): 184 kB | 45/58 kBProgress (2): 184 kB | 49/58 kBProgress (2): 184 kB | 53/58 kBProgress (2): 184 kB | 57/58 kBProgress (2): 184 kB | 58 kB                               Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar (184 kB at 135 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar (58 kB at 40 kB/s)
+[INFO] 
+[INFO] ----------------< com.fasterxml.util:low-gc-membuffers >----------------
+[INFO] Building Low GC memory buffers 1.2.1-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ low-gc-membuffers ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-java) @ low-gc-membuffers ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ low-gc-membuffers ---
+[INFO] Source directory: /Users/seyoung/data/repo/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ low-gc-membuffers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ low-gc-membuffers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 33 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ low-gc-membuffers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ low-gc-membuffers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ low-gc-membuffers ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.util.membuf.impl.BufferCloseTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.util.membuf.impl.BufferCloseTest
+[INFO] Running com.fasterxml.util.membuf.impl.BufferReuseTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.impl.BufferReuseTest
+[INFO] Running com.fasterxml.util.membuf.misc.TestAutoClose
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s - in com.fasterxml.util.membuf.misc.TestAutoClose
+[INFO] Running com.fasterxml.util.membuf.bytes.LeakingBuffersTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.bytes.LeakingBuffersTest
+[INFO] Running com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.PeekChunkyBytesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.bytes.PeekChunkyBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 s - in com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.FullBytesBufferTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.bytes.FullBytesBufferTest
+[INFO] Running com.fasterxml.util.membuf.bytes.SkipBytesTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.util.membuf.bytes.SkipBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 s - in com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest
+[INFO] Running com.fasterxml.util.membuf.util.BufferRecyclerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.util.BufferRecyclerTest
+[INFO] Running com.fasterxml.util.membuf.util.UTF8MateTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in com.fasterxml.util.membuf.util.UTF8MateTest
+[INFO] Running com.fasterxml.util.membuf.longs.LongerStreamyLongsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in com.fasterxml.util.membuf.longs.LongerStreamyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.SkipLongsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.longs.SkipLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.LongerChunkyLongsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.util.membuf.longs.LongerChunkyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.PeekChunkyLongsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.longs.PeekChunkyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.FullLongsBufferTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.util.membuf.longs.FullLongsBufferTest
+[INFO] Running com.fasterxml.util.membuf.longs.AppendReadLongsTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s - in com.fasterxml.util.membuf.longs.AppendReadLongsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.571 s
+[INFO] Finished at: 2021-11-27T04:14:33+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.fasterxml.util:low-gc-membuffers >----------------
+[INFO] Building Low GC memory buffers 1.2.1-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ low-gc-membuffers ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ low-gc-membuffers ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 33 files (4 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 19 files (6 packages).
+[INFO] 51 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-java) @ low-gc-membuffers ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ low-gc-membuffers ---
+[INFO] Source directory: /Users/seyoung/data/repo/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ low-gc-membuffers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ low-gc-membuffers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 33 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ low-gc-membuffers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ low-gc-membuffers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.6
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ low-gc-membuffers ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.util.membuf.impl.BufferCloseTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in com.fasterxml.util.membuf.impl.BufferCloseTest
+[INFO] Running com.fasterxml.util.membuf.impl.BufferReuseTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.impl.BufferReuseTest
+[INFO] Running com.fasterxml.util.membuf.misc.TestAutoClose
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in com.fasterxml.util.membuf.misc.TestAutoClose
+[INFO] Running com.fasterxml.util.membuf.bytes.LeakingBuffersTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.util.membuf.bytes.LeakingBuffersTest
+[INFO] Running com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s - in com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.PeekChunkyBytesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.util.membuf.bytes.PeekChunkyBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.258 s - in com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.FullBytesBufferTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.util.membuf.bytes.FullBytesBufferTest
+[INFO] Running com.fasterxml.util.membuf.bytes.SkipBytesTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.util.membuf.bytes.SkipBytesTest
+[INFO] Running com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 s - in com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest
+[INFO] Running com.fasterxml.util.membuf.util.BufferRecyclerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.util.membuf.util.BufferRecyclerTest
+[INFO] Running com.fasterxml.util.membuf.util.UTF8MateTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.323 s - in com.fasterxml.util.membuf.util.UTF8MateTest
+[INFO] Running com.fasterxml.util.membuf.longs.LongerStreamyLongsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 s - in com.fasterxml.util.membuf.longs.LongerStreamyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.SkipLongsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.util.membuf.longs.SkipLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.LongerChunkyLongsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.util.membuf.longs.LongerChunkyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.PeekChunkyLongsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.util.membuf.longs.PeekChunkyLongsTest
+[INFO] Running com.fasterxml.util.membuf.longs.FullLongsBufferTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.util.membuf.longs.FullLongsBufferTest
+[INFO] Running com.fasterxml.util.membuf.longs.AppendReadLongsTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s - in com.fasterxml.util.membuf.longs.AppendReadLongsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ----------------< com.fasterxml.util:low-gc-membuffers >----------------
+[INFO] Building Low GC memory buffers 1.2.1-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ low-gc-membuffers ---
+[INFO] 
+[INFO] ----------------< com.fasterxml.util:low-gc-membuffers >----------------
+[INFO] Building Low GC memory buffers 1.2.1-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ low-gc-membuffers ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn6768370379322100066resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.608 s
+[INFO] Finished at: 2021-11-27T04:14:41+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testChunkyAppendAndGet
+[test][2/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testChunkyAppendAndRead
+[test][3/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testChunkyReadFromEmpty
+[test][4/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testEmptySegments
+[test][5/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testStreamyAppendAndGet
+[test][6/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testStreamyAppendAndGet2
+[test][7/51] com.fasterxml.util.membuf.bytes.AppendAndReadBytesTest#testStreamyReadFromEmpty
+[test][8/51] com.fasterxml.util.membuf.bytes.FullBytesBufferTest#testChunkyMaxBuffers
+[test][9/51] com.fasterxml.util.membuf.bytes.FullBytesBufferTest#testChunkyTryWriteToFull
+[test][10/51] com.fasterxml.util.membuf.bytes.FullBytesBufferTest#testStreamyMaxBuffers
+[test][11/51] com.fasterxml.util.membuf.bytes.FullBytesBufferTest#testStreamyTryWriteToFull
+[test][12/51] com.fasterxml.util.membuf.bytes.LeakingBuffersTest#testSimpleLeak
+[test][13/51] com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest#test12SegmentBuffer
+[test][14/51] com.fasterxml.util.membuf.bytes.LongerChunkyBytesTest#testShakespeareLineByLine
+[test][15/51] com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest#test12SegmentBuffer
+[test][16/51] com.fasterxml.util.membuf.bytes.LongerStreamyBytesTest#testShakespeare
+[test][17/51] com.fasterxml.util.membuf.bytes.PeekChunkyBytesTest#testChunkyPeeks
+[test][18/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testChunkyLongerSkip
+[test][19/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testChunkySkipAndRead
+[test][20/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testChunkySkips
+[test][21/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testStreamyLongerSkip
+[test][22/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testStreamySkipAndRead
+[test][23/51] com.fasterxml.util.membuf.bytes.SkipBytesTest#testStreamySkips
+[test][24/51] com.fasterxml.util.membuf.impl.BufferCloseTest#testClosing
+[test][25/51] com.fasterxml.util.membuf.impl.BufferReuseTest#testGlobalReuseWithClear
+[test][26/51] com.fasterxml.util.membuf.impl.BufferReuseTest#testGlobalReuseWithReads
+[test][27/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testEmptySegments
+[test][28/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testSimpleAppendAndGet
+[test][29/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testSimpleAppendAndRead
+[test][30/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testStreamyAppendAndGet
+[test][31/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testStreamyAppendAndGet2
+[test][32/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testStreamyReadFromEmpty
+[test][33/51] com.fasterxml.util.membuf.longs.AppendReadLongsTest#testTryReadFromEmpty
+[test][34/51] com.fasterxml.util.membuf.longs.FullLongsBufferTest#testChunkyMaxBuffers
+[test][35/51] com.fasterxml.util.membuf.longs.FullLongsBufferTest#testChunkyTryWriteToFull
+[test][36/51] com.fasterxml.util.membuf.longs.FullLongsBufferTest#testStreamyMaxBuffers
+[test][37/51] com.fasterxml.util.membuf.longs.FullLongsBufferTest#testStreamyTryWriteToFull
+[test][38/51] com.fasterxml.util.membuf.longs.LongerChunkyLongsTest#test12SegmentBuffer
+[test][39/51] com.fasterxml.util.membuf.longs.LongerStreamyLongsTest#test12SegmentBuffer
+[test][40/51] com.fasterxml.util.membuf.longs.LongerStreamyLongsTest#testShakespeare
+[test][41/51] com.fasterxml.util.membuf.longs.PeekChunkyLongsTest#testSimplePeeks
+[test][42/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testChunkySkips
+[test][43/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testLongerSkip
+[test][44/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testSimpleSkipAndRead
+[test][45/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testStreamyLongerSkip
+[test][46/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testStreamySkipAndRead
+[test][47/51] com.fasterxml.util.membuf.longs.SkipLongsTest#testStreamySkips
+[test][48/51] com.fasterxml.util.membuf.misc.TestAutoClose#testAutoCloseWithFinalize
+[test][49/51] com.fasterxml.util.membuf.util.BufferRecyclerTest#testSimple
+[test][50/51] com.fasterxml.util.membuf.util.UTF8MateTest#testLonger
+[test][51/51] com.fasterxml.util.membuf.util.UTF8MateTest#testSimple
+[main][14/14] python parse_data.py
+  0%|          | 0/51 [00:00<?, ?it/s] 27%|██▋       | 14/51 [00:00<00:00, 133.07it/s] 59%|█████▉    | 30/51 [00:00<00:00, 144.53it/s] 90%|█████████ | 46/51 [00:00<00:00, 149.96it/s]100%|██████████| 51/51 [00:00<00:00, 148.46it/s]
+Done.

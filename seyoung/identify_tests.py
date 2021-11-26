@@ -42,7 +42,7 @@ def make_command(package: str, test_class: str, test_method: str, i: int, n: int
     clover_xml = f"./clover/{name}.xml"
     log_file = f"./clover/{name}.log"
 
-    cmd = f'echo "{i}/{n}: {test}" && mvn --file repo/pom.xml --fail-never --log-file {log_file} -Dmaven.clover.generateHtml=false -Dtest={test} clean clover:setup test clover:aggregate clover:clover && cp repo/target/site/clover/clover.xml {clover_xml}'
+    cmd = f'echo "[test][{i+1}/{n}] {test}" && mvn --file repo/pom.xml --fail-never --log-file {log_file} -Dmaven.clover.generateHtml=false -Dtest={test} clean clover:setup test clover:aggregate clover:clover && cp repo/target/site/clover/clover.xml {clover_xml}'
     return cmd
 
 
@@ -85,7 +85,7 @@ def identify_tests(clover_xml: str):
     )
     n = len(unit_tests)
     commands = [
-        make_command(d["package"], d["test_class"], d["test_method"], i + 1, n)
+        make_command(d["package"], d["test_class"], d["test_method"], i, n)
         for i, d in enumerate(unit_tests)
     ]
 
@@ -99,7 +99,7 @@ def main():
     clover_xml = "clover.xml"
 
     commands = identify_tests(clover_xml)
-    write_list("commands.sh", commands)
+    write_list("tests.sh", commands)
 
     print("Done.")
 

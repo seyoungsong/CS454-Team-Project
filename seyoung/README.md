@@ -8,10 +8,10 @@
 - [sloc](https://github.com/flosse/sloc)
 
 ```bash
-# install OpenJDK 11
-brew install openjdk@11
-sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-java -version # openjdk version "11.0.12"
+# install OpenJDK 8
+brew install openjdk@8
+sudo ln -sfn $(brew --prefix)/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+java -version # openjdk version "1.8.0_312"
 
 # install Maven
 echo "export JAVA_HOME=$(/usr/libexec/java_home)" >> ~/.zshrc
@@ -46,21 +46,13 @@ code ~/.m2/settings.xml
 
 ## Clone the subject repository from GitHub
 
-- [Search GitHub](https://github.com/search)
-
-TODO: git clone latest tag
-
 ```bash
 # download a java program from github
 rm -rf repo
 git clone --depth 1 --recursive https://github.com/cowtowncoder/java-uuid-generator repo
-rm -rf repo/.git
 
 # make sure maven works
 mvn --file repo/pom.xml --fail-never clean test
-
-# run sloc
-sloc --format cli-table repo > sloc.txt # SLOC
 ```
 
 ## Run OpenClover
@@ -72,13 +64,20 @@ mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clo
 # copy clover.xml to root
 cp repo/target/site/clover/clover.xml ./clover.xml
 
-# identify unit tests from clover.xml and make commands.sh
+# identify unit tests from clover.xml and make tests.sh
 python identify_tests.py
 
 # run clover for single tests
 rm -rf clover
 mkdir -p clover
-bash commands.sh
+bash tests.sh
+
+# log github url, timestamp, hash
+git --git-dir repo/.git config --get remote.origin.url > git.log
+git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+
+# run sloc
+sloc --format cli-table repo > sloc.txt # SLOC
 
 # parse xml files to make data.json
 python parse_data.py
@@ -102,4 +101,16 @@ mvn --file repo/pom.xml clean clover:setup -Dtest=com.rometools.certiorem.hub.Co
 # copy (unit) clover.xml to clover dir
 mkdir -p ./clover
 cp repo/target/site/clover/clover.xml ./clover/clover#com.rometools.certiorem.hub#ControllerTest#testSubscribe.xml
+```
+
+## Run
+
+Change `--idx` with respect to [`github_result_idx.json](./github_result_idx.json)
+
+```bash
+python main.py --idx 22
+zsh run.sh
+
+# one line
+python main.py --idx 22; clear; zsh run.sh
 ```

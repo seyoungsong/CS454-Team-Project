@@ -51,14 +51,21 @@ TODO
 
 ## 4.2. Experimental Design
 
-N=1
-N=2, 1:1
-N=3, 1:2:3
-N=8, 1:1:1:1:4:4:4:4
+1. Sequential Test Prioritization
+   - $c = \{1\}$
+2. Parallel Test Prioritization
+   - $c = \{2, 4, 8, 16\}$
+3. Parallel Test Prioritization (Distributed System)
+   - $1:2$
+   - $1:3$
+   - $1:4$
+   - $1:1:1:1:4:4:4:4$
 
 ## 4.3. Subjects
 
 TODO: Seyoung
+
+27 Java Projects
 
 ## 4.4. Results and Analysis
 

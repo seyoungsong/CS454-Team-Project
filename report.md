@@ -14,57 +14,57 @@ CJKmainfont: Noto Serif CJK KR
 
 # Abstract
 
-TODO: 마지막
+TODO
 
-# Introduction
+# 1. Introduction
 
 - Regression Test Case Prioritization
 - Parallel Test Prioritization
 - Parallel Test Prioritization, but different CPU
 
-# Parallel Test Prioritization
+# 2. Parallel Test Prioritization
 
 - Problem Description
 - Problem Definition
 - Effectiveness Measure
 
-# Algorithms
+# 3. Algorithms
 
-## Greedy Algorithms
-
-TODO
-
-## Simulated Annealing
+## 3.1. Greedy Algorithms
 
 TODO
 
-## Genetic Algorithms
+## 3.2. Simulated Annealing
 
 TODO
 
-# Empirical Study
+## 3.3. Genetic Algorithms
 
-## Research Questions
+TODO
+
+# 4. Empirical Study
+
+## 4.1. Research Questions
 
 - RQ1: Which algorithm is most effective in solving the parallel test prioritization problem?
 - RQ2: How do the number of computing resources and the relative performance between them influence the performance of the parallel test prioritization techniques?
 
-## Experimental Design
+## 4.2. Experimental Design
 
 N=1
 N=2, 1:1
 N=3, 1:2:3
 N=8, 1:1:1:1:4:4:4:4
 
-## Subjects and Tools
+## 4.3. Subjects
 
 TODO: Seyoung
 
-## Results and Analysis
+## 4.4. Results and Analysis
 
 TODO
 
-# Conclusion
+# 5. Conclusion
 
 - Discussion
   - Comparison With Sequential Test Prioritization

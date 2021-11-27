@@ -19,7 +19,7 @@ def main():
     subprocess.run(md2pdf.split())
     openpdf = "open report.pdf"
     subprocess.run(openpdf.split())
-    print("Done")
+    print("Done.")
 
 
 if __name__ == "__main__":

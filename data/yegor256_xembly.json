@@ -1,0 +1,8882 @@
+{
+  "info": {
+    "project": "xembly 1.0-SNAPSHOT",
+    "filename": "yegor256_xembly.json",
+    "github": {
+      "url": "https://github.com/yegor256/xembly",
+      "dev": "yegor256",
+      "repo": "xembly"
+    },
+    "env": {
+      "platform": "macOS-11.6-arm64-arm-64bit",
+      "java": "openjdk version \"1.8.0_312\"",
+      "maven": "Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)"
+    },
+    "commit": {
+      "datetime": "2020-11-16T05:50:56+09:00",
+      "url": "https://github.com/yegor256/xembly/tree/414be57c0722936ee40264aa8367a493981c90f2",
+      "hash": "414be57c0722936ee40264aa8367a493981c90f2",
+      "timestamp": 1605473456
+    },
+    "metrics": {
+      "project": {
+        "coveredelements": "537",
+        "complexity": "192",
+        "loc": "3112",
+        "methods": "108",
+        "classes": "29",
+        "statements": "435",
+        "packages": "1",
+        "coveredconditionals": "76",
+        "coveredmethods": "95",
+        "elements": "643",
+        "ncloc": "1325",
+        "files": "27",
+        "conditionals": "100",
+        "coveredstatements": "366"
+      },
+      "testproject": {
+        "coveredelements": "306",
+        "complexity": "72",
+        "loc": "2254",
+        "methods": "68",
+        "classes": "19",
+        "statements": "258",
+        "packages": "2",
+        "coveredconditionals": "6",
+        "coveredmethods": "63",
+        "elements": "334",
+        "ncloc": "1214",
+        "files": "19",
+        "conditionals": "8",
+        "coveredstatements": "237"
+      }
+    }
+  },
+  "data": [
+    {
+      "name": "org.xembly.AddDirectiveTest#addsNodesToCurrentNodes",
+      "package": "org.xembly",
+      "class": "AddDirectiveTest",
+      "method": "addsNodesToCurrentNodes",
+      "success": true,
+      "duration": 0.111,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.AddIfDirectiveTest#addsDomNodesDirectly",
+      "package": "org.xembly",
+      "class": "AddIfDirectiveTest",
+      "method": "addsDomNodesDirectly",
+      "success": true,
+      "duration": 0.082,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "78F",
+            "78T",
+            "79",
+            "79F",
+            "85",
+            "85T",
+            "86",
+            "87",
+            "87T",
+            "88",
+            "92",
+            "93",
+            "95",
+            "97"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.AddIfDirectiveTest#addsNodesToCurrentNodes",
+      "package": "org.xembly",
+      "class": "AddIfDirectiveTest",
+      "method": "addsNodesToCurrentNodes",
+      "success": true,
+      "duration": 0.111,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "78F",
+            "78T",
+            "79",
+            "79F",
+            "79T",
+            "81",
+            "82",
+            "85",
+            "85F",
+            "85T",
+            "86",
+            "87",
+            "87T",
+            "88",
+            "92",
+            "93",
+            "95",
+            "97"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.ArgTest#escapesAndUnescaped",
+      "package": "org.xembly",
+      "class": "ArgTest",
+      "method": "escapesAndUnescaped",
+      "success": true,
+      "duration": 0.006,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "119T",
+            "120",
+            "121",
+            "121F",
+            "121T",
+            "122",
+            "123",
+            "123F",
+            "123T",
+            "124",
+            "125",
+            "125F",
+            "125T",
+            "126",
+            "127",
+            "127F",
+            "127T",
+            "128",
+            "129",
+            "129F",
+            "129T",
+            "130",
+            "132",
+            "135",
+            "144M",
+            "145",
+            "146",
+            "146F",
+            "146T",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "151",
+            "151F",
+            "151T",
+            "152",
+            "153",
+            "153F",
+            "153T",
+            "154",
+            "155",
+            "155F",
+            "155T",
+            "156",
+            "157",
+            "157T",
+            "158",
+            "164",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.ArgTest#rejectsToEscapeInvalidXmlChars",
+      "package": "org.xembly",
+      "class": "ArgTest",
+      "method": "rejectsToEscapeInvalidXmlChars",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "190M",
+            "192",
+            "192F",
+            "192T",
+            "193",
+            "209M",
+            "210",
+            "211",
+            "54M",
+            "55"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XmlContentException",
+          "lines": [
+            "48M",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.ArgTest#rejectsToUnEscapeInvalidXmlChars",
+      "package": "org.xembly",
+      "class": "ArgTest",
+      "method": "rejectsToUnEscapeInvalidXmlChars",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "144M",
+            "145",
+            "146",
+            "146T",
+            "147",
+            "148",
+            "173M",
+            "175",
+            "190M",
+            "192",
+            "192T",
+            "193",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XmlContentException",
+          "lines": [
+            "48M",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.AttrDirectiveTest#addsAttributesToCurrentNodes",
+      "package": "org.xembly",
+      "class": "AttrDirectiveTest",
+      "method": "addsAttributesToCurrentNodes",
+      "success": true,
+      "duration": 0.118,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.AttrDirectiveTest#addsCaseSensitiveAttributesDirectly",
+      "package": "org.xembly",
+      "class": "AttrDirectiveTest",
+      "method": "addsCaseSensitiveAttributesDirectly",
+      "success": true,
+      "duration": 0.119,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.AttrDirectiveTest#addsDomAttributesDirectly",
+      "package": "org.xembly",
+      "class": "AttrDirectiveTest",
+      "method": "addsDomAttributesDirectly",
+      "success": true,
+      "duration": 0.071,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.CommentDirectiveTest#addsComment",
+      "package": "org.xembly",
+      "class": "CommentDirectiveTest",
+      "method": "addsComment",
+      "success": true,
+      "duration": 0.108,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "CommentDirective",
+          "lines": [
+            "56M",
+            "57",
+            "65M",
+            "69",
+            "70",
+            "70T",
+            "71",
+            "75",
+            "76",
+            "77",
+            "78",
+            "80"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#addsComments",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "addsComments",
+      "success": true,
+      "duration": 0.114,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "CommentDirective",
+          "lines": [
+            "56M",
+            "57",
+            "65M",
+            "69",
+            "70",
+            "70T",
+            "71",
+            "75",
+            "76",
+            "77",
+            "78",
+            "80"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "539M",
+            "540",
+            "541",
+            "551",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268",
+            "287M",
+            "289",
+            "290",
+            "291",
+            "292",
+            "297",
+            "297F",
+            "300",
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#addsElementsCaseSensitively",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "addsElementsCaseSensitively",
+      "success": true,
+      "duration": 0.101,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "78F",
+            "85",
+            "85T",
+            "86",
+            "87",
+            "87T",
+            "88",
+            "92",
+            "93",
+            "95",
+            "97"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "310M",
+            "311",
+            "312",
+            "322",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#addsMapOfValues",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "addsMapOfValues",
+      "success": true,
+      "duration": 0.108,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "295M",
+            "296",
+            "297",
+            "301",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "444M",
+            "446",
+            "447",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#appendsDirs",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "appendsDirs",
+      "success": true,
+      "duration": 0.008,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "121M",
+            "123",
+            "126M",
+            "128",
+            "226M",
+            "227",
+            "228",
+            "230",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Print",
+          "lines": [
+            "53M",
+            "54",
+            "57M",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "64F",
+            "67",
+            "68",
+            "69",
+            "70",
+            "70F",
+            "73",
+            "75"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#appendsExistingNode",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "appendsExistingNode",
+      "success": true,
+      "duration": 0.083,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "156M",
+            "164",
+            "165",
+            "165F",
+            "165T",
+            "166",
+            "167",
+            "168",
+            "168F",
+            "168T",
+            "169",
+            "170",
+            "173",
+            "173F",
+            "173T",
+            "174",
+            "175",
+            "176",
+            "176F",
+            "176T",
+            "177",
+            "178",
+            "179",
+            "180",
+            "183",
+            "187",
+            "188",
+            "189",
+            "189F",
+            "189T",
+            "190",
+            "191",
+            "191F",
+            "200",
+            "217",
+            "226M",
+            "227",
+            "228",
+            "230",
+            "241M",
+            "242",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "444M",
+            "446",
+            "447",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#convertsToString",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "convertsToString",
+      "success": true,
+      "duration": 0.047,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "121M",
+            "123",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Print",
+          "lines": [
+            "53M",
+            "54",
+            "57M",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "64F",
+            "64T",
+            "65",
+            "67",
+            "68",
+            "69",
+            "70",
+            "70F",
+            "70T",
+            "71",
+            "73",
+            "75"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#copiesExistingNode",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "copiesExistingNode",
+      "success": true,
+      "duration": 0.104,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "156M",
+            "164",
+            "165",
+            "165F",
+            "165T",
+            "166",
+            "167",
+            "168",
+            "168F",
+            "168T",
+            "169",
+            "170",
+            "173",
+            "173F",
+            "173T",
+            "174",
+            "175",
+            "176",
+            "176F",
+            "176T",
+            "177",
+            "178",
+            "179",
+            "180",
+            "183",
+            "187",
+            "188",
+            "189",
+            "189F",
+            "189T",
+            "190",
+            "191",
+            "191F",
+            "200",
+            "201",
+            "202",
+            "203",
+            "205",
+            "206",
+            "217",
+            "226M",
+            "227",
+            "228",
+            "230",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "375M",
+            "377",
+            "378",
+            "388",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "444M",
+            "446",
+            "447",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87F",
+            "90",
+            "91",
+            "94"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#ingoresEmptyInput",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "ingoresEmptyInput",
+      "success": true,
+      "duration": 0.046,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#makesXmlDocument",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "makesXmlDocument",
+      "success": true,
+      "duration": 0.093,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "CdataDirective",
+          "lines": [
+            "56M",
+            "57",
+            "65M",
+            "69",
+            "70",
+            "70T",
+            "71",
+            "75",
+            "76",
+            "77",
+            "78",
+            "80"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "375M",
+            "377",
+            "378",
+            "388",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "444M",
+            "446",
+            "447",
+            "513M",
+            "514",
+            "515",
+            "525",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87F",
+            "90",
+            "91",
+            "94"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#parsesIncomingGrammar",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "parsesIncomingGrammar",
+      "success": true,
+      "duration": 0.05,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "84M",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#performsFullScaleModifications",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "performsFullScaleModifications",
+      "success": true,
+      "duration": 0.173,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "68M",
+            "70",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "121M",
+            "123",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Print",
+          "lines": [
+            "53M",
+            "54",
+            "57M",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "64F",
+            "67",
+            "68",
+            "69",
+            "70",
+            "70F",
+            "73",
+            "75"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "59M",
+            "61",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#prefixesItemsWithNamespaces",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "prefixesItemsWithNamespaces",
+      "success": true,
+      "duration": 0.12,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#pushesAndPopsCursor",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "pushesAndPopsCursor",
+      "success": true,
+      "duration": 0.091,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "487M",
+            "488",
+            "489",
+            "497M",
+            "498",
+            "499",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomStack",
+          "lines": [
+            "53M",
+            "55",
+            "56",
+            "60M",
+            "62",
+            "63",
+            "64"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PopDirective",
+          "lines": [
+            "50M",
+            "54"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PushDirective",
+          "lines": [
+            "50M",
+            "54",
+            "55"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#throwsOnBrokenEscapedXmlContent",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "throwsOnBrokenEscapedXmlContent",
+      "success": true,
+      "duration": 0.046,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "144M",
+            "145",
+            "146",
+            "146T",
+            "147",
+            "148",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "190M",
+            "192",
+            "192F",
+            "192T",
+            "193",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90T",
+            "91",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ParsingException",
+          "lines": [
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SyntaxException",
+          "lines": [
+            "49M",
+            "50"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "79",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XmlContentException",
+          "lines": [
+            "48M",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#throwsOnBrokenGrammar",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "throwsOnBrokenGrammar",
+      "success": true,
+      "duration": 0.046,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "SyntaxException",
+          "lines": [
+            "49M",
+            "50"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88",
+            "90M",
+            "95"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DirectivesTest#throwsOnBrokenXmlContent",
+      "package": "org.xembly",
+      "class": "DirectivesTest",
+      "method": "throwsOnBrokenXmlContent",
+      "success": true,
+      "duration": 0.047,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "190M",
+            "192",
+            "192F",
+            "192T",
+            "193",
+            "209M",
+            "210",
+            "211",
+            "54M",
+            "55",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ParsingException",
+          "lines": [
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SyntaxException",
+          "lines": [
+            "49M",
+            "50"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "79",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XmlContentException",
+          "lines": [
+            "48M",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DomStackTest#addsAndRetrieves",
+      "package": "org.xembly",
+      "class": "DomStackTest",
+      "method": "addsAndRetrieves",
+      "success": true,
+      "duration": 0.286,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "DomStack",
+          "lines": [
+            "53M",
+            "55",
+            "56",
+            "60M",
+            "62",
+            "63",
+            "64"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.DomStackTest#throwsExceptionOnEmpty",
+      "package": "org.xembly",
+      "class": "DomStackTest",
+      "method": "throwsExceptionOnEmpty",
+      "success": true,
+      "duration": 0.015,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "DomStack",
+          "lines": [
+            "60M",
+            "62",
+            "63",
+            "64",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ImpossibleModificationException",
+          "lines": [
+            "57M",
+            "59"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.NsDirectiveTest#setsNsAttr",
+      "package": "org.xembly",
+      "class": "NsDirectiveTest",
+      "method": "setsNsAttr",
+      "success": true,
+      "duration": 0.129,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "NsDirective",
+          "lines": [
+            "53M",
+            "54",
+            "65M",
+            "68",
+            "69",
+            "73"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.PiDirectiveTest#addsProcessingInstructionsDirectlyToDom",
+      "package": "org.xembly",
+      "class": "PiDirectiveTest",
+      "method": "addsProcessingInstructionsDirectlyToDom",
+      "success": true,
+      "duration": 0.088,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87T",
+            "88",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.PiDirectiveTest#addsProcessingInstructionsToDom",
+      "package": "org.xembly",
+      "class": "PiDirectiveTest",
+      "method": "addsProcessingInstructionsToDom",
+      "success": true,
+      "duration": 0.108,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87F",
+            "90",
+            "91",
+            "94"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.PiDirectiveTest#addsProcessingInstructionsToDomRoot",
+      "package": "org.xembly",
+      "class": "PiDirectiveTest",
+      "method": "addsProcessingInstructionsToDomRoot",
+      "success": true,
+      "duration": 0.109,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87F",
+            "90",
+            "91",
+            "94"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.PiDirectiveTest#prependsProcessingInstructionsToDomRoot",
+      "package": "org.xembly",
+      "class": "PiDirectiveTest",
+      "method": "prependsProcessingInstructionsToDomRoot",
+      "success": true,
+      "duration": 0.098,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "PiDirective",
+          "lines": [
+            "63M",
+            "65",
+            "66",
+            "74M",
+            "78",
+            "79",
+            "79T",
+            "80",
+            "84",
+            "87",
+            "87F",
+            "90",
+            "91",
+            "94"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.RemoveDirectiveTest#removesCurrentNodes",
+      "package": "org.xembly",
+      "class": "RemoveDirectiveTest",
+      "method": "removesCurrentNodes",
+      "success": true,
+      "duration": 0.109,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.RemoveDirectiveTest#removesDomNodesDirectly",
+      "package": "org.xembly",
+      "class": "RemoveDirectiveTest",
+      "method": "removesDomNodesDirectly",
+      "success": true,
+      "duration": 0.085,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.SetDirectiveTest#rejectsContentWithInvalidXmlCharacters",
+      "package": "org.xembly",
+      "class": "SetDirectiveTest",
+      "method": "rejectsContentWithInvalidXmlCharacters",
+      "success": true,
+      "duration": 0.053,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "144M",
+            "145",
+            "146",
+            "146T",
+            "147",
+            "148",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "192T",
+            "193",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ParsingException",
+          "lines": [
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SyntaxException",
+          "lines": [
+            "49M",
+            "50"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "79",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XmlContentException",
+          "lines": [
+            "48M",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.SetDirectiveTest#setsTextContentOfNodes",
+      "package": "org.xembly",
+      "class": "SetDirectiveTest",
+      "method": "setsTextContentOfNodes",
+      "success": true,
+      "duration": 0.129,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "144M",
+            "145",
+            "146",
+            "146F",
+            "149",
+            "149F",
+            "151",
+            "151F",
+            "151T",
+            "152",
+            "153",
+            "153F",
+            "155",
+            "155F",
+            "157",
+            "157T",
+            "158",
+            "164",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.SetDirectiveTest#setsTextDirectlyIntoDomNodes",
+      "package": "org.xembly",
+      "class": "SetDirectiveTest",
+      "method": "setsTextDirectlyIntoDomNodes",
+      "success": true,
+      "duration": 0.11,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.StrictDirectiveTest#checksNumberOfCurrentNodes",
+      "package": "org.xembly",
+      "class": "StrictDirectiveTest",
+      "method": "checksNumberOfCurrentNodes",
+      "success": true,
+      "duration": 0.111,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsTooBig",
+      "package": "org.xembly",
+      "class": "StrictDirectiveTest",
+      "method": "failsWhenNumberOfCurrentNodesIsTooBig",
+      "success": true,
+      "duration": 0.081,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ImpossibleModificationException",
+          "lines": [
+            "57M",
+            "59"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "161"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "84M",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsTooSmall",
+      "package": "org.xembly",
+      "class": "StrictDirectiveTest",
+      "method": "failsWhenNumberOfCurrentNodesIsTooSmall",
+      "success": true,
+      "duration": 0.102,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ImpossibleModificationException",
+          "lines": [
+            "57M",
+            "59"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "161"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsZero",
+      "package": "org.xembly",
+      "class": "StrictDirectiveTest",
+      "method": "failsWhenNumberOfCurrentNodesIsZero",
+      "success": true,
+      "duration": 0.101,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ImpossibleModificationException",
+          "lines": [
+            "57M",
+            "59"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "161"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "84M",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.SyntaxExceptionTest#instantiatesException",
+      "package": "org.xembly",
+      "class": "SyntaxExceptionTest",
+      "method": "instantiatesException",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "SyntaxException",
+          "lines": [
+            "49M",
+            "50"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.UpDirectiveTest#jumpsToParentsWhenTheyExist",
+      "package": "org.xembly",
+      "class": "UpDirectiveTest",
+      "method": "jumpsToParentsWhenTheyExist",
+      "success": true,
+      "duration": 0.115,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.UpDirectiveTest#throwsWhenNoParents",
+      "package": "org.xembly",
+      "class": "UpDirectiveTest",
+      "method": "throwsWhenNoParents",
+      "success": true,
+      "duration": 0.084,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "121",
+            "121F",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "129",
+            "129F",
+            "132",
+            "135",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "ImpossibleModificationException",
+          "lines": [
+            "57M",
+            "59"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "161"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#escapesBrokenText",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "escapesBrokenText",
+      "success": true,
+      "duration": 0.049,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "287M",
+            "289",
+            "290",
+            "291",
+            "292",
+            "297",
+            "297F",
+            "297T",
+            "298",
+            "300",
+            "303"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#makesChangesToDomDocument",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "makesChangesToDomDocument",
+      "success": true,
+      "duration": 0.118,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "144M",
+            "145",
+            "146",
+            "146F",
+            "149",
+            "149T",
+            "150",
+            "164",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#makesChangesToDomDocumentFromBuilder",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "makesChangesToDomDocumentFromBuilder",
+      "success": true,
+      "duration": 0.136,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60",
+            "63M",
+            "65",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "78F",
+            "85",
+            "85T",
+            "86",
+            "87",
+            "87T",
+            "88",
+            "92",
+            "93",
+            "95",
+            "97"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "116M",
+            "117",
+            "118",
+            "119",
+            "119F",
+            "119T",
+            "120",
+            "121",
+            "121F",
+            "121T",
+            "122",
+            "123",
+            "123F",
+            "125",
+            "125F",
+            "125T",
+            "126",
+            "127",
+            "127F",
+            "127T",
+            "128",
+            "129",
+            "129F",
+            "129T",
+            "130",
+            "132",
+            "135",
+            "144M",
+            "145",
+            "146",
+            "146F",
+            "146T",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "151",
+            "151F",
+            "151T",
+            "152",
+            "153",
+            "153F",
+            "153T",
+            "154",
+            "155",
+            "155T",
+            "156",
+            "164",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "61",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "68M",
+            "70",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "121M",
+            "123",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "310M",
+            "311",
+            "312",
+            "322",
+            "330M",
+            "331",
+            "332",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "444M",
+            "446",
+            "447",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "477M",
+            "478",
+            "479",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Print",
+          "lines": [
+            "53M",
+            "54",
+            "57M",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "64F",
+            "64T",
+            "65",
+            "67",
+            "68",
+            "69",
+            "70",
+            "70F",
+            "70T",
+            "71",
+            "73",
+            "75"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "49M",
+            "51",
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "59M",
+            "61",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "58M",
+            "60",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "47M",
+            "49",
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "125M",
+            "126",
+            "127",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "88M",
+            "90",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#modifiesClonedNode",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "modifiesClonedNode",
+      "success": true,
+      "duration": 0.088,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#printsXmlDocument",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "printsXmlDocument",
+      "success": true,
+      "duration": 0.106,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "402M",
+            "403",
+            "404",
+            "414",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#removesAttribute",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "removesAttribute",
+      "success": true,
+      "duration": 0.093,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "330M",
+            "331",
+            "332",
+            "347M",
+            "348",
+            "349",
+            "359",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "477M",
+            "478",
+            "479",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72T",
+            "73",
+            "74",
+            "75",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#removesRootNode",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "removesRootNode",
+      "success": true,
+      "duration": 0.089,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "330M",
+            "331",
+            "332",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#rendersXmlDeclaration",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "rendersXmlDeclaration",
+      "success": true,
+      "duration": 0.11,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168",
+            "196M",
+            "197",
+            "198",
+            "199",
+            "209",
+            "210",
+            "218M",
+            "219",
+            "220",
+            "238M",
+            "239",
+            "240",
+            "241",
+            "251",
+            "252",
+            "253",
+            "254",
+            "255",
+            "268"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XemblerTest#replacesRootNode",
+      "package": "org.xembly",
+      "class": "XemblerTest",
+      "method": "replacesRootNode",
+      "success": true,
+      "duration": 0.093,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "100",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "251M",
+            "252",
+            "253",
+            "263",
+            "330M",
+            "331",
+            "332",
+            "456M",
+            "457",
+            "458",
+            "468",
+            "560M",
+            "561",
+            "562",
+            "565",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XpathDirectiveTest#findsNodesByXpathDirectly",
+      "package": "org.xembly",
+      "class": "XpathDirectiveTest",
+      "method": "findsNodesByXpathDirectly",
+      "success": true,
+      "duration": 0.022,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XpathDirectiveTest#findsNodesInEmptyDom",
+      "package": "org.xembly",
+      "class": "XpathDirectiveTest",
+      "method": "findsNodesInEmptyDom",
+      "success": true,
+      "duration": 0.021,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123F",
+            "127",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XpathDirectiveTest#findsNodesWithXpathExpression",
+      "package": "org.xembly",
+      "class": "XpathDirectiveTest",
+      "method": "findsNodesWithXpathExpression",
+      "success": true,
+      "duration": 0.136,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AttrDirective",
+          "lines": [
+            "62M",
+            "64",
+            "65",
+            "73M",
+            "76",
+            "77",
+            "78",
+            "79",
+            "81"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100F",
+            "103",
+            "105",
+            "140M",
+            "143",
+            "144",
+            "145",
+            "146",
+            "147",
+            "148",
+            "156",
+            "158",
+            "166M",
+            "168",
+            "169",
+            "169F",
+            "169T",
+            "170",
+            "180M",
+            "182",
+            "183",
+            "183F",
+            "192",
+            "194",
+            "62M",
+            "64",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XpathDirectiveTest#findsRootInClonedNode",
+      "package": "org.xembly",
+      "class": "XpathDirectiveTest",
+      "method": "findsRootInClonedNode",
+      "success": true,
+      "duration": 0.122,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XpathDirectiveTest#ignoresEmptySearches",
+      "package": "org.xembly",
+      "class": "XpathDirectiveTest",
+      "method": "ignoresEmptySearches",
+      "success": true,
+      "duration": 0.103,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "StrictDirective",
+          "lines": [
+            "54M",
+            "55",
+            "63M",
+            "67",
+            "67F",
+            "90"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123F",
+            "123T",
+            "125",
+            "127",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XsetDirectiveTest#setsTextContentOfNodes",
+      "package": "org.xembly",
+      "class": "XsetDirectiveTest",
+      "method": "setsTextContentOfNodes",
+      "success": true,
+      "duration": 0.13,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "101",
+            "103",
+            "105",
+            "108",
+            "144M",
+            "145",
+            "146",
+            "146F",
+            "149",
+            "149F",
+            "151",
+            "151F",
+            "151T",
+            "152",
+            "153",
+            "153F",
+            "155",
+            "155F",
+            "157",
+            "157T",
+            "158",
+            "164",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F",
+            "91T",
+            "92",
+            "93",
+            "93F",
+            "93T",
+            "95",
+            "96",
+            "96F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "UpDirective",
+          "lines": [
+            "52M",
+            "57",
+            "58",
+            "59",
+            "60",
+            "60F",
+            "68",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XsetDirective",
+          "lines": [
+            "100",
+            "67M",
+            "68",
+            "76M",
+            "80",
+            "82",
+            "83",
+            "84",
+            "85",
+            "97",
+            "98"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.XsetDirectiveTest#setsTextDirectlyIntoDomNodes",
+      "package": "org.xembly",
+      "class": "XsetDirectiveTest",
+      "method": "setsTextDirectlyIntoDomNodes",
+      "success": true,
+      "duration": 0.108,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XsetDirective",
+          "lines": [
+            "100",
+            "67M",
+            "68",
+            "76M",
+            "80",
+            "82",
+            "83",
+            "84",
+            "85",
+            "97",
+            "98"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.prof.DirectivesProfTest#parsesLongProgram",
+      "package": "org.xembly.prof",
+      "class": "DirectivesProfTest",
+      "method": "parsesLongProgram",
+      "success": true,
+      "duration": 0.188,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "84M",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.xembly.prof.XemblerProfTest#modifiesDom",
+      "package": "org.xembly.prof",
+      "class": "XemblerProfTest",
+      "method": "modifiesDom",
+      "success": true,
+      "duration": 1.187,
+      "coverage": [
+        {
+          "package": "org.xembly",
+          "class": "AddDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "75T",
+            "76",
+            "80",
+            "81",
+            "82",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "AddIfDirective",
+          "lines": [
+            "59M",
+            "60",
+            "68M",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "78F",
+            "78T",
+            "79",
+            "79T",
+            "81",
+            "82",
+            "85",
+            "85F",
+            "85T",
+            "86",
+            "87",
+            "87T",
+            "88",
+            "92",
+            "93",
+            "95",
+            "97"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Arg",
+          "lines": [
+            "105",
+            "108",
+            "173M",
+            "175",
+            "176",
+            "177",
+            "178",
+            "179",
+            "180",
+            "190M",
+            "192",
+            "192F",
+            "209M",
+            "210",
+            "211",
+            "213",
+            "54M",
+            "55",
+            "69M",
+            "70",
+            "79M",
+            "82",
+            "83",
+            "83F",
+            "88",
+            "89",
+            "90",
+            "90F",
+            "90T",
+            "91",
+            "91F"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Directives",
+          "lines": [
+            "108M",
+            "109",
+            "116M",
+            "118",
+            "126M",
+            "128",
+            "560M",
+            "561",
+            "562",
+            "563",
+            "565"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "DomCursor",
+          "lines": [
+            "59M",
+            "60",
+            "61",
+            "64M",
+            "66",
+            "69M",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "RemoveDirective",
+          "lines": [
+            "54M",
+            "57",
+            "58",
+            "59",
+            "61",
+            "69M",
+            "71",
+            "72",
+            "72F",
+            "77",
+            "78",
+            "78F",
+            "83",
+            "85"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "SetDirective",
+          "lines": [
+            "55M",
+            "56",
+            "64M",
+            "67",
+            "68",
+            "69",
+            "71"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Verbs",
+          "lines": [
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "68",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "Xembler",
+          "lines": [
+            "105M",
+            "106",
+            "107",
+            "108",
+            "115M",
+            "116",
+            "145M",
+            "147",
+            "150",
+            "151",
+            "152",
+            "153",
+            "154",
+            "166",
+            "168"
+          ]
+        },
+        {
+          "package": "org.xembly",
+          "class": "XpathDirective",
+          "lines": [
+            "100",
+            "100T",
+            "101",
+            "105",
+            "114M",
+            "116",
+            "117",
+            "117T",
+            "118",
+            "122",
+            "123",
+            "123T",
+            "125",
+            "129",
+            "84M",
+            "85",
+            "93M",
+            "97",
+            "98",
+            "99"
+          ]
+        }
+      ]
+    }
+  ]
+}

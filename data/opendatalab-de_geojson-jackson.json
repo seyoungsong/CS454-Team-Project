@@ -1,0 +1,3495 @@
+{
+  "info": {
+    "project": "GeoJson POJOs for Jackson 1.15-SNAPSHOT",
+    "filename": "opendatalab-de_geojson-jackson.json",
+    "github": {
+      "url": "https://github.com/opendatalab-de/geojson-jackson",
+      "dev": "opendatalab-de",
+      "repo": "geojson-jackson"
+    },
+    "env": {
+      "platform": "macOS-11.6-arm64-arm-64bit",
+      "java": "openjdk version \"1.8.0_312\"",
+      "maven": "Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)"
+    },
+    "commit": {
+      "datetime": "2021-08-27T15:57:45+09:00",
+      "url": "https://github.com/opendatalab-de/geojson-jackson/tree/2d41d1f274d4054123250698a596c02ff0b63687",
+      "hash": "2d41d1f274d4054123250698a596c02ff0b63687",
+      "timestamp": 1630047465
+    },
+    "metrics": {
+      "project": {
+        "coveredelements": "312",
+        "complexity": "189",
+        "loc": "950",
+        "methods": "122",
+        "classes": "18",
+        "statements": "272",
+        "packages": "2",
+        "coveredconditionals": "33",
+        "coveredmethods": "101",
+        "elements": "512",
+        "ncloc": "743",
+        "files": "17",
+        "conditionals": "118",
+        "coveredstatements": "178"
+      },
+      "testproject": {
+        "coveredelements": "292",
+        "complexity": "87",
+        "loc": "861",
+        "methods": "75",
+        "classes": "17",
+        "statements": "225",
+        "packages": "2",
+        "coveredconditionals": "4",
+        "coveredmethods": "74",
+        "elements": "304",
+        "ncloc": "709",
+        "files": "16",
+        "conditionals": "4",
+        "coveredstatements": "214"
+      }
+    }
+  },
+  "data": [
+    {
+      "name": "org.geojson.FeatureTest#itShouldHaveProperties",
+      "package": "org.geojson",
+      "class": "FeatureTest",
+      "method": "itShouldHaveProperties",
+      "success": true,
+      "duration": 0.002,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Feature",
+          "lines": [
+            "25M",
+            "26"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.FeatureTest#itShouldSerializeFeature",
+      "package": "org.geojson",
+      "class": "FeatureTest",
+      "method": "itShouldSerializeFeature",
+      "success": true,
+      "duration": 0.029,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Feature",
+          "lines": [
+            "25M",
+            "26",
+            "33M",
+            "34",
+            "41M",
+            "42"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.GeoJsonObjectVisitorTest#itShouldAdapter",
+      "package": "org.geojson",
+      "class": "GeoJsonObjectVisitorTest",
+      "method": "itShouldAdapter",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.geojson.GeoJsonObjectVisitorTest#should_visit_right_class",
+      "package": "org.geojson",
+      "class": "GeoJsonObjectVisitorTest",
+      "method": "should_visit_right_class",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_additional_elements",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_equals_with_additional_elements",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "122M",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "134",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_additional_elements_and_null",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_equals_with_additional_elements_and_null",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "122M",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "134",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_equals_with_alt",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "85M",
+            "86"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_equals_without_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_equals_without_alt",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "23M",
+            "24",
+            "25",
+            "85M",
+            "86"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_additional_elements_set_with_Nan_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_additional_elements_set_with_Nan_alt",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160T",
+            "161",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_additional_elements_set_with_missing_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_additional_elements_set_with_missing_alt",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160T",
+            "161",
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_alt_not_specified_in_constructor",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_alt_not_specified_in_constructor",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160T",
+            "161",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_alt_set_to_Nan_with_additional_elements",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_alt_set_to_Nan_with_additional_elements",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "160T",
+            "161",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Nan",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Nan",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F",
+            "97T",
+            "98"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Negative_Infinity",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Negative_Infinity",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "100T",
+            "101",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Positive_Infinity",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Positive_Infinity",
+      "success": true,
+      "duration": 0.002,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "100T",
+            "101",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Nan",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_set_to_Nan",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F",
+            "97T",
+            "98"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Negative_Infinity",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_set_to_Negative_Infinity",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "100T",
+            "101",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Positive_Infinity",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_LngLatAlt_throw_if_any_additional_elements_set_to_Positive_Infinity",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "100T",
+            "101",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_additional_elements_and_different_size",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_not_LngLatAlt_equals_with_additional_elements_and_different_size",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "122M",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "134",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_additional_elements_in_different_order",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_not_LngLatAlt_equals_with_additional_elements_in_different_order",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "122M",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "134",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_not_LngLatAlt_equals_with_alt",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "28M",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_without_additional_elements",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_not_LngLatAlt_equals_without_additional_elements",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "122M",
+            "124",
+            "125",
+            "126",
+            "127",
+            "128",
+            "129",
+            "130",
+            "131",
+            "132",
+            "134",
+            "159M",
+            "160",
+            "160F",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_without_alt",
+      "package": "org.geojson",
+      "class": "LngLatAltTest",
+      "method": "should_not_LngLatAlt_equals_without_alt",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "108M",
+            "110",
+            "110F",
+            "113",
+            "113F",
+            "116",
+            "117",
+            "28M",
+            "29",
+            "30",
+            "31"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringCrs",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringCrs",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Crs",
+          "lines": [
+            "52M",
+            "54"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringFeature",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringFeature",
+      "success": true,
+      "duration": 0.008,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Feature",
+          "lines": [
+            "77M",
+            "79"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringFeatureCollection",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringFeatureCollection",
+      "success": true,
+      "duration": 0.003,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "FeatureCollection",
+          "lines": [
+            "54M",
+            "56"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringLineString",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringLineString",
+      "success": true,
+      "duration": 0.006,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "13M",
+            "14",
+            "15",
+            "55M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LineString",
+          "lines": [
+            "17M",
+            "19",
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "137M",
+            "139",
+            "141",
+            "141F",
+            "154",
+            "156",
+            "23M",
+            "24",
+            "25",
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "17M",
+            "19",
+            "8M",
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringMultiLineString",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringMultiLineString",
+      "success": true,
+      "duration": 0.006,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "55M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "137M",
+            "139",
+            "141",
+            "141F",
+            "154",
+            "156",
+            "23M",
+            "24",
+            "25",
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiLineString",
+          "lines": [
+            "10M",
+            "11",
+            "19M",
+            "21"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringMultiPolygon",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringMultiPolygon",
+      "success": true,
+      "duration": 0.009,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "24M",
+            "25",
+            "55M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "137M",
+            "139",
+            "141",
+            "141F",
+            "154",
+            "156",
+            "23M",
+            "24",
+            "25",
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPolygon",
+          "lines": [
+            "10M",
+            "11",
+            "14M",
+            "15",
+            "16",
+            "24M",
+            "26"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "17M",
+            "18"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringPoint",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringPoint",
+      "success": true,
+      "duration": 0.006,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "137M",
+            "139",
+            "141",
+            "141F",
+            "154",
+            "156",
+            "23M",
+            "24",
+            "25",
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "14M",
+            "15",
+            "61M",
+            "63"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringPointWithAdditionalElements",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringPointWithAdditionalElements",
+      "success": true,
+      "duration": 0.006,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "137M",
+            "139",
+            "141",
+            "141T",
+            "142",
+            "144",
+            "145",
+            "146",
+            "146T",
+            "147",
+            "148",
+            "151",
+            "154",
+            "156",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "22M",
+            "23",
+            "61M",
+            "63"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringPointWithAdditionalElementsAndIgnoreNulls",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringPointWithAdditionalElementsAndIgnoreNulls",
+      "success": true,
+      "duration": 0.013,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "137M",
+            "139",
+            "141",
+            "141T",
+            "142",
+            "144",
+            "145",
+            "146",
+            "146T",
+            "147",
+            "148",
+            "151",
+            "154",
+            "156",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "22M",
+            "23",
+            "61M",
+            "63"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.ToStringTest#itShouldToStringPolygon",
+      "package": "org.geojson",
+      "class": "ToStringTest",
+      "method": "itShouldToStringPolygon",
+      "success": true,
+      "duration": 0.009,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "59M",
+            "61"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "55M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "137M",
+            "139",
+            "141",
+            "141F",
+            "154",
+            "156",
+            "23M",
+            "24",
+            "25",
+            "56M",
+            "57"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "17M",
+            "18",
+            "66M",
+            "68"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.CrsTest#itShouldParseCrsWithLink",
+      "package": "org.geojson.jackson",
+      "class": "CrsTest",
+      "method": "itShouldParseCrsWithLink",
+      "success": true,
+      "duration": 0.068,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Crs",
+          "lines": [
+            "14M",
+            "15",
+            "18M",
+            "19",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.CrsTest#itShouldSerializeCrsWithLink",
+      "package": "org.geojson.jackson",
+      "class": "CrsTest",
+      "method": "itShouldSerializeCrsWithLink",
+      "success": true,
+      "duration": 0.045,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Crs",
+          "lines": [
+            "14M",
+            "15",
+            "18M",
+            "19",
+            "22M",
+            "23"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "28M",
+            "29",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "26M",
+            "27",
+            "7M"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.GeometryCollectionTest#itShouldDeserialize",
+      "package": "org.geojson.jackson",
+      "class": "GeometryCollectionTest",
+      "method": "itShouldDeserialize",
+      "success": true,
+      "duration": 0.045,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeometryCollection",
+          "lines": [
+            "15M",
+            "16"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LineString",
+          "lines": [
+            "5M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "5M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.GeometryCollectionTest#itShouldDeserializeSubtype",
+      "package": "org.geojson.jackson",
+      "class": "GeometryCollectionTest",
+      "method": "itShouldDeserializeSubtype",
+      "success": true,
+      "duration": 0.061,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Feature",
+          "lines": [
+            "33M",
+            "34",
+            "37M",
+            "38"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "FeatureCollection",
+          "lines": [
+            "12M",
+            "13",
+            "16M",
+            "17"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeometryCollection",
+          "lines": [
+            "15M",
+            "16"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.GeometryCollectionTest#itShouldSerialize",
+      "package": "org.geojson.jackson",
+      "class": "GeometryCollectionTest",
+      "method": "itShouldSerialize",
+      "success": true,
+      "duration": 0.038,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "13M",
+            "14",
+            "15",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "GeometryCollection",
+          "lines": [
+            "11M",
+            "12",
+            "24M",
+            "25",
+            "26"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LineString",
+          "lines": [
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "14M",
+            "15",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.LineStringTest#itShouldDeserializeLineString",
+      "package": "org.geojson.jackson",
+      "class": "LineStringTest",
+      "method": "itShouldDeserializeLineString",
+      "success": true,
+      "duration": 0.045,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "24M",
+            "25",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LineString",
+          "lines": [
+            "5M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "5M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.LineStringTest#itShouldSerializeMultiPoint",
+      "package": "org.geojson.jackson",
+      "class": "LineStringTest",
+      "method": "itShouldSerializeMultiPoint",
+      "success": true,
+      "duration": 0.04,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "13M",
+            "14",
+            "15",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LineString",
+          "lines": [
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.LngLatAltDeserializerTest#deserializeMongoLngLatAlt",
+      "package": "org.geojson.jackson",
+      "class": "LngLatAltDeserializerTest",
+      "method": "deserializeMongoLngLatAlt",
+      "success": true,
+      "duration": 0.083,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "108M",
+            "110",
+            "110T",
+            "111",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "28M",
+            "29",
+            "30",
+            "31",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "76M",
+            "77",
+            "80M",
+            "81",
+            "82",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "29T",
+            "30",
+            "31",
+            "31F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18T",
+            "19",
+            "21",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.LngLatAltSerializerTest#testSerialization",
+      "package": "org.geojson.jackson",
+      "class": "LngLatAltSerializerTest",
+      "method": "testSerialization",
+      "success": true,
+      "duration": 0.089,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "28M",
+            "29",
+            "30",
+            "31",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69",
+            "76M",
+            "77",
+            "85M",
+            "86"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18T",
+            "19",
+            "21",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.MultiLineStringTest#itShouldSerialize",
+      "package": "org.geojson.jackson",
+      "class": "MultiLineStringTest",
+      "method": "itShouldSerialize",
+      "success": true,
+      "duration": 0.035,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiLineString",
+          "lines": [
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.MultiPointTest#itShouldDeserializeMultiPoint",
+      "package": "org.geojson.jackson",
+      "class": "MultiPointTest",
+      "method": "itShouldDeserializeMultiPoint",
+      "success": true,
+      "duration": 0.047,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "24M",
+            "25",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "5M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.MultiPointTest#itShouldSerializeMultiPoint",
+      "package": "org.geojson.jackson",
+      "class": "MultiPointTest",
+      "method": "itShouldSerializeMultiPoint",
+      "success": true,
+      "duration": 0.034,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "13M",
+            "14",
+            "15",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPoint",
+          "lines": [
+            "8M",
+            "9"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.MultiPoligonTest#itShouldDeserialize",
+      "package": "org.geojson.jackson",
+      "class": "MultiPoligonTest",
+      "method": "itShouldDeserialize",
+      "success": true,
+      "duration": 0.044,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "24M",
+            "25",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "64M",
+            "65",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPolygon",
+          "lines": [
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.MultiPoligonTest#itShouldSerialize",
+      "package": "org.geojson.jackson",
+      "class": "MultiPoligonTest",
+      "method": "itShouldSerialize",
+      "success": true,
+      "duration": 0.035,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "MultiPolygon",
+          "lines": [
+            "14M",
+            "15",
+            "16",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "13M",
+            "14",
+            "17M",
+            "18",
+            "46M",
+            "47",
+            "48",
+            "56M",
+            "57",
+            "57F"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldDeserializeAPoint",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldDeserializeAPoint",
+      "success": true,
+      "duration": 0.044,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "26M",
+            "27",
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldDeserializeAPointWithAdditionalAttributes",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldDeserializeAPointWithAdditionalAttributes",
+      "success": true,
+      "duration": 0.045,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "76M",
+            "77",
+            "80M",
+            "81",
+            "82",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "26M",
+            "27",
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "29T",
+            "30",
+            "31",
+            "31F",
+            "31T",
+            "32",
+            "35",
+            "36",
+            "36F",
+            "36T",
+            "37",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58",
+            "59",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldDeserializeAPointWithAltitude",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldDeserializeAPointWithAltitude",
+      "success": true,
+      "duration": 0.044,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "76M",
+            "77",
+            "80M",
+            "81",
+            "82",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "26M",
+            "27",
+            "30M",
+            "31",
+            "7M"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "29T",
+            "30",
+            "31",
+            "31F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58",
+            "59",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldSerializeAPoint",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldSerializeAPoint",
+      "success": true,
+      "duration": 0.031,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "14M",
+            "15",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldSerializeAPointWithAdditionalAttributes",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldSerializeAPointWithAdditionalAttributes",
+      "success": true,
+      "duration": 0.037,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69",
+            "76M",
+            "77",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "22M",
+            "23",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18T",
+            "19",
+            "21",
+            "22",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldSerializeAPointWithAdditionalAttributesAndNull",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldSerializeAPointWithAdditionalAttributesAndNull",
+      "success": true,
+      "duration": 0.04,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "100",
+            "100F",
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "43M",
+            "44",
+            "45",
+            "46",
+            "48",
+            "49",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69",
+            "76M",
+            "77",
+            "85M",
+            "86",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96",
+            "97",
+            "97F"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "22M",
+            "23",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18T",
+            "19",
+            "21",
+            "22",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PointTest#itShouldSerializeAPointWithAltitude",
+      "package": "org.geojson.jackson",
+      "class": "PointTest",
+      "method": "itShouldSerializeAPointWithAltitude",
+      "success": true,
+      "duration": 0.032,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "28M",
+            "29",
+            "30",
+            "31",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69",
+            "76M",
+            "77",
+            "85M",
+            "86"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Point",
+          "lines": [
+            "18M",
+            "19",
+            "26M",
+            "27"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18T",
+            "19",
+            "21",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldDeserialize",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldDeserialize",
+      "success": true,
+      "duration": 0.046,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "28M",
+            "29"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "105",
+            "159M",
+            "160",
+            "160F",
+            "20M",
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "56M",
+            "57",
+            "60M",
+            "61",
+            "64M",
+            "65",
+            "68M",
+            "69",
+            "72M",
+            "73",
+            "76M",
+            "77",
+            "80M",
+            "81",
+            "82",
+            "89M",
+            "90",
+            "90T",
+            "91",
+            "96"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "10M",
+            "29M",
+            "31",
+            "32",
+            "35M",
+            "37",
+            "38",
+            "41M",
+            "42",
+            "43",
+            "56M",
+            "57",
+            "57F"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltDeserializer",
+          "lines": [
+            "15M",
+            "17",
+            "17T",
+            "18",
+            "23M",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29F",
+            "35",
+            "36",
+            "36F",
+            "39",
+            "40",
+            "43M",
+            "44",
+            "45",
+            "45F",
+            "51",
+            "52",
+            "53",
+            "53T",
+            "54",
+            "57",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldFailOnAddInteriorRingWithoutExteriorRing",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldFailOnAddInteriorRingWithoutExteriorRing",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "10M",
+            "46M",
+            "47",
+            "56M",
+            "57",
+            "57T",
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldReplaceExteriorRing",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldReplaceExteriorRing",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "13M",
+            "14",
+            "21M",
+            "22",
+            "22F",
+            "25",
+            "29M",
+            "31",
+            "32",
+            "35M",
+            "37",
+            "38",
+            "56M",
+            "57",
+            "57F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldSerialize",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldSerialize",
+      "success": true,
+      "duration": 0.035,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "13M",
+            "14"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldSerializeWithHole",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldSerializeWithHole",
+      "success": true,
+      "duration": 0.042,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "GeoJsonObject",
+          "lines": [
+            "24M",
+            "25",
+            "32M",
+            "33"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M",
+            "19M",
+            "20",
+            "21",
+            "24M",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25",
+            "52M",
+            "53",
+            "60M",
+            "61",
+            "68M",
+            "69"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "13M",
+            "14",
+            "46M",
+            "47",
+            "48",
+            "56M",
+            "57",
+            "57F"
+          ]
+        },
+        {
+          "package": "org.geojson.jackson",
+          "class": "LngLatAltSerializer",
+          "lines": [
+            "13M",
+            "15",
+            "16",
+            "17",
+            "18",
+            "18F",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.geojson.jackson.PolygonTest#itShouldSetExteriorRing",
+      "package": "org.geojson.jackson",
+      "class": "PolygonTest",
+      "method": "itShouldSetExteriorRing",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.geojson",
+          "class": "Geometry",
+          "lines": [
+            "10M"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "LngLatAlt",
+          "lines": [
+            "23M",
+            "24",
+            "25"
+          ]
+        },
+        {
+          "package": "org.geojson",
+          "class": "Polygon",
+          "lines": [
+            "10M",
+            "21M",
+            "22",
+            "22T",
+            "23",
+            "29M",
+            "31",
+            "32",
+            "56M",
+            "57",
+            "57F"
+          ]
+        }
+      ]
+    }
+  ]
+}

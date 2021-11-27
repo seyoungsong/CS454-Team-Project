@@ -1,0 +1,1971 @@
+{
+  "info": {
+    "project": "Java archiving library 1.3.0-SNAPSHOT",
+    "filename": "thrau_jarchivelib.json",
+    "github": {
+      "url": "https://github.com/thrau/jarchivelib",
+      "dev": "thrau",
+      "repo": "jarchivelib"
+    },
+    "env": {
+      "platform": "macOS-11.6-arm64-arm-64bit",
+      "java": "openjdk version \"1.8.0_312\"",
+      "maven": "Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)"
+    },
+    "commit": {
+      "datetime": "2021-08-10T20:47:23+09:00",
+      "url": "https://github.com/thrau/jarchivelib/tree/4b3d39f313f613dbb08cbda8888e6cb9e279c124",
+      "hash": "4b3d39f313f613dbb08cbda8888e6cb9e279c124",
+      "timestamp": 1628596043
+    },
+    "metrics": {
+      "project": {
+        "coveredelements": "673",
+        "complexity": "249",
+        "loc": "2596",
+        "methods": "170",
+        "classes": "32",
+        "statements": "441",
+        "packages": "1",
+        "coveredconditionals": "115",
+        "coveredmethods": "152",
+        "elements": "741",
+        "ncloc": "1211",
+        "files": "20",
+        "conditionals": "130",
+        "coveredstatements": "406"
+      },
+      "testproject": {
+        "coveredelements": "505",
+        "complexity": "145",
+        "loc": "1470",
+        "methods": "118",
+        "classes": "17",
+        "statements": "367",
+        "packages": "1",
+        "coveredconditionals": "23",
+        "coveredmethods": "118",
+        "elements": "523",
+        "ncloc": "925",
+        "files": "17",
+        "conditionals": "38",
+        "coveredstatements": "364"
+      }
+    }
+  },
+  "data": [
+    {
+      "name": "org.rauschig.jarchivelib.Archiver7zTest#extract_properlyExtractsArchiveStream",
+      "package": "org.rauschig.jarchivelib",
+      "class": "Archiver7zTest",
+      "method": "extract_properlyExtractsArchiveStream",
+      "success": false,
+      "duration": 0.023,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "124M",
+            "125",
+            "125T",
+            "126"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "40M",
+            "41"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "SevenZArchiver",
+          "lines": [
+            "35M",
+            "36"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ArchiverTarGzTest#getFilenameExtension_targz_returnsCorrectFilenameExtension",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ArchiverTarGzTest",
+      "method": "getFilenameExtension_targz_returnsCorrectFilenameExtension",
+      "success": true,
+      "duration": 0.002,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66",
+            "83M",
+            "84"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverCompressorDecorator",
+          "lines": [
+            "117M",
+            "119",
+            "46M",
+            "47",
+            "48"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "100",
+            "96M",
+            "97",
+            "98"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "116M",
+            "118",
+            "40M",
+            "41",
+            "44M",
+            "45"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsCompressor",
+          "lines": [
+            "107M",
+            "109",
+            "43M",
+            "44",
+            "47M",
+            "48"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54",
+            "71M",
+            "72"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ArchiverTarTest#getFilenameExtension_tar_returnsCorrectFilenameExtension",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ArchiverTarTest",
+      "method": "getFilenameExtension_tar_returnsCorrectFilenameExtension",
+      "success": true,
+      "duration": 0.002,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66",
+            "83M",
+            "84"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "124M",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "130"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "116M",
+            "118",
+            "40M",
+            "41",
+            "44M",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ExtractPermissionsTest#extract_restoresJavaFilePermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ExtractPermissionsTest",
+      "method": "extract_restoresJavaFilePermissions",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ExtractPermissionsTest#extract_restoresUnixPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ExtractPermissionsTest",
+      "method": "extract_restoresUnixPermissions",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ExtractPermissionsTest#extract_stream_restoresJavaPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ExtractPermissionsTest",
+      "method": "extract_stream_restoresJavaPermissions",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.rauschig.jarchivelib.ExtractPermissionsTest#extract_stream_restoresUnixPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "ExtractPermissionsTest",
+      "method": "extract_stream_restoresUnixPermissions",
+      "exception": "KeyError('testsuccess')"
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromArchiveFile_returnsCorrectArchiver",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromArchiveFile_returnsCorrectArchiver",
+      "success": true,
+      "duration": 0.014,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "124M",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "130",
+            "39M",
+            "40",
+            "42",
+            "42F",
+            "46",
+            "56M",
+            "57",
+            "57F",
+            "61",
+            "61F",
+            "63",
+            "63T",
+            "64"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "40M",
+            "41"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "120M",
+            "121",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromCompressedArchiveFile_returnsCorrectArchiver",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromCompressedArchiveFile_returnsCorrectArchiver",
+      "success": true,
+      "duration": 0.01,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverCompressorDecorator",
+          "lines": [
+            "46M",
+            "47",
+            "48"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "100",
+            "39M",
+            "40",
+            "42",
+            "42F",
+            "46",
+            "56M",
+            "57",
+            "57F",
+            "61",
+            "61T",
+            "62",
+            "96M",
+            "97",
+            "98"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "40M",
+            "41"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsCompressor",
+          "lines": [
+            "43M",
+            "44"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "120M",
+            "121",
+            "129M",
+            "130",
+            "146M",
+            "147",
+            "148",
+            "148T",
+            "149",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromStringArchiveAndCompressionFormat_returnsCorrectArchiver",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromStringArchiveAndCompressionFormat_returnsCorrectArchiver",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "110M",
+            "111",
+            "112",
+            "112F",
+            "112T",
+            "113",
+            "64M",
+            "65",
+            "66",
+            "74M",
+            "75",
+            "93M",
+            "94",
+            "95",
+            "95F",
+            "95T",
+            "96"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverCompressorDecorator",
+          "lines": [
+            "46M",
+            "47",
+            "48"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "100",
+            "78M",
+            "79",
+            "79F",
+            "82",
+            "82F",
+            "86",
+            "96M",
+            "97",
+            "98"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "40M",
+            "41"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsCompressor",
+          "lines": [
+            "43M",
+            "44"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "100",
+            "101",
+            "101F",
+            "101T",
+            "102",
+            "52M",
+            "53",
+            "54",
+            "62M",
+            "63",
+            "81M",
+            "82",
+            "83",
+            "83F",
+            "83T",
+            "84",
+            "99M"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromStringArchiveFormat_returnsCorrectArchiver",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromStringArchiveFormat_returnsCorrectArchiver",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "110M",
+            "111",
+            "112",
+            "112F",
+            "112T",
+            "113",
+            "64M",
+            "65",
+            "66",
+            "74M",
+            "75",
+            "93M",
+            "94",
+            "95",
+            "95F",
+            "95T",
+            "96"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "110M",
+            "111",
+            "111F",
+            "115",
+            "124M",
+            "125",
+            "125F",
+            "127",
+            "127F",
+            "130"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsArchiver",
+          "lines": [
+            "40M",
+            "41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromUnknownArchiveType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromUnknownArchiveType_fails",
+      "success": true,
+      "duration": 0.011,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "39M",
+            "40",
+            "42",
+            "42F",
+            "46",
+            "56M",
+            "57",
+            "57F",
+            "61",
+            "61F",
+            "63",
+            "63F",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "111M",
+            "112",
+            "133M",
+            "135",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_fromUnknownFileExtension_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_fromUnknownFileExtension_fails",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "39M",
+            "40",
+            "42",
+            "42T",
+            "43"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "153",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_withUnknownArchiveAndCompressionType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_withUnknownArchiveAndCompressionType_fails",
+      "success": true,
+      "duration": 0.016,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "100",
+            "64M",
+            "65",
+            "66",
+            "74M",
+            "75",
+            "93M",
+            "94",
+            "95",
+            "95F"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "78M",
+            "79",
+            "79T",
+            "80"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_withUnknownArchiveType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_withUnknownArchiveType_fails",
+      "success": true,
+      "duration": 0.013,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "100",
+            "64M",
+            "65",
+            "66",
+            "74M",
+            "75",
+            "93M",
+            "94",
+            "95",
+            "95F"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "110M",
+            "111",
+            "111T",
+            "112"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createArchiver_withUnknownCompressionType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createArchiver_withUnknownCompressionType_fails",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66",
+            "74M",
+            "75",
+            "93M",
+            "94",
+            "95",
+            "95F",
+            "95T",
+            "96"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiverFactory",
+          "lines": [
+            "78M",
+            "79",
+            "79F",
+            "82",
+            "82T",
+            "83"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54",
+            "62M",
+            "63",
+            "81M",
+            "82",
+            "83",
+            "83F",
+            "88"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_fromFile_returnsCorrectCompressor",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_fromFile_returnsCorrectCompressor",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsCompressor",
+          "lines": [
+            "43M",
+            "44"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "37M",
+            "38",
+            "40",
+            "40F",
+            "44",
+            "54M",
+            "55",
+            "55F",
+            "59",
+            "59T",
+            "60",
+            "87M",
+            "88"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "129M",
+            "130",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_fromStringCompressionFormat_returnsCorrectCompressor",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_fromStringCompressionFormat_returnsCorrectCompressor",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CommonsCompressor",
+          "lines": [
+            "43M",
+            "44"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "100",
+            "101",
+            "101F",
+            "101T",
+            "102",
+            "52M",
+            "53",
+            "54",
+            "62M",
+            "63",
+            "81M",
+            "82",
+            "83",
+            "83F",
+            "83T",
+            "84",
+            "99M"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "73M",
+            "74",
+            "74F",
+            "78",
+            "87M",
+            "88"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_fromUnknownCompressionType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_fromUnknownCompressionType_fails",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "37M",
+            "38",
+            "40",
+            "40F",
+            "44",
+            "54M",
+            "55",
+            "55F",
+            "59",
+            "59F",
+            "62"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "111M",
+            "112",
+            "133M",
+            "135",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_fromUnknownFileExtension_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_fromUnknownFileExtension_fails",
+      "success": true,
+      "duration": 0.008,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "37M",
+            "38",
+            "40",
+            "40T",
+            "41"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "153",
+            "164M",
+            "165",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_fromUnknownFileType_throwsException",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_fromUnknownFileType_throwsException",
+      "success": true,
+      "duration": 0.012,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "54M",
+            "55",
+            "55T",
+            "56"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FactoryTest#createCompressor_withUnknownCompressionType_fails",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FactoryTest",
+      "method": "createCompressor_withUnknownCompressionType_fails",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54",
+            "62M",
+            "63",
+            "81M",
+            "82",
+            "83",
+            "83F",
+            "88"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressorFactory",
+          "lines": [
+            "73M",
+            "74",
+            "74T",
+            "75"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FileTypeTest#get_archive_returnsCorrectFileType",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FileTypeTest",
+      "method": "get_archive_returnsCorrectFileType",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "111M",
+            "112",
+            "120M",
+            "121",
+            "129M",
+            "130",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FileTypeTest#get_compressedArchive_returnsCorrectFileType",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FileTypeTest",
+      "method": "get_compressedArchive_returnsCorrectFileType",
+      "success": true,
+      "duration": 0.013,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "111M",
+            "112",
+            "120M",
+            "121",
+            "129M",
+            "130",
+            "146M",
+            "147",
+            "148",
+            "148T",
+            "149",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FileTypeTest#get_compressed_returnsCorrectFileType",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FileTypeTest",
+      "method": "get_compressed_returnsCorrectFileType",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "102M",
+            "103",
+            "111M",
+            "112",
+            "120M",
+            "121",
+            "129M",
+            "130",
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "148T",
+            "149",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85",
+            "93M",
+            "94"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.FileTypeTest#get_unknownExtension_returnsUnknown",
+      "package": "org.rauschig.jarchivelib",
+      "class": "FileTypeTest",
+      "method": "get_unknownExtension_returnsUnknown",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "ArchiveFormat",
+          "lines": [
+            "64M",
+            "65",
+            "66"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "CompressionType",
+          "lines": [
+            "52M",
+            "53",
+            "54"
+          ]
+        },
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileType",
+          "lines": [
+            "146M",
+            "147",
+            "148",
+            "148F",
+            "153",
+            "168M",
+            "169",
+            "172M",
+            "173",
+            "176M",
+            "177",
+            "46M",
+            "48",
+            "49",
+            "50",
+            "51",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "74M",
+            "75",
+            "78M",
+            "79",
+            "82M",
+            "83",
+            "84",
+            "85"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#allPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "allPermissions",
+      "success": true,
+      "duration": 0.002,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#groupPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "groupPermissions",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#noPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "noPermissions",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#othersPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "othersPermissions",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#ownerPermissions",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "ownerPermissions",
+      "success": true,
+      "duration": 0.005,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#permissionCombinations",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "permissionCombinations",
+      "success": true,
+      "duration": 0.007,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "org.rauschig.jarchivelib.PosixFilePermissionsMapperTest#permissionsSameForAll",
+      "package": "org.rauschig.jarchivelib",
+      "class": "PosixFilePermissionsMapperTest",
+      "method": "permissionsSameForAll",
+      "success": true,
+      "duration": 0.004,
+      "coverage": [
+        {
+          "package": "org.rauschig.jarchivelib",
+          "class": "FileModeMapper",
+          "lines": [
+            "132M",
+            "133",
+            "134",
+            "135",
+            "137",
+            "138",
+            "139",
+            "141",
+            "142",
+            "143",
+            "146M",
+            "147",
+            "148",
+            "149",
+            "149F",
+            "149T",
+            "150",
+            "153"
+          ]
+        }
+      ]
+    }
+  ]
+}

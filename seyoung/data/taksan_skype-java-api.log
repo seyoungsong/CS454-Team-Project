@@ -1,0 +1,321 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/taksan/skype-java-api repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.github.taksan:skype-java-api:jar:1.8-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> duplicate declaration of version 4.13.1 @ line 87, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< com.github.taksan:skype-java-api >------------------
+[INFO] Building Skype API 1.8-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ skype-java-api ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ skype-java-api ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ skype-java-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ skype-java-api ---
+[INFO] Compiling 82 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ skype-java-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 24 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ skype-java-api ---
+[INFO] Compiling 51 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ skype-java-api ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.skype.AutoSkypeClientAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.skype.ChatMessageEditConnectorListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.skype.ProfileTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec
+Running com.skype.CallStatusChangedListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.DialogAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoChatAPITest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.284 sec
+Running com.skype.SkypeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.skype.AutoSkypeAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.VideoAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoVoiceMailAPITest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.071 sec
+Running com.skype.SystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CountryIsoByCountryNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.skype.SkypeObjectTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.PhoneAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoDebugOutTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.skype.ChatMessageListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.FriendTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 sec
+Running com.skype.AutoCallAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.979 sec
+Running com.skype.GroupAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.SMSTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.connector.ConnectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.skype.connector.test.AutoConnectorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.329 sec
+Running com.skype.connector.osx.OSXConnectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.skype.connector.AutoPropertyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.skype.connector.ConnectorUtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.skype.VoiceMailAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.HistoryAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.Ap2ApAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoAp2ApAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallForwardingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.Ap2ApAPIStressTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.SkypeExceptionHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoMainWindowStateTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.624 sec
+
+Results :
+
+Tests run: 43, Failures: 0, Errors: 0, Skipped: 19
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.587 s
+[INFO] Finished at: 2021-11-27T16:29:50+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.github.taksan:skype-java-api:jar:1.8-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> duplicate declaration of version 4.13.1 @ line 87, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< com.github.taksan:skype-java-api >------------------
+[INFO] Building Skype API 1.8-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ skype-java-api ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ skype-java-api ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 82 files (5 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 51 files (5 packages).
+[INFO] 66 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ skype-java-api ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ skype-java-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ skype-java-api ---
+[INFO] Compiling 82 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ skype-java-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 24 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ skype-java-api ---
+[INFO] Compiling 51 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ skype-java-api ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.skype.AutoSkypeClientAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
+Running com.skype.ChatMessageEditConnectorListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.skype.ProfileTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec
+Running com.skype.CallStatusChangedListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.DialogAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoChatAPITest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.292 sec
+Running com.skype.SkypeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.skype.AutoSkypeAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.VideoAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoVoiceMailAPITest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.078 sec
+Running com.skype.SystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CountryIsoByCountryNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.skype.SkypeObjectTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.PhoneAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoDebugOutTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.skype.ChatMessageListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.skype.FriendTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.179 sec
+Running com.skype.AutoCallAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.984 sec
+Running com.skype.GroupAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.SMSTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.connector.ConnectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.skype.connector.test.AutoConnectorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.334 sec
+Running com.skype.connector.osx.OSXConnectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.skype.connector.AutoPropertyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.skype.connector.ConnectorUtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.skype.VoiceMailAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.HistoryAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.Ap2ApAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoAp2ApAPITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallForwardingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running com.skype.Ap2ApAPIStressTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.CallListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.SkypeExceptionHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running com.skype.AutoMainWindowStateTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.614 sec
+
+Results :
+
+Tests run: 43, Failures: 0, Errors: 0, Skipped: 19
+
+[INFO] 
+[INFO] ------------------< com.github.taksan:skype-java-api >------------------
+[INFO] Building Skype API 1.8-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ skype-java-api ---
+[INFO] 
+[INFO] ------------------< com.github.taksan:skype-java-api >------------------
+[INFO] Building Skype API 1.8-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ skype-java-api ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8122556843283037538resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.999 s
+[INFO] Finished at: 2021-11-27T16:30:13+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/24] com.skype.AutoCallAPITest#testSendDTMF
+[test][2/24] com.skype.AutoChatAPITest#testGetAllActiveChat
+[test][3/24] com.skype.AutoChatAPITest#testGetAllBookmarkedChat
+[test][4/24] com.skype.AutoChatAPITest#testGetAllChat
+[test][5/24] com.skype.AutoChatAPITest#testGetAllMissedChat
+[test][6/24] com.skype.AutoChatAPITest#testGetAllRecentChat
+[test][7/24] com.skype.AutoDebugOutTest#testBasic
+[test][8/24] com.skype.AutoMainWindowStateTest#testBasic
+[test][9/24] com.skype.AutoSkypeClientAPITest#test
+[test][10/24] com.skype.AutoVoiceMailAPITest#testGetAllVoiceMails
+[test][11/24] com.skype.AutoVoiceMailAPITest#testVoiceMail
+[test][12/24] com.skype.ChatMessageEditConnectorListenerTest#onProcessMessage_ShouldTriggerListenerEventIfEditSequenceIsMet
+[test][13/24] com.skype.CountryIsoByCountryNameTest#onGetIsoForCountry_ShouldReturnCountryIso
+[test][14/24] com.skype.FriendTest#testFriendProperties
+[test][15/24] com.skype.FriendTest#testGetAllFriends
+[test][16/24] com.skype.ProfileTest#testBasic
+[test][17/24] com.skype.SkypeTest#addListener_ShouldNotAddListenerIfExceptionIsThrown
+[test][18/24] com.skype.connector.AutoPropertyTest#testBasic
+[test][19/24] com.skype.connector.ConnectorTest#testProperty
+[test][20/24] com.skype.connector.ConnectorUtilsTest#getConnectorInstance_ShouldReturnValidConnector
+[test][21/24] com.skype.connector.ConnectorUtilsTest#getTempDir_ShouldReturnARandomTemporaryDirUnderTempDir
+[test][22/24] com.skype.connector.osx.OSXConnectorTest#onFixLegacyMessage_ShouldAddChatPrefix
+[test][23/24] com.skype.connector.test.AutoConnectorTest#testCall
+[test][24/24] com.skype.connector.test.AutoConnectorTest#testGetVersion
+[main][14/14] python parse_data.py
+  0%|          | 0/24 [00:00<?, ?it/s] 42%|████▏     | 10/24 [00:00<00:00, 98.04it/s] 88%|████████▊ | 21/24 [00:00<00:00, 100.01it/s]100%|██████████| 24/24 [00:00<00:00, 100.40it/s]
+Done.

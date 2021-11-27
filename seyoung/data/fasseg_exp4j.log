@@ -1,0 +1,538 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/fasseg/exp4j repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-external/2.7/wagon-ssh-external-2.7.pom
+Progress (1): 2.7/4.3 kBProgress (1): 4.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-external/2.7/wagon-ssh-external-2.7.pom (4.3 kB at 4.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-providers/2.7/wagon-providers-2.7.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-providers/2.7/wagon-providers-2.7.pom (2.7 kB at 9.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon/2.7/wagon-2.7.pom
+Progress (1): 2.7/19 kBProgress (1): 5.5/19 kBProgress (1): 8.2/19 kBProgress (1): 11/19 kB Progress (1): 14/19 kBProgress (1): 16/19 kBProgress (1): 19 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon/2.7/wagon-2.7.pom (19 kB at 60 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-common/2.7/wagon-ssh-common-2.7.pom
+Progress (1): 1.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-common/2.7/wagon-ssh-common-2.7.pom (1.8 kB at 6.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/2.7/wagon-provider-api-2.7.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/2.7/wagon-provider-api-2.7.pom (1.7 kB at 6.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-external/2.7/wagon-ssh-external-2.7.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-common/2.7/wagon-ssh-common-2.7.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/2.7/wagon-provider-api-2.7.jar
+Progress (1): 2.7/15 kBProgress (1): 5.5/15 kBProgress (1): 8.2/15 kBProgress (1): 11/15 kB Progress (1): 14/15 kBProgress (1): 15 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-external/2.7/wagon-ssh-external-2.7.jar (15 kB at 50 kB/s)
+Progress (1): 2.7/53 kBProgress (2): 2.7/53 kB | 2.7/25 kBProgress (2): 5.5/53 kB | 2.7/25 kBProgress (2): 5.5/53 kB | 5.5/25 kBProgress (2): 8.2/53 kB | 5.5/25 kBProgress (2): 8.2/53 kB | 8.2/25 kBProgress (2): 11/53 kB | 8.2/25 kB Progress (2): 11/53 kB | 11/25 kB Progress (2): 11/53 kB | 14/25 kBProgress (2): 11/53 kB | 16/25 kBProgress (2): 14/53 kB | 16/25 kBProgress (2): 14/53 kB | 19/25 kBProgress (2): 16/53 kB | 19/25 kBProgress (2): 16/53 kB | 22/25 kBProgress (2): 19/53 kB | 22/25 kBProgress (2): 19/53 kB | 25/25 kBProgress (2): 19/53 kB | 25 kB   Progress (2): 22/53 kB | 25 kBProgress (2): 25/53 kB | 25 kBProgress (2): 27/53 kB | 25 kBProgress (2): 30/53 kB | 25 kBProgress (2): 33/53 kB | 25 kBProgress (2): 36/53 kB | 25 kBProgress (2): 38/53 kB | 25 kBProgress (2): 41/53 kB | 25 kBProgress (2): 44/53 kB | 25 kBProgress (2): 47/53 kB | 25 kBProgress (2): 49/53 kB | 25 kBProgress (2): 52/53 kB | 25 kBProgress (2): 53 kB | 25 kB                              Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-ssh-common/2.7/wagon-ssh-common-2.7.jar (25 kB at 42 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/2.7/wagon-provider-api-2.7.jar (53 kB at 71 kB/s)
+[INFO] 
+[INFO] -----------------------< net.objecthunter:exp4j >-----------------------
+[INFO] Building exp4j 0.4.9-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.1/logback-classic-1.1.1.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.1/logback-classic-1.1.1.pom (12 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.1.1/logback-parent-1.1.1.pom
+Progress (1): 4.1/15 kBProgress (1): 8.2/15 kBProgress (1): 12/15 kB Progress (1): 15 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.1.1/logback-parent-1.1.1.pom (15 kB at 51 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.1/logback-core-1.1.1.pom
+Progress (1): 4.1/5.0 kBProgress (1): 5.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.1/logback-core-1.1.1.pom (5.0 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.pom (2.7 kB at 9.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.6/slf4j-parent-1.7.6.pom
+Progress (1): 4.1/12 kBProgress (1): 8.2/12 kBProgress (1): 12 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.6/slf4j-parent-1.7.6.pom (12 kB at 42 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.1/logback-classic-1.1.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.1/logback-core-1.1.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar
+Progress (1): 2.7/29 kBProgress (1): 5.5/29 kBProgress (2): 5.5/29 kB | 2.7/428 kBProgress (2): 8.2/29 kB | 2.7/428 kBProgress (2): 8.2/29 kB | 5.5/428 kBProgress (3): 8.2/29 kB | 5.5/428 kB | 4.1/271 kBProgress (3): 8.2/29 kB | 5.5/428 kB | 8.2/271 kBProgress (3): 8.2/29 kB | 5.5/428 kB | 12/271 kB Progress (3): 11/29 kB | 5.5/428 kB | 12/271 kB Progress (3): 11/29 kB | 5.5/428 kB | 16/271 kBProgress (3): 11/29 kB | 8.2/428 kB | 16/271 kBProgress (3): 14/29 kB | 8.2/428 kB | 16/271 kBProgress (3): 14/29 kB | 11/428 kB | 16/271 kB Progress (3): 16/29 kB | 11/428 kB | 16/271 kBProgress (3): 16/29 kB | 11/428 kB | 20/271 kBProgress (3): 16/29 kB | 11/428 kB | 25/271 kBProgress (3): 16/29 kB | 11/428 kB | 29/271 kBProgress (3): 16/29 kB | 11/428 kB | 33/271 kBProgress (3): 16/29 kB | 14/428 kB | 33/271 kBProgress (3): 19/29 kB | 14/428 kB | 33/271 kBProgress (3): 22/29 kB | 14/428 kB | 33/271 kBProgress (3): 25/29 kB | 14/428 kB | 33/271 kBProgress (3): 25/29 kB | 14/428 kB | 37/271 kBProgress (3): 25/29 kB | 14/428 kB | 41/271 kBProgress (3): 25/29 kB | 14/428 kB | 45/271 kBProgress (3): 25/29 kB | 14/428 kB | 49/271 kBProgress (3): 27/29 kB | 14/428 kB | 49/271 kBProgress (3): 29 kB | 14/428 kB | 49/271 kB   Progress (3): 29 kB | 14/428 kB | 53/271 kBProgress (3): 29 kB | 14/428 kB | 57/271 kBProgress (3): 29 kB | 14/428 kB | 61/271 kBProgress (3): 29 kB | 14/428 kB | 66/271 kBProgress (3): 29 kB | 18/428 kB | 66/271 kBProgress (3): 29 kB | 22/428 kB | 66/271 kBProgress (3): 29 kB | 26/428 kB | 66/271 kBProgress (3): 29 kB | 30/428 kB | 66/271 kBProgress (3): 29 kB | 30/428 kB | 70/271 kBProgress (3): 29 kB | 30/428 kB | 74/271 kBProgress (3): 29 kB | 30/428 kB | 78/271 kBProgress (3): 29 kB | 30/428 kB | 82/271 kBProgress (3): 29 kB | 34/428 kB | 82/271 kBProgress (3): 29 kB | 34/428 kB | 86/271 kBProgress (3): 29 kB | 38/428 kB | 86/271 kBProgress (3): 29 kB | 38/428 kB | 90/271 kBProgress (3): 29 kB | 42/428 kB | 90/271 kBProgress (3): 29 kB | 42/428 kB | 94/271 kBProgress (3): 29 kB | 42/428 kB | 98/271 kBProgress (3): 29 kB | 46/428 kB | 98/271 kBProgress (3): 29 kB | 46/428 kB | 102/271 kBProgress (3): 29 kB | 46/428 kB | 106/271 kBProgress (3): 29 kB | 46/428 kB | 111/271 kBProgress (3): 29 kB | 46/428 kB | 115/271 kBProgress (3): 29 kB | 51/428 kB | 115/271 kBProgress (3): 29 kB | 55/428 kB | 115/271 kBProgress (3): 29 kB | 59/428 kB | 115/271 kBProgress (3): 29 kB | 63/428 kB | 115/271 kBProgress (3): 29 kB | 63/428 kB | 119/271 kBProgress (3): 29 kB | 63/428 kB | 123/271 kBProgress (3): 29 kB | 63/428 kB | 127/271 kBProgress (3): 29 kB | 63/428 kB | 131/271 kBProgress (3): 29 kB | 63/428 kB | 135/271 kBProgress (3): 29 kB | 63/428 kB | 139/271 kBProgress (3): 29 kB | 63/428 kB | 143/271 kBProgress (3): 29 kB | 63/428 kB | 147/271 kBProgress (3): 29 kB | 63/428 kB | 152/271 kBProgress (3): 29 kB | 63/428 kB | 156/271 kBProgress (3): 29 kB | 63/428 kB | 160/271 kBProgress (3): 29 kB | 63/428 kB | 164/271 kBProgress (3): 29 kB | 67/428 kB | 164/271 kBProgress (3): 29 kB | 71/428 kB | 164/271 kBProgress (3): 29 kB | 75/428 kB | 164/271 kBProgress (3): 29 kB | 79/428 kB | 164/271 kBProgress (3): 29 kB | 79/428 kB | 168/271 kBProgress (3): 29 kB | 79/428 kB | 172/271 kBProgress (3): 29 kB | 79/428 kB | 176/271 kBProgress (3): 29 kB | 79/428 kB | 180/271 kBProgress (3): 29 kB | 79/428 kB | 184/271 kBProgress (3): 29 kB | 79/428 kB | 188/271 kBProgress (3): 29 kB | 79/428 kB | 193/271 kBProgress (3): 29 kB | 79/428 kB | 197/271 kBProgress (3): 29 kB | 83/428 kB | 197/271 kBProgress (3): 29 kB | 87/428 kB | 197/271 kBProgress (3): 29 kB | 92/428 kB | 197/271 kBProgress (3): 29 kB | 96/428 kB | 197/271 kBProgress (3): 29 kB | 96/428 kB | 201/271 kBProgress (3): 29 kB | 96/428 kB | 205/271 kBProgress (3): 29 kB | 96/428 kB | 209/271 kBProgress (3): 29 kB | 96/428 kB | 213/271 kBProgress (3): 29 kB | 96/428 kB | 217/271 kBProgress (3): 29 kB | 96/428 kB | 221/271 kBProgress (3): 29 kB | 96/428 kB | 225/271 kBProgress (3): 29 kB | 96/428 kB | 229/271 kBProgress (3): 29 kB | 100/428 kB | 229/271 kBProgress (3): 29 kB | 104/428 kB | 229/271 kBProgress (3): 29 kB | 108/428 kB | 229/271 kBProgress (3): 29 kB | 112/428 kB | 229/271 kB                                             Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar (29 kB at 84 kB/s)
+Progress (2): 116/428 kB | 229/271 kBProgress (2): 120/428 kB | 229/271 kBProgress (2): 124/428 kB | 229/271 kBProgress (2): 128/428 kB | 229/271 kBProgress (2): 128/428 kB | 233/271 kBProgress (2): 128/428 kB | 238/271 kBProgress (2): 128/428 kB | 242/271 kBProgress (2): 128/428 kB | 246/271 kBProgress (2): 132/428 kB | 246/271 kBProgress (2): 137/428 kB | 246/271 kBProgress (2): 141/428 kB | 246/271 kBProgress (2): 145/428 kB | 246/271 kBProgress (2): 145/428 kB | 250/271 kBProgress (2): 145/428 kB | 254/271 kBProgress (2): 145/428 kB | 258/271 kBProgress (2): 145/428 kB | 262/271 kBProgress (2): 145/428 kB | 266/271 kBProgress (2): 145/428 kB | 270/271 kBProgress (2): 145/428 kB | 271 kB    Progress (2): 149/428 kB | 271 kBProgress (2): 153/428 kB | 271 kBProgress (2): 157/428 kB | 271 kBProgress (2): 161/428 kB | 271 kBProgress (2): 165/428 kB | 271 kBProgress (2): 169/428 kB | 271 kBProgress (2): 173/428 kB | 271 kBProgress (2): 178/428 kB | 271 kBProgress (2): 182/428 kB | 271 kBProgress (2): 186/428 kB | 271 kBProgress (2): 190/428 kB | 271 kBProgress (2): 194/428 kB | 271 kBProgress (2): 198/428 kB | 271 kBProgress (2): 202/428 kB | 271 kBProgress (2): 206/428 kB | 271 kBProgress (2): 210/428 kB | 271 kBProgress (2): 214/428 kB | 271 kBProgress (2): 219/428 kB | 271 kBProgress (2): 223/428 kB | 271 kBProgress (2): 227/428 kB | 271 kBProgress (2): 231/428 kB | 271 kBProgress (2): 235/428 kB | 271 kBProgress (2): 239/428 kB | 271 kBProgress (2): 243/428 kB | 271 kBProgress (2): 247/428 kB | 271 kBProgress (2): 251/428 kB | 271 kBProgress (2): 255/428 kB | 271 kBProgress (2): 259/428 kB | 271 kBProgress (2): 264/428 kB | 271 kBProgress (2): 268/428 kB | 271 kBProgress (2): 272/428 kB | 271 kBProgress (2): 276/428 kB | 271 kBProgress (2): 280/428 kB | 271 kBProgress (2): 284/428 kB | 271 kBProgress (2): 288/428 kB | 271 kBProgress (2): 292/428 kB | 271 kBProgress (2): 296/428 kB | 271 kBProgress (2): 300/428 kB | 271 kBProgress (2): 305/428 kB | 271 kBProgress (2): 309/428 kB | 271 kBProgress (2): 313/428 kB | 271 kBProgress (2): 317/428 kB | 271 kBProgress (2): 321/428 kB | 271 kBProgress (2): 325/428 kB | 271 kBProgress (2): 329/428 kB | 271 kBProgress (2): 333/428 kB | 271 kBProgress (2): 337/428 kB | 271 kBProgress (2): 341/428 kB | 271 kBProgress (2): 345/428 kB | 271 kBProgress (2): 350/428 kB | 271 kBProgress (2): 354/428 kB | 271 kBProgress (2): 358/428 kB | 271 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.1/logback-classic-1.1.1.jar (271 kB at 485 kB/s)
+Progress (1): 362/428 kBProgress (1): 366/428 kBProgress (1): 370/428 kBProgress (1): 374/428 kBProgress (1): 378/428 kBProgress (1): 382/428 kBProgress (1): 386/428 kBProgress (1): 391/428 kBProgress (1): 395/428 kBProgress (1): 399/428 kBProgress (1): 403/428 kBProgress (1): 407/428 kBProgress (1): 411/428 kBProgress (1): 415/428 kBProgress (1): 419/428 kBProgress (1): 423/428 kBProgress (1): 427/428 kBProgress (1): 428 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.1/logback-core-1.1.1.jar (428 kB at 592 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ exp4j ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ exp4j ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ exp4j ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ exp4j ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ exp4j ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] /Users/seyoung/data/repo/src/test/java/net/objecthunter/exp4j/FunctionsTest.java: /Users/seyoung/data/repo/src/test/java/net/objecthunter/exp4j/FunctionsTest.java uses or overrides a deprecated API.
+[WARNING] /Users/seyoung/data/repo/src/test/java/net/objecthunter/exp4j/FunctionsTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ exp4j ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running net.objecthunter.exp4j.shuntingyard.ShuntingYardTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running net.objecthunter.exp4j.ExpressionBuilderTest
+Tests run: 219, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running net.objecthunter.exp4j.FunctionsTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running net.objecthunter.exp4j.ExpressionTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec
+Running net.objecthunter.exp4j.tokenizer.TokenizerTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running net.objecthunter.exp4j.ArrayStackTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running net.objecthunter.exp4j.PerformanceTest
++------------------------+---------------------------+--------------------------+
+| Implementation         | Calculations per Second   | Percentage of Math       |
++------------------------+---------------------------+--------------------------+
+| Java Math              |                3111498.00 |                 100.00 % |
+| exp4j                  |                2089076.50 |                  67.14 % |
+| JSR-223 (Java Script)  |                   2602.50 |                   0.08 % |
++------------------------+---------------------------+--------------------------+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.129 sec
+Running net.objecthunter.exp4j.ExpressionValidateTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 312, Failures: 0, Errors: 0, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.927 s
+[INFO] Finished at: 2021-11-27T11:30:43+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< net.objecthunter:exp4j >-----------------------
+[INFO] Building exp4j 0.4.9-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ exp4j ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ exp4j ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 19 files (5 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 11 files (3 packages).
+[INFO] 312 test methods detected.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ exp4j ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ exp4j ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ exp4j ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ exp4j ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/seyoung/data/repo/target/test-classes
+[WARNING] /Users/seyoung/data/repo/target/clover/src-test-instrumented/net/objecthunter/exp4j/FunctionsTest.java: /Users/seyoung/data/repo/target/clover/src-test-instrumented/net/objecthunter/exp4j/FunctionsTest.java uses or overrides a deprecated API.
+[WARNING] /Users/seyoung/data/repo/target/clover/src-test-instrumented/net/objecthunter/exp4j/FunctionsTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ exp4j ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running net.objecthunter.exp4j.shuntingyard.ShuntingYardTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running net.objecthunter.exp4j.ExpressionBuilderTest
+Tests run: 219, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 sec
+Running net.objecthunter.exp4j.FunctionsTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running net.objecthunter.exp4j.ExpressionTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.01 sec
+Running net.objecthunter.exp4j.tokenizer.TokenizerTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running net.objecthunter.exp4j.ArrayStackTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running net.objecthunter.exp4j.PerformanceTest
++------------------------+---------------------------+--------------------------+
+| Implementation         | Calculations per Second   | Percentage of Math       |
++------------------------+---------------------------+--------------------------+
+| Java Math              |                2930207.00 |                 100.00 % |
+| exp4j                  |                 556607.50 |                  19.00 % |
+| JSR-223 (Java Script)  |                   2016.50 |                   0.07 % |
++------------------------+---------------------------+--------------------------+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.113 sec
+Running net.objecthunter.exp4j.ExpressionValidateTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+
+Results :
+
+Tests run: 312, Failures: 0, Errors: 0, Skipped: 1
+
+[INFO] 
+[INFO] -----------------------< net.objecthunter:exp4j >-----------------------
+[INFO] Building exp4j 0.4.9-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ exp4j ---
+[INFO] 
+[INFO] -----------------------< net.objecthunter:exp4j >-----------------------
+[INFO] Building exp4j 0.4.9-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ exp4j ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn7897218717363902055resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.655 s
+[INFO] Finished at: 2021-11-27T11:30:55+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/311] net.objecthunter.exp4j.ArrayStackTest#testConstructor
+[test][2/311] net.objecthunter.exp4j.ArrayStackTest#testIsEmpty
+[test][3/311] net.objecthunter.exp4j.ArrayStackTest#testPeek
+[test][4/311] net.objecthunter.exp4j.ArrayStackTest#testPeek2
+[test][5/311] net.objecthunter.exp4j.ArrayStackTest#testPeekNoData
+[test][6/311] net.objecthunter.exp4j.ArrayStackTest#testPop
+[test][7/311] net.objecthunter.exp4j.ArrayStackTest#testPop2
+[test][8/311] net.objecthunter.exp4j.ArrayStackTest#testPop3
+[test][9/311] net.objecthunter.exp4j.ArrayStackTest#testPopNoData
+[test][10/311] net.objecthunter.exp4j.ArrayStackTest#testPushLessSize
+[test][11/311] net.objecthunter.exp4j.ArrayStackTest#testPushNoSize
+[test][12/311] net.objecthunter.exp4j.ArrayStackTest#testSize
+[test][13/311] net.objecthunter.exp4j.ExpressionBuilderTest#testCustomPercent
+[test][14/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample1
+[test][15/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample10
+[test][16/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample11
+[test][17/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample12
+[test][18/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample2
+[test][19/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample3
+[test][20/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample4
+[test][21/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample5
+[test][22/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample6
+[test][23/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample7
+[test][24/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample8
+[test][25/311] net.objecthunter.exp4j.ExpressionBuilderTest#testDocumentationExample9
+[test][26/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression1
+[test][27/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression10
+[test][28/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression11
+[test][29/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression12
+[test][30/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression13
+[test][31/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression14
+[test][32/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression15
+[test][33/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression16
+[test][34/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression17
+[test][35/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression18
+[test][36/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression19
+[test][37/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression2
+[test][38/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression20
+[test][39/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression21
+[test][40/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression22
+[test][41/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression23
+[test][42/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression24
+[test][43/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression25
+[test][44/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression26
+[test][45/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression27
+[test][46/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression28
+[test][47/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression29
+[test][48/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression3
+[test][49/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression30
+[test][50/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression31
+[test][51/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression32
+[test][52/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression33
+[test][53/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression34
+[test][54/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression4
+[test][55/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression40
+[test][56/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression41
+[test][57/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression42
+[test][58/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression43
+[test][59/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression44
+[test][60/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression45
+[test][61/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression46
+[test][62/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression48
+[test][63/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression49
+[test][64/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression5
+[test][65/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression50
+[test][66/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression51
+[test][67/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression52
+[test][68/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression53
+[test][69/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression54
+[test][70/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression55
+[test][71/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression56
+[test][72/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression57
+[test][73/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression58
+[test][74/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression59
+[test][75/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression6
+[test][76/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression60
+[test][77/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression61
+[test][78/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression62
+[test][79/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression63
+[test][80/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression64
+[test][81/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression65
+[test][82/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression66
+[test][83/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression67
+[test][84/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression68
+[test][85/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression69
+[test][86/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression7
+[test][87/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression70
+[test][88/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression71
+[test][89/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression72
+[test][90/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression73
+[test][91/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression74
+[test][92/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression75
+[test][93/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression76
+[test][94/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression77
+[test][95/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression78
+[test][96/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression79
+[test][97/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression8
+[test][98/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression80
+[test][99/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression81
+[test][100/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression82
+[test][101/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression83
+[test][102/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression84
+[test][103/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression85
+[test][104/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpression9
+[test][105/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder01
+[test][106/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder02
+[test][107/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder03
+[test][108/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder04
+[test][109/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder05
+[test][110/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder06
+[test][111/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder07
+[test][112/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder08
+[test][113/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder1
+[test][114/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder10
+[test][115/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder11
+[test][116/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder12
+[test][117/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder13
+[test][118/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder14
+[test][119/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder15
+[test][120/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder16
+[test][121/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder17
+[test][122/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder18
+[test][123/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder19
+[test][124/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder2
+[test][125/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder3
+[test][126/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder4
+[test][127/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder5
+[test][128/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder6
+[test][129/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder7
+[test][130/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder8
+[test][131/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionBuilder9
+[test][132/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionMultiplication
+[test][133/311] net.objecthunter.exp4j.ExpressionBuilderTest#testExpressionPower
+[test][134/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFailUnknownFunction1
+[test][135/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFailUnknownFunction2
+[test][136/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFailUnknownFunction3
+[test][137/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction1
+[test][138/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction10
+[test][139/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction11
+[test][140/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction12
+[test][141/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction13
+[test][142/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction14
+[test][143/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction15
+[test][144/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction16
+[test][145/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction17
+[test][146/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction18
+[test][147/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction19
+[test][148/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction2
+[test][149/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction20
+[test][150/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction22
+[test][151/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction23
+[test][152/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction24
+[test][153/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction3
+[test][154/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction4
+[test][155/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction5
+[test][156/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction6
+[test][157/311] net.objecthunter.exp4j.ExpressionBuilderTest#testFunction7
+[test][158/311] net.objecthunter.exp4j.ExpressionBuilderTest#testGetVariableNames1
+[test][159/311] net.objecthunter.exp4j.ExpressionBuilderTest#testGetVariableNames2
+[test][160/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOffFunction
+[test][161/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOffNumber
+[test][162/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOffParentheses
+[test][163/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOffVariable
+[test][164/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOnFunction
+[test][165/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOnNumber
+[test][166/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOnParentheses
+[test][167/311] net.objecthunter.exp4j.ExpressionBuilderTest#testImplicitMultiplicationOnVariable
+[test][168/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidFunction
+[test][169/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidFunction1
+[test][170/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidFunction2
+[test][171/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidNumberOfArguments1
+[test][172/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidNumberOfArguments2
+[test][173/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidOperator1
+[test][174/311] net.objecthunter.exp4j.ExpressionBuilderTest#testInvalidVarName
+[test][175/311] net.objecthunter.exp4j.ExpressionBuilderTest#testMisplacedSeparator
+[test][176/311] net.objecthunter.exp4j.ExpressionBuilderTest#testMissingVar
+[test][177/311] net.objecthunter.exp4j.ExpressionBuilderTest#testModulo1
+[test][178/311] net.objecthunter.exp4j.ExpressionBuilderTest#testOperators1
+[test][179/311] net.objecthunter.exp4j.ExpressionBuilderTest#testOperators2
+[test][180/311] net.objecthunter.exp4j.ExpressionBuilderTest#testOperators3
+[test][181/311] net.objecthunter.exp4j.ExpressionBuilderTest#testOperators4
+[test][182/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfix1
+[test][183/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixEverything
+[test][184/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixExponentiation1
+[test][185/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixExponentiation2
+[test][186/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixExponentiation3
+[test][187/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixExponentiation4
+[test][188/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction1
+[test][189/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction10
+[test][190/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction11
+[test][191/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction12
+[test][192/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction13
+[test][193/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction14
+[test][194/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction15
+[test][195/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction16
+[test][196/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction17
+[test][197/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction18
+[test][198/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction19
+[test][199/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction2
+[test][200/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction20
+[test][201/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction21
+[test][202/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction3
+[test][203/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction5
+[test][204/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction6
+[test][205/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction7
+[test][206/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction8
+[test][207/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixFunction9
+[test][208/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixInvalidVariableName
+[test][209/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixParenthesis
+[test][210/311] net.objecthunter.exp4j.ExpressionBuilderTest#testPostfixVariables
+[test][211/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSameName
+[test][212/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSameVariableAndBuiltinFunctionName
+[test][213/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSameVariableAndUserFunctionName
+[test][214/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSecondArgumentNegative
+[test][215/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSignum
+[test][216/311] net.objecthunter.exp4j.ExpressionBuilderTest#testSpaceBetweenNumbers
+[test][217/311] net.objecthunter.exp4j.ExpressionBuilderTest#testTwoAdjacentOperators
+[test][218/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinus
+[test][219/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinusInParenthesisSpace
+[test][220/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinusPowerPrecedence
+[test][221/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinusSpace
+[test][222/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinusSpace1
+[test][223/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnaryMinusSpaces
+[test][224/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnicodeVariable1
+[test][225/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnicodeVariable2
+[test][226/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnicodeVariable3
+[test][227/311] net.objecthunter.exp4j.ExpressionBuilderTest#testUnicodeVariable4
+[test][228/311] net.objecthunter.exp4j.ExpressionBuilderTest#testValidationDocExample
+[test][229/311] net.objecthunter.exp4j.ExpressionBuilderTest#testVarMap
+[test][230/311] net.objecthunter.exp4j.ExpressionBuilderTest#testVarName1
+[test][231/311] net.objecthunter.exp4j.ExpressionBuilderTest#testVariableWithDot
+[test][232/311] net.objecthunter.exp4j.ExpressionTest#testClearVariables
+[test][233/311] net.objecthunter.exp4j.ExpressionTest#testCotangent1
+[test][234/311] net.objecthunter.exp4j.ExpressionTest#testExpression1
+[test][235/311] net.objecthunter.exp4j.ExpressionTest#testExpression2
+[test][236/311] net.objecthunter.exp4j.ExpressionTest#testFactorial
+[test][237/311] net.objecthunter.exp4j.ExpressionTest#testGetVariableNames1
+[test][238/311] net.objecthunter.exp4j.ExpressionTest#testInvalidCotangent1
+[test][239/311] net.objecthunter.exp4j.ExpressionTest#testInvalidFactorial2
+[test][240/311] net.objecthunter.exp4j.ExpressionTest#testOperatorFactorial2
+[test][241/311] net.objecthunter.exp4j.ExpressionValidateTest#testNoArgFunctionValidation
+[test][242/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunction
+[test][243/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionAndOperator
+[test][244/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionNegative
+[test][245/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionPositive
+[test][246/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithSevenArguments
+[test][247/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithSevenArgumentsAndOperator
+[test][248/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithThreeArguments
+[test][249/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithThreeArgumentsAndOperator
+[test][250/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithTwoAndThreeArguments
+[test][251/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithTwoAndThreeArgumentsAndMultipleOperator
+[test][252/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithTwoAndThreeArgumentsAndOperator
+[test][253/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithTwoArguments
+[test][254/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateFunctionWithTwoArgumentsAndOperator
+[test][255/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidFunction
+[test][256/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidFunctionWithManyArguments
+[test][257/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidFunctionWithTooFewArguments
+[test][258/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidFunctionWithTooFewArgumentsAndOperands
+[test][259/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidOperand
+[test][260/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateInvalidOperator
+[test][261/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateNumber
+[test][262/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateNumberNegative
+[test][263/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateNumberPositive
+[test][264/311] net.objecthunter.exp4j.ExpressionValidateTest#testValidateOperator
+[test][265/311] net.objecthunter.exp4j.FunctionsTest#testCheckFunctionNames
+[test][266/311] net.objecthunter.exp4j.FunctionsTest#testFunctionNameEmpty
+[test][267/311] net.objecthunter.exp4j.FunctionsTest#testFunctionNameNegativeArgs
+[test][268/311] net.objecthunter.exp4j.FunctionsTest#testFunctionNameNull
+[test][269/311] net.objecthunter.exp4j.FunctionsTest#testFunctionNameZeroArgs
+[test][270/311] net.objecthunter.exp4j.FunctionsTest#testGetAllowedFunctionChars
+[test][271/311] net.objecthunter.exp4j.FunctionsTest#testIllegalFunctionName1
+[test][272/311] net.objecthunter.exp4j.FunctionsTest#testIllegalFunctionName2
+[test][273/311] net.objecthunter.exp4j.FunctionsTest#testIllegalFunctionName3
+[test][274/311] net.objecthunter.exp4j.PerformanceTest#testBenches
+[test][275/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard1
+[test][276/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard2
+[test][277/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard3
+[test][278/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard4
+[test][279/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard5
+[test][280/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard6
+[test][281/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard7
+[test][282/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard8
+[test][283/311] net.objecthunter.exp4j.shuntingyard.ShuntingYardTest#testShuntingYard9
+[test][284/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization1
+[test][285/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization10
+[test][286/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization11
+[test][287/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization12
+[test][288/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization13
+[test][289/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization14
+[test][290/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization15
+[test][291/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization16
+[test][292/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization17
+[test][293/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization18
+[test][294/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization19
+[test][295/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization2
+[test][296/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization20
+[test][297/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization21
+[test][298/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization22
+[test][299/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization3
+[test][300/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization4
+[test][301/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization5
+[test][302/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization6
+[test][303/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization7
+[test][304/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization8
+[test][305/311] net.objecthunter.exp4j.tokenizer.TokenizerTest#testTokenization9
+[test][306/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownFunction
+[test][307/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownFunction1Details
+[test][308/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownFunction2Details
+[test][309/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownVariable
+[test][310/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownVariable1Details
+[test][311/311] net.objecthunter.exp4j.tokenizer.TokenizerUnknownTokenOrVariableTest#testTokenizationOfUnknownVariable2Details
+[main][14/14] python parse_data.py
+  0%|          | 0/311 [00:00<?, ?it/s]  6%|▋         | 20/311 [00:00<00:01, 198.26it/s] 13%|█▎        | 40/311 [00:00<00:01, 196.87it/s] 19%|█▉        | 60/311 [00:00<00:01, 196.33it/s] 26%|██▌       | 80/311 [00:00<00:01, 194.37it/s] 32%|███▏      | 100/311 [00:00<00:01, 194.01it/s] 39%|███▊      | 120/311 [00:00<00:00, 191.40it/s] 45%|████▌     | 140/311 [00:00<00:00, 191.48it/s] 51%|█████▏    | 160/311 [00:00<00:00, 191.94it/s] 58%|█████▊    | 180/311 [00:00<00:00, 190.43it/s] 64%|██████▍   | 200/311 [00:01<00:00, 189.84it/s] 71%|███████   | 220/311 [00:01<00:00, 190.36it/s] 77%|███████▋  | 240/311 [00:01<00:00, 190.82it/s] 84%|████████▎ | 260/311 [00:01<00:00, 192.15it/s] 90%|█████████ | 280/311 [00:01<00:00, 194.08it/s] 96%|█████████▋| 300/311 [00:01<00:00, 194.48it/s]100%|██████████| 311/311 [00:01<00:00, 192.56it/s]
+Done.

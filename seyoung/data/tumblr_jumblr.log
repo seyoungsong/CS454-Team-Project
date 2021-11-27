@@ -1,0 +1,332 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/tumblr/jumblr repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.tumblr:jumblr >--------------------------
+[INFO] Building jumblr 0.0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom
+Progress (1): 2.7/6.7 kBProgress (1): 5.5/6.7 kBProgress (1): 6.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom (6.7 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar
+Progress (1): 2.7/30 kBProgress (1): 5.5/30 kBProgress (1): 8.2/30 kBProgress (1): 11/30 kB Progress (1): 14/30 kBProgress (1): 16/30 kBProgress (1): 19/30 kBProgress (1): 22/30 kBProgress (1): 25/30 kBProgress (1): 27/30 kBProgress (1): 30 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar (30 kB at 71 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.9/maven-javadoc-plugin-2.9.pom
+Progress (1): 2.7/15 kBProgress (1): 5.5/15 kBProgress (1): 8.2/15 kBProgress (1): 11/15 kB Progress (1): 14/15 kBProgress (1): 15 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.9/maven-javadoc-plugin-2.9.pom (15 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.9/maven-javadoc-plugin-2.9.jar
+Progress (1): 2.7/362 kBProgress (1): 5.5/362 kBProgress (1): 8.2/362 kBProgress (1): 11/362 kB Progress (1): 15/362 kBProgress (1): 19/362 kBProgress (1): 23/362 kBProgress (1): 27/362 kBProgress (1): 31/362 kBProgress (1): 36/362 kBProgress (1): 40/362 kBProgress (1): 44/362 kBProgress (1): 48/362 kBProgress (1): 52/362 kBProgress (1): 56/362 kBProgress (1): 60/362 kBProgress (1): 64/362 kBProgress (1): 68/362 kBProgress (1): 72/362 kBProgress (1): 77/362 kBProgress (1): 81/362 kBProgress (1): 85/362 kBProgress (1): 89/362 kBProgress (1): 93/362 kBProgress (1): 97/362 kBProgress (1): 101/362 kBProgress (1): 105/362 kBProgress (1): 109/362 kBProgress (1): 113/362 kBProgress (1): 117/362 kBProgress (1): 122/362 kBProgress (1): 126/362 kBProgress (1): 130/362 kBProgress (1): 134/362 kBProgress (1): 138/362 kBProgress (1): 142/362 kBProgress (1): 146/362 kBProgress (1): 150/362 kBProgress (1): 154/362 kBProgress (1): 158/362 kBProgress (1): 163/362 kBProgress (1): 167/362 kBProgress (1): 171/362 kBProgress (1): 175/362 kBProgress (1): 179/362 kBProgress (1): 183/362 kBProgress (1): 187/362 kBProgress (1): 191/362 kBProgress (1): 195/362 kBProgress (1): 199/362 kBProgress (1): 203/362 kBProgress (1): 208/362 kBProgress (1): 212/362 kBProgress (1): 216/362 kBProgress (1): 219/362 kBProgress (1): 223/362 kBProgress (1): 227/362 kBProgress (1): 231/362 kBProgress (1): 235/362 kBProgress (1): 239/362 kBProgress (1): 243/362 kBProgress (1): 247/362 kBProgress (1): 251/362 kBProgress (1): 256/362 kBProgress (1): 260/362 kBProgress (1): 264/362 kBProgress (1): 268/362 kBProgress (1): 272/362 kBProgress (1): 276/362 kBProgress (1): 280/362 kBProgress (1): 284/362 kBProgress (1): 288/362 kBProgress (1): 292/362 kBProgress (1): 297/362 kBProgress (1): 301/362 kBProgress (1): 305/362 kBProgress (1): 309/362 kBProgress (1): 313/362 kBProgress (1): 317/362 kBProgress (1): 321/362 kBProgress (1): 325/362 kBProgress (1): 329/362 kBProgress (1): 333/362 kBProgress (1): 338/362 kBProgress (1): 342/362 kBProgress (1): 346/362 kBProgress (1): 350/362 kBProgress (1): 354/362 kBProgress (1): 358/362 kBProgress (1): 362/362 kBProgress (1): 362 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.9/maven-javadoc-plugin-2.9.jar (362 kB at 599 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/scribe/scribe/1.3.3/scribe-1.3.3.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/scribe/scribe/1.3.3/scribe-1.3.3.pom (2.4 kB at 8.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.2.2/gson-2.2.2.pom
+Progress (1): 4.1/7.6 kBProgress (1): 7.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.2.2/gson-2.2.2.pom (7.6 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/scribe/scribe/1.3.3/scribe-1.3.3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar
+Progress (1): 4.1/86 kBProgress (1): 8.2/86 kBProgress (1): 12/86 kB Progress (1): 16/86 kBProgress (1): 20/86 kBProgress (1): 25/86 kBProgress (1): 29/86 kBProgress (1): 33/86 kBProgress (1): 37/86 kBProgress (1): 41/86 kBProgress (1): 45/86 kBProgress (1): 49/86 kBProgress (1): 53/86 kBProgress (1): 57/86 kBProgress (1): 61/86 kBProgress (1): 66/86 kBProgress (1): 70/86 kBProgress (1): 74/86 kBProgress (1): 78/86 kBProgress (1): 82/86 kBProgress (1): 86 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/scribe/scribe/1.3.3/scribe-1.3.3.jar (86 kB at 251 kB/s)
+Progress (1): 2.7/189 kBProgress (1): 5.5/189 kBProgress (1): 8.2/189 kBProgress (1): 11/189 kB Progress (1): 14/189 kBProgress (2): 14/189 kB | 2.7/58 kBProgress (2): 14/189 kB | 5.5/58 kBProgress (2): 14/189 kB | 8.2/58 kBProgress (2): 14/189 kB | 11/58 kB Progress (2): 14/189 kB | 14/58 kBProgress (2): 16/189 kB | 14/58 kBProgress (2): 16/189 kB | 16/58 kBProgress (2): 19/189 kB | 16/58 kBProgress (2): 19/189 kB | 19/58 kBProgress (2): 22/189 kB | 19/58 kBProgress (2): 25/189 kB | 19/58 kBProgress (2): 25/189 kB | 22/58 kBProgress (2): 25/189 kB | 25/58 kBProgress (2): 27/189 kB | 25/58 kBProgress (2): 30/189 kB | 25/58 kBProgress (2): 30/189 kB | 27/58 kBProgress (2): 30/189 kB | 30/58 kBProgress (2): 33/189 kB | 30/58 kBProgress (2): 33/189 kB | 33/58 kBProgress (2): 36/189 kB | 33/58 kBProgress (2): 38/189 kB | 33/58 kBProgress (2): 38/189 kB | 36/58 kBProgress (2): 38/189 kB | 38/58 kBProgress (2): 41/189 kB | 38/58 kBProgress (2): 44/189 kB | 38/58 kBProgress (2): 47/189 kB | 38/58 kBProgress (2): 47/189 kB | 41/58 kBProgress (2): 47/189 kB | 44/58 kBProgress (2): 49/189 kB | 44/58 kBProgress (2): 49/189 kB | 47/58 kBProgress (2): 52/189 kB | 47/58 kBProgress (2): 52/189 kB | 49/58 kBProgress (2): 55/189 kB | 49/58 kBProgress (2): 58/189 kB | 49/58 kBProgress (2): 58/189 kB | 52/58 kBProgress (2): 60/189 kB | 52/58 kBProgress (2): 60/189 kB | 55/58 kBProgress (2): 63/189 kB | 55/58 kBProgress (2): 63/189 kB | 58/58 kBProgress (2): 66/189 kB | 58/58 kBProgress (2): 66/189 kB | 58 kB   Progress (2): 70/189 kB | 58 kBProgress (2): 74/189 kB | 58 kBProgress (2): 78/189 kB | 58 kBProgress (2): 82/189 kB | 58 kBProgress (2): 86/189 kB | 58 kBProgress (2): 90/189 kB | 58 kBProgress (2): 94/189 kB | 58 kBProgress (2): 99/189 kB | 58 kBProgress (2): 103/189 kB | 58 kBProgress (2): 107/189 kB | 58 kBProgress (2): 111/189 kB | 58 kBProgress (2): 115/189 kB | 58 kBProgress (2): 119/189 kB | 58 kBProgress (2): 123/189 kB | 58 kBProgress (2): 127/189 kB | 58 kBProgress (2): 131/189 kB | 58 kBProgress (2): 135/189 kB | 58 kBProgress (2): 140/189 kB | 58 kBProgress (2): 144/189 kB | 58 kBProgress (2): 148/189 kB | 58 kBProgress (2): 152/189 kB | 58 kBProgress (2): 156/189 kB | 58 kBProgress (2): 160/189 kB | 58 kBProgress (2): 164/189 kB | 58 kBProgress (2): 168/189 kB | 58 kBProgress (2): 172/189 kB | 58 kBProgress (2): 176/189 kB | 58 kBProgress (2): 180/189 kB | 58 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.4/commons-codec-1.4.jar (58 kB at 80 kB/s)
+Progress (1): 185/189 kBProgress (1): 189/189 kBProgress (1): 189 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar (189 kB at 218 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jumblr ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jumblr ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jumblr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ jumblr ---
+[INFO] Compiling 29 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jumblr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ jumblr ---
+[INFO] Compiling 17 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jumblr ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.tumblr.jumblr.JumblrClientErrorTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+Running com.tumblr.jumblr.types.TextPostTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.tumblr.jumblr.types.PostcardPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.tumblr.jumblr.types.AudioPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.tumblr.jumblr.types.VideoPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.tumblr.jumblr.types.PhotoPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.tumblr.jumblr.types.UserTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.tumblr.jumblr.types.ChatPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.tumblr.jumblr.types.BlogTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.tumblr.jumblr.types.QuotePostTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.tumblr.jumblr.types.UnknownTypePostTest
+deserialized post for unknown type: nonexistent
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.tumblr.jumblr.types.LinkPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.tumblr.jumblr.types.AnswerPostTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.tumblr.jumblr.JumblrClientTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.tumblr.jumblr.request.RequestBuilderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+
+Results :
+
+Tests run: 103, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.790 s
+[INFO] Finished at: 2021-11-27T09:50:23+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/cobertura-maven-plugin/2.4/cobertura-maven-plugin-2.4.pom
+Progress (1): 2.7/7.3 kBProgress (1): 5.5/7.3 kBProgress (1): 7.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/cobertura-maven-plugin/2.4/cobertura-maven-plugin-2.4.pom (7.3 kB at 8.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/24/mojo-parent-24.pom
+Progress (1): 2.7/23 kBProgress (1): 5.5/23 kBProgress (1): 8.2/23 kBProgress (1): 11/23 kB Progress (1): 14/23 kBProgress (1): 16/23 kBProgress (1): 19/23 kBProgress (1): 22/23 kBProgress (1): 23 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/24/mojo-parent-24.pom (23 kB at 73 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/cobertura-maven-plugin/2.4/cobertura-maven-plugin-2.4.jar
+Progress (1): 2.7/37 kBProgress (1): 5.5/37 kBProgress (1): 8.2/37 kBProgress (1): 11/37 kB Progress (1): 14/37 kBProgress (1): 16/37 kBProgress (1): 19/37 kBProgress (1): 22/37 kBProgress (1): 25/37 kBProgress (1): 27/37 kBProgress (1): 30/37 kBProgress (1): 33/37 kBProgress (1): 37/37 kBProgress (1): 37 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/cobertura-maven-plugin/2.4/cobertura-maven-plugin-2.4.jar (37 kB at 109 kB/s)
+[INFO] 
+[INFO] -------------------------< com.tumblr:jumblr >--------------------------
+[INFO] Building jumblr 0.0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jumblr ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ jumblr ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 29 files (6 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 17 files (3 packages).
+[INFO] 103 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jumblr ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jumblr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ jumblr ---
+[INFO] Compiling 29 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jumblr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ jumblr ---
+[INFO] Compiling 17 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jumblr ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.tumblr.jumblr.JumblrClientErrorTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec
+Running com.tumblr.jumblr.types.TextPostTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.tumblr.jumblr.types.PostcardPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.tumblr.jumblr.types.AudioPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.tumblr.jumblr.types.VideoPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.tumblr.jumblr.types.PhotoPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.tumblr.jumblr.types.UserTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.tumblr.jumblr.types.ChatPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.tumblr.jumblr.types.BlogTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.tumblr.jumblr.types.QuotePostTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.tumblr.jumblr.types.UnknownTypePostTest
+deserialized post for unknown type: nonexistent
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.tumblr.jumblr.types.LinkPostTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.tumblr.jumblr.types.AnswerPostTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.tumblr.jumblr.JumblrClientTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.tumblr.jumblr.request.RequestBuilderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+
+Results :
+
+Tests run: 103, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -------------------------< com.tumblr:jumblr >--------------------------
+[INFO] Building jumblr 0.0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ jumblr ---
+[INFO] 
+[INFO] -------------------------< com.tumblr:jumblr >--------------------------
+[INFO] Building jumblr 0.0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ jumblr ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8514295744758188648resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.890 s
+[INFO] Finished at: 2021-11-27T09:50:30+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/103] com.tumblr.jumblr.JumblrClientErrorTest#blogDraftPosts
+[test][2/103] com.tumblr.jumblr.JumblrClientErrorTest#blogFollowers
+[test][3/103] com.tumblr.jumblr.JumblrClientErrorTest#blogInfo
+[test][4/103] com.tumblr.jumblr.JumblrClientErrorTest#blogLikes
+[test][5/103] com.tumblr.jumblr.JumblrClientErrorTest#blogPost
+[test][6/103] com.tumblr.jumblr.JumblrClientErrorTest#blogPosts
+[test][7/103] com.tumblr.jumblr.JumblrClientErrorTest#blogQueuedPosts
+[test][8/103] com.tumblr.jumblr.JumblrClientErrorTest#blogSubmissions
+[test][9/103] com.tumblr.jumblr.JumblrClientErrorTest#follow
+[test][10/103] com.tumblr.jumblr.JumblrClientErrorTest#like
+[test][11/103] com.tumblr.jumblr.JumblrClientErrorTest#postDelete
+[test][12/103] com.tumblr.jumblr.JumblrClientErrorTest#postReblog
+[test][13/103] com.tumblr.jumblr.JumblrClientErrorTest#tagged
+[test][14/103] com.tumblr.jumblr.JumblrClientErrorTest#unfollow
+[test][15/103] com.tumblr.jumblr.JumblrClientErrorTest#unlike
+[test][16/103] com.tumblr.jumblr.JumblrClientErrorTest#user
+[test][17/103] com.tumblr.jumblr.JumblrClientErrorTest#userAvatar
+[test][18/103] com.tumblr.jumblr.JumblrClientErrorTest#userDashboard
+[test][19/103] com.tumblr.jumblr.JumblrClientErrorTest#userFollowing
+[test][20/103] com.tumblr.jumblr.JumblrClientErrorTest#userLikes
+[test][21/103] com.tumblr.jumblr.JumblrClientTest#blogDraftPosts
+[test][22/103] com.tumblr.jumblr.JumblrClientTest#blogFollowers
+[test][23/103] com.tumblr.jumblr.JumblrClientTest#blogInfo
+[test][24/103] com.tumblr.jumblr.JumblrClientTest#blogLikes
+[test][25/103] com.tumblr.jumblr.JumblrClientTest#blogPost
+[test][26/103] com.tumblr.jumblr.JumblrClientTest#blogPosts
+[test][27/103] com.tumblr.jumblr.JumblrClientTest#blogQueuedPosts
+[test][28/103] com.tumblr.jumblr.JumblrClientTest#blogSubmissions
+[test][29/103] com.tumblr.jumblr.JumblrClientTest#follow
+[test][30/103] com.tumblr.jumblr.JumblrClientTest#like
+[test][31/103] com.tumblr.jumblr.JumblrClientTest#newPost
+[test][32/103] com.tumblr.jumblr.JumblrClientTest#postCreate
+[test][33/103] com.tumblr.jumblr.JumblrClientTest#postDelete
+[test][34/103] com.tumblr.jumblr.JumblrClientTest#postEdit
+[test][35/103] com.tumblr.jumblr.JumblrClientTest#postReblog
+[test][36/103] com.tumblr.jumblr.JumblrClientTest#setToken
+[test][37/103] com.tumblr.jumblr.JumblrClientTest#tagged
+[test][38/103] com.tumblr.jumblr.JumblrClientTest#unfollow
+[test][39/103] com.tumblr.jumblr.JumblrClientTest#unlike
+[test][40/103] com.tumblr.jumblr.JumblrClientTest#user
+[test][41/103] com.tumblr.jumblr.JumblrClientTest#userAvatar
+[test][42/103] com.tumblr.jumblr.JumblrClientTest#userDashboard
+[test][43/103] com.tumblr.jumblr.JumblrClientTest#userFollowing
+[test][44/103] com.tumblr.jumblr.JumblrClientTest#userLikes
+[test][45/103] com.tumblr.jumblr.JumblrClientTest#xauth
+[test][46/103] com.tumblr.jumblr.request.RequestBuilderTest#testClearEmptyJson
+[test][47/103] com.tumblr.jumblr.request.RequestBuilderTest#testGetParams
+[test][48/103] com.tumblr.jumblr.request.RequestBuilderTest#testXauthBadResponseGoodCode
+[test][49/103] com.tumblr.jumblr.request.RequestBuilderTest#testXauthForbidden
+[test][50/103] com.tumblr.jumblr.request.RequestBuilderTest#testXauthSuccess
+[test][51/103] com.tumblr.jumblr.request.RequestBuilderTest#testXauthSuccessWithExtra
+[test][52/103] com.tumblr.jumblr.types.AnswerPostTest#getAskingName
+[test][53/103] com.tumblr.jumblr.types.AnswerPostTest#save
+[test][54/103] com.tumblr.jumblr.types.AudioPostTest#setDataWithSource
+[test][55/103] com.tumblr.jumblr.types.AudioPostTest#setDataWithoutSource
+[test][56/103] com.tumblr.jumblr.types.AudioPostTest#setSourceWithData
+[test][57/103] com.tumblr.jumblr.types.AudioPostTest#setSourceWithoutData
+[test][58/103] com.tumblr.jumblr.types.AudioPostTest#testOtherDetail
+[test][59/103] com.tumblr.jumblr.types.AudioPostTest#testReaders
+[test][60/103] com.tumblr.jumblr.types.BlogTest#avatar
+[test][61/103] com.tumblr.jumblr.types.BlogTest#draftPosts
+[test][62/103] com.tumblr.jumblr.types.BlogTest#followers
+[test][63/103] com.tumblr.jumblr.types.BlogTest#getFollow
+[test][64/103] com.tumblr.jumblr.types.BlogTest#getLikedPosts
+[test][65/103] com.tumblr.jumblr.types.BlogTest#getPost
+[test][66/103] com.tumblr.jumblr.types.BlogTest#getUnfollow
+[test][67/103] com.tumblr.jumblr.types.BlogTest#newPost
+[test][68/103] com.tumblr.jumblr.types.BlogTest#posts
+[test][69/103] com.tumblr.jumblr.types.BlogTest#queuedPosts
+[test][70/103] com.tumblr.jumblr.types.BlogTest#submissions
+[test][71/103] com.tumblr.jumblr.types.BlogTest#testReaders
+[test][72/103] com.tumblr.jumblr.types.ChatPostTest#detail
+[test][73/103] com.tumblr.jumblr.types.ChatPostTest#testReaders
+[test][74/103] com.tumblr.jumblr.types.ChatPostTest#testWriters
+[test][75/103] com.tumblr.jumblr.types.LinkPostTest#detail
+[test][76/103] com.tumblr.jumblr.types.LinkPostTest#testReaders
+[test][77/103] com.tumblr.jumblr.types.LinkPostTest#testWriters
+[test][78/103] com.tumblr.jumblr.types.PhotoPostTest#setDataWithSource
+[test][79/103] com.tumblr.jumblr.types.PhotoPostTest#setDataWithoutSource
+[test][80/103] com.tumblr.jumblr.types.PhotoPostTest#setSourceWithData
+[test][81/103] com.tumblr.jumblr.types.PhotoPostTest#setSourceWithoutData
+[test][82/103] com.tumblr.jumblr.types.PhotoPostTest#testOtherDetail
+[test][83/103] com.tumblr.jumblr.types.PhotoPostTest#testReaders
+[test][84/103] com.tumblr.jumblr.types.PostcardPostTest#detail
+[test][85/103] com.tumblr.jumblr.types.PostcardPostTest#testReaders
+[test][86/103] com.tumblr.jumblr.types.PostcardPostTest#testWriters
+[test][87/103] com.tumblr.jumblr.types.QuotePostTest#detail
+[test][88/103] com.tumblr.jumblr.types.QuotePostTest#testNotes
+[test][89/103] com.tumblr.jumblr.types.QuotePostTest#testReaders
+[test][90/103] com.tumblr.jumblr.types.QuotePostTest#testWriters
+[test][91/103] com.tumblr.jumblr.types.TextPostTest#detail
+[test][92/103] com.tumblr.jumblr.types.TextPostTest#testNoteCount
+[test][93/103] com.tumblr.jumblr.types.TextPostTest#testReaders
+[test][94/103] com.tumblr.jumblr.types.TextPostTest#testReblog
+[test][95/103] com.tumblr.jumblr.types.TextPostTest#testWriters
+[test][96/103] com.tumblr.jumblr.types.UnknownTypePostTest#isFound
+[test][97/103] com.tumblr.jumblr.types.UserTest#testReaders
+[test][98/103] com.tumblr.jumblr.types.VideoPostTest#setDataWithEmbedCode
+[test][99/103] com.tumblr.jumblr.types.VideoPostTest#setDataWithoutEmbedCode
+[test][100/103] com.tumblr.jumblr.types.VideoPostTest#setEmbedCodeWithData
+[test][101/103] com.tumblr.jumblr.types.VideoPostTest#setEmbedCodeWithoutData
+[test][102/103] com.tumblr.jumblr.types.VideoPostTest#testOtherDetail
+[test][103/103] com.tumblr.jumblr.types.VideoPostTest#testReaders
+[main][14/14] python parse_data.py
+  0%|          | 0/103 [00:00<?, ?it/s] 29%|██▉       | 30/103 [00:00<00:00, 295.30it/s] 58%|█████▊    | 60/103 [00:00<00:00, 293.55it/s] 87%|████████▋ | 90/103 [00:00<00:00, 294.04it/s]100%|██████████| 103/103 [00:00<00:00, 295.71it/s]
+Done.

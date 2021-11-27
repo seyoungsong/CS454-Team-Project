@@ -1,0 +1,238 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/jakewharton/disklrucache repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.jakewharton:disklrucache >--------------------
+[INFO] Building Disk LRU Cache 2.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ disklrucache ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ disklrucache ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ disklrucache ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ disklrucache ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ disklrucache ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ disklrucache ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ disklrucache ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.jakewharton.disklrucache.DiskLruCacheTest
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit4088205369704874108/DiskLruCacheTest is corrupt: unexpected journal line: DIRTY   k1, removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit2943676387034749332/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 0, 2, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit280299460401135631/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 2, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit6443490247169236355/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 1, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit8938104724678020744/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 2, x], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit5171934265884521395/DiskLruCacheTest is corrupt: unexpected journal line: BOGUS, removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit5840822289339012288/DiskLruCacheTest is corrupt: unexpected journal line: [0000x001, 1], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit4249183463737004595/DiskLruCacheTest is corrupt: unexpected journal line: [1, 1, 1], removing
+Journal compacted from 73 bytes to 57 bytes
+Journal compacted from 40033 bytes to 85 bytes
+Journal compacted from 14059 bytes to 64 bytes
+Journal compacted from 20073 bytes to 65 bytes
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.369 sec
+Running com.jakewharton.disklrucache.StrictLineReaderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.584 s
+[INFO] Finished at: 2021-11-27T09:30:18+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.jakewharton:disklrucache >--------------------
+[INFO] Building Disk LRU Cache 2.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ disklrucache ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ disklrucache ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 3 files (1 package).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 2 files (1 package).
+[INFO] 61 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ disklrucache ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ disklrucache ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ disklrucache ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ disklrucache ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ disklrucache ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ disklrucache ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.jakewharton.disklrucache.DiskLruCacheTest
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit7702828502707741727/DiskLruCacheTest is corrupt: unexpected journal line: DIRTY   k1, removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit2459150981643594151/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 0, 2, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit3373044029304471974/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 2, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit8745509575836230192/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 1, ], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit2334126873610194680/DiskLruCacheTest is corrupt: unexpected journal header: [libcore.io.DiskLruCache, 1, 2, x], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit5304397701335566622/DiskLruCacheTest is corrupt: unexpected journal line: BOGUS, removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit5461978846849684514/DiskLruCacheTest is corrupt: unexpected journal line: [0000x001, 1], removing
+DiskLruCache /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/junit8151566911161501755/DiskLruCacheTest is corrupt: unexpected journal line: [1, 1, 1], removing
+Journal compacted from 73 bytes to 57 bytes
+Journal compacted from 40033 bytes to 85 bytes
+Journal compacted from 14059 bytes to 57 bytes
+Journal compacted from 20073 bytes to 65 bytes
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.712 sec
+Running com.jakewharton.disklrucache.StrictLineReaderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 61, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --------------------< com.jakewharton:disklrucache >--------------------
+[INFO] Building Disk LRU Cache 2.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ disklrucache ---
+[INFO] 
+[INFO] --------------------< com.jakewharton:disklrucache >--------------------
+[INFO] Building Disk LRU Cache 2.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ disklrucache ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn2846184634184320777resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.393 s
+[INFO] Finished at: 2021-11-27T09:30:24+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/61] com.jakewharton.disklrucache.DiskLruCacheTest#aggressiveClearingHandlesEdit
+[test][2/61] com.jakewharton.disklrucache.DiskLruCacheTest#aggressiveClearingHandlesPartialEdit
+[test][3/61] com.jakewharton.disklrucache.DiskLruCacheTest#aggressiveClearingHandlesRead
+[test][4/61] com.jakewharton.disklrucache.DiskLruCacheTest#aggressiveClearingHandlesWrite
+[test][5/61] com.jakewharton.disklrucache.DiskLruCacheTest#cacheSingleEntryOfSizeGreaterThanMaxSize
+[test][6/61] com.jakewharton.disklrucache.DiskLruCacheTest#cacheSingleValueOfSizeGreaterThanMaxSize
+[test][7/61] com.jakewharton.disklrucache.DiskLruCacheTest#cannotOperateOnEditAfterPublish
+[test][8/61] com.jakewharton.disklrucache.DiskLruCacheTest#cannotOperateOnEditAfterRevert
+[test][9/61] com.jakewharton.disklrucache.DiskLruCacheTest#constructorDoesNotAllowZeroCacheSize
+[test][10/61] com.jakewharton.disklrucache.DiskLruCacheTest#constructorDoesNotAllowZeroValuesPerEntry
+[test][11/61] com.jakewharton.disklrucache.DiskLruCacheTest#createNewEntryWithTooFewValuesFails
+[test][12/61] com.jakewharton.disklrucache.DiskLruCacheTest#editSameVersion
+[test][13/61] com.jakewharton.disklrucache.DiskLruCacheTest#editSinceEvicted
+[test][14/61] com.jakewharton.disklrucache.DiskLruCacheTest#editSinceEvictedAndRecreated
+[test][15/61] com.jakewharton.disklrucache.DiskLruCacheTest#editSnapshotAfterChangeAborted
+[test][16/61] com.jakewharton.disklrucache.DiskLruCacheTest#editSnapshotAfterChangeCommitted
+[test][17/61] com.jakewharton.disklrucache.DiskLruCacheTest#emptyCache
+[test][18/61] com.jakewharton.disklrucache.DiskLruCacheTest#evictOnInsert
+[test][19/61] com.jakewharton.disklrucache.DiskLruCacheTest#evictOnUpdate
+[test][20/61] com.jakewharton.disklrucache.DiskLruCacheTest#evictionHonorsLruFromCurrentSession
+[test][21/61] com.jakewharton.disklrucache.DiskLruCacheTest#evictionHonorsLruFromPreviousSession
+[test][22/61] com.jakewharton.disklrucache.DiskLruCacheTest#explicitRemoveAppliedToDiskImmediately
+[test][23/61] com.jakewharton.disklrucache.DiskLruCacheTest#fileDeletedExternally
+[test][24/61] com.jakewharton.disklrucache.DiskLruCacheTest#growMaxSize
+[test][25/61] com.jakewharton.disklrucache.DiskLruCacheTest#journalDoesNotIncludeReadOfYetUnpublishedValue
+[test][26/61] com.jakewharton.disklrucache.DiskLruCacheTest#journalFileIsPreferredOverBackupFile
+[test][27/61] com.jakewharton.disklrucache.DiskLruCacheTest#journalWithEditAndPublish
+[test][28/61] com.jakewharton.disklrucache.DiskLruCacheTest#journalWithEditAndPublishAndRead
+[test][29/61] com.jakewharton.disklrucache.DiskLruCacheTest#keyWithCarriageReturnNotPermitted
+[test][30/61] com.jakewharton.disklrucache.DiskLruCacheTest#keyWithNewlineNotPermitted
+[test][31/61] com.jakewharton.disklrucache.DiskLruCacheTest#keyWithSpaceNotPermitted
+[test][32/61] com.jakewharton.disklrucache.DiskLruCacheTest#nullKeyThrows
+[test][33/61] com.jakewharton.disklrucache.DiskLruCacheTest#openCreatesDirectoryIfNecessary
+[test][34/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithDirtyKeyDeletesAllFilesForThatKey
+[test][35/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidAppVersionClearsDirectory
+[test][36/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidBlankLineClearsDirectory
+[test][37/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidFileSizeClearsDirectory
+[test][38/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidJournalLineClearsDirectory
+[test][39/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidValueCountClearsDirectory
+[test][40/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithInvalidVersionClearsDirectory
+[test][41/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithTooManyFileSizesClearsDirectory
+[test][42/61] com.jakewharton.disklrucache.DiskLruCacheTest#openWithTruncatedLineDiscardsThatLine
+[test][43/61] com.jakewharton.disklrucache.DiskLruCacheTest#readAndWriteEntryAcrossCacheOpenAndClose
+[test][44/61] com.jakewharton.disklrucache.DiskLruCacheTest#readAndWriteEntryWithoutProperClose
+[test][45/61] com.jakewharton.disklrucache.DiskLruCacheTest#readAndWriteOverlapsMaintainConsistency
+[test][46/61] com.jakewharton.disklrucache.DiskLruCacheTest#readingTheSameStreamMultipleTimes
+[test][47/61] com.jakewharton.disklrucache.DiskLruCacheTest#rebuildJournalOnRepeatedEdits
+[test][48/61] com.jakewharton.disklrucache.DiskLruCacheTest#rebuildJournalOnRepeatedEditsWithOpenAndClose
+[test][49/61] com.jakewharton.disklrucache.DiskLruCacheTest#rebuildJournalOnRepeatedReads
+[test][50/61] com.jakewharton.disklrucache.DiskLruCacheTest#rebuildJournalOnRepeatedReadsWithOpenAndClose
+[test][51/61] com.jakewharton.disklrucache.DiskLruCacheTest#removeAbsentElement
+[test][52/61] com.jakewharton.disklrucache.DiskLruCacheTest#removeHandlesMissingFile
+[test][53/61] com.jakewharton.disklrucache.DiskLruCacheTest#restoreBackupFile
+[test][54/61] com.jakewharton.disklrucache.DiskLruCacheTest#revertWithTooFewValues
+[test][55/61] com.jakewharton.disklrucache.DiskLruCacheTest#revertedNewFileIsRemoveInJournal
+[test][56/61] com.jakewharton.disklrucache.DiskLruCacheTest#shrinkMaxSizeEvicts
+[test][57/61] com.jakewharton.disklrucache.DiskLruCacheTest#unterminatedEditIsRevertedOnClose
+[test][58/61] com.jakewharton.disklrucache.DiskLruCacheTest#updateExistingEntryWithTooFewValuesReusesPreviousValues
+[test][59/61] com.jakewharton.disklrucache.DiskLruCacheTest#validateKey
+[test][60/61] com.jakewharton.disklrucache.DiskLruCacheTest#writeAndReadEntry
+[test][61/61] com.jakewharton.disklrucache.StrictLineReaderTest#lineReaderConsistencyWithReadAsciiLine
+[main][14/14] python parse_data.py
+  0%|          | 0/61 [00:00<?, ?it/s] 75%|███████▌  | 46/61 [00:00<00:00, 458.34it/s]100%|██████████| 61/61 [00:00<00:00, 464.87it/s]
+Done.

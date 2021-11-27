@@ -1,0 +1,490 @@
+[
+  {
+    "subject": "geojson-jackson",
+    "url": "https://github.com/opendatalab-de/geojson-jackson",
+    "idx": 0,
+    "sloc": 1569
+  },
+  {
+    "subject": "disklrucache",
+    "url": "https://github.com/jakewharton/disklrucache",
+    "idx": 1,
+    "sloc": 1921
+  },
+  {
+    "subject": "jarchivelib",
+    "url": "https://github.com/thrau/jarchivelib",
+    "idx": 2,
+    "sloc": 2256
+  },
+  {
+    "subject": "stateless4j",
+    "url": "https://github.com/stateless4j/stateless4j",
+    "idx": 3,
+    "sloc": 2728
+  },
+  {
+    "subject": "jumblr",
+    "url": "https://github.com/tumblr/jumblr",
+    "idx": 4,
+    "sloc": 2970
+  },
+  {
+    "subject": "xembly",
+    "url": "https://github.com/yegor256/xembly",
+    "idx": 5,
+    "sloc": 3030
+  },
+  {
+    "subject": "redline-smalltalk",
+    "url": "https://github.com/bulenkov/redlinesmalltalk",
+    "idx": 6,
+    "sloc": 3402
+  },
+  {
+    "subject": "jsonassert",
+    "url": "https://github.com/skyscreamer/jsonassert",
+    "idx": 7,
+    "sloc": 3476
+  },
+  {
+    "subject": "gson-fire",
+    "url": "https://github.com/julman99/gson-fire",
+    "idx": 8,
+    "sloc": 3566
+  },
+  {
+    "subject": "gdx-artemis",
+    "url": "https://github.com/apotapov/gdx-artemis",
+    "idx": 9,
+    "sloc": 3607
+  },
+  {
+    "subject": "dictomaton",
+    "url": "https://github.com/danieldk/dictomaton",
+    "idx": 10,
+    "sloc": 4318
+  },
+  {
+    "subject": "java-uuid-generator",
+    "url": "https://github.com/cowtowncoder/java-uuid-generator",
+    "idx": 11,
+    "sloc": 4321
+  },
+  {
+    "subject": "jadventure",
+    "url": "https://github.com/progether/jadventure",
+    "idx": 12,
+    "sloc": 5276
+  },
+  {
+    "subject": "protoparser",
+    "url": "https://github.com/square/protoparser",
+    "idx": 13,
+    "sloc": 5545
+  },
+  {
+    "subject": "efflux",
+    "url": "https://github.com/jonbo372/efflux",
+    "idx": 14,
+    "sloc": 5633
+  },
+  {
+    "subject": "pusher-websocket-java",
+    "url": "https://github.com/pusher/pusher-websocket-java",
+    "idx": 15,
+    "sloc": 5644
+  },
+  {
+    "subject": "exp4j",
+    "url": "https://github.com/fasseg/exp4j",
+    "idx": 16,
+    "sloc": 5699
+  },
+  {
+    "subject": "metrics-core",
+    "url": "https://github.com/avaje-metrics/metrics",
+    "idx": 17,
+    "sloc": 6493
+  },
+  {
+    "subject": "jactor",
+    "url": "https://github.com/laforge49/jactor",
+    "idx": 18,
+    "sloc": 6984
+  },
+  {
+    "subject": "lastcalc",
+    "url": "https://github.com/sanity/lastcalc",
+    "idx": 19,
+    "sloc": 7271
+  },
+  {
+    "subject": "restfixture",
+    "url": "https://github.com/smartrics/restfixture",
+    "idx": 20,
+    "sloc": 8243
+  },
+  {
+    "subject": "java-faker",
+    "url": "https://github.com/dius/java-faker",
+    "idx": 21,
+    "sloc": 8541
+  },
+  {
+    "subject": "nv-websocket-client",
+    "url": "https://github.com/takahikokawasaki/nv-websocket-client",
+    "idx": 22,
+    "sloc": 8617
+  },
+  {
+    "subject": "stream-lib",
+    "url": "https://github.com/addthis/stream-lib",
+    "idx": 23,
+    "sloc": 8756
+  },
+  {
+    "subject": "commons-cli",
+    "url": "https://github.com/apache/commons-cli",
+    "idx": 24,
+    "sloc": 9053
+  },
+  {
+    "subject": "skype-java-api",
+    "url": "https://github.com/taksan/skype-java-api",
+    "idx": 25,
+    "sloc": 9749
+  },
+  {
+    "subject": "javapoet",
+    "url": "https://github.com/square/javapoet",
+    "idx": 26,
+    "sloc": 9874
+  },
+  {
+    "subject": "mp3agic",
+    "url": "https://github.com/mpatric/mp3agic",
+    "idx": 27,
+    "sloc": 10037
+  },
+  {
+    "subject": "spring-retry",
+    "url": "https://github.com/spring-projects/spring-retry",
+    "idx": 28,
+    "sloc": 10612
+  },
+  {
+    "subject": "jpush-api-java-client",
+    "url": "https://github.com/jpush/jpush-api-java-client",
+    "idx": 29,
+    "sloc": 10729
+  },
+  {
+    "subject": "jopt-simple",
+    "url": "https://github.com/jopt-simple/jopt-simple",
+    "idx": 30,
+    "sloc": 10819
+  },
+  {
+    "subject": "jasmine-maven-plugin",
+    "url": "https://github.com/searls/jasmine-maven-plugin",
+    "idx": 31,
+    "sloc": 10848
+  },
+  {
+    "subject": "jline2",
+    "url": "https://github.com/jline/jline2",
+    "idx": 32,
+    "sloc": 11255
+  },
+  {
+    "subject": "liqp",
+    "url": "https://github.com/bkiers/liqp",
+    "idx": 33,
+    "sloc": 12446
+  },
+  {
+    "subject": "low-gc-membuffers",
+    "url": "https://github.com/cowtowncoder/low-gc-membuffers",
+    "idx": 34,
+    "sloc": 13099
+  },
+  {
+    "subject": "la4j",
+    "url": "https://github.com/vkostyukov/la4j",
+    "idx": 35,
+    "sloc": 13662
+  },
+  {
+    "subject": "webbit",
+    "url": "https://github.com/webbit/webbit",
+    "idx": 36,
+    "sloc": 14648
+  },
+  {
+    "subject": "javaewah",
+    "url": "https://github.com/lemire/javaewah",
+    "idx": 37,
+    "sloc": 14742
+  },
+  {
+    "subject": "joss",
+    "url": "https://github.com/javaswift/joss",
+    "idx": 38,
+    "sloc": 15360
+  },
+  {
+    "subject": "wsc",
+    "url": "https://github.com/forcedotcom/wsc",
+    "idx": 39,
+    "sloc": 16141
+  },
+  {
+    "subject": "scribe-java",
+    "url": "https://github.com/scribejava/scribejava",
+    "idx": 40,
+    "sloc": 16654
+  },
+  {
+    "subject": "commons-pool",
+    "url": "https://github.com/apache/commons-pool",
+    "idx": 41,
+    "sloc": 18174
+  },
+  {
+    "subject": "user-agent-utils",
+    "url": "https://github.com/haraldwalker/user-agent-utils",
+    "idx": 42,
+    "sloc": 18709
+  },
+  {
+    "subject": "mapdb-mapdb",
+    "url": "https://github.com/jankotek/mapdb",
+    "idx": 43,
+    "sloc": 20246
+  },
+  {
+    "subject": "jsoup-learning",
+    "url": "https://github.com/code4craft/jsoup-learning",
+    "idx": 44,
+    "sloc": 20812
+  },
+  {
+    "subject": "streamex",
+    "url": "https://github.com/amaembo/streamex",
+    "idx": 45,
+    "sloc": 21009
+  },
+  {
+    "subject": "javafastpfor",
+    "url": "https://github.com/lemire/javafastpfor",
+    "idx": 46,
+    "sloc": 21548
+  },
+  {
+    "subject": "commons-jxpath",
+    "url": "https://github.com/apache/commons-jxpath",
+    "idx": 47,
+    "sloc": 28768
+  },
+  {
+    "subject": "worldguard",
+    "url": "https://github.com/enginehub/worldguard",
+    "idx": 48,
+    "sloc": 28923
+  },
+  {
+    "subject": "raml-java-parser",
+    "url": "https://github.com/raml-org/raml-java-parser",
+    "idx": 49,
+    "sloc": 29187
+  },
+  {
+    "subject": "restcountries",
+    "url": "https://github.com/apilayer/restcountries",
+    "idx": 50,
+    "sloc": 31799
+  },
+  {
+    "subject": "lanterna",
+    "url": "https://github.com/mabe02/lanterna",
+    "idx": 51,
+    "sloc": 32715
+  },
+  {
+    "subject": "commons-dbcp",
+    "url": "https://github.com/apache/commons-dbcp",
+    "idx": 52,
+    "sloc": 36290
+  },
+  {
+    "subject": "vraptor-archive",
+    "url": "https://github.com/caelum/vraptor4",
+    "idx": 53,
+    "sloc": 37953
+  },
+  {
+    "subject": "jprotobuf",
+    "url": "https://github.com/jhunters/jprotobuf",
+    "idx": 54,
+    "sloc": 41834
+  },
+  {
+    "subject": "jsqlparser",
+    "url": "https://github.com/jsqlparser/jsqlparser",
+    "idx": 55,
+    "sloc": 44141
+  },
+  {
+    "subject": "blueflood",
+    "url": "https://github.com/rackerlabs/blueflood",
+    "idx": 56,
+    "sloc": 44466
+  },
+  {
+    "subject": "commons-io",
+    "url": "https://github.com/apache/commons-io",
+    "idx": 57,
+    "sloc": 47237
+  },
+  {
+    "subject": "ews-java-api",
+    "url": "https://github.com/officedev/ews-java-api",
+    "idx": 58,
+    "sloc": 47328
+  },
+  {
+    "subject": "statsd-jvm-profiler",
+    "url": "https://github.com/etsy/statsd-jvm-profiler",
+    "idx": 59,
+    "sloc": 55871
+  },
+  {
+    "subject": "rome",
+    "url": "https://github.com/rometools/rome",
+    "idx": 60,
+    "sloc": 59228
+  },
+  {
+    "subject": "nodebox",
+    "url": "https://github.com/nodebox/nodebox",
+    "idx": 61,
+    "sloc": 62674
+  },
+  {
+    "subject": "asterisk-java",
+    "url": "https://github.com/asterisk-java/asterisk-java",
+    "idx": 62,
+    "sloc": 63145
+  },
+  {
+    "subject": "jsprit",
+    "url": "https://github.com/graphhopper/jsprit",
+    "idx": 63,
+    "sloc": 70479
+  },
+  {
+    "subject": "roaringbitmap",
+    "url": "https://github.com/roaringbitmap/roaringbitmap",
+    "idx": 64,
+    "sloc": 75995
+  },
+  {
+    "subject": "hivemall",
+    "url": "https://github.com/apache/incubator-hivemall",
+    "idx": 65,
+    "sloc": 86722
+  },
+  {
+    "subject": "commons-lang",
+    "url": "https://github.com/apache/commons-lang",
+    "idx": 66,
+    "sloc": 91401
+  },
+  {
+    "subject": "joda-time",
+    "url": "https://github.com/jodaorg/joda-time",
+    "idx": 67,
+    "sloc": 94873
+  },
+  {
+    "subject": "chukwa",
+    "url": "https://github.com/apache/chukwa",
+    "idx": 68,
+    "sloc": 101089
+  },
+  {
+    "subject": "lambdaj",
+    "url": "https://github.com/mariofusco/lambdaj",
+    "idx": 69,
+    "sloc": 130599
+  },
+  {
+    "subject": "cassandra-reaper",
+    "url": "https://github.com/thelastpickle/cassandra-reaper",
+    "idx": 70,
+    "sloc": 149043
+  },
+  {
+    "subject": "commons-math",
+    "url": "https://github.com/apache/commons-math",
+    "idx": 71,
+    "sloc": 160471
+  },
+  {
+    "subject": "assertj-core",
+    "url": "https://github.com/assertj/assertj-core",
+    "idx": 72,
+    "sloc": 200262
+  },
+  {
+    "subject": "jackson-datatype-joda",
+    "url": "https://github.com/fasterxml/jackson-datatype-joda",
+    "idx": 73,
+    "sloc": 268847
+  },
+  {
+    "subject": "jackson-dataformat-csv",
+    "memo": "(DEPRECATED) -- moved under: FasterXML/jackson-dataformats-text",
+    "url": "https://github.com/fasterxml/jackson-dataformats-text",
+    "idx": 74,
+    "sloc": 381658
+  },
+  {
+    "subject": "jackson-datatype-guava",
+    "memo": "(DEPRECATED) -- moved under `jackson-datatypes-collections`",
+    "url": "https://github.com/fasterxml/jackson-datatypes-collections",
+    "idx": 75,
+    "sloc": 528769
+  },
+  {
+    "subject": "jackson-dataformat-xml",
+    "url": "https://github.com/fasterxml/jackson-dataformat-xml",
+    "idx": 76,
+    "sloc": 639519
+  },
+  {
+    "subject": "languagetool",
+    "url": "https://github.com/languagetool-org/languagetool",
+    "idx": 77,
+    "sloc": 876294
+  },
+  {
+    "subject": "hbase",
+    "url": "https://github.com/apache/hbase",
+    "idx": 78,
+    "sloc": 914249
+  },
+  {
+    "subject": "camel-core",
+    "url": "https://github.com/apache/camel",
+    "idx": 79,
+    "sloc": 1711025
+  },
+  {
+    "subject": "jackson-core",
+    "url": "https://github.com/fasterxml/jackson-core",
+    "idx": 80,
+    "sloc": 2066185
+  }
+]

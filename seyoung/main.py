@@ -30,7 +30,7 @@ def write_list(filename: str, l: list[str]):
 def main(idx: int):
     # idx = 22
     github_url = [
-        d["url"] for d in read_json("github_result_idx.json") if d["idx"] == idx
+        d["url"] for d in read_json("github_result_sloc.json") if d["idx"] == idx
     ][0]
     github_url = github_url.rstrip("/").lower()
     dev_name, repo_name = github_url.replace("https://github.com/", "").split("/")

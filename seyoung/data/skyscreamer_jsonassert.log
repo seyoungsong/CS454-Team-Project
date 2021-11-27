@@ -1,0 +1,375 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/skyscreamer/jsonassert repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.skyscreamer:jsonassert:jar:1.5.1-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 80, column 32
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< org.skyscreamer:jsonassert >---------------------
+[INFO] Building JSONassert 1.5.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.1/maven-compiler-plugin-2.3.1.pom
+Progress (1): 2.7/5.9 kBProgress (1): 5.5/5.9 kBProgress (1): 5.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.1/maven-compiler-plugin-2.3.1.pom (5.9 kB at 5.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.1/maven-compiler-plugin-2.3.1.jar
+Progress (1): 2.7/30 kBProgress (1): 5.5/30 kBProgress (1): 8.2/30 kBProgress (1): 11/30 kB Progress (1): 14/30 kBProgress (1): 16/30 kBProgress (1): 19/30 kBProgress (1): 22/30 kBProgress (1): 25/30 kBProgress (1): 27/30 kBProgress (1): 30 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.1/maven-compiler-plugin-2.3.1.jar (30 kB at 84 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.pom
+Progress (1): 2.7/2.8 kBProgress (1): 2.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.pom (2.8 kB at 9.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar
+Progress (1): 2.7/18 kBProgress (1): 5.5/18 kBProgress (1): 8.2/18 kBProgress (1): 11/18 kB Progress (1): 14/18 kBProgress (1): 16/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar (18 kB at 62 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jsonassert ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jsonassert ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jsonassert ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ jsonassert ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/1.8/plexus-compiler-api-1.8.pom
+Progress (1): 778 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/1.8/plexus-compiler-api-1.8.pom (778 B at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/1.8/plexus-compiler-1.8.pom
+Progress (1): 2.7/3.4 kBProgress (1): 3.4 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/1.8/plexus-compiler-1.8.pom (3.4 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/1.8/plexus-compiler-manager-1.8.pom
+Progress (1): 690 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/1.8/plexus-compiler-manager-1.8.pom (690 B at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/1.8/plexus-compiler-javac-1.8.pom
+Progress (1): 686 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/1.8/plexus-compiler-javac-1.8.pom (686 B at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/1.8/plexus-compilers-1.8.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/1.8/plexus-compilers-1.8.pom (1.3 kB at 4.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/1.8/plexus-compiler-api-1.8.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/1.8/plexus-compiler-manager-1.8.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/1.8/plexus-compiler-javac-1.8.jar
+Progress (1): 4.1/20 kBProgress (1): 8.2/20 kBProgress (1): 12/20 kB Progress (1): 16/20 kBProgress (1): 20 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/1.8/plexus-compiler-api-1.8.jar (20 kB at 68 kB/s)
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB   Progress (2): 12 kB | 2.7/5.3 kBProgress (2): 12 kB | 5.3 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/1.8/plexus-compiler-javac-1.8.jar (12 kB at 21 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/1.8/plexus-compiler-manager-1.8.jar (5.3 kB at 8.7 kB/s)
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jsonassert ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ jsonassert ---
+[INFO] Compiling 11 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jsonassert ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.skyscreamer.jsonassert.JSONAssertTest
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running org.skyscreamer.jsonassert.comparator.JSONCompareUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.skyscreamer.jsonassert.comparator.CustomComparatorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.JSONCompareTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.skyscreamer.jsonassert.JSONArrayWithNullTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.ArrayValueMatcherTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running org.skyscreamer.jsonassert.JSONCompareModeTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.JSONCustomComparatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.skyscreamer.jsonassert.DependencyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+
+Results :
+
+Tests run: 150, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.792 s
+[INFO] Finished at: 2021-11-27T10:12:36+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.skyscreamer:jsonassert:jar:1.5.1-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 80, column 32
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< org.skyscreamer:jsonassert >---------------------
+[INFO] Building JSONassert 1.5.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jsonassert ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ jsonassert ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 19 files (3 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 11 files (2 packages).
+[INFO] 151 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jsonassert ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jsonassert ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ jsonassert ---
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jsonassert ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ jsonassert ---
+[INFO] Compiling 11 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jsonassert ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.skyscreamer.jsonassert.JSONAssertTest
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 sec
+Running org.skyscreamer.jsonassert.comparator.JSONCompareUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running org.skyscreamer.jsonassert.comparator.CustomComparatorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.skyscreamer.jsonassert.JSONCompareTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running org.skyscreamer.jsonassert.JSONArrayWithNullTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.skyscreamer.jsonassert.ArrayValueMatcherTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Running org.skyscreamer.jsonassert.JSONCompareModeTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.JSONCustomComparatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.DependencyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 150, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---------------------< org.skyscreamer:jsonassert >---------------------
+[INFO] Building JSONassert 1.5.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ jsonassert ---
+[INFO] 
+[INFO] ---------------------< org.skyscreamer:jsonassert >---------------------
+[INFO] Building JSONassert 1.5.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ jsonassert ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn1828837395279651555resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.564 s
+[INFO] Finished at: 2021-11-27T10:12:43+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenAppliedToNonArray
+[test][2/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenInnerArraySizeDoesNotMatch
+[test][3/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenInnerJSONObjectArrayElementDoesNotMatch
+[test][4/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenNotEveryElementOfJSONObjectArrayMatches
+[test][5/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenSecondElementOfJSONObjectArrayDoesNotMatch
+[test][6/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenThirdElementOfJSONObjectArrayDoesNotMatchInMultiplePlaces
+[test][7/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenTwoElementOfSimpleValueArrayDoNotMatch
+[test][8/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#failsWhenTwoElementsOfJSONObjectArrayDoNotMatch
+[test][9/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#jsonObjectMatchesSecondElementOfJSONObjectArray
+[test][10/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesElementPairsStartingFromElement0OfJSONObjectArrayWhenRangeTooLarge
+[test][11/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesElementPairsStartingFromElement1OfJSONObjectArrayWhenRangeTooLarge
+[test][12/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesEveryElementOfJSONObjectArray
+[test][13/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesEveryElementOfJSONObjectArrayWhenRangeTooLarge
+[test][14/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesFirstElementOfArrayOfJSONArrays
+[test][15/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesSecondElementOfJSONObjectArray
+[test][16/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesSizeOfFirstThreeInnerArrays
+[test][17/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#matchesThirdElementOfSimpleValueArray
+[test][18/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#simpleValueMatchesSecondElementOfJSONObjectArray
+[test][19/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyBackgroundAttributesOfEveryArrayElementAlternateBetweenWhiteAndGrey
+[test][20/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyEveryArrayElementWithCustomComparator
+[test][21/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyEveryElementOfArrayIsJSONArrayOfLength3
+[test][22/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyIdAttributeOfFirstArrayElementMatches
+[test][23/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyIdAttributeOfFirstArrayElementMatchesSimplifiedExpectedSyntax
+[test][24/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifySecondElementOfArrayIsJSONArrayWhoseFirstElementIs9
+[test][25/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifySecondElementOfArrayIsJSONArrayWhoseFirstElementIs9WithEvenMoreSimpliedExpectedString
+[test][26/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifySecondElementOfArrayIsJSONArrayWhoseFirstElementIs9WithSimpliedExpectedString
+[test][27/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyTypeAttributeOfEveryArrayElementMatchesRow
+[test][28/150] org.skyscreamer.jsonassert.ArrayValueMatcherTest#verifyTypeAttributeOfSecondAndThirdElementMatchesRow
+[test][29/150] org.skyscreamer.jsonassert.DependencyTest#nop
+[test][30/150] org.skyscreamer.jsonassert.JSONArrayWithNullTest#testJSONArrayWithNullValue
+[test][31/150] org.skyscreamer.jsonassert.JSONArrayWithNullTest#testJSONArrayWithNullValueAndJsonObject
+[test][32/150] org.skyscreamer.jsonassert.JSONAssertTest#testArray
+[test][33/150] org.skyscreamer.jsonassert.JSONAssertTest#testArrayOfArrays
+[test][34/150] org.skyscreamer.jsonassert.JSONAssertTest#testArrayOfArraysStrict
+[test][35/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsJSONArray2BooleanWithMessage
+[test][36/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsJSONArray2JSONCompareWithMessage
+[test][37/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsJSONObject2Boolean
+[test][38/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsJSONObject2JSONCompare
+[test][39/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsString
+[test][40/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsString2Boolean
+[test][41/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsString2JSONCompare
+[test][42/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsString2JsonComparator
+[test][43/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsStringJSONArrayBooleanWithMessage
+[test][44/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsStringJSONArrayCompareModeWithMessage
+[test][45/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsStringJSONObjectBoolean
+[test][46/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertEqualsStringJSONObjectJSONCompare
+[test][47/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsJSONArray
+[test][48/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsJSONArray2BooleanWithMessage
+[test][49/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsJSONArray2JSONCompareWithMessage
+[test][50/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsJSONObject2Boolean
+[test][51/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsString
+[test][52/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsString2Boolean
+[test][53/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsString2JSONCompare
+[test][54/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsString2JsonComparator
+[test][55/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsStringAndJSONObject
+[test][56/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsStringJSONArrayBooleanWithMessage
+[test][57/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsStringJSONArrayCompareModeWithMessage
+[test][58/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsStringJSONObjectBoolean
+[test][59/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsStringJSONObjectJSONCompare
+[test][60/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenDifferentLenient
+[test][61/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenDifferentStrict
+[test][62/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenEqualDiffObjectsLenient
+[test][63/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenEqualDiffObjectsStrict
+[test][64/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenEqualLenient
+[test][65/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNotEqualsWhenEqualStrict
+[test][66/150] org.skyscreamer.jsonassert.JSONAssertTest#testAssertNtEqualsJSONObject2JSONCompare
+[test][67/150] org.skyscreamer.jsonassert.JSONAssertTest#testBooleanArray
+[test][68/150] org.skyscreamer.jsonassert.JSONAssertTest#testComplexArray
+[test][69/150] org.skyscreamer.jsonassert.JSONAssertTest#testComplexArrayNoUniqueID
+[test][70/150] org.skyscreamer.jsonassert.JSONAssertTest#testComplexMixedArray
+[test][71/150] org.skyscreamer.jsonassert.JSONAssertTest#testComplexMixedStrictArray
+[test][72/150] org.skyscreamer.jsonassert.JSONAssertTest#testEquivalentIntAndDouble
+[test][73/150] org.skyscreamer.jsonassert.JSONAssertTest#testEquivalentIntAndLong
+[test][74/150] org.skyscreamer.jsonassert.JSONAssertTest#testExpectedArrayButActualObject
+[test][75/150] org.skyscreamer.jsonassert.JSONAssertTest#testExpectedObjectButActualArray
+[test][76/150] org.skyscreamer.jsonassert.JSONAssertTest#testFieldMismatch
+[test][77/150] org.skyscreamer.jsonassert.JSONAssertTest#testIncorrectTypes
+[test][78/150] org.skyscreamer.jsonassert.JSONAssertTest#testLenientArrayRecursion
+[test][79/150] org.skyscreamer.jsonassert.JSONAssertTest#testNested
+[test][80/150] org.skyscreamer.jsonassert.JSONAssertTest#testNullEquality
+[test][81/150] org.skyscreamer.jsonassert.JSONAssertTest#testNullProperty
+[test][82/150] org.skyscreamer.jsonassert.JSONAssertTest#testNumber
+[test][83/150] org.skyscreamer.jsonassert.JSONAssertTest#testReversed
+[test][84/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimple
+[test][85/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimpleAndComplexArray
+[test][86/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimpleAndComplexStrictArray
+[test][87/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimpleArray
+[test][88/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimpleMixedArray
+[test][89/150] org.skyscreamer.jsonassert.JSONAssertTest#testSimpleStrict
+[test][90/150] org.skyscreamer.jsonassert.JSONAssertTest#testString
+[test][91/150] org.skyscreamer.jsonassert.JSONAssertTest#testVeryNested
+[test][92/150] org.skyscreamer.jsonassert.JSONCompareModeTest#testWithExtensibility
+[test][93/150] org.skyscreamer.jsonassert.JSONCompareModeTest#testWithStrictOrdering
+[test][94/150] org.skyscreamer.jsonassert.JSONCompareModeTest#testWithoutExtensibility
+[test][95/150] org.skyscreamer.jsonassert.JSONCompareModeTest#testWithoutStrictOrdering
+[test][96/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsArrayMissingExpectedElement
+[test][97/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsArraysOfUnequalLength
+[test][98/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsMismatchedFieldValues
+[test][99/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsMismatchedTypes
+[test][100/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsMissingField
+[test][101/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsMissingJSONObjectWithUniqueKeyInUnorderedArray
+[test][102/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnexpectedArrayWhenExpectingObject
+[test][103/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnexpectedFieldInNonExtensibleMode
+[test][104/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnexpectedNonNull
+[test][105/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnexpectedNull
+[test][106/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnexpectedObjectWhenExpectingArray
+[test][107/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnmatchedJSONArrayWhereExpectedContainsJSONObjectWithUniqueKeyButActualContainsElementOfOtherType
+[test][108/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnmatchedJSONArrayWhereOnlyExpectedContainsJSONObjectWithUniqueKey
+[test][109/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnmatchedJSONObjectInUnorderedArray
+[test][110/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsUnmatchesIntegerValueInUnorderedArrayContainingJSONObject
+[test][111/150] org.skyscreamer.jsonassert.JSONCompareTest#reportsWrongSimpleValueCountInUnorderedArray
+[test][112/150] org.skyscreamer.jsonassert.JSONCompareTest#succeedsWithEmptyArrays
+[test][113/150] org.skyscreamer.jsonassert.JSONCompareTest#succeedsWithJSONObjectsWithNonUniqueKeyInUnorderedArray
+[test][114/150] org.skyscreamer.jsonassert.JSONCompareTest#succeedsWithNestedJSONObjectsInUnorderedArray
+[test][115/150] org.skyscreamer.jsonassert.JSONCompareTest#succeedsWithSomeNestedJSONObjectsInUnorderedArray
+[test][116/150] org.skyscreamer.jsonassert.JSONCustomComparatorTest#whenDeepPathMatchesCallCustomMatcher
+[test][117/150] org.skyscreamer.jsonassert.JSONCustomComparatorTest#whenDeepWildcardPathMatchesCallCustomMatcher
+[test][118/150] org.skyscreamer.jsonassert.JSONCustomComparatorTest#whenPathMatchesInCustomizationThenCallCustomMatcher
+[test][119/150] org.skyscreamer.jsonassert.JSONCustomComparatorTest#whenRootDeepWildcardPathMatchesCallCustomMatcher
+[test][120/150] org.skyscreamer.jsonassert.JSONCustomComparatorTest#whenSimpleWildcardPathMatchesCallCustomMatcher
+[test][121/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#constantRegexMatchesStringAttributeInsideArray
+[test][122/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#constantRegexWithSimplePathMatchsStringAttribute
+[test][123/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#constantRegexWithThreeLevelPathMatchsStringAttribute
+[test][124/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#dynamicRegexMatchesStringAttributeInsideArray
+[test][125/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#dynamicRegexMatchesStringAttributeInsideArrayWithNoArgConstructor
+[test][126/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#dynamicRegexWithSimplePathMatchsStringAttribute
+[test][127/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#dynamicRegexWithThreeLevelPathMatchsStringAttribute
+[test][128/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#failsWhenConstantRegexDoesNotMatchStringAttributeInsideArray
+[test][129/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#failsWhenConstantRegexInvalid
+[test][130/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#failsWhenDynamicRegexDoesNotMatchStringAttributeInsideArray
+[test][131/150] org.skyscreamer.jsonassert.RegularExpressionValueMatcherTest#failsWhenDynamicRegexInvalid
+[test][132/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenActualArrayLongerThanExpectedLength
+[test][133/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenActualArrayLongerThanMaxOfExpectedRange
+[test][134/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenActualArrayTooShort
+[test][135/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedArraySizeNotANumber
+[test][136/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedArrayTooLong
+[test][137/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedArrayTooShort
+[test][138/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedMaximumTooSmall
+[test][139/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedMinimumTooSmall
+[test][140/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenExpectedNotAllSimpleTypes
+[test][141/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenFirstExpectedArrayElementNotANumber
+[test][142/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#failsWhenSecondExpectedArrayElementNotANumber
+[test][143/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenActualArrayContainsBetween2And6Elements
+[test][144/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenActualArrayContainsExactly3Elements
+[test][145/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenExactSizeExpected
+[test][146/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenSizeIsMaximumOfExpectedRange
+[test][147/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenSizeIsMinimumOfExpectedRange
+[test][148/150] org.skyscreamer.jsonassert.comparator.ArraySizeComparatorTest#succeedsWhenSizeWithinExpectedRange
+[test][149/150] org.skyscreamer.jsonassert.comparator.CustomComparatorTest#testFullArrayComparison
+[test][150/150] org.skyscreamer.jsonassert.comparator.JSONCompareUtilTest#testGetCardinalityMap
+[main][14/14] python parse_data.py
+  0%|          | 0/150 [00:00<?, ?it/s] 21%|██▏       | 32/150 [00:00<00:00, 311.17it/s] 43%|████▎     | 64/150 [00:00<00:00, 313.30it/s] 64%|██████▍   | 96/150 [00:00<00:00, 312.95it/s] 85%|████████▌ | 128/150 [00:00<00:00, 311.72it/s]100%|██████████| 150/150 [00:00<00:00, 313.82it/s]
+Done.

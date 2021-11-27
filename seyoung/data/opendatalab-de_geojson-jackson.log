@@ -1,0 +1,259 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/opendatalab-de/geojson-jackson repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< de.grundid.opendatalab:geojson-jackson >---------------
+[INFO] Building GeoJson POJOs for Jackson 1.15-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ geojson-jackson ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ geojson-jackson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ geojson-jackson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ geojson-jackson ---
+[INFO] Compiling 17 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ geojson-jackson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ geojson-jackson ---
+[INFO] Compiling 16 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ geojson-jackson ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.geojson.FeatureTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec
+Running org.geojson.GeoJsonObjectVisitorTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.geojson.ToStringTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.geojson.LngLatAltTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.geojson.jackson.MultiPoligonTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Running org.geojson.jackson.LineStringTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.geojson.jackson.PointTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running org.geojson.jackson.CrsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.geojson.jackson.GeometryCollectionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.geojson.jackson.MultiPointTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.geojson.jackson.MultiLineStringTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.geojson.jackson.PolygonTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running org.geojson.jackson.LngLatAltDeserializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.geojson.jackson.LngLatAltSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 76, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.523 s
+[INFO] Finished at: 2021-11-27T09:25:27+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< de.grundid.opendatalab:geojson-jackson >---------------
+[INFO] Building GeoJson POJOs for Jackson 1.15-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ geojson-jackson ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ geojson-jackson ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 17 files (2 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 16 files (2 packages).
+[INFO] 60 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ geojson-jackson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ geojson-jackson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ geojson-jackson ---
+[INFO] Compiling 17 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ geojson-jackson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ geojson-jackson ---
+[INFO] Compiling 16 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ geojson-jackson ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.geojson.FeatureTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
+Running org.geojson.GeoJsonObjectVisitorTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.geojson.ToStringTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.geojson.LngLatAltTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.geojson.jackson.MultiPoligonTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Running org.geojson.jackson.LineStringTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.geojson.jackson.PointTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running org.geojson.jackson.CrsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.geojson.jackson.GeometryCollectionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.geojson.jackson.MultiPointTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.geojson.jackson.MultiLineStringTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.geojson.jackson.PolygonTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running org.geojson.jackson.LngLatAltDeserializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.geojson.jackson.LngLatAltSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 76, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---------------< de.grundid.opendatalab:geojson-jackson >---------------
+[INFO] Building GeoJson POJOs for Jackson 1.15-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ geojson-jackson ---
+[INFO] 
+[INFO] ---------------< de.grundid.opendatalab:geojson-jackson >---------------
+[INFO] Building GeoJson POJOs for Jackson 1.15-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ geojson-jackson ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8459666994369888784resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.300 s
+[INFO] Finished at: 2021-11-27T09:25:32+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/60] org.geojson.FeatureTest#itShouldHaveProperties
+[test][2/60] org.geojson.FeatureTest#itShouldSerializeFeature
+[test][3/60] org.geojson.GeoJsonObjectVisitorTest#itShouldAdapter
+[test][4/60] org.geojson.GeoJsonObjectVisitorTest#should_visit_right_class
+[test][5/60] org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_additional_elements
+[test][6/60] org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_additional_elements_and_null
+[test][7/60] org.geojson.LngLatAltTest#should_LngLatAlt_equals_with_alt
+[test][8/60] org.geojson.LngLatAltTest#should_LngLatAlt_equals_without_alt
+[test][9/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_additional_elements_set_with_Nan_alt
+[test][10/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_additional_elements_set_with_missing_alt
+[test][11/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_alt_not_specified_in_constructor
+[test][12/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_alt_set_to_Nan_with_additional_elements
+[test][13/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Nan
+[test][14/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Negative_Infinity
+[test][15/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_constructed_to_Positive_Infinity
+[test][16/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Nan
+[test][17/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Negative_Infinity
+[test][18/60] org.geojson.LngLatAltTest#should_LngLatAlt_throw_if_any_additional_elements_set_to_Positive_Infinity
+[test][19/60] org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_additional_elements_and_different_size
+[test][20/60] org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_additional_elements_in_different_order
+[test][21/60] org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_with_alt
+[test][22/60] org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_without_additional_elements
+[test][23/60] org.geojson.LngLatAltTest#should_not_LngLatAlt_equals_without_alt
+[test][24/60] org.geojson.ToStringTest#itShouldToStringCrs
+[test][25/60] org.geojson.ToStringTest#itShouldToStringFeature
+[test][26/60] org.geojson.ToStringTest#itShouldToStringFeatureCollection
+[test][27/60] org.geojson.ToStringTest#itShouldToStringLineString
+[test][28/60] org.geojson.ToStringTest#itShouldToStringMultiLineString
+[test][29/60] org.geojson.ToStringTest#itShouldToStringMultiPolygon
+[test][30/60] org.geojson.ToStringTest#itShouldToStringPoint
+[test][31/60] org.geojson.ToStringTest#itShouldToStringPointWithAdditionalElements
+[test][32/60] org.geojson.ToStringTest#itShouldToStringPointWithAdditionalElementsAndIgnoreNulls
+[test][33/60] org.geojson.ToStringTest#itShouldToStringPolygon
+[test][34/60] org.geojson.jackson.CrsTest#itShouldParseCrsWithLink
+[test][35/60] org.geojson.jackson.CrsTest#itShouldSerializeCrsWithLink
+[test][36/60] org.geojson.jackson.GeometryCollectionTest#itShouldDeserialize
+[test][37/60] org.geojson.jackson.GeometryCollectionTest#itShouldDeserializeSubtype
+[test][38/60] org.geojson.jackson.GeometryCollectionTest#itShouldSerialize
+[test][39/60] org.geojson.jackson.LineStringTest#itShouldDeserializeLineString
+[test][40/60] org.geojson.jackson.LineStringTest#itShouldSerializeMultiPoint
+[test][41/60] org.geojson.jackson.LngLatAltDeserializerTest#deserializeMongoLngLatAlt
+[test][42/60] org.geojson.jackson.LngLatAltSerializerTest#testSerialization
+[test][43/60] org.geojson.jackson.MultiLineStringTest#itShouldSerialize
+[test][44/60] org.geojson.jackson.MultiPointTest#itShouldDeserializeMultiPoint
+[test][45/60] org.geojson.jackson.MultiPointTest#itShouldSerializeMultiPoint
+[test][46/60] org.geojson.jackson.MultiPoligonTest#itShouldDeserialize
+[test][47/60] org.geojson.jackson.MultiPoligonTest#itShouldSerialize
+[test][48/60] org.geojson.jackson.PointTest#itShouldDeserializeAPoint
+[test][49/60] org.geojson.jackson.PointTest#itShouldDeserializeAPointWithAdditionalAttributes
+[test][50/60] org.geojson.jackson.PointTest#itShouldDeserializeAPointWithAltitude
+[test][51/60] org.geojson.jackson.PointTest#itShouldSerializeAPoint
+[test][52/60] org.geojson.jackson.PointTest#itShouldSerializeAPointWithAdditionalAttributes
+[test][53/60] org.geojson.jackson.PointTest#itShouldSerializeAPointWithAdditionalAttributesAndNull
+[test][54/60] org.geojson.jackson.PointTest#itShouldSerializeAPointWithAltitude
+[test][55/60] org.geojson.jackson.PolygonTest#itShouldDeserialize
+[test][56/60] org.geojson.jackson.PolygonTest#itShouldFailOnAddInteriorRingWithoutExteriorRing
+[test][57/60] org.geojson.jackson.PolygonTest#itShouldReplaceExteriorRing
+[test][58/60] org.geojson.jackson.PolygonTest#itShouldSerialize
+[test][59/60] org.geojson.jackson.PolygonTest#itShouldSerializeWithHole
+[test][60/60] org.geojson.jackson.PolygonTest#itShouldSetExteriorRing
+[main][14/14] python parse_data.py
+  0%|          | 0/60 [00:00<?, ?it/s] 88%|████████▊ | 53/60 [00:00<00:00, 527.25it/s]100%|██████████| 60/60 [00:00<00:00, 529.14it/s]
+except: org.geojson.GeoJsonObjectVisitorTest#itShouldAdapter
+except: org.geojson.GeoJsonObjectVisitorTest#should_visit_right_class
+Done.

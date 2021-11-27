@@ -1,0 +1,292 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/takahikokawasaki/nv-websocket-client repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.4/nexus-staging-maven-plugin-1.6.4.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.4/nexus-staging-maven-plugin-1.6.4.pom (12 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-staging/1.6.4/nexus-staging-1.6.4.pom
+Progress (1): 2.7/2.8 kBProgress (1): 2.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-staging/1.6.4/nexus-staging-1.6.4.pom (2.8 kB at 9.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-maven-plugins/1.6.4/nexus-maven-plugins-1.6.4.pom
+Progress (1): 2.7/18 kBProgress (1): 5.5/18 kBProgress (1): 8.2/18 kBProgress (1): 11/18 kB Progress (1): 14/18 kBProgress (1): 16/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-maven-plugins/1.6.4/nexus-maven-plugins-1.6.4.pom (18 kB at 56 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.4/nexus-common-1.6.4.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.4/nexus-common-1.6.4.pom (2.2 kB at 7.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.4/nexus-staging-maven-plugin-1.6.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.4/nexus-common-1.6.4.jar
+Progress (1): 2.7/248 kBProgress (1): 5.5/248 kBProgress (1): 8.2/248 kBProgress (1): 11/248 kB Progress (1): 14/248 kBProgress (1): 16/248 kBProgress (1): 19/248 kBProgress (1): 22/248 kBProgress (1): 25/248 kBProgress (1): 27/248 kBProgress (1): 32/248 kBProgress (1): 36/248 kBProgress (1): 40/248 kBProgress (1): 44/248 kBProgress (1): 48/248 kBProgress (1): 52/248 kBProgress (1): 56/248 kBProgress (1): 60/248 kBProgress (1): 64/248 kBProgress (1): 68/248 kBProgress (1): 72/248 kBProgress (1): 77/248 kBProgress (1): 81/248 kBProgress (1): 85/248 kBProgress (1): 89/248 kBProgress (1): 93/248 kBProgress (1): 97/248 kBProgress (1): 101/248 kBProgress (1): 105/248 kBProgress (1): 109/248 kBProgress (1): 113/248 kBProgress (1): 118/248 kBProgress (1): 122/248 kBProgress (1): 126/248 kBProgress (1): 130/248 kBProgress (1): 134/248 kBProgress (1): 138/248 kBProgress (1): 142/248 kBProgress (2): 142/248 kB | 2.7/16 kBProgress (2): 142/248 kB | 5.5/16 kBProgress (2): 142/248 kB | 8.2/16 kBProgress (2): 142/248 kB | 11/16 kB Progress (2): 142/248 kB | 14/16 kBProgress (2): 146/248 kB | 14/16 kBProgress (2): 150/248 kB | 14/16 kBProgress (2): 154/248 kB | 14/16 kBProgress (2): 158/248 kB | 14/16 kBProgress (2): 158/248 kB | 16 kB   Progress (2): 163/248 kB | 16 kBProgress (2): 167/248 kB | 16 kBProgress (2): 171/248 kB | 16 kBProgress (2): 175/248 kB | 16 kBProgress (2): 179/248 kB | 16 kBProgress (2): 183/248 kB | 16 kBProgress (2): 187/248 kB | 16 kBProgress (2): 191/248 kB | 16 kBProgress (2): 195/248 kB | 16 kBProgress (2): 199/248 kB | 16 kBProgress (2): 204/248 kB | 16 kBProgress (2): 208/248 kB | 16 kBProgress (2): 212/248 kB | 16 kBProgress (2): 216/248 kB | 16 kBProgress (2): 219/248 kB | 16 kBProgress (2): 223/248 kB | 16 kBProgress (2): 227/248 kB | 16 kBProgress (2): 231/248 kB | 16 kBProgress (2): 235/248 kB | 16 kBProgress (2): 239/248 kB | 16 kBProgress (2): 243/248 kB | 16 kBProgress (2): 247/248 kB | 16 kBProgress (2): 248 kB | 16 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.4/nexus-common-1.6.4.jar (16 kB at 28 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.4/nexus-staging-maven-plugin-1.6.4.jar (248 kB at 395 kB/s)
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.neovisionaries:nv-websocket-client:bundle:2.15-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ line 73, column 29
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 76, column 40
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------< com.neovisionaries:nv-websocket-client >---------------
+[INFO] Building com.neovisionaries:nv-websocket-client 2.15-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.pom
+Progress (1): 4.1/12 kBProgress (1): 8.2/12 kBProgress (1): 12 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.pom (12 kB at 42 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.jar
+Progress (1): 4.1/45 kBProgress (1): 8.2/45 kBProgress (1): 12/45 kB Progress (1): 16/45 kBProgress (1): 20/45 kBProgress (1): 25/45 kBProgress (1): 29/45 kBProgress (1): 33/45 kBProgress (1): 37/45 kBProgress (1): 41/45 kBProgress (1): 45/45 kBProgress (1): 45 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.2/maven-compiler-plugin-3.2.jar (45 kB at 160 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nv-websocket-client ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ nv-websocket-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ nv-websocket-client ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.pom
+Progress (1): 865 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.pom (865 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.4/plexus-compiler-2.4.pom
+Progress (1): 4.1/5.3 kBProgress (1): 5.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.4/plexus-compiler-2.4.pom (5.3 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.pom
+Progress (1): 690 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.pom (690 B at 2.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.pom
+Progress (1): 769 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.pom (769 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.4/plexus-compilers-2.4.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.4/plexus-compilers-2.4.pom (1.3 kB at 4.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.jar
+Progress (1): 4.1/25 kBProgress (1): 8.2/25 kBProgress (1): 12/25 kB Progress (1): 16/25 kBProgress (2): 16/25 kB | 2.7/4.6 kBProgress (2): 20/25 kB | 2.7/4.6 kBProgress (2): 25/25 kB | 2.7/4.6 kBProgress (2): 25/25 kB | 4.6 kB    Progress (2): 25 kB | 4.6 kB                               Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.4/plexus-compiler-manager-2.4.jar (4.6 kB at 16 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.4/plexus-compiler-api-2.4.jar (25 kB at 85 kB/s)
+Progress (1): 2.7/19 kBProgress (1): 5.5/19 kBProgress (1): 8.2/19 kBProgress (1): 11/19 kB Progress (1): 14/19 kBProgress (1): 16/19 kBProgress (1): 19/19 kBProgress (1): 19 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.4/plexus-compiler-javac-2.4.jar (19 kB at 35 kB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 58 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ nv-websocket-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ nv-websocket-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ nv-websocket-client ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.neovisionaries.ws.client.WebSocketFrameTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in com.neovisionaries.ws.client.WebSocketFrameTest
+[INFO] Running com.neovisionaries.ws.client.WebSocketExtensionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.neovisionaries.ws.client.WebSocketExtensionTest
+[INFO] Running com.neovisionaries.ws.client.TokenTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.neovisionaries.ws.client.TokenTest
+[INFO] Running com.neovisionaries.ws.client.MiscTest
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.neovisionaries.ws.client.MiscTest
+[INFO] Running com.neovisionaries.ws.client.PerMessageDeflateExtensionTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.neovisionaries.ws.client.PerMessageDeflateExtensionTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 73, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.265 s
+[INFO] Finished at: 2021-11-27T15:02:41+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.neovisionaries:nv-websocket-client:bundle:2.15-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ line 73, column 29
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 76, column 40
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------< com.neovisionaries:nv-websocket-client >---------------
+[INFO] Building com.neovisionaries:nv-websocket-client 2.15-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nv-websocket-client ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ nv-websocket-client ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 58 files (1 package).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 5 files (1 package).
+[INFO] 73 test methods detected.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ nv-websocket-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ nv-websocket-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 58 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ nv-websocket-client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ nv-websocket-client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ nv-websocket-client ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.neovisionaries.ws.client.WebSocketFrameTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 s - in com.neovisionaries.ws.client.WebSocketFrameTest
+[INFO] Running com.neovisionaries.ws.client.WebSocketExtensionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.neovisionaries.ws.client.WebSocketExtensionTest
+[INFO] Running com.neovisionaries.ws.client.TokenTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.neovisionaries.ws.client.TokenTest
+[INFO] Running com.neovisionaries.ws.client.MiscTest
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.neovisionaries.ws.client.MiscTest
+[INFO] Running com.neovisionaries.ws.client.PerMessageDeflateExtensionTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.neovisionaries.ws.client.PerMessageDeflateExtensionTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 73, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ---------------< com.neovisionaries:nv-websocket-client >---------------
+[INFO] Building com.neovisionaries:nv-websocket-client 2.15-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ nv-websocket-client ---
+[INFO] 
+[INFO] ---------------< com.neovisionaries:nv-websocket-client >---------------
+[INFO] Building com.neovisionaries:nv-websocket-client 2.15-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ nv-websocket-client ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn2206570104396231190resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.504 s
+[INFO] Finished at: 2021-11-27T15:02:51+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/73] com.neovisionaries.ws.client.MiscTest#test01
+[test][2/73] com.neovisionaries.ws.client.MiscTest#test02
+[test][3/73] com.neovisionaries.ws.client.MiscTest#test03
+[test][4/73] com.neovisionaries.ws.client.MiscTest#test04
+[test][5/73] com.neovisionaries.ws.client.MiscTest#test05
+[test][6/73] com.neovisionaries.ws.client.MiscTest#test06
+[test][7/73] com.neovisionaries.ws.client.MiscTest#test07
+[test][8/73] com.neovisionaries.ws.client.MiscTest#test08
+[test][9/73] com.neovisionaries.ws.client.MiscTest#test09
+[test][10/73] com.neovisionaries.ws.client.MiscTest#test10
+[test][11/73] com.neovisionaries.ws.client.MiscTest#test11
+[test][12/73] com.neovisionaries.ws.client.MiscTest#test12
+[test][13/73] com.neovisionaries.ws.client.MiscTest#test13
+[test][14/73] com.neovisionaries.ws.client.MiscTest#test14
+[test][15/73] com.neovisionaries.ws.client.MiscTest#test15
+[test][16/73] com.neovisionaries.ws.client.MiscTest#test16
+[test][17/73] com.neovisionaries.ws.client.MiscTest#test17
+[test][18/73] com.neovisionaries.ws.client.MiscTest#test18
+[test][19/73] com.neovisionaries.ws.client.MiscTest#test19
+[test][20/73] com.neovisionaries.ws.client.MiscTest#test20
+[test][21/73] com.neovisionaries.ws.client.MiscTest#test21
+[test][22/73] com.neovisionaries.ws.client.MiscTest#test22
+[test][23/73] com.neovisionaries.ws.client.MiscTest#test23
+[test][24/73] com.neovisionaries.ws.client.MiscTest#test24
+[test][25/73] com.neovisionaries.ws.client.MiscTest#test25
+[test][26/73] com.neovisionaries.ws.client.MiscTest#test26
+[test][27/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test001
+[test][28/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test002
+[test][29/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test003
+[test][30/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test004
+[test][31/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test005
+[test][32/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test006
+[test][33/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test007
+[test][34/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test008
+[test][35/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test009
+[test][36/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test010
+[test][37/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test011
+[test][38/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test012
+[test][39/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test013
+[test][40/73] com.neovisionaries.ws.client.PerMessageDeflateExtensionTest#test014
+[test][41/73] com.neovisionaries.ws.client.TokenTest#test001
+[test][42/73] com.neovisionaries.ws.client.TokenTest#test002
+[test][43/73] com.neovisionaries.ws.client.TokenTest#test003
+[test][44/73] com.neovisionaries.ws.client.TokenTest#test004
+[test][45/73] com.neovisionaries.ws.client.TokenTest#test005
+[test][46/73] com.neovisionaries.ws.client.TokenTest#test006
+[test][47/73] com.neovisionaries.ws.client.TokenTest#test007
+[test][48/73] com.neovisionaries.ws.client.TokenTest#test008
+[test][49/73] com.neovisionaries.ws.client.TokenTest#test009
+[test][50/73] com.neovisionaries.ws.client.TokenTest#test010
+[test][51/73] com.neovisionaries.ws.client.TokenTest#test011
+[test][52/73] com.neovisionaries.ws.client.TokenTest#test012
+[test][53/73] com.neovisionaries.ws.client.TokenTest#test013
+[test][54/73] com.neovisionaries.ws.client.TokenTest#test014
+[test][55/73] com.neovisionaries.ws.client.TokenTest#test015
+[test][56/73] com.neovisionaries.ws.client.TokenTest#test016
+[test][57/73] com.neovisionaries.ws.client.TokenTest#test017
+[test][58/73] com.neovisionaries.ws.client.TokenTest#test018
+[test][59/73] com.neovisionaries.ws.client.WebSocketExtensionTest#test001
+[test][60/73] com.neovisionaries.ws.client.WebSocketExtensionTest#test002
+[test][61/73] com.neovisionaries.ws.client.WebSocketExtensionTest#test003
+[test][62/73] com.neovisionaries.ws.client.WebSocketExtensionTest#test004
+[test][63/73] com.neovisionaries.ws.client.WebSocketExtensionTest#test005
+[test][64/73] com.neovisionaries.ws.client.WebSocketFrameTest#test001
+[test][65/73] com.neovisionaries.ws.client.WebSocketFrameTest#test002
+[test][66/73] com.neovisionaries.ws.client.WebSocketFrameTest#test003
+[test][67/73] com.neovisionaries.ws.client.WebSocketFrameTest#test004
+[test][68/73] com.neovisionaries.ws.client.WebSocketFrameTest#test005
+[test][69/73] com.neovisionaries.ws.client.WebSocketFrameTest#test006
+[test][70/73] com.neovisionaries.ws.client.WebSocketFrameTest#test007
+[test][71/73] com.neovisionaries.ws.client.WebSocketFrameTest#test008
+[test][72/73] com.neovisionaries.ws.client.WebSocketFrameTest#test009
+[test][73/73] com.neovisionaries.ws.client.WebSocketFrameTest#test010
+[main][14/14] python parse_data.py
+  0%|          | 0/73 [00:00<?, ?it/s] 16%|█▋        | 12/73 [00:00<00:00, 116.90it/s] 33%|███▎      | 24/73 [00:00<00:00, 118.39it/s] 49%|████▉     | 36/73 [00:00<00:00, 118.44it/s] 66%|██████▌   | 48/73 [00:00<00:00, 118.47it/s] 84%|████████▎ | 61/73 [00:00<00:00, 119.23it/s]100%|██████████| 73/73 [00:00<00:00, 103.03it/s]100%|██████████| 73/73 [00:00<00:00, 110.31it/s]
+Done.

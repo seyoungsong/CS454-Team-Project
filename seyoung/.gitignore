@@ -484,8 +484,10 @@ repo
 tests.sh
 clover.xml
 sloc.txt
+sloc.csv
 clover/
 data.json
 main.sh
 run.sh
 !data/*.log
+!data_old/*.log

@@ -1,6 +1,8 @@
 ---
 title: Parallel Test Case Prioritization for Distributed System Using Search Algorithms
-author: Team 6
+author: |
+  | Team 6
+  | Seyoung Song, Subeom Park, Yoonho Nam, Azret Kenzhaliev
 papersize: A4
 geometry: margin=2cm
 fontsize: 12pt
@@ -10,30 +12,64 @@ monofont: Hack Nerd Font Mono
 CJKmainfont: Noto Serif CJK KR
 ---
 
-# Temp
+# Abstract
+
+TODO: 마지막
 
 # Introduction
 
-1. Regression Test Case Prioritization
-2. Parallel Test Prioritization
-3. Parallel Test Prioritization, but different CPU
+- Regression Test Case Prioritization
+- Parallel Test Prioritization
+- Parallel Test Prioritization, but different CPU
 
-# Literature Review
+# Parallel Test Prioritization
 
-- Harman(2007)
-  - 6 C programs and their corresponding test suites
-  - infrastructure
-- Chen(2018)
-  - 50 open-source projects from GitHub
-  - PIT, MutGen
-- Luo(2019)
-  - 58 real-world Java programs from GitHub
-  - PIT
-- Zhou(2021)
-  - 54 open-source Java projects from GitHub (Maven, JUnit)
-  - Clover, bcel
-  - SLOC
-  - Pitest (PIT)
+- Problem Description
+- Problem Definition
+- Effectiveness Measure
+
+# Algorithms
+
+## Greedy Algorithms
+
+TODO
+
+## Simulated Annealing
+
+TODO
+
+## Genetic Algorithms
+
+TODO
+
+# Empirical Study
+
+## Research Questions
+
+- RQ1: Which algorithm is most effective in solving the parallel test prioritization problem?
+- RQ2: How do the number of computing resources and the relative performance between them influence the performance of the parallel test prioritization techniques?
+
+## Experimental Design
+
+N=1
+N=2, 1:1
+N=3, 1:2:3
+N=8, 1:1:1:1:4:4:4:4
+
+## Subjects and Tools
+
+TODO: Seyoung
+
+## Results and Analysis
+
+TODO
+
+# Conclusion
+
+- Discussion
+  - Comparison With Sequential Test Prioritization
+  - Practical Concerns
+  - Generalizability
 
 # References
 

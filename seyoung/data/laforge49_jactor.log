@@ -1,0 +1,806 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/laforge49/jactor repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.7/maven-bundle-plugin-2.3.7.pom
+Progress (1): 2.7/4.0 kBProgress (1): 4.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.7/maven-bundle-plugin-2.3.7.pom (4.0 kB at 4.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.pom (1.4 kB at 4.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.pom
+Progress (1): 2.7/4.0 kBProgress (1): 4.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.pom (4.0 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.7/maven-bundle-plugin-2.3.7.jar
+Downloading from central: https://repo.maven.apache.org/maven2/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.jar
+Progress (1): 4.1/920 kBProgress (1): 8.2/920 kBProgress (1): 12/920 kB Progress (1): 16/920 kBProgress (1): 21/920 kBProgress (1): 25/920 kBProgress (1): 29/920 kBProgress (1): 33/920 kBProgress (1): 37/920 kBProgress (1): 41/920 kBProgress (1): 45/920 kBProgress (1): 49/920 kBProgress (1): 53/920 kBProgress (1): 62/920 kBProgress (1): 70/920 kBProgress (1): 78/920 kBProgress (1): 86/920 kBProgress (1): 94/920 kBProgress (1): 103/920 kBProgress (1): 111/920 kBProgress (1): 119/920 kBProgress (1): 127/920 kBProgress (1): 135/920 kBProgress (2): 135/920 kB | 2.7/124 kBProgress (2): 135/920 kB | 5.5/124 kBProgress (2): 135/920 kB | 8.2/124 kBProgress (2): 135/920 kB | 11/124 kB Progress (3): 135/920 kB | 11/124 kB | 2.7/20 kBProgress (3): 135/920 kB | 11/124 kB | 5.5/20 kBProgress (3): 135/920 kB | 11/124 kB | 8.2/20 kBProgress (3): 135/920 kB | 11/124 kB | 11/20 kB Progress (3): 135/920 kB | 14/124 kB | 11/20 kBProgress (3): 135/920 kB | 14/124 kB | 14/20 kBProgress (3): 135/920 kB | 16/124 kB | 14/20 kBProgress (3): 144/920 kB | 16/124 kB | 14/20 kBProgress (3): 152/920 kB | 16/124 kB | 14/20 kBProgress (3): 152/920 kB | 16/124 kB | 16/20 kBProgress (3): 152/920 kB | 19/124 kB | 16/20 kBProgress (3): 152/920 kB | 19/124 kB | 19/20 kBProgress (3): 152/920 kB | 19/124 kB | 20 kB   Progress (3): 160/920 kB | 19/124 kB | 20 kBProgress (3): 168/920 kB | 19/124 kB | 20 kBProgress (3): 168/920 kB | 22/124 kB | 20 kBProgress (3): 168/920 kB | 25/124 kB | 20 kBProgress (3): 176/920 kB | 25/124 kB | 20 kBProgress (3): 185/920 kB | 25/124 kB | 20 kBProgress (3): 185/920 kB | 27/124 kB | 20 kBProgress (3): 185/920 kB | 30/124 kB | 20 kBProgress (3): 193/920 kB | 30/124 kB | 20 kBProgress (3): 201/920 kB | 30/124 kB | 20 kBProgress (3): 201/920 kB | 33/124 kB | 20 kBProgress (3): 201/920 kB | 36/124 kB | 20 kBProgress (3): 209/920 kB | 36/124 kB | 20 kBProgress (3): 217/920 kB | 36/124 kB | 20 kBProgress (3): 217/920 kB | 38/124 kB | 20 kBProgress (3): 226/920 kB | 38/124 kB | 20 kBProgress (3): 234/920 kB | 38/124 kB | 20 kBProgress (3): 242/920 kB | 38/124 kB | 20 kBProgress (3): 250/920 kB | 38/124 kB | 20 kBProgress (3): 258/920 kB | 38/124 kB | 20 kBProgress (3): 266/920 kB | 38/124 kB | 20 kBProgress (3): 275/920 kB | 38/124 kB | 20 kBProgress (3): 283/920 kB | 38/124 kB | 20 kBProgress (3): 283/920 kB | 41/124 kB | 20 kBProgress (3): 291/920 kB | 41/124 kB | 20 kBProgress (3): 299/920 kB | 41/124 kB | 20 kBProgress (3): 299/920 kB | 44/124 kB | 20 kBProgress (3): 307/920 kB | 44/124 kB | 20 kBProgress (3): 316/920 kB | 44/124 kB | 20 kBProgress (3): 316/920 kB | 47/124 kB | 20 kBProgress (3): 324/920 kB | 47/124 kB | 20 kBProgress (3): 332/920 kB | 47/124 kB | 20 kBProgress (3): 332/920 kB | 49/124 kB | 20 kBProgress (3): 340/920 kB | 49/124 kB | 20 kBProgress (3): 340/920 kB | 52/124 kB | 20 kBProgress (3): 348/920 kB | 52/124 kB | 20 kBProgress (3): 348/920 kB | 55/124 kB | 20 kBProgress (3): 357/920 kB | 55/124 kB | 20 kBProgress (3): 365/920 kB | 55/124 kB | 20 kBProgress (3): 365/920 kB | 58/124 kB | 20 kBProgress (3): 373/920 kB | 58/124 kB | 20 kBProgress (3): 381/920 kB | 58/124 kB | 20 kBProgress (3): 381/920 kB | 60/124 kB | 20 kBProgress (3): 381/920 kB | 63/124 kB | 20 kBProgress (3): 381/920 kB | 66/124 kB | 20 kBProgress (3): 389/920 kB | 66/124 kB | 20 kBProgress (3): 398/920 kB | 66/124 kB | 20 kBProgress (3): 406/920 kB | 66/124 kB | 20 kBProgress (3): 414/920 kB | 66/124 kB | 20 kBProgress (3): 422/920 kB | 66/124 kB | 20 kBProgress (3): 430/920 kB | 66/124 kB | 20 kB                                            Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-archiver/2.4.1/maven-archiver-2.4.1.jar (20 kB at 34 kB/s)
+Progress (2): 430/920 kB | 70/124 kBProgress (2): 438/920 kB | 70/124 kBProgress (2): 438/920 kB | 74/124 kBProgress (2): 447/920 kB | 74/124 kBProgress (2): 447/920 kB | 78/124 kBProgress (2): 447/920 kB | 82/124 kBProgress (2): 455/920 kB | 82/124 kBProgress (2): 463/920 kB | 82/124 kBProgress (2): 471/920 kB | 82/124 kBProgress (2): 479/920 kB | 82/124 kBProgress (2): 488/920 kB | 82/124 kBProgress (2): 496/920 kB | 82/124 kBProgress (2): 496/920 kB | 86/124 kBProgress (2): 504/920 kB | 86/124 kBProgress (2): 504/920 kB | 90/124 kBProgress (2): 504/920 kB | 94/124 kBProgress (2): 512/920 kB | 94/124 kBProgress (2): 512/920 kB | 99/124 kBProgress (2): 520/920 kB | 99/124 kBProgress (2): 529/920 kB | 99/124 kBProgress (2): 537/920 kB | 99/124 kBProgress (2): 545/920 kB | 99/124 kBProgress (2): 545/920 kB | 103/124 kBProgress (2): 553/920 kB | 103/124 kBProgress (2): 553/920 kB | 107/124 kBProgress (2): 553/920 kB | 111/124 kBProgress (2): 561/920 kB | 111/124 kBProgress (2): 561/920 kB | 115/124 kBProgress (2): 570/920 kB | 115/124 kBProgress (2): 578/920 kB | 115/124 kBProgress (2): 586/920 kB | 115/124 kBProgress (2): 594/920 kB | 115/124 kBProgress (2): 602/920 kB | 115/124 kBProgress (2): 611/920 kB | 115/124 kBProgress (2): 611/920 kB | 119/124 kBProgress (2): 611/920 kB | 123/124 kBProgress (2): 619/920 kB | 123/124 kBProgress (2): 619/920 kB | 124 kB    Progress (2): 627/920 kB | 124 kBProgress (2): 635/920 kB | 124 kBProgress (2): 643/920 kB | 124 kBProgress (2): 651/920 kB | 124 kBProgress (2): 660/920 kB | 124 kBProgress (2): 668/920 kB | 124 kBProgress (2): 676/920 kB | 124 kBProgress (2): 684/920 kB | 124 kBProgress (2): 692/920 kB | 124 kBProgress (2): 701/920 kB | 124 kBProgress (2): 709/920 kB | 124 kBProgress (2): 717/920 kB | 124 kBProgress (2): 725/920 kB | 124 kBProgress (2): 733/920 kB | 124 kBProgress (2): 742/920 kB | 124 kBProgress (2): 750/920 kB | 124 kBProgress (2): 758/920 kB | 124 kBProgress (2): 766/920 kB | 124 kBProgress (2): 774/920 kB | 124 kBProgress (2): 783/920 kB | 124 kBProgress (2): 791/920 kB | 124 kBProgress (2): 799/920 kB | 124 kBProgress (2): 807/920 kB | 124 kBProgress (2): 815/920 kB | 124 kBProgress (2): 824/920 kB | 124 kBProgress (2): 832/920 kB | 124 kBProgress (2): 840/920 kB | 124 kBProgress (2): 848/920 kB | 124 kBProgress (2): 856/920 kB | 124 kBProgress (2): 864/920 kB | 124 kBProgress (2): 873/920 kB | 124 kBProgress (2): 881/920 kB | 124 kBProgress (2): 889/920 kB | 124 kBProgress (2): 897/920 kB | 124 kBProgress (2): 905/920 kB | 124 kBProgress (2): 914/920 kB | 124 kBProgress (2): 920 kB | 124 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/felix/maven-bundle-plugin/2.3.7/maven-bundle-plugin-2.3.7.jar (124 kB at 151 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/biz/aQute/bndlib/1.50.0/bndlib-1.50.0.jar (920 kB at 1.1 MB/s)
+[INFO] 
+[INFO] --------------------< org.agilewiki.jactor:jactor >---------------------
+[INFO] Building JActor 5.0.0-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.0/org.osgi.core-4.3.0.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.0/org.osgi.core-4.3.0.pom (1.4 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/4.3.0/org.osgi.compendium-4.3.0.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/4.3.0/org.osgi.compendium-4.3.0.pom (1.4 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.6.4/slf4j-parent-1.6.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.6.4/slf4j-parent-1.6.4.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.pom
+Progress (1): 1.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.pom (1.5 kB at 5.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.0/org.osgi.core-4.3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/4.3.0/org.osgi.compendium-4.3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar (0 B at 0 B/s)
+Progress (1): 4.1/347 kBProgress (2): 4.1/347 kB | 2.7/768 kBProgress (2): 8.2/347 kB | 2.7/768 kBProgress (2): 12/347 kB | 2.7/768 kB Progress (2): 16/347 kB | 2.7/768 kBProgress (2): 16/347 kB | 5.5/768 kBProgress (2): 16/347 kB | 8.2/768 kBProgress (2): 20/347 kB | 8.2/768 kBProgress (2): 25/347 kB | 8.2/768 kBProgress (2): 25/347 kB | 11/768 kB Progress (2): 29/347 kB | 11/768 kBProgress (2): 33/347 kB | 11/768 kBProgress (2): 37/347 kB | 11/768 kBProgress (2): 41/347 kB | 11/768 kBProgress (2): 45/347 kB | 11/768 kBProgress (2): 49/347 kB | 11/768 kBProgress (2): 49/347 kB | 14/768 kBProgress (2): 53/347 kB | 14/768 kBProgress (2): 57/347 kB | 14/768 kBProgress (2): 61/347 kB | 14/768 kBProgress (2): 66/347 kB | 14/768 kBProgress (2): 66/347 kB | 16/768 kBProgress (2): 70/347 kB | 16/768 kBProgress (2): 74/347 kB | 16/768 kBProgress (2): 78/347 kB | 16/768 kBProgress (2): 82/347 kB | 16/768 kBProgress (2): 82/347 kB | 19/768 kBProgress (2): 82/347 kB | 22/768 kBProgress (2): 86/347 kB | 22/768 kBProgress (2): 90/347 kB | 22/768 kBProgress (2): 94/347 kB | 22/768 kBProgress (2): 98/347 kB | 22/768 kBProgress (2): 98/347 kB | 25/768 kBProgress (2): 98/347 kB | 27/768 kBProgress (2): 102/347 kB | 27/768 kBProgress (2): 106/347 kB | 27/768 kBProgress (2): 111/347 kB | 27/768 kBProgress (2): 115/347 kB | 27/768 kBProgress (2): 115/347 kB | 30/768 kBProgress (2): 115/347 kB | 33/768 kBProgress (2): 119/347 kB | 33/768 kBProgress (2): 123/347 kB | 33/768 kBProgress (2): 127/347 kB | 33/768 kBProgress (2): 131/347 kB | 33/768 kBProgress (2): 131/347 kB | 36/768 kBProgress (2): 135/347 kB | 36/768 kBProgress (2): 139/347 kB | 36/768 kBProgress (2): 143/347 kB | 36/768 kBProgress (2): 147/347 kB | 36/768 kBProgress (2): 147/347 kB | 38/768 kBProgress (2): 147/347 kB | 41/768 kBProgress (2): 152/347 kB | 41/768 kBProgress (2): 156/347 kB | 41/768 kBProgress (2): 160/347 kB | 41/768 kBProgress (2): 164/347 kB | 41/768 kBProgress (2): 164/347 kB | 44/768 kBProgress (2): 168/347 kB | 44/768 kBProgress (2): 172/347 kB | 44/768 kBProgress (2): 176/347 kB | 44/768 kBProgress (2): 180/347 kB | 44/768 kBProgress (2): 184/347 kB | 44/768 kBProgress (2): 188/347 kB | 44/768 kBProgress (2): 193/347 kB | 44/768 kBProgress (2): 197/347 kB | 44/768 kBProgress (2): 201/347 kB | 44/768 kBProgress (2): 205/347 kB | 44/768 kBProgress (2): 209/347 kB | 44/768 kBProgress (2): 213/347 kB | 44/768 kBProgress (2): 217/347 kB | 44/768 kBProgress (2): 217/347 kB | 48/768 kBProgress (2): 217/347 kB | 52/768 kBProgress (2): 217/347 kB | 56/768 kBProgress (2): 217/347 kB | 60/768 kBProgress (2): 221/347 kB | 60/768 kBProgress (2): 225/347 kB | 60/768 kBProgress (2): 229/347 kB | 60/768 kBProgress (2): 233/347 kB | 60/768 kBProgress (2): 238/347 kB | 60/768 kBProgress (2): 242/347 kB | 60/768 kBProgress (2): 246/347 kB | 60/768 kBProgress (2): 250/347 kB | 60/768 kBProgress (2): 254/347 kB | 60/768 kBProgress (2): 258/347 kB | 60/768 kBProgress (2): 262/347 kB | 60/768 kBProgress (2): 266/347 kB | 60/768 kBProgress (2): 270/347 kB | 60/768 kBProgress (2): 274/347 kB | 60/768 kBProgress (2): 279/347 kB | 60/768 kBProgress (2): 283/347 kB | 60/768 kBProgress (2): 287/347 kB | 60/768 kBProgress (2): 291/347 kB | 60/768 kBProgress (2): 295/347 kB | 60/768 kBProgress (2): 299/347 kB | 60/768 kBProgress (2): 299/347 kB | 64/768 kBProgress (2): 299/347 kB | 68/768 kBProgress (2): 299/347 kB | 73/768 kBProgress (2): 299/347 kB | 77/768 kBProgress (2): 303/347 kB | 77/768 kBProgress (2): 307/347 kB | 77/768 kBProgress (2): 311/347 kB | 77/768 kBProgress (2): 315/347 kB | 77/768 kBProgress (2): 319/347 kB | 77/768 kBProgress (2): 324/347 kB | 77/768 kBProgress (2): 328/347 kB | 77/768 kBProgress (2): 332/347 kB | 77/768 kBProgress (2): 336/347 kB | 77/768 kBProgress (2): 340/347 kB | 77/768 kBProgress (2): 344/347 kB | 77/768 kBProgress (2): 347 kB | 77/768 kB    Progress (2): 347 kB | 81/768 kBProgress (2): 347 kB | 85/768 kBProgress (2): 347 kB | 89/768 kBProgress (2): 347 kB | 93/768 kBProgress (2): 347 kB | 97/768 kBProgress (2): 347 kB | 101/768 kBProgress (2): 347 kB | 105/768 kBProgress (2): 347 kB | 109/768 kBProgress (2): 347 kB | 114/768 kBProgress (2): 347 kB | 118/768 kBProgress (2): 347 kB | 122/768 kBProgress (2): 347 kB | 126/768 kBProgress (2): 347 kB | 130/768 kBProgress (2): 347 kB | 134/768 kBProgress (2): 347 kB | 138/768 kBProgress (2): 347 kB | 142/768 kBProgress (2): 347 kB | 146/768 kBProgress (2): 347 kB | 150/768 kBProgress (2): 347 kB | 154/768 kBProgress (2): 347 kB | 159/768 kBProgress (2): 347 kB | 163/768 kBProgress (2): 347 kB | 167/768 kBProgress (2): 347 kB | 171/768 kBProgress (2): 347 kB | 175/768 kBProgress (2): 347 kB | 179/768 kBProgress (2): 347 kB | 183/768 kBProgress (2): 347 kB | 187/768 kBProgress (2): 347 kB | 191/768 kBProgress (2): 347 kB | 195/768 kBProgress (2): 347 kB | 200/768 kBProgress (2): 347 kB | 204/768 kBProgress (2): 347 kB | 208/768 kBProgress (2): 347 kB | 212/768 kBProgress (2): 347 kB | 216/768 kBProgress (2): 347 kB | 219/768 kBProgress (3): 347 kB | 219/768 kB | 2.7/7.7 kBProgress (3): 347 kB | 219/768 kB | 5.5/7.7 kBProgress (3): 347 kB | 219/768 kB | 7.7 kB                                              Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/4.3.0/org.osgi.core-4.3.0.jar (347 kB at 768 kB/s)
+Progress (2): 223/768 kB | 7.7 kBProgress (2): 227/768 kB | 7.7 kBProgress (2): 231/768 kB | 7.7 kBProgress (2): 235/768 kB | 7.7 kBProgress (2): 239/768 kB | 7.7 kBProgress (2): 243/768 kB | 7.7 kBProgress (2): 247/768 kB | 7.7 kBProgress (2): 251/768 kB | 7.7 kBProgress (2): 256/768 kB | 7.7 kBProgress (2): 260/768 kB | 7.7 kBProgress (2): 264/768 kB | 7.7 kBProgress (2): 268/768 kB | 7.7 kBProgress (2): 272/768 kB | 7.7 kBProgress (2): 276/768 kB | 7.7 kBProgress (2): 280/768 kB | 7.7 kBProgress (2): 284/768 kB | 7.7 kBProgress (2): 288/768 kB | 7.7 kBProgress (2): 292/768 kB | 7.7 kBProgress (2): 297/768 kB | 7.7 kBProgress (2): 301/768 kB | 7.7 kBProgress (2): 305/768 kB | 7.7 kBProgress (2): 309/768 kB | 7.7 kBProgress (2): 313/768 kB | 7.7 kBProgress (2): 317/768 kB | 7.7 kBProgress (2): 321/768 kB | 7.7 kBProgress (2): 325/768 kB | 7.7 kBProgress (2): 329/768 kB | 7.7 kBProgress (2): 333/768 kB | 7.7 kBProgress (2): 338/768 kB | 7.7 kBProgress (2): 342/768 kB | 7.7 kBProgress (2): 346/768 kB | 7.7 kBProgress (2): 350/768 kB | 7.7 kBProgress (2): 354/768 kB | 7.7 kBProgress (2): 358/768 kB | 7.7 kBProgress (2): 362/768 kB | 7.7 kBProgress (2): 366/768 kB | 7.7 kBProgress (2): 370/768 kB | 7.7 kBProgress (2): 374/768 kB | 7.7 kBProgress (2): 378/768 kB | 7.7 kBProgress (2): 383/768 kB | 7.7 kBProgress (2): 387/768 kB | 7.7 kBProgress (2): 391/768 kB | 7.7 kBProgress (2): 395/768 kB | 7.7 kBProgress (2): 399/768 kB | 7.7 kBProgress (2): 403/768 kB | 7.7 kBProgress (2): 407/768 kB | 7.7 kBProgress (2): 411/768 kB | 7.7 kBProgress (2): 415/768 kB | 7.7 kBProgress (2): 419/768 kB | 7.7 kBProgress (2): 424/768 kB | 7.7 kBProgress (2): 428/768 kB | 7.7 kBProgress (2): 432/768 kB | 7.7 kBProgress (2): 436/768 kB | 7.7 kBProgress (2): 438/768 kB | 7.7 kBProgress (2): 442/768 kB | 7.7 kBProgress (2): 446/768 kB | 7.7 kBProgress (2): 450/768 kB | 7.7 kBProgress (2): 454/768 kB | 7.7 kBProgress (2): 458/768 kB | 7.7 kBProgress (2): 463/768 kB | 7.7 kBProgress (2): 467/768 kB | 7.7 kBProgress (2): 471/768 kB | 7.7 kBProgress (2): 475/768 kB | 7.7 kBProgress (2): 479/768 kB | 7.7 kBProgress (2): 483/768 kB | 7.7 kBProgress (2): 487/768 kB | 7.7 kBProgress (2): 491/768 kB | 7.7 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar (7.7 kB at 13 kB/s)
+Progress (1): 495/768 kBProgress (1): 499/768 kBProgress (1): 504/768 kBProgress (1): 508/768 kBProgress (1): 512/768 kBProgress (1): 516/768 kBProgress (1): 520/768 kBProgress (1): 524/768 kBProgress (1): 528/768 kBProgress (1): 532/768 kBProgress (1): 536/768 kBProgress (1): 540/768 kBProgress (1): 544/768 kBProgress (1): 549/768 kBProgress (1): 553/768 kBProgress (1): 557/768 kBProgress (1): 561/768 kBProgress (1): 565/768 kBProgress (1): 569/768 kBProgress (1): 573/768 kBProgress (1): 577/768 kBProgress (1): 581/768 kBProgress (1): 585/768 kBProgress (1): 590/768 kBProgress (1): 594/768 kBProgress (1): 598/768 kBProgress (1): 602/768 kBProgress (1): 606/768 kBProgress (1): 610/768 kBProgress (1): 614/768 kBProgress (1): 618/768 kBProgress (1): 622/768 kBProgress (1): 626/768 kBProgress (1): 631/768 kBProgress (1): 635/768 kBProgress (1): 639/768 kBProgress (1): 643/768 kBProgress (1): 647/768 kBProgress (1): 651/768 kBProgress (1): 655/768 kBProgress (1): 657/768 kBProgress (1): 661/768 kBProgress (1): 665/768 kBProgress (1): 670/768 kBProgress (1): 674/768 kBProgress (1): 678/768 kBProgress (1): 682/768 kBProgress (1): 686/768 kBProgress (1): 690/768 kBProgress (1): 694/768 kBProgress (1): 698/768 kBProgress (1): 702/768 kBProgress (1): 706/768 kBProgress (1): 711/768 kBProgress (1): 715/768 kBProgress (1): 719/768 kBProgress (1): 723/768 kBProgress (1): 727/768 kBProgress (1): 731/768 kBProgress (1): 735/768 kBProgress (1): 739/768 kBProgress (1): 743/768 kBProgress (1): 747/768 kBProgress (1): 751/768 kBProgress (1): 756/768 kBProgress (1): 760/768 kBProgress (1): 764/768 kBProgress (1): 768/768 kBProgress (1): 768 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/osgi/org.osgi.compendium/4.3.0/org.osgi.compendium-4.3.0.jar (768 kB at 942 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jactor ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jactor ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ jactor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ jactor ---
+[INFO] Compiling 92 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ jactor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ jactor ---
+[INFO] Compiling 148 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ jactor ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.agilewiki.jactor.basics.Test2a
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in org.agilewiki.jactor.basics.Test2a
+[INFO] Running org.agilewiki.jactor.basics.Test4
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.basics.Test4
+[INFO] Running org.agilewiki.jactor.basics.Test2
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.basics.Test2
+[INFO] Running org.agilewiki.jactor.basics.Test5
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.512 s - in org.agilewiki.jactor.basics.Test5
+[INFO] Running org.agilewiki.jactor.basics.Test3
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.basics.Test3
+[INFO] Running org.agilewiki.jactor.basics.Test1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.agilewiki.jactor.basics.Test1
+[INFO] Running org.agilewiki.jactor.advanced.many.ManyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 s - in org.agilewiki.jactor.advanced.many.ManyTest
+[INFO] Running org.agilewiki.jactor.advanced.allInOne.AllInOneTest
+started
+sending allocate
+got allocate
+sending release
+got release
+responding to allocate
+finished
+got allocate response
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.advanced.allInOne.AllInOneTest
+[INFO] Running org.agilewiki.jactor.counterTest.CounterTest
+[java-shared] Number of runs: 10
+[java-shared] Count: 1000
+[java-shared] Test time in seconds: 0.001
+[java-shared] Messages per second: 10000.0
+[java-unshared] Number of runs: 10
+[java-unshared] Count: 1000
+[java-unshared] Test time in seconds: 0.0
+[java-unshared] Messages per second: Infinity
+[java-async] Number of runs: 100
+[java-async] Count: 10000
+[java-async] Test time in seconds: 0.001
+[java-async] Messages per second: 100000.0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.agilewiki.jactor.counterTest.CounterTest
+[INFO] Running org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest
+start ResponsePrinterTest 1
+Hello world!
+end ResponsePrinterTest 1
+start ResponsePrinterTest 2
+Hello world!
+end ResponsePrinterTest 2
+start ResponsePrinterTest 3
+Hello world!
+end ResponsePrinterTest 3
+start ResponsePrinterTest 4
+0
+1
+2
+3
+4
+5 sends
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+end ResponsePrinterTest 4
+start ResponsePrinterTest 5
+0
+1
+2
+3
+4
+5 sends
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+end ResponsePrinterTest 5
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest
+[INFO] Running org.agilewiki.jactor.lpc.EventTest
+A got request
+A got request
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.EventTest
+[INFO] Running org.agilewiki.jactor.lpc.serverTest.ServerTest
+run 19 tasks
+start request 2
+start request 12
+start request 17
+start request 4
+start request 10
+start request 5
+start request 0
+start request 3
+start request 7
+start request 1
+Performed request 2 delay 10
+Performed request 7 delay 10
+start request 9
+start request 11
+Performed request 0 delay 20
+start request 8
+Performed request 9 delay 30
+start request 16
+Performed request 11 delay 30
+start request 15
+Performed request 17 delay 60
+start request 18
+Performed request 12 delay 60
+Performed request 4 delay 60
+Performed request 10 delay 60
+start request 13
+start request 14
+start request 6
+Performed request 15 delay 10
+Performed request 3 delay 70
+Performed request 5 delay 80
+Performed request 1 delay 70
+Performed request 6 delay 20
+Performed request 8 delay 70
+Performed request 18 delay 60
+Performed request 13 delay 60
+Performed request 16 delay 90
+Performed request 14 delay 90
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 s - in org.agilewiki.jactor.lpc.serverTest.ServerTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.SharedMailboxTest
+####################################################
+!
+1 parallel runs of 2000000 messages each.
+2000000 messages sent with 1 threads.
+msgs per sec = 74074074
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 s - in org.agilewiki.jactor.lpc.timingTest.SharedMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.AsyncMailboxTest
+####################################################
+null test time 8
+1 parallel runs of 2000000 messages each.
+2000000 messages sent with 8 threads.
+msgs per sec = 3305785
+adjusted msgs per sec = 3350083
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.855 s - in org.agilewiki.jactor.lpc.timingTest.AsyncMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.MailboxTest
+null test time 0
+1 parallel runs of 2 messages each.
+2 messages sent with 1 threads.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.timingTest.MailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.ASATest
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.ASATest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.SharedMailboxTest
+Test Go1
+Exception caught by Driver
+Test Go2
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.lpc.exceptionsTest.SharedMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.AsyncTest
+Exception caught by Driver
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.exceptionsTest.AsyncTest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.SyncTest
+Test Go1
+Exception caught by Driver
+Test Go2
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.exceptionsTest.SyncTest
+[INFO] Running org.agilewiki.jactor.lpc.syncTiming.Sync1Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.syncTiming.Sync1Test
+[INFO] Running org.agilewiki.jactor.lpc.SSATest
+S got request
+S got request
+A got request
+S got response
+S got response
+org.agilewiki.jactor.SimpleRequest@2f410acf
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.lpc.SSATest
+[INFO] Running org.agilewiki.jactor.lpc.ShATest
+S got request
+S got request
+A got request
+org.agilewiki.jactor.SimpleRequest@2f410acf
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.ShATest
+[INFO] Running org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest
+test 6
+120
+test 1
+9
+test 2
+9
+test 3
+9
+test 4
+9
+test 5
+Set 1 => 1
++ 2 => 3
+* 3 => 9
+/ 0 => java.lang.ArithmeticException: / by zero
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.ReturnFTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.simpleMachine.ReturnFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SetFTest
+Hello world!
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.SetFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IteratorTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.IteratorTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IfFTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.IfFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendVVTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.simpleMachine.SendVVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendFFTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.SendFFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendVFTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.SendVFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendFVTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.SendFVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IfVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.IfVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.ReturnVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.simpleMachine.ReturnVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SetVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.SetVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.GotoTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.GotoTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.CallTest
+6
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.simpleMachine.CallTest
+[INFO] Running org.agilewiki.jactor.bufferedEvents.BufferedTimingTest
+4 parallel runs of 12 messages each.
+56 messages sent with 4 threads.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.bufferedEvents.BufferedTimingTest
+[INFO] Running org.agilewiki.jactor.properties.PropertiesTest
+foo
+bar
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.properties.PropertiesTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.SyncTimingTest
+each iteration takes 0.0 nanoseconds
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.iteratorTest.SyncTimingTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.factorialTest.FactorialTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.iteratorTest.factorialTest.FactorialTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.SimpleFactorialTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.iteratorTest.SimpleFactorialTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.AsyncTimingTest
+each iteration takes 0.0 nanoseconds
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.iteratorTest.AsyncTimingTest
+[INFO] Running org.agilewiki.jactor.pubsub.actorName.ActorNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.pubsub.actorName.ActorNameTest
+[INFO] Running org.agilewiki.jactor.pubsub.latency.SharedTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.pubsub.latency.SharedTest
+[INFO] Running org.agilewiki.jactor.pubsub.publish.PublishTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.pubsub.publish.PublishTest
+[INFO] Running org.agilewiki.jactor.continuation.ContinuationTest
+>>> Hello world! <<<
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.continuation.ContinuationTest
+[INFO] Running org.agilewiki.jactor.events.quadTest.QuadTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.events.quadTest.QuadTest
+[INFO] Running org.agilewiki.jactor.nbLock.NBLockTest
+start 1
+  end 1
+start 2
+  end 2
+start 3
+  end 3
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 s - in org.agilewiki.jactor.nbLock.NBLockTest
+[INFO] Running org.agilewiki.jactor.nbLock.exceptionsTest.NBLockExceptionsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.334 s - in org.agilewiki.jactor.nbLock.exceptionsTest.NBLockExceptionsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.651 s
+[INFO] Finished at: 2021-11-27T12:20:22+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8.pom
+Progress (1): 2.7/16 kBProgress (1): 5.5/16 kBProgress (1): 8.2/16 kBProgress (1): 11/16 kB Progress (1): 14/16 kBProgress (1): 16 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8.pom (16 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/19/maven-plugins-19.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/19/maven-plugins-19.pom (11 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8.jar
+Progress (1): 2.7/289 kBProgress (1): 5.5/289 kBProgress (1): 8.2/289 kBProgress (1): 11/289 kB Progress (1): 14/289 kBProgress (1): 16/289 kBProgress (1): 19/289 kBProgress (1): 22/289 kBProgress (1): 25/289 kBProgress (1): 27/289 kBProgress (1): 30/289 kBProgress (1): 33/289 kBProgress (1): 36/289 kBProgress (1): 40/289 kBProgress (1): 44/289 kBProgress (1): 48/289 kBProgress (1): 52/289 kBProgress (1): 56/289 kBProgress (1): 60/289 kBProgress (1): 64/289 kBProgress (1): 68/289 kBProgress (1): 73/289 kBProgress (1): 77/289 kBProgress (1): 81/289 kBProgress (1): 85/289 kBProgress (1): 89/289 kBProgress (1): 93/289 kBProgress (1): 97/289 kBProgress (1): 101/289 kBProgress (1): 105/289 kBProgress (1): 109/289 kBProgress (1): 113/289 kBProgress (1): 118/289 kBProgress (1): 122/289 kBProgress (1): 126/289 kBProgress (1): 130/289 kBProgress (1): 134/289 kBProgress (1): 138/289 kBProgress (1): 142/289 kBProgress (1): 146/289 kBProgress (1): 150/289 kBProgress (1): 154/289 kBProgress (1): 159/289 kBProgress (1): 163/289 kBProgress (1): 167/289 kBProgress (1): 171/289 kBProgress (1): 175/289 kBProgress (1): 179/289 kBProgress (1): 183/289 kBProgress (1): 187/289 kBProgress (1): 191/289 kBProgress (1): 195/289 kBProgress (1): 199/289 kBProgress (1): 204/289 kBProgress (1): 208/289 kBProgress (1): 212/289 kBProgress (1): 216/289 kBProgress (1): 220/289 kBProgress (1): 224/289 kBProgress (1): 228/289 kBProgress (1): 232/289 kBProgress (1): 236/289 kBProgress (1): 240/289 kBProgress (1): 245/289 kBProgress (1): 249/289 kBProgress (1): 253/289 kBProgress (1): 257/289 kBProgress (1): 261/289 kBProgress (1): 265/289 kBProgress (1): 269/289 kBProgress (1): 273/289 kBProgress (1): 277/289 kBProgress (1): 281/289 kBProgress (1): 286/289 kBProgress (1): 289 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.8/maven-javadoc-plugin-2.8.jar (289 kB at 431 kB/s)
+[INFO] 
+[INFO] --------------------< org.agilewiki.jactor:jactor >---------------------
+[INFO] Building JActor 5.0.0-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jactor ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ jactor ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 92 files (15 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 148 files (25 packages).
+[INFO] 60 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ jactor ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ jactor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ jactor ---
+[INFO] Compiling 92 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ jactor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ jactor ---
+[INFO] Compiling 148 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ jactor ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.agilewiki.jactor.basics.Test2a
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in org.agilewiki.jactor.basics.Test2a
+[INFO] Running org.agilewiki.jactor.basics.Test4
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.basics.Test4
+[INFO] Running org.agilewiki.jactor.basics.Test2
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.basics.Test2
+[INFO] Running org.agilewiki.jactor.basics.Test5
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.501 s - in org.agilewiki.jactor.basics.Test5
+[INFO] Running org.agilewiki.jactor.basics.Test3
+Hello world!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.agilewiki.jactor.basics.Test3
+[INFO] Running org.agilewiki.jactor.basics.Test1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.basics.Test1
+[INFO] Running org.agilewiki.jactor.advanced.many.ManyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 s - in org.agilewiki.jactor.advanced.many.ManyTest
+[INFO] Running org.agilewiki.jactor.advanced.allInOne.AllInOneTest
+started
+sending allocate
+got allocate
+sending release
+got release
+responding to allocate
+finished
+got allocate response
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.agilewiki.jactor.advanced.allInOne.AllInOneTest
+[INFO] Running org.agilewiki.jactor.counterTest.CounterTest
+[java-shared] Number of runs: 10
+[java-shared] Count: 1000
+[java-shared] Test time in seconds: 0.002
+[java-shared] Messages per second: 5000.0
+[java-unshared] Number of runs: 10
+[java-unshared] Count: 1000
+[java-unshared] Test time in seconds: 0.0
+[java-unshared] Messages per second: Infinity
+[java-async] Number of runs: 100
+[java-async] Count: 10000
+[java-async] Test time in seconds: 0.002
+[java-async] Messages per second: 50000.0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.agilewiki.jactor.counterTest.CounterTest
+[INFO] Running org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest
+start ResponsePrinterTest 1
+Hello world!
+end ResponsePrinterTest 1
+start ResponsePrinterTest 2
+Hello world!
+end ResponsePrinterTest 2
+start ResponsePrinterTest 3
+Hello world!
+end ResponsePrinterTest 3
+start ResponsePrinterTest 4
+0
+1
+2
+3
+4
+5 sends
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+end ResponsePrinterTest 4
+start ResponsePrinterTest 5
+0
+1
+2
+3
+4
+5 sends
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+Hello world!
+end ResponsePrinterTest 5
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest
+[INFO] Running org.agilewiki.jactor.lpc.EventTest
+A got request
+A got request
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.agilewiki.jactor.lpc.EventTest
+[INFO] Running org.agilewiki.jactor.lpc.serverTest.ServerTest
+run 18 tasks
+start request 10
+start request 15
+start request 13
+start request 4
+start request 9
+start request 6
+start request 12
+start request 5
+start request 0
+start request 1
+Performed request 4 delay 10
+start request 3
+Performed request 9 delay 20
+start request 7
+Performed request 12 delay 30
+start request 8
+Performed request 0 delay 30
+Performed request 3 delay 20
+start request 2
+start request 17
+Performed request 5 delay 40
+start request 14
+Performed request 1 delay 50
+start request 11
+Performed request 15 delay 50
+start request 16
+Performed request 16 delay 0
+Performed request 2 delay 20
+Performed request 17 delay 30
+Performed request 6 delay 70
+Performed request 14 delay 30
+Performed request 13 delay 80
+Performed request 7 delay 70
+Performed request 10 delay 90
+Performed request 11 delay 50
+Performed request 8 delay 80
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s - in org.agilewiki.jactor.lpc.serverTest.ServerTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.SharedMailboxTest
+####################################################
+!
+1 parallel runs of 2000000 messages each.
+2000000 messages sent with 1 threads.
+msgs per sec = 6042296
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.873 s - in org.agilewiki.jactor.lpc.timingTest.SharedMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.AsyncMailboxTest
+####################################################
+null test time 60
+1 parallel runs of 2000000 messages each.
+2000000 messages sent with 8 threads.
+msgs per sec = 727008
+adjusted msgs per sec = 743218
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.549 s - in org.agilewiki.jactor.lpc.timingTest.AsyncMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.timingTest.MailboxTest
+null test time 0
+1 parallel runs of 2 messages each.
+2 messages sent with 1 threads.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.agilewiki.jactor.lpc.timingTest.MailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.ASATest
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.agilewiki.jactor.lpc.ASATest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.SharedMailboxTest
+Test Go1
+Exception caught by Driver
+Test Go2
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in org.agilewiki.jactor.lpc.exceptionsTest.SharedMailboxTest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.AsyncTest
+Exception caught by Driver
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.lpc.exceptionsTest.AsyncTest
+[INFO] Running org.agilewiki.jactor.lpc.exceptionsTest.SyncTest
+Test Go1
+Exception caught by Driver
+Test Go2
+Exception caught by Driver
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.agilewiki.jactor.lpc.exceptionsTest.SyncTest
+[INFO] Running org.agilewiki.jactor.lpc.syncTiming.Sync1Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.agilewiki.jactor.lpc.syncTiming.Sync1Test
+[INFO] Running org.agilewiki.jactor.lpc.SSATest
+S got request
+S got request
+A got request
+S got response
+S got response
+org.agilewiki.jactor.SimpleRequest@725bef66
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.agilewiki.jactor.lpc.SSATest
+[INFO] Running org.agilewiki.jactor.lpc.ShATest
+S got request
+S got request
+A got request
+org.agilewiki.jactor.SimpleRequest@725bef66
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.lpc.ShATest
+[INFO] Running org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest
+test 1
+9
+test 2
+9
+test 3
+9
+test 4
+9
+test 5
+Set 1 => 1
++ 2 => 3
+* 3 => 9
+/ 0 => java.lang.ArithmeticException: / by zero
+test 6
+120
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.ReturnFTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.simpleMachine.ReturnFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SetFTest
+Hello world!
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.simpleMachine.SetFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IteratorTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.simpleMachine.IteratorTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IfFTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.agilewiki.jactor.simpleMachine.IfFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendVVTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.simpleMachine.SendVVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendFFTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.agilewiki.jactor.simpleMachine.SendFFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendVFTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.simpleMachine.SendVFTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SendFVTest
+42
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.agilewiki.jactor.simpleMachine.SendFVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.IfVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.simpleMachine.IfVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.ReturnVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.agilewiki.jactor.simpleMachine.ReturnVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.SetVTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.agilewiki.jactor.simpleMachine.SetVTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.GotoTest
+Hello world!
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.simpleMachine.GotoTest
+[INFO] Running org.agilewiki.jactor.simpleMachine.CallTest
+6
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.agilewiki.jactor.simpleMachine.CallTest
+[INFO] Running org.agilewiki.jactor.bufferedEvents.BufferedTimingTest
+4 parallel runs of 12 messages each.
+56 messages sent with 4 threads.
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.agilewiki.jactor.bufferedEvents.BufferedTimingTest
+[INFO] Running org.agilewiki.jactor.properties.PropertiesTest
+foo
+bar
+null
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.agilewiki.jactor.properties.PropertiesTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.SyncTimingTest
+each iteration takes 0.0 nanoseconds
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.iteratorTest.SyncTimingTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.factorialTest.FactorialTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.agilewiki.jactor.iteratorTest.factorialTest.FactorialTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.SimpleFactorialTest
+120
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.agilewiki.jactor.iteratorTest.SimpleFactorialTest
+[INFO] Running org.agilewiki.jactor.iteratorTest.AsyncTimingTest
+each iteration takes 0.0 nanoseconds
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.agilewiki.jactor.iteratorTest.AsyncTimingTest
+[INFO] Running org.agilewiki.jactor.pubsub.actorName.ActorNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.agilewiki.jactor.pubsub.actorName.ActorNameTest
+[INFO] Running org.agilewiki.jactor.pubsub.latency.SharedTest
+messages: 1
+milliseconds: 1
+messages per second: 1000
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.agilewiki.jactor.pubsub.latency.SharedTest
+[INFO] Running org.agilewiki.jactor.pubsub.publish.PublishTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.agilewiki.jactor.pubsub.publish.PublishTest
+[INFO] Running org.agilewiki.jactor.continuation.ContinuationTest
+>>> Hello world! <<<
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.agilewiki.jactor.continuation.ContinuationTest
+[INFO] Running org.agilewiki.jactor.events.quadTest.QuadTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.agilewiki.jactor.events.quadTest.QuadTest
+[INFO] Running org.agilewiki.jactor.nbLock.NBLockTest
+start 1
+  end 1
+start 2
+  end 2
+start 3
+  end 3
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.324 s - in org.agilewiki.jactor.nbLock.NBLockTest
+[INFO] Running org.agilewiki.jactor.nbLock.exceptionsTest.NBLockExceptionsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.337 s - in org.agilewiki.jactor.nbLock.exceptionsTest.NBLockExceptionsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --------------------< org.agilewiki.jactor:jactor >---------------------
+[INFO] Building JActor 5.0.0-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ jactor ---
+[INFO] 
+[INFO] --------------------< org.agilewiki.jactor:jactor >---------------------
+[INFO] Building JActor 5.0.0-SNAPSHOT
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ jactor ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8403789721349213949resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.498 s
+[INFO] Finished at: 2021-11-27T12:20:44+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/60] org.agilewiki.jactor.advanced.allInOne.AllInOneTest#test
+[test][2/60] org.agilewiki.jactor.advanced.many.ManyTest#test
+[test][3/60] org.agilewiki.jactor.basics.Test1#test
+[test][4/60] org.agilewiki.jactor.basics.Test2#test
+[test][5/60] org.agilewiki.jactor.basics.Test2a#test
+[test][6/60] org.agilewiki.jactor.basics.Test3#test
+[test][7/60] org.agilewiki.jactor.basics.Test4#test
+[test][8/60] org.agilewiki.jactor.basics.Test5#test
+[test][9/60] org.agilewiki.jactor.bufferedEvents.BufferedTimingTest#testTiming
+[test][10/60] org.agilewiki.jactor.continuation.ContinuationTest#test
+[test][11/60] org.agilewiki.jactor.counterTest.CounterTest#testAsync
+[test][12/60] org.agilewiki.jactor.counterTest.CounterTest#testShared
+[test][13/60] org.agilewiki.jactor.counterTest.CounterTest#testUnshared
+[test][14/60] org.agilewiki.jactor.events.quadTest.QuadTest#testTiming
+[test][15/60] org.agilewiki.jactor.iteratorTest.AsyncTimingTest#testSync
+[test][16/60] org.agilewiki.jactor.iteratorTest.SimpleFactorialTest#testFactorial
+[test][17/60] org.agilewiki.jactor.iteratorTest.SyncTimingTest#testSync
+[test][18/60] org.agilewiki.jactor.iteratorTest.factorialTest.FactorialTest#testFactorial
+[test][19/60] org.agilewiki.jactor.lpc.ASATest#test
+[test][20/60] org.agilewiki.jactor.lpc.EventTest#test
+[test][21/60] org.agilewiki.jactor.lpc.SSATest#test
+[test][22/60] org.agilewiki.jactor.lpc.ShATest#test
+[test][23/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test1
+[test][24/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test2
+[test][25/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test3
+[test][26/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test4
+[test][27/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test5
+[test][28/60] org.agilewiki.jactor.lpc.calculatorTest.CalculatorTest#test6
+[test][29/60] org.agilewiki.jactor.lpc.exceptionsTest.AsyncTest#testExceptions
+[test][30/60] org.agilewiki.jactor.lpc.exceptionsTest.SharedMailboxTest#testExceptions
+[test][31/60] org.agilewiki.jactor.lpc.exceptionsTest.SyncTest#testExceptions
+[test][32/60] org.agilewiki.jactor.lpc.serverTest.ServerTest#test
+[test][33/60] org.agilewiki.jactor.lpc.syncTiming.Sync1Test#test
+[test][34/60] org.agilewiki.jactor.lpc.timingTest.AsyncMailboxTest#testTiming
+[test][35/60] org.agilewiki.jactor.lpc.timingTest.MailboxTest#testTiming
+[test][36/60] org.agilewiki.jactor.lpc.timingTest.SharedMailboxTest#testTiming
+[test][37/60] org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest#test1
+[test][38/60] org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest#test2
+[test][39/60] org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest#test3
+[test][40/60] org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest#test4
+[test][41/60] org.agilewiki.jactor.multithreadingTest.ResponsePrinterTest#test5
+[test][42/60] org.agilewiki.jactor.nbLock.NBLockTest#test
+[test][43/60] org.agilewiki.jactor.nbLock.exceptionsTest.NBLockExceptionsTest#test
+[test][44/60] org.agilewiki.jactor.properties.PropertiesTest#test
+[test][45/60] org.agilewiki.jactor.pubsub.actorName.ActorNameTest#test
+[test][46/60] org.agilewiki.jactor.pubsub.latency.SharedTest#test
+[test][47/60] org.agilewiki.jactor.pubsub.publish.PublishTest#test
+[test][48/60] org.agilewiki.jactor.simpleMachine.CallTest#test
+[test][49/60] org.agilewiki.jactor.simpleMachine.GotoTest#test
+[test][50/60] org.agilewiki.jactor.simpleMachine.IfFTest#test
+[test][51/60] org.agilewiki.jactor.simpleMachine.IfVTest#test
+[test][52/60] org.agilewiki.jactor.simpleMachine.IteratorTest#test
+[test][53/60] org.agilewiki.jactor.simpleMachine.ReturnFTest#test
+[test][54/60] org.agilewiki.jactor.simpleMachine.ReturnVTest#test
+[test][55/60] org.agilewiki.jactor.simpleMachine.SendFFTest#test
+[test][56/60] org.agilewiki.jactor.simpleMachine.SendFVTest#test
+[test][57/60] org.agilewiki.jactor.simpleMachine.SendVFTest#test
+[test][58/60] org.agilewiki.jactor.simpleMachine.SendVVTest#test
+[test][59/60] org.agilewiki.jactor.simpleMachine.SetFTest#test
+[test][60/60] org.agilewiki.jactor.simpleMachine.SetVTest#test
+[main][14/14] python parse_data.py
+  0%|          | 0/60 [00:00<?, ?it/s] 22%|██▏       | 13/60 [00:00<00:00, 123.79it/s] 43%|████▎     | 26/60 [00:00<00:00, 125.64it/s] 65%|██████▌   | 39/60 [00:00<00:00, 126.13it/s] 88%|████████▊ | 53/60 [00:00<00:00, 127.12it/s]100%|██████████| 60/60 [00:00<00:00, 126.69it/s]
+Done.

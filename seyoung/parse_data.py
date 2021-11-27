@@ -107,24 +107,36 @@ def get_data(xmls: list[str]):
     for xml in tqdm(xmls):
         root = ET.parse(xml).getroot()
         _, test_package, test_class, test_method = Path(xml).stem.split("#")
-
         test_name = f"{test_package}.{test_class}#{test_method}"
-        test_success, test_duration = get_success_and_duration(
-            root, test_package, test_class, test_method
-        )
-        test_coverage = get_coverage(root)
 
-        data.append(
-            {
-                "name": test_name,
-                "package": test_package,
-                "class": test_class,
-                "method": test_method,
-                "success": test_success,
-                "duration": test_duration,
-                "coverage": test_coverage,
-            }
-        )
+        try:
+            test_success, test_duration = get_success_and_duration(
+                root, test_package, test_class, test_method
+            )
+            test_coverage = get_coverage(root)
+            data.append(
+                {
+                    "name": test_name,
+                    "package": test_package,
+                    "class": test_class,
+                    "method": test_method,
+                    "success": test_success,
+                    "duration": test_duration,
+                    "coverage": test_coverage,
+                }
+            )
+        except Exception as e:
+            print(f"except: {test_name}")
+            e_str = repr(e)
+            data.append(
+                {
+                    "name": test_name,
+                    "package": test_package,
+                    "class": test_class,
+                    "method": test_method,
+                    "exception": e_str,
+                }
+            )
     return data
 
 

@@ -1,0 +1,414 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/square/protoparser repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.squareup:protoparser >----------------------
+[INFO] Building ProtoParser 4.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/value/auto-value/1.0-rc2/auto-value-1.0-rc2.pom
+Progress (1): 2.7/3.9 kBProgress (1): 3.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/value/auto-value/1.0-rc2/auto-value-1.0-rc2.pom (3.9 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-parent/1.0-rc1/auto-parent-1.0-rc1.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-parent/1.0-rc1/auto-parent-1.0-rc1.pom (6.5 kB at 22 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-common/0.3/auto-common-0.3.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-common/0.3/auto-common-0.3.pom (2.4 kB at 8.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-parent/2/auto-parent-2.pom
+Progress (1): 2.7/4.5 kBProgress (1): 4.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-parent/2/auto-parent-2.pom (4.5 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/service/auto-service/1.0-rc2/auto-service-1.0-rc2.pom
+Progress (1): 2.7/2.7 kBProgress (1): 2.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/service/auto-service/1.0-rc2/auto-service-1.0-rc2.pom (2.7 kB at 8.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/17.0/guava-17.0.pom
+Progress (1): 2.7/5.6 kBProgress (1): 5.5/5.6 kBProgress (1): 5.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/17.0/guava-17.0.pom (5.6 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/17.0/guava-parent-17.0.pom
+Progress (1): 2.7/7.8 kBProgress (1): 5.5/7.8 kBProgress (1): 7.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/17.0/guava-parent-17.0.pom (7.8 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/4.1/asm-4.1.pom
+Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/4.1/asm-4.1.pom (1.9 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/4.1/asm-parent-4.1.pom
+Progress (1): 2.7/5.5 kBProgress (1): 5.5/5.5 kBProgress (1): 5.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/4.1/asm-parent-4.1.pom (5.5 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.7.0/assertj-core-1.7.0.pom
+Progress (1): 2.7/4.6 kBProgress (1): 4.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.7.0/assertj-core-1.7.0.pom (4.6 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/1.2.6/assertj-parent-pom-1.2.6.pom
+Progress (1): 2.7/13 kBProgress (1): 5.5/13 kBProgress (1): 8.2/13 kBProgress (1): 12/13 kB Progress (1): 13 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/1.2.6/assertj-parent-pom-1.2.6.pom (13 kB at 44 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/value/auto-value/1.0-rc2/auto-value-1.0-rc2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-common/0.3/auto-common-0.3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/auto/service/auto-service/1.0-rc2/auto-service-1.0-rc2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/17.0/guava-17.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/4.1/asm-4.1.jar
+Progress (1): 4.1/127 kBProgress (1): 8.2/127 kBProgress (1): 12/127 kB Progress (1): 16/127 kBProgress (1): 20/127 kBProgress (1): 25/127 kBProgress (1): 29/127 kBProgress (1): 33/127 kBProgress (1): 37/127 kBProgress (1): 41/127 kBProgress (1): 45/127 kBProgress (1): 49/127 kBProgress (1): 53/127 kBProgress (1): 57/127 kBProgress (1): 61/127 kBProgress (1): 66/127 kBProgress (1): 70/127 kBProgress (1): 74/127 kBProgress (1): 78/127 kBProgress (1): 82/127 kBProgress (1): 86/127 kBProgress (1): 90/127 kBProgress (1): 94/127 kBProgress (1): 98/127 kBProgress (1): 102/127 kBProgress (1): 106/127 kBProgress (1): 111/127 kBProgress (1): 115/127 kBProgress (1): 119/127 kBProgress (1): 123/127 kBProgress (1): 127 kB    Progress (2): 127 kB | 2.7/47 kBProgress (2): 127 kB | 5.5/47 kBProgress (2): 127 kB | 8.2/47 kBProgress (3): 127 kB | 8.2/47 kB | 2.7/10 kBProgress (3): 127 kB | 11/47 kB | 2.7/10 kB Progress (3): 127 kB | 11/47 kB | 5.5/10 kBProgress (3): 127 kB | 14/47 kB | 5.5/10 kBProgress (3): 127 kB | 14/47 kB | 8.2/10 kBProgress (3): 127 kB | 14/47 kB | 10 kB    Progress (3): 127 kB | 16/47 kB | 10 kBProgress (3): 127 kB | 19/47 kB | 10 kBProgress (3): 127 kB | 22/47 kB | 10 kBProgress (4): 127 kB | 22/47 kB | 10 kB | 2.7/39 kBProgress (4): 127 kB | 25/47 kB | 10 kB | 2.7/39 kBProgress (4): 127 kB | 25/47 kB | 10 kB | 5.5/39 kBProgress (4): 127 kB | 25/47 kB | 10 kB | 8.2/39 kBProgress (4): 127 kB | 25/47 kB | 10 kB | 11/39 kB Progress (4): 127 kB | 25/47 kB | 10 kB | 14/39 kBProgress (4): 127 kB | 27/47 kB | 10 kB | 14/39 kBProgress (4): 127 kB | 27/47 kB | 10 kB | 16/39 kBProgress (4): 127 kB | 30/47 kB | 10 kB | 16/39 kBProgress (4): 127 kB | 30/47 kB | 10 kB | 19/39 kBProgress (4): 127 kB | 33/47 kB | 10 kB | 19/39 kBProgress (4): 127 kB | 33/47 kB | 10 kB | 22/39 kBProgress (4): 127 kB | 36/47 kB | 10 kB | 22/39 kBProgress (4): 127 kB | 36/47 kB | 10 kB | 25/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 25/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 27/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 30/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 33/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 36/39 kBProgress (4): 127 kB | 38/47 kB | 10 kB | 38/39 kB                                                  Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/value/auto-value/1.0-rc2/auto-value-1.0-rc2.jar (127 kB at 233 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.7.0/assertj-core-1.7.0.jar
+Progress (4): 38/47 kB | 10 kB | 38/39 kB | 0/2.2 MBProgress (4): 41/47 kB | 10 kB | 38/39 kB | 0/2.2 MBProgress (4): 44/47 kB | 10 kB | 38/39 kB | 0/2.2 MBProgress (4): 47/47 kB | 10 kB | 38/39 kB | 0/2.2 MBProgress (4): 47/47 kB | 10 kB | 38/39 kB | 0/2.2 MBProgress (4): 47 kB | 10 kB | 38/39 kB | 0/2.2 MB                                                    Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/service/auto-service/1.0-rc2/auto-service-1.0-rc2.jar (10 kB at 17 kB/s)
+Progress (3): 47 kB | 39 kB | 0/2.2 MBProgress (3): 47 kB | 39 kB | 0/2.2 MBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 4.1/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 8.2/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 12/619 kB Progress (4): 47 kB | 39 kB | 0/2.2 MB | 16/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 16/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 20/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 25/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 29/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 33/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 37/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 41/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 45/619 kBProgress (4): 47 kB | 39 kB | 0/2.2 MB | 49/619 kBProgress (4): 47 kB | 39 kB | 0.1/2.2 MB | 49/619 kBProgress (4): 47 kB | 39 kB | 0.1/2.2 MB | 53/619 kBProgress (4): 47 kB | 39 kB | 0.1/2.2 MB | 57/619 kBProgress (4): 47 kB | 39 kB | 0.1/2.2 MB | 61/619 kBProgress (4): 47 kB | 39 kB | 0.1/2.2 MB | 66/619 kB                                                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/4.1/asm-4.1.jar (47 kB at 64 kB/s)
+Progress (3): 39 kB | 0.1/2.2 MB | 66/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 70/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 74/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 78/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 82/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 82/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 86/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 90/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 94/619 kBProgress (3): 39 kB | 0.1/2.2 MB | 98/619 kB                                            Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auto/auto-common/0.3/auto-common-0.3.jar (39 kB at 51 kB/s)
+Progress (2): 0.1/2.2 MB | 102/619 kBProgress (2): 0.1/2.2 MB | 106/619 kBProgress (2): 0.1/2.2 MB | 111/619 kBProgress (2): 0.1/2.2 MB | 115/619 kBProgress (2): 0.1/2.2 MB | 115/619 kBProgress (2): 0.1/2.2 MB | 119/619 kBProgress (2): 0.1/2.2 MB | 123/619 kBProgress (2): 0.1/2.2 MB | 127/619 kBProgress (2): 0.1/2.2 MB | 131/619 kBProgress (2): 0.1/2.2 MB | 131/619 kBProgress (2): 0.1/2.2 MB | 135/619 kBProgress (2): 0.1/2.2 MB | 139/619 kBProgress (2): 0.1/2.2 MB | 143/619 kBProgress (2): 0.1/2.2 MB | 147/619 kBProgress (2): 0.1/2.2 MB | 152/619 kBProgress (2): 0.1/2.2 MB | 156/619 kBProgress (2): 0.1/2.2 MB | 160/619 kBProgress (2): 0.1/2.2 MB | 164/619 kBProgress (2): 0.1/2.2 MB | 168/619 kBProgress (2): 0.1/2.2 MB | 172/619 kBProgress (2): 0.1/2.2 MB | 176/619 kBProgress (2): 0.1/2.2 MB | 180/619 kBProgress (2): 0.1/2.2 MB | 184/619 kBProgress (2): 0.1/2.2 MB | 188/619 kBProgress (2): 0.1/2.2 MB | 193/619 kBProgress (2): 0.1/2.2 MB | 197/619 kBProgress (2): 0.1/2.2 MB | 197/619 kBProgress (2): 0.1/2.2 MB | 201/619 kBProgress (2): 0.1/2.2 MB | 205/619 kBProgress (2): 0.1/2.2 MB | 209/619 kBProgress (2): 0.1/2.2 MB | 213/619 kBProgress (2): 0.1/2.2 MB | 213/619 kBProgress (2): 0.1/2.2 MB | 217/619 kBProgress (2): 0.1/2.2 MB | 221/619 kBProgress (2): 0.1/2.2 MB | 225/619 kBProgress (2): 0.1/2.2 MB | 229/619 kBProgress (2): 0.2/2.2 MB | 229/619 kBProgress (2): 0.2/2.2 MB | 233/619 kBProgress (2): 0.2/2.2 MB | 238/619 kBProgress (2): 0.2/2.2 MB | 242/619 kBProgress (2): 0.2/2.2 MB | 246/619 kBProgress (2): 0.2/2.2 MB | 246/619 kBProgress (2): 0.2/2.2 MB | 250/619 kBProgress (2): 0.2/2.2 MB | 254/619 kBProgress (2): 0.2/2.2 MB | 254/619 kBProgress (2): 0.2/2.2 MB | 258/619 kBProgress (2): 0.2/2.2 MB | 262/619 kBProgress (2): 0.2/2.2 MB | 266/619 kBProgress (2): 0.2/2.2 MB | 270/619 kBProgress (2): 0.2/2.2 MB | 270/619 kBProgress (2): 0.2/2.2 MB | 274/619 kBProgress (2): 0.2/2.2 MB | 279/619 kBProgress (2): 0.2/2.2 MB | 283/619 kBProgress (2): 0.2/2.2 MB | 283/619 kBProgress (2): 0.2/2.2 MB | 287/619 kBProgress (2): 0.2/2.2 MB | 291/619 kBProgress (2): 0.2/2.2 MB | 295/619 kBProgress (2): 0.2/2.2 MB | 299/619 kBProgress (2): 0.2/2.2 MB | 303/619 kBProgress (2): 0.2/2.2 MB | 303/619 kBProgress (2): 0.2/2.2 MB | 307/619 kBProgress (2): 0.2/2.2 MB | 311/619 kBProgress (2): 0.2/2.2 MB | 315/619 kBProgress (2): 0.2/2.2 MB | 319/619 kBProgress (2): 0.2/2.2 MB | 324/619 kBProgress (2): 0.2/2.2 MB | 328/619 kBProgress (2): 0.2/2.2 MB | 332/619 kBProgress (2): 0.2/2.2 MB | 336/619 kBProgress (2): 0.2/2.2 MB | 340/619 kBProgress (2): 0.2/2.2 MB | 344/619 kBProgress (2): 0.2/2.2 MB | 348/619 kBProgress (2): 0.2/2.2 MB | 352/619 kBProgress (2): 0.2/2.2 MB | 356/619 kBProgress (2): 0.2/2.2 MB | 360/619 kBProgress (2): 0.2/2.2 MB | 365/619 kBProgress (2): 0.2/2.2 MB | 369/619 kBProgress (2): 0.2/2.2 MB | 373/619 kBProgress (2): 0.2/2.2 MB | 377/619 kBProgress (2): 0.2/2.2 MB | 381/619 kBProgress (2): 0.2/2.2 MB | 385/619 kBProgress (2): 0.2/2.2 MB | 389/619 kBProgress (2): 0.2/2.2 MB | 393/619 kBProgress (2): 0.2/2.2 MB | 397/619 kBProgress (2): 0.2/2.2 MB | 401/619 kBProgress (2): 0.2/2.2 MB | 406/619 kBProgress (2): 0.2/2.2 MB | 410/619 kBProgress (2): 0.2/2.2 MB | 414/619 kBProgress (2): 0.2/2.2 MB | 418/619 kBProgress (2): 0.2/2.2 MB | 422/619 kBProgress (2): 0.2/2.2 MB | 426/619 kBProgress (2): 0.2/2.2 MB | 430/619 kBProgress (2): 0.2/2.2 MB | 434/619 kBProgress (2): 0.3/2.2 MB | 434/619 kBProgress (2): 0.3/2.2 MB | 438/619 kBProgress (2): 0.3/2.2 MB | 442/619 kBProgress (2): 0.3/2.2 MB | 446/619 kBProgress (2): 0.3/2.2 MB | 451/619 kBProgress (2): 0.3/2.2 MB | 455/619 kBProgress (2): 0.3/2.2 MB | 459/619 kBProgress (2): 0.3/2.2 MB | 459/619 kBProgress (2): 0.3/2.2 MB | 463/619 kBProgress (2): 0.3/2.2 MB | 467/619 kBProgress (2): 0.3/2.2 MB | 471/619 kBProgress (2): 0.3/2.2 MB | 475/619 kBProgress (2): 0.3/2.2 MB | 479/619 kBProgress (2): 0.3/2.2 MB | 483/619 kBProgress (2): 0.3/2.2 MB | 487/619 kBProgress (2): 0.3/2.2 MB | 491/619 kBProgress (2): 0.3/2.2 MB | 491/619 kBProgress (2): 0.3/2.2 MB | 495/619 kBProgress (2): 0.3/2.2 MB | 499/619 kBProgress (2): 0.3/2.2 MB | 503/619 kBProgress (2): 0.3/2.2 MB | 507/619 kBProgress (2): 0.3/2.2 MB | 507/619 kBProgress (2): 0.3/2.2 MB | 511/619 kBProgress (2): 0.3/2.2 MB | 515/619 kBProgress (2): 0.3/2.2 MB | 520/619 kBProgress (2): 0.3/2.2 MB | 524/619 kBProgress (2): 0.3/2.2 MB | 524/619 kBProgress (2): 0.3/2.2 MB | 528/619 kBProgress (2): 0.3/2.2 MB | 532/619 kBProgress (2): 0.3/2.2 MB | 536/619 kBProgress (2): 0.3/2.2 MB | 540/619 kBProgress (2): 0.3/2.2 MB | 544/619 kBProgress (2): 0.3/2.2 MB | 548/619 kBProgress (2): 0.3/2.2 MB | 548/619 kBProgress (2): 0.3/2.2 MB | 552/619 kBProgress (2): 0.3/2.2 MB | 556/619 kBProgress (2): 0.3/2.2 MB | 561/619 kBProgress (2): 0.3/2.2 MB | 565/619 kBProgress (2): 0.4/2.2 MB | 565/619 kBProgress (2): 0.4/2.2 MB | 569/619 kBProgress (2): 0.4/2.2 MB | 573/619 kBProgress (2): 0.4/2.2 MB | 577/619 kBProgress (2): 0.4/2.2 MB | 581/619 kBProgress (2): 0.4/2.2 MB | 581/619 kBProgress (2): 0.4/2.2 MB | 585/619 kBProgress (2): 0.4/2.2 MB | 589/619 kBProgress (2): 0.4/2.2 MB | 593/619 kBProgress (2): 0.4/2.2 MB | 597/619 kBProgress (2): 0.4/2.2 MB | 602/619 kBProgress (2): 0.4/2.2 MB | 606/619 kBProgress (2): 0.4/2.2 MB | 606/619 kBProgress (2): 0.4/2.2 MB | 610/619 kBProgress (2): 0.4/2.2 MB | 614/619 kBProgress (2): 0.4/2.2 MB | 618/619 kBProgress (2): 0.4/2.2 MB | 619 kB    Progress (2): 0.4/2.2 MB | 619 kBProgress (2): 0.4/2.2 MB | 619 kBProgress (2): 0.4/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.5/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.6/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.7/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kBProgress (2): 0.8/2.2 MB | 619 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.7.0/assertj-core-1.7.0.jar (619 kB at 529 kB/s)
+Progress (1): 0.8/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 0.9/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.0/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.1/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.2/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.3/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.4/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.5/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.6/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.7/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.8/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 1.9/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.0/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.1/2.2 MBProgress (1): 2.2/2.2 MBProgress (1): 2.2/2.2 MBProgress (1): 2.2/2.2 MBProgress (1): 2.2/2.2 MBProgress (1): 2.2/2.2 MBProgress (1): 2.2 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/17.0/guava-17.0.jar (2.2 MB at 1.4 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ protoparser ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ protoparser ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ protoparser ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ protoparser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] /Users/seyoung/data/repo/src/main/java/com/squareup/protoparser/OptionElement.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/seyoung/data/repo/src/main/java/com/squareup/protoparser/OptionElement.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ protoparser ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ protoparser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ protoparser ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.squareup.protoparser.ProtoParserTest
+Tests run: 47, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec
+Running com.squareup.protoparser.MessageElementTest
+Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.EnumElementTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.UtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.OneOfElementTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.squareup.protoparser.DataTypeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.squareup.protoparser.FieldElementTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.ServiceElementTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.ExtensionsElementTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.squareup.protoparser.OptionElementTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.squareup.protoparser.ProtoFileTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.squareup.protoparser.RpcElementTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.ExtendElementTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.EnumConstantElementTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 171, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.572 s
+[INFO] Finished at: 2021-11-27T11:05:06+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.13/maven-checkstyle-plugin-2.13.pom
+Progress (1): 2.7/13 kBProgress (1): 5.5/13 kBProgress (1): 8.2/13 kBProgress (1): 11/13 kB Progress (1): 13 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.13/maven-checkstyle-plugin-2.13.pom (13 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.13/maven-checkstyle-plugin-2.13.jar
+Progress (1): 2.7/114 kBProgress (1): 5.5/114 kBProgress (1): 8.2/114 kBProgress (1): 11/114 kB Progress (1): 14/114 kBProgress (1): 16/114 kBProgress (1): 19/114 kBProgress (1): 22/114 kBProgress (1): 25/114 kBProgress (1): 27/114 kBProgress (1): 30/114 kBProgress (1): 33/114 kBProgress (1): 36/114 kBProgress (1): 38/114 kBProgress (1): 41/114 kBProgress (1): 44/114 kBProgress (1): 47/114 kBProgress (1): 49/114 kBProgress (1): 52/114 kBProgress (1): 56/114 kBProgress (1): 60/114 kBProgress (1): 64/114 kBProgress (1): 68/114 kBProgress (1): 73/114 kBProgress (1): 77/114 kBProgress (1): 81/114 kBProgress (1): 85/114 kBProgress (1): 89/114 kBProgress (1): 93/114 kBProgress (1): 97/114 kBProgress (1): 101/114 kBProgress (1): 105/114 kBProgress (1): 109/114 kBProgress (1): 114/114 kBProgress (1): 114 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.13/maven-checkstyle-plugin-2.13.jar (114 kB at 226 kB/s)
+[INFO] 
+[INFO] ----------------------< com.squareup:protoparser >----------------------
+[INFO] Building ProtoParser 4.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ protoparser ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ protoparser ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 15 files (1 package).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 16 files (1 package).
+[INFO] 171 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ protoparser ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ protoparser ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ protoparser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /Users/seyoung/data/repo/target/classes
+[WARNING] /Users/seyoung/data/repo/target/clover/src-instrumented/com/squareup/protoparser/OptionElement.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/seyoung/data/repo/target/clover/src-instrumented/com/squareup/protoparser/OptionElement.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ protoparser ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ protoparser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ protoparser ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.squareup.protoparser.ProtoParserTest
+Tests run: 47, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec
+Running com.squareup.protoparser.MessageElementTest
+Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.squareup.protoparser.EnumElementTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.squareup.protoparser.UtilsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.squareup.protoparser.OneOfElementTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.squareup.protoparser.DataTypeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.squareup.protoparser.FieldElementTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.squareup.protoparser.ServiceElementTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.squareup.protoparser.ExtensionsElementTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.squareup.protoparser.OptionElementTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.squareup.protoparser.ProtoFileTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.squareup.protoparser.RpcElementTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.squareup.protoparser.ExtendElementTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.squareup.protoparser.EnumConstantElementTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+
+Results :
+
+Tests run: 171, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ----------------------< com.squareup:protoparser >----------------------
+[INFO] Building ProtoParser 4.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ protoparser ---
+[INFO] 
+[INFO] ----------------------< com.squareup:protoparser >----------------------
+[INFO] Building ProtoParser 4.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ protoparser ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8729478844707114556resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.945 s
+[INFO] Finished at: 2021-11-27T11:05:13+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/171] com.squareup.protoparser.DataTypeTest#mapToString
+[test][2/171] com.squareup.protoparser.DataTypeTest#namedToString
+[test][3/171] com.squareup.protoparser.DataTypeTest#scalarToString
+[test][4/171] com.squareup.protoparser.EnumConstantElementTest#nameRequired
+[test][5/171] com.squareup.protoparser.EnumConstantElementTest#nullBuilderValuesThrow
+[test][6/171] com.squareup.protoparser.EnumConstantElementTest#tagRequired
+[test][7/171] com.squareup.protoparser.EnumElementTest#addMultipleConstants
+[test][8/171] com.squareup.protoparser.EnumElementTest#addMultipleOptions
+[test][9/171] com.squareup.protoparser.EnumElementTest#duplicateValueTagThrows
+[test][10/171] com.squareup.protoparser.EnumElementTest#duplicateValueTagWithAllowAlias
+[test][11/171] com.squareup.protoparser.EnumElementTest#emptyToSchema
+[test][12/171] com.squareup.protoparser.EnumElementTest#fieldToSchema
+[test][13/171] com.squareup.protoparser.EnumElementTest#fieldWithDocumentationToSchema
+[test][14/171] com.squareup.protoparser.EnumElementTest#fieldWithOptionsToSchema
+[test][15/171] com.squareup.protoparser.EnumElementTest#nameRequired
+[test][16/171] com.squareup.protoparser.EnumElementTest#nameSetsQualifiedName
+[test][17/171] com.squareup.protoparser.EnumElementTest#nullBuilderValuesThrow
+[test][18/171] com.squareup.protoparser.EnumElementTest#simpleToSchema
+[test][19/171] com.squareup.protoparser.EnumElementTest#simpleWithDocumentationToSchema
+[test][20/171] com.squareup.protoparser.EnumElementTest#simpleWithOptionsToSchema
+[test][21/171] com.squareup.protoparser.ExtendElementTest#addMultipleFields
+[test][22/171] com.squareup.protoparser.ExtendElementTest#duplicateTagValueThrows
+[test][23/171] com.squareup.protoparser.ExtendElementTest#emptyToSchema
+[test][24/171] com.squareup.protoparser.ExtendElementTest#nameRequired
+[test][25/171] com.squareup.protoparser.ExtendElementTest#nameSetsQualifiedName
+[test][26/171] com.squareup.protoparser.ExtendElementTest#nullBuilderValuesThrow
+[test][27/171] com.squareup.protoparser.ExtendElementTest#simpleToSchema
+[test][28/171] com.squareup.protoparser.ExtendElementTest#simpleWithDocumentationToSchema
+[test][29/171] com.squareup.protoparser.ExtensionsElementTest#invalidTagRangeThrows
+[test][30/171] com.squareup.protoparser.ExtensionsElementTest#maxRangeToSchema
+[test][31/171] com.squareup.protoparser.ExtensionsElementTest#rangeToSchema
+[test][32/171] com.squareup.protoparser.ExtensionsElementTest#singleValueToSchema
+[test][33/171] com.squareup.protoparser.ExtensionsElementTest#withDocumentationToSchema
+[test][34/171] com.squareup.protoparser.FieldElementTest#addMultipleOptions
+[test][35/171] com.squareup.protoparser.FieldElementTest#deprecatedSupportStringAndBoolean
+[test][36/171] com.squareup.protoparser.FieldElementTest#field
+[test][37/171] com.squareup.protoparser.FieldElementTest#labelRequired
+[test][38/171] com.squareup.protoparser.FieldElementTest#nameRequired
+[test][39/171] com.squareup.protoparser.FieldElementTest#nullBuilderValuesThrow
+[test][40/171] com.squareup.protoparser.FieldElementTest#packedSupportStringAndBoolean
+[test][41/171] com.squareup.protoparser.FieldElementTest#tagRequired
+[test][42/171] com.squareup.protoparser.FieldElementTest#typeRequired
+[test][43/171] com.squareup.protoparser.MessageElementTest#addMultipleExtensions
+[test][44/171] com.squareup.protoparser.MessageElementTest#addMultipleFields
+[test][45/171] com.squareup.protoparser.MessageElementTest#addMultipleOneOfs
+[test][46/171] com.squareup.protoparser.MessageElementTest#addMultipleOptions
+[test][47/171] com.squareup.protoparser.MessageElementTest#addMultipleTypes
+[test][48/171] com.squareup.protoparser.MessageElementTest#defaultMissing
+[test][49/171] com.squareup.protoparser.MessageElementTest#defaultValue
+[test][50/171] com.squareup.protoparser.MessageElementTest#deprecatedFalse
+[test][51/171] com.squareup.protoparser.MessageElementTest#deprecatedMissing
+[test][52/171] com.squareup.protoparser.MessageElementTest#deprecatedTrue
+[test][53/171] com.squareup.protoparser.MessageElementTest#duplicateEnumValueTagInScopeThrows
+[test][54/171] com.squareup.protoparser.MessageElementTest#duplicateTagValueOneOfThrows
+[test][55/171] com.squareup.protoparser.MessageElementTest#duplicateTagValueThrows
+[test][56/171] com.squareup.protoparser.MessageElementTest#emptyToSchema
+[test][57/171] com.squareup.protoparser.MessageElementTest#fieldToSchema
+[test][58/171] com.squareup.protoparser.MessageElementTest#fieldWithDocumentationToSchema
+[test][59/171] com.squareup.protoparser.MessageElementTest#fieldWithOptionsToSchema
+[test][60/171] com.squareup.protoparser.MessageElementTest#multipleEverythingToSchema
+[test][61/171] com.squareup.protoparser.MessageElementTest#nameRequired
+[test][62/171] com.squareup.protoparser.MessageElementTest#nameSetsQualifiedName
+[test][63/171] com.squareup.protoparser.MessageElementTest#nullBuilderValuesThrow
+[test][64/171] com.squareup.protoparser.MessageElementTest#oneOfFieldDisallowed
+[test][65/171] com.squareup.protoparser.MessageElementTest#oneOfFieldToSchema
+[test][66/171] com.squareup.protoparser.MessageElementTest#oneOfToSchema
+[test][67/171] com.squareup.protoparser.MessageElementTest#packedFalse
+[test][68/171] com.squareup.protoparser.MessageElementTest#packedMissing
+[test][69/171] com.squareup.protoparser.MessageElementTest#packedTrue
+[test][70/171] com.squareup.protoparser.MessageElementTest#simpleToSchema
+[test][71/171] com.squareup.protoparser.MessageElementTest#simpleWithDocumentationToSchema
+[test][72/171] com.squareup.protoparser.MessageElementTest#simpleWithExtensionsToSchema
+[test][73/171] com.squareup.protoparser.MessageElementTest#simpleWithNestedElementsToSchema
+[test][74/171] com.squareup.protoparser.MessageElementTest#simpleWithOptionsToSchema
+[test][75/171] com.squareup.protoparser.OneOfElementTest#nameRequired
+[test][76/171] com.squareup.protoparser.OneOfElementTest#nullBuilderValuesThrow
+[test][77/171] com.squareup.protoparser.OptionElementTest#booleanToSchema
+[test][78/171] com.squareup.protoparser.OptionElementTest#findInList
+[test][79/171] com.squareup.protoparser.OptionElementTest#findInListDuplicate
+[test][80/171] com.squareup.protoparser.OptionElementTest#findInListMissing
+[test][81/171] com.squareup.protoparser.OptionElementTest#listToSchema
+[test][82/171] com.squareup.protoparser.OptionElementTest#mapToSchema
+[test][83/171] com.squareup.protoparser.OptionElementTest#nestedToSchema
+[test][84/171] com.squareup.protoparser.OptionElementTest#nullNameThrows
+[test][85/171] com.squareup.protoparser.OptionElementTest#nullValueThrows
+[test][86/171] com.squareup.protoparser.OptionElementTest#optionListToMap
+[test][87/171] com.squareup.protoparser.OptionElementTest#simpleToSchema
+[test][88/171] com.squareup.protoparser.ProtoFileTest#addMultipleDependencies
+[test][89/171] com.squareup.protoparser.ProtoFileTest#addMultipleExtends
+[test][90/171] com.squareup.protoparser.ProtoFileTest#addMultipleOptions
+[test][91/171] com.squareup.protoparser.ProtoFileTest#addMultiplePublicDependencies
+[test][92/171] com.squareup.protoparser.ProtoFileTest#addMultipleServices
+[test][93/171] com.squareup.protoparser.ProtoFileTest#emptyToSchema
+[test][94/171] com.squareup.protoparser.ProtoFileTest#emptyWithPackageToSchema
+[test][95/171] com.squareup.protoparser.ProtoFileTest#multipleEverythingToSchema
+[test][96/171] com.squareup.protoparser.ProtoFileTest#nullBuilderValuesThrow
+[test][97/171] com.squareup.protoparser.ProtoFileTest#simpleToSchema
+[test][98/171] com.squareup.protoparser.ProtoFileTest#simpleWithBothImportsToSchema
+[test][99/171] com.squareup.protoparser.ProtoFileTest#simpleWithExtendsToSchema
+[test][100/171] com.squareup.protoparser.ProtoFileTest#simpleWithImportsToSchema
+[test][101/171] com.squareup.protoparser.ProtoFileTest#simpleWithOptionsToSchema
+[test][102/171] com.squareup.protoparser.ProtoFileTest#simpleWithPublicImportsToSchema
+[test][103/171] com.squareup.protoparser.ProtoFileTest#simpleWithServicesToSchema
+[test][104/171] com.squareup.protoparser.ProtoFileTest#syntaxToSchema
+[test][105/171] com.squareup.protoparser.ProtoFileTest#tagValueValidation
+[test][106/171] com.squareup.protoparser.ProtoParserTest#defaultFieldWithParen
+[test][107/171] com.squareup.protoparser.ProtoParserTest#defaultFieldWithStringEscapes
+[test][108/171] com.squareup.protoparser.ProtoParserTest#enumValueLeadingAndTrailingCommentsAreCombined
+[test][109/171] com.squareup.protoparser.ProtoParserTest#enumValueTrailingComment
+[test][110/171] com.squareup.protoparser.ProtoParserTest#extend
+[test][111/171] com.squareup.protoparser.ProtoParserTest#extendInMessage
+[test][112/171] com.squareup.protoparser.ProtoParserTest#extendInMessageWithPackage
+[test][113/171] com.squareup.protoparser.ProtoParserTest#extensionWithNestedMessage
+[test][114/171] com.squareup.protoparser.ProtoParserTest#fqcnExtendInMessage
+[test][115/171] com.squareup.protoparser.ProtoParserTest#fqcnExtendInMessageWithPackage
+[test][116/171] com.squareup.protoparser.ProtoParserTest#hexTag
+[test][117/171] com.squareup.protoparser.ProtoParserTest#imports
+[test][118/171] com.squareup.protoparser.ProtoParserTest#invalidHexStringEscape
+[test][119/171] com.squareup.protoparser.ProtoParserTest#invalidSyntaxValueThrows
+[test][120/171] com.squareup.protoparser.ProtoParserTest#invalidTrailingComment
+[test][121/171] com.squareup.protoparser.ProtoParserTest#messageFieldLeadingAndTrailingCommentAreCombined
+[test][122/171] com.squareup.protoparser.ProtoParserTest#messageFieldTrailingComment
+[test][123/171] com.squareup.protoparser.ProtoParserTest#multilineJavadocComment
+[test][124/171] com.squareup.protoparser.ProtoParserTest#multilineJavadocCommentWithLeadingWhitespace
+[test][125/171] com.squareup.protoparser.ProtoParserTest#multilineJavadocCommentWithoutLeadingAsterisks
+[test][126/171] com.squareup.protoparser.ProtoParserTest#multipleSingleLineComments
+[test][127/171] com.squareup.protoparser.ProtoParserTest#multipleSingleLineCommentsWithLeadingWhitespace
+[test][128/171] com.squareup.protoparser.ProtoParserTest#nestingInMessage
+[test][129/171] com.squareup.protoparser.ProtoParserTest#noWhitespace
+[test][130/171] com.squareup.protoparser.ProtoParserTest#optionNumericalBounds
+[test][131/171] com.squareup.protoparser.ProtoParserTest#optionParentheses
+[test][132/171] com.squareup.protoparser.ProtoParserTest#optionsWithNestedMapsAndTrailingCommas
+[test][133/171] com.squareup.protoparser.ProtoParserTest#packageDeclaration
+[test][134/171] com.squareup.protoparser.ProtoParserTest#parseEnum
+[test][135/171] com.squareup.protoparser.ProtoParserTest#parseEnumWithOptions
+[test][136/171] com.squareup.protoparser.ProtoParserTest#parseMessageAndFields
+[test][137/171] com.squareup.protoparser.ProtoParserTest#parseMessageAndOneOf
+[test][138/171] com.squareup.protoparser.ProtoParserTest#publicImports
+[test][139/171] com.squareup.protoparser.ProtoParserTest#service
+[test][140/171] com.squareup.protoparser.ProtoParserTest#serviceTypesMustBeNamed
+[test][141/171] com.squareup.protoparser.ProtoParserTest#singleLineComment
+[test][142/171] com.squareup.protoparser.ProtoParserTest#singleLineJavadocComment
+[test][143/171] com.squareup.protoparser.ProtoParserTest#structuredOption
+[test][144/171] com.squareup.protoparser.ProtoParserTest#syntaxInWrongContextThrows
+[test][145/171] com.squareup.protoparser.ProtoParserTest#syntaxNotRequired
+[test][146/171] com.squareup.protoparser.ProtoParserTest#syntaxSpecified
+[test][147/171] com.squareup.protoparser.ProtoParserTest#trailingCommentNotAssignedToFollowingField
+[test][148/171] com.squareup.protoparser.ProtoParserTest#trailingCommentNotCombinedWhenEmpty
+[test][149/171] com.squareup.protoparser.ProtoParserTest#trailingMultilineComment
+[test][150/171] com.squareup.protoparser.ProtoParserTest#trailingMultilineCommentMustBeLastOnLineThrows
+[test][151/171] com.squareup.protoparser.ProtoParserTest#trailingUnclosedMultilineCommentThrows
+[test][152/171] com.squareup.protoparser.ProtoParserTest#typeParsing
+[test][153/171] com.squareup.protoparser.RpcElementTest#nameRequired
+[test][154/171] com.squareup.protoparser.RpcElementTest#nullBuilderValuesThrow
+[test][155/171] com.squareup.protoparser.RpcElementTest#requestTypeRequired
+[test][156/171] com.squareup.protoparser.RpcElementTest#responseTypeRequired
+[test][157/171] com.squareup.protoparser.ServiceElementTest#addMultipleOptions
+[test][158/171] com.squareup.protoparser.ServiceElementTest#addMultipleRpcs
+[test][159/171] com.squareup.protoparser.ServiceElementTest#emptyToSchema
+[test][160/171] com.squareup.protoparser.ServiceElementTest#multipleToSchema
+[test][161/171] com.squareup.protoparser.ServiceElementTest#nameRequired
+[test][162/171] com.squareup.protoparser.ServiceElementTest#nameSetsQualifiedName
+[test][163/171] com.squareup.protoparser.ServiceElementTest#nullBuilderValuesThrow
+[test][164/171] com.squareup.protoparser.ServiceElementTest#rpcToSchema
+[test][165/171] com.squareup.protoparser.ServiceElementTest#rpcWithDocumentationToSchema
+[test][166/171] com.squareup.protoparser.ServiceElementTest#rpcWithOptionsToSchema
+[test][167/171] com.squareup.protoparser.ServiceElementTest#singleToSchema
+[test][168/171] com.squareup.protoparser.ServiceElementTest#singleWithDocumentationToSchema
+[test][169/171] com.squareup.protoparser.ServiceElementTest#singleWithOptionsToSchema
+[test][170/171] com.squareup.protoparser.UtilsTest#documentationTest
+[test][171/171] com.squareup.protoparser.UtilsTest#indentationTest
+[main][14/14] python parse_data.py
+  0%|          | 0/171 [00:00<?, ?it/s] 13%|█▎        | 22/171 [00:00<00:00, 211.25it/s] 26%|██▌       | 44/171 [00:00<00:00, 213.78it/s] 39%|███▊      | 66/171 [00:00<00:00, 213.94it/s] 51%|█████▏    | 88/171 [00:00<00:00, 214.85it/s] 64%|██████▍   | 110/171 [00:00<00:00, 214.27it/s] 77%|███████▋  | 132/171 [00:00<00:00, 213.98it/s] 90%|█████████ | 154/171 [00:00<00:00, 211.05it/s]100%|██████████| 171/171 [00:00<00:00, 213.28it/s]
+Done.

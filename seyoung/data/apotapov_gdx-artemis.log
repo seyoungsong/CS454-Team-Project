@@ -1,0 +1,288 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/apotapov/gdx-artemis repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.roundtriangles.games:gdx-artemis >----------------
+[INFO] Building gdx-artemis 0.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.pom
+Progress (1): 2.7/5.2 kBProgress (1): 5.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.pom (5.2 kB at 5.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.jar
+Progress (1): 2.7/24 kBProgress (1): 5.5/24 kBProgress (1): 8.2/24 kBProgress (1): 11/24 kB Progress (1): 14/24 kBProgress (1): 16/24 kBProgress (1): 19/24 kBProgress (1): 22/24 kBProgress (1): 24 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.jar (24 kB at 70 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx/1.6.1/gdx-1.6.1.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx/1.6.1/gdx-1.6.1.pom (1.7 kB at 3.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx-parent/1.6.1/gdx-parent-1.6.1.pom
+Progress (1): 2.7/4.3 kBProgress (1): 4.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx-parent/1.6.1/gdx-parent-1.6.1.pom (4.3 kB at 16 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.pom
+Progress (1): 949 B                   Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.pom (949 B at 3.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx/1.6.1/gdx-1.6.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar
+Progress (1): 0/1.8 MBProgress (1): 0/1.8 MBProgress (1): 0/1.8 MBProgress (1): 0/1.8 MBProgress (1): 0/1.8 MBProgress (1): 0/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (1): 0.1/1.8 MBProgress (2): 0.1/1.8 MB | 2.7/237 kBProgress (2): 0.1/1.8 MB | 5.5/237 kBProgress (2): 0.1/1.8 MB | 8.2/237 kBProgress (2): 0.1/1.8 MB | 11/237 kB Progress (2): 0.1/1.8 MB | 14/237 kBProgress (2): 0.1/1.8 MB | 14/237 kBProgress (2): 0.1/1.8 MB | 14/237 kBProgress (2): 0.1/1.8 MB | 16/237 kBProgress (2): 0.1/1.8 MB | 19/237 kBProgress (2): 0.1/1.8 MB | 19/237 kBProgress (2): 0.1/1.8 MB | 19/237 kBProgress (2): 0.1/1.8 MB | 22/237 kBProgress (2): 0.1/1.8 MB | 25/237 kBProgress (2): 0.1/1.8 MB | 25/237 kBProgress (2): 0.2/1.8 MB | 25/237 kBProgress (2): 0.2/1.8 MB | 27/237 kBProgress (2): 0.2/1.8 MB | 30/237 kBProgress (2): 0.2/1.8 MB | 33/237 kBProgress (2): 0.2/1.8 MB | 36/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.2/1.8 MB | 38/237 kBProgress (2): 0.3/1.8 MB | 38/237 kBProgress (2): 0.3/1.8 MB | 38/237 kBProgress (2): 0.3/1.8 MB | 38/237 kBProgress (2): 0.3/1.8 MB | 41/237 kBProgress (2): 0.3/1.8 MB | 44/237 kBProgress (2): 0.3/1.8 MB | 44/237 kBProgress (2): 0.3/1.8 MB | 44/237 kBProgress (2): 0.3/1.8 MB | 47/237 kBProgress (2): 0.3/1.8 MB | 49/237 kBProgress (2): 0.3/1.8 MB | 49/237 kBProgress (2): 0.3/1.8 MB | 49/237 kBProgress (2): 0.3/1.8 MB | 52/237 kBProgress (2): 0.3/1.8 MB | 52/237 kBProgress (2): 0.3/1.8 MB | 52/237 kBProgress (2): 0.3/1.8 MB | 55/237 kBProgress (2): 0.3/1.8 MB | 58/237 kBProgress (2): 0.3/1.8 MB | 58/237 kBProgress (2): 0.3/1.8 MB | 58/237 kBProgress (2): 0.3/1.8 MB | 60/237 kBProgress (2): 0.3/1.8 MB | 63/237 kBProgress (2): 0.3/1.8 MB | 63/237 kBProgress (2): 0.4/1.8 MB | 63/237 kBProgress (2): 0.4/1.8 MB | 66/237 kBProgress (2): 0.4/1.8 MB | 70/237 kBProgress (2): 0.4/1.8 MB | 74/237 kBProgress (2): 0.4/1.8 MB | 78/237 kBProgress (2): 0.4/1.8 MB | 82/237 kBProgress (2): 0.4/1.8 MB | 86/237 kBProgress (2): 0.4/1.8 MB | 90/237 kBProgress (2): 0.4/1.8 MB | 94/237 kBProgress (2): 0.4/1.8 MB | 99/237 kBProgress (2): 0.4/1.8 MB | 103/237 kBProgress (2): 0.4/1.8 MB | 107/237 kBProgress (2): 0.4/1.8 MB | 111/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.4/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.5/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 115/237 kBProgress (2): 0.6/1.8 MB | 119/237 kBProgress (2): 0.6/1.8 MB | 123/237 kBProgress (2): 0.6/1.8 MB | 127/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 131/237 kBProgress (2): 0.6/1.8 MB | 135/237 kBProgress (2): 0.6/1.8 MB | 135/237 kBProgress (2): 0.6/1.8 MB | 140/237 kBProgress (2): 0.6/1.8 MB | 144/237 kBProgress (2): 0.6/1.8 MB | 144/237 kBProgress (2): 0.6/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 148/237 kBProgress (2): 0.7/1.8 MB | 152/237 kBProgress (2): 0.7/1.8 MB | 152/237 kBProgress (2): 0.7/1.8 MB | 156/237 kBProgress (2): 0.7/1.8 MB | 160/237 kBProgress (2): 0.7/1.8 MB | 160/237 kBProgress (2): 0.7/1.8 MB | 164/237 kBProgress (2): 0.7/1.8 MB | 164/237 kBProgress (2): 0.7/1.8 MB | 164/237 kBProgress (2): 0.7/1.8 MB | 164/237 kBProgress (2): 0.8/1.8 MB | 164/237 kBProgress (2): 0.8/1.8 MB | 164/237 kBProgress (2): 0.8/1.8 MB | 168/237 kBProgress (2): 0.8/1.8 MB | 172/237 kBProgress (2): 0.8/1.8 MB | 176/237 kBProgress (2): 0.8/1.8 MB | 180/237 kBProgress (2): 0.8/1.8 MB | 180/237 kBProgress (2): 0.8/1.8 MB | 180/237 kBProgress (2): 0.8/1.8 MB | 185/237 kBProgress (2): 0.8/1.8 MB | 189/237 kBProgress (2): 0.8/1.8 MB | 193/237 kBProgress (2): 0.8/1.8 MB | 197/237 kBProgress (2): 0.8/1.8 MB | 201/237 kBProgress (2): 0.8/1.8 MB | 205/237 kBProgress (2): 0.8/1.8 MB | 209/237 kBProgress (2): 0.8/1.8 MB | 213/237 kBProgress (2): 0.8/1.8 MB | 217/237 kBProgress (2): 0.8/1.8 MB | 221/237 kBProgress (2): 0.8/1.8 MB | 226/237 kBProgress (2): 0.8/1.8 MB | 230/237 kBProgress (2): 0.8/1.8 MB | 234/237 kBProgress (2): 0.8/1.8 MB | 237 kB    Progress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.8/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 0.9/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.0/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.1/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.2/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.3/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.4/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.5/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kBProgress (2): 1.6/1.8 MB | 237 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.1/junit-4.8.1.jar (237 kB at 268 kB/s)
+Progress (1): 1.6/1.8 MBProgress (1): 1.6/1.8 MBProgress (1): 1.6/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.7/1.8 MBProgress (1): 1.8/1.8 MBProgress (1): 1.8 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/badlogicgames/gdx/gdx/1.6.1/gdx-1.6.1.jar (1.8 MB at 1.7 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gdx-artemis ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gdx-artemis ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gdx-artemis ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ gdx-artemis ---
+[INFO] Compiling 38 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gdx-artemis ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ gdx-artemis ---
+[INFO] Compiling 20 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gdx-artemis ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.artemis.ComponentMapperTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running com.artemis.managers.SingletonEntityManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.managers.GroupManagerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.managers.PlayerManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.managers.TeamManagerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.managers.GenericGroupManagerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.managers.EntityManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.managers.ComponentManagerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.managers.SingletonComponentManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.utils.IdentifierTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.artemis.utils.SafeArrayTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.EntityTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.ParentMapperTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.systems.EntitySystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.systems.ExpirationSystemTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.systems.SkipEntityProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.systems.PassiveSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.systems.EntityProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.systems.event.BasicEventDeliverySystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.artemis.systems.event.EventProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.760 s
+[INFO] Finished at: 2021-11-27T10:39:13+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.3.1/maven-jar-plugin-2.3.1.pom
+Progress (1): 2.7/5.7 kBProgress (1): 5.5/5.7 kBProgress (1): 5.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.3.1/maven-jar-plugin-2.3.1.pom (5.7 kB at 6.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.3.1/maven-jar-plugin-2.3.1.jar
+Progress (1): 2.7/32 kBProgress (1): 5.5/32 kBProgress (1): 8.2/32 kBProgress (1): 11/32 kB Progress (1): 14/32 kBProgress (1): 16/32 kBProgress (1): 19/32 kBProgress (1): 22/32 kBProgress (1): 25/32 kBProgress (1): 27/32 kBProgress (1): 30/32 kBProgress (1): 32 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.3.1/maven-jar-plugin-2.3.1.jar (32 kB at 95 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.pom
+Progress (1): 2.7/4.9 kBProgress (1): 4.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.pom (4.9 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.jar
+Progress (1): 2.7/23 kBProgress (1): 5.5/23 kBProgress (1): 8.2/23 kBProgress (1): 11/23 kB Progress (1): 14/23 kBProgress (1): 16/23 kBProgress (1): 19/23 kBProgress (1): 23 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/2.3.1/maven-install-plugin-2.3.1.jar (23 kB at 71 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.5/maven-deploy-plugin-2.5.pom
+Progress (1): 4.1/5.7 kBProgress (1): 5.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.5/maven-deploy-plugin-2.5.pom (5.7 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.5/maven-deploy-plugin-2.5.jar
+Progress (1): 4.1/23 kBProgress (1): 8.2/23 kBProgress (1): 12/23 kB Progress (1): 16/23 kBProgress (1): 20/23 kBProgress (1): 23 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-deploy-plugin/2.5/maven-deploy-plugin-2.5.jar (23 kB at 72 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.4.2/maven-release-plugin-2.4.2.pom
+Progress (1): 4.1/11 kBProgress (1): 8.2/11 kBProgress (1): 11 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.4.2/maven-release-plugin-2.4.2.pom (11 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/2.4.2/maven-release-2.4.2.pom
+Progress (1): 4.1/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/2.4.2/maven-release-2.4.2.pom (4.8 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.4.2/maven-release-plugin-2.4.2.jar
+Progress (1): 4.1/51 kBProgress (1): 8.2/51 kBProgress (1): 12/51 kB Progress (1): 16/51 kBProgress (1): 20/51 kBProgress (1): 25/51 kBProgress (1): 29/51 kBProgress (1): 33/51 kBProgress (1): 37/51 kBProgress (1): 41/51 kBProgress (1): 45/51 kBProgress (1): 49/51 kBProgress (1): 51 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/2.4.2/maven-release-plugin-2.4.2.jar (51 kB at 131 kB/s)
+[INFO] 
+[INFO] ----------------< com.roundtriangles.games:gdx-artemis >----------------
+[INFO] Building gdx-artemis 0.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gdx-artemis ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ gdx-artemis ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 38 files (5 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 20 files (5 packages).
+[INFO] 35 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gdx-artemis ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gdx-artemis ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ gdx-artemis ---
+[INFO] Compiling 38 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gdx-artemis ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ gdx-artemis ---
+[INFO] Compiling 20 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gdx-artemis ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.artemis.ComponentMapperTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec
+Running com.artemis.managers.SingletonEntityManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.managers.GroupManagerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.artemis.managers.PlayerManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.artemis.managers.TeamManagerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.artemis.managers.GenericGroupManagerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.artemis.managers.EntityManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.artemis.managers.ComponentManagerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.artemis.managers.SingletonComponentManagerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.utils.IdentifierTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.utils.SafeArrayTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.EntityTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.ParentMapperTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.artemis.systems.EntitySystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.artemis.systems.ExpirationSystemTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.artemis.systems.SkipEntityProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.systems.PassiveSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.systems.EntityProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.artemis.systems.event.BasicEventDeliverySystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.artemis.systems.event.EventProcessingSystemTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+
+Results :
+
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ----------------< com.roundtriangles.games:gdx-artemis >----------------
+[INFO] Building gdx-artemis 0.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ gdx-artemis ---
+[INFO] 
+[INFO] ----------------< com.roundtriangles.games:gdx-artemis >----------------
+[INFO] Building gdx-artemis 0.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ gdx-artemis ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn6570975101329389691resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.392 s
+[INFO] Finished at: 2021-11-27T10:39:23+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/35] com.artemis.ComponentMapperTest#testComponentCaching
+[test][2/35] com.artemis.EntityTest#testGetComponents
+[test][3/35] com.artemis.ParentMapperTest#testParentMapper
+[test][4/35] com.artemis.managers.ComponentManagerTest#testComponentReplace
+[test][5/35] com.artemis.managers.ComponentManagerTest#testGetComponents
+[test][6/35] com.artemis.managers.ComponentManagerTest#testRemoveComponent
+[test][7/35] com.artemis.managers.EntityManagerTest#testCreateNewEntityInstance
+[test][8/35] com.artemis.managers.EntityManagerTest#testReuseEntityInstance
+[test][9/35] com.artemis.managers.GenericGroupManagerTest#testGetEntities
+[test][10/35] com.artemis.managers.GenericGroupManagerTest#testGetGroups
+[test][11/35] com.artemis.managers.GenericGroupManagerTest#testInGroup
+[test][12/35] com.artemis.managers.GenericGroupManagerTest#testRemoveAll
+[test][13/35] com.artemis.managers.GroupManagerTest#testGetEntities
+[test][14/35] com.artemis.managers.GroupManagerTest#testGetGroups
+[test][15/35] com.artemis.managers.GroupManagerTest#testInGroup
+[test][16/35] com.artemis.managers.GroupManagerTest#testRemoveAll
+[test][17/35] com.artemis.managers.PlayerManagerTest#testDeleteEntity
+[test][18/35] com.artemis.managers.PlayerManagerTest#testSimple
+[test][19/35] com.artemis.managers.SingletonComponentManagerTest#testStorageRetrieval
+[test][20/35] com.artemis.managers.SingletonComponentManagerTest#testSystemAccess
+[test][21/35] com.artemis.managers.SingletonEntityManagerTest#testDeleteEntity
+[test][22/35] com.artemis.managers.SingletonEntityManagerTest#testSimple
+[test][23/35] com.artemis.managers.TeamManagerTest#testSimple
+[test][24/35] com.artemis.systems.EntityProcessingSystemTest#testDelete
+[test][25/35] com.artemis.systems.EntitySystemTest#testCheck
+[test][26/35] com.artemis.systems.ExpirationSystemTest#testExpiration
+[test][27/35] com.artemis.systems.ExpirationSystemTest#testExpirationWithTimerReuse
+[test][28/35] com.artemis.systems.PassiveSystemTest#testPassive
+[test][29/35] com.artemis.systems.SkipEntityProcessingSystemTest#testExpiration
+[test][30/35] com.artemis.systems.event.BasicEventDeliverySystemTest#testSimple
+[test][31/35] com.artemis.systems.event.EventProcessingSystemTest#testEventProcessingSystems
+[test][32/35] com.artemis.utils.IdentifierTest#testCheckIn
+[test][33/35] com.artemis.utils.IdentifierTest#testCheckOut
+[test][34/35] com.artemis.utils.IdentifierTest#testDispose
+[test][35/35] com.artemis.utils.SafeArrayTest#testGetSet
+[main][14/14] python parse_data.py
+  0%|          | 0/35 [00:00<?, ?it/s] 69%|██████▊   | 24/35 [00:00<00:00, 234.37it/s]100%|██████████| 35/35 [00:00<00:00, 235.56it/s]
+Done.

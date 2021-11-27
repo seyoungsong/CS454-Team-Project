@@ -1,0 +1,352 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/jonbo372/efflux repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.factor45.efflux:efflux:jar:0.4.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 96, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 117, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 182, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< org.factor45.efflux:efflux >---------------------
+[INFO] Building efflux 0.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml
+Progress (1): 552 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml (552 B at 576 B/s)
+[WARNING] Could not transfer metadata org.apache.maven.plugins:maven-jxr-plugin/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/3.1.1/maven-jxr-plugin-3.1.1.pom
+Progress (1): 2.7/8.6 kBProgress (1): 5.5/8.6 kBProgress (1): 8.2/8.6 kBProgress (1): 8.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/3.1.1/maven-jxr-plugin-3.1.1.pom (8.6 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/jxr/jxr/3.1.1/jxr-3.1.1.pom
+Progress (1): 2.7/6.1 kBProgress (1): 5.5/6.1 kBProgress (1): 6.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/jxr/jxr/3.1.1/jxr-3.1.1.pom (6.1 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/3.1.1/maven-jxr-plugin-3.1.1.jar
+Progress (1): 2.7/67 kBProgress (1): 5.5/67 kBProgress (1): 8.2/67 kBProgress (1): 11/67 kB Progress (1): 14/67 kBProgress (1): 16/67 kBProgress (1): 19/67 kBProgress (1): 22/67 kBProgress (1): 25/67 kBProgress (1): 27/67 kBProgress (1): 30/67 kBProgress (1): 33/67 kBProgress (1): 36/67 kBProgress (1): 38/67 kBProgress (1): 41/67 kBProgress (1): 44/67 kBProgress (1): 47/67 kBProgress (1): 51/67 kBProgress (1): 55/67 kBProgress (1): 59/67 kBProgress (1): 63/67 kBProgress (1): 67/67 kBProgress (1): 67 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jxr-plugin/3.1.1/maven-jxr-plugin-3.1.1.jar (67 kB at 146 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.7/junit-4.7.pom
+Progress (1): 1.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.7/junit-4.7.pom (1.2 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.pom
+Progress (1): 4.1/24 kBProgress (1): 8.2/24 kBProgress (1): 12/24 kB Progress (1): 16/24 kBProgress (1): 20/24 kBProgress (1): 24 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.pom (24 kB at 79 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/5/jboss-parent-5.pom
+Progress (1): 4.1/19 kBProgress (1): 8.2/19 kBProgress (1): 12/19 kB Progress (1): 16/19 kBProgress (1): 19 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/5/jboss-parent-5.pom (19 kB at 61 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom
+Progress (1): 3.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom (3.0 kB at 10 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.6.1/slf4j-parent-1.6.1.pom
+Progress (1): 4.1/9.3 kBProgress (1): 8.2/9.3 kBProgress (1): 9.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.6.1/slf4j-parent-1.6.1.pom (9.3 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.pom (1.7 kB at 5.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.16/log4j-1.2.16.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.16/log4j-1.2.16.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.7/junit-4.7.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.16/log4j-1.2.16.jar
+Progress (1): 4.1/232 kBProgress (1): 8.2/232 kBProgress (1): 12/232 kB Progress (1): 16/232 kBProgress (1): 20/232 kBProgress (1): 25/232 kBProgress (1): 29/232 kBProgress (1): 33/232 kBProgress (1): 37/232 kBProgress (1): 41/232 kBProgress (1): 45/232 kBProgress (1): 49/232 kBProgress (1): 53/232 kBProgress (1): 57/232 kBProgress (1): 61/232 kBProgress (1): 66/232 kBProgress (1): 70/232 kBProgress (1): 74/232 kBProgress (1): 78/232 kBProgress (1): 82/232 kBProgress (1): 86/232 kBProgress (1): 90/232 kBProgress (1): 94/232 kBProgress (1): 98/232 kBProgress (1): 102/232 kBProgress (1): 106/232 kBProgress (1): 111/232 kBProgress (1): 115/232 kBProgress (1): 119/232 kBProgress (1): 123/232 kBProgress (1): 127/232 kBProgress (1): 131/232 kBProgress (1): 135/232 kBProgress (1): 139/232 kBProgress (1): 143/232 kBProgress (1): 147/232 kBProgress (1): 152/232 kBProgress (1): 156/232 kBProgress (1): 160/232 kBProgress (1): 164/232 kBProgress (1): 168/232 kBProgress (1): 172/232 kBProgress (1): 176/232 kBProgress (1): 180/232 kBProgress (1): 184/232 kBProgress (1): 188/232 kBProgress (1): 193/232 kBProgress (1): 197/232 kBProgress (1): 201/232 kBProgress (1): 205/232 kBProgress (1): 209/232 kBProgress (1): 213/232 kBProgress (1): 217/232 kBProgress (1): 221/232 kBProgress (1): 225/232 kBProgress (1): 229/232 kBProgress (1): 232 kB    Progress (2): 232 kB | 2.7/9.8 kBProgress (2): 232 kB | 5.5/9.8 kBProgress (2): 232 kB | 8.2/9.8 kBProgress (2): 232 kB | 9.8 kB    Progress (3): 232 kB | 9.8 kB | 2.7/25 kBProgress (3): 232 kB | 9.8 kB | 5.5/25 kBProgress (3): 232 kB | 9.8 kB | 8.2/25 kBProgress (3): 232 kB | 9.8 kB | 11/25 kB Progress (3): 232 kB | 9.8 kB | 14/25 kBProgress (3): 232 kB | 9.8 kB | 16/25 kBProgress (3): 232 kB | 9.8 kB | 19/25 kBProgress (3): 232 kB | 9.8 kB | 22/25 kBProgress (4): 232 kB | 9.8 kB | 22/25 kB | 2.7/482 kBProgress (4): 232 kB | 9.8 kB | 25/25 kB | 2.7/482 kBProgress (5): 232 kB | 9.8 kB | 25/25 kB | 2.7/482 kB | 2.7/786 kBProgress (5): 232 kB | 9.8 kB | 25/25 kB | 5.5/482 kB | 2.7/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 5.5/482 kB | 2.7/786 kB   Progress (5): 232 kB | 9.8 kB | 25 kB | 8.2/482 kB | 2.7/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 8.2/482 kB | 5.5/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 11/482 kB | 5.5/786 kB Progress (5): 232 kB | 9.8 kB | 25 kB | 11/482 kB | 8.2/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 14/482 kB | 8.2/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 14/482 kB | 11/786 kB Progress (5): 232 kB | 9.8 kB | 25 kB | 14/482 kB | 14/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 16/482 kB | 14/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 16/482 kB | 16/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 19/482 kB | 16/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 19/482 kB | 19/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 22/482 kB | 19/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 22/482 kB | 22/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 25/482 kB | 22/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 25/482 kB | 25/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 27/482 kB | 25/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 27/482 kB | 27/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 30/482 kB | 27/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 30/482 kB | 30/786 kBProgress (5): 232 kB | 9.8 kB | 25 kB | 33/482 kB | 30/786 kB                                                             Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.7/junit-4.7.jar (232 kB at 477 kB/s)
+Progress (4): 9.8 kB | 25 kB | 33/482 kB | 33/786 kBProgress (4): 9.8 kB | 25 kB | 36/482 kB | 33/786 kBProgress (4): 9.8 kB | 25 kB | 36/482 kB | 36/786 kBProgress (4): 9.8 kB | 25 kB | 38/482 kB | 36/786 kBProgress (4): 9.8 kB | 25 kB | 38/482 kB | 38/786 kB                                                    Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar (9.8 kB at 17 kB/s)
+Progress (3): 25 kB | 41/482 kB | 38/786 kBProgress (3): 25 kB | 41/482 kB | 41/786 kBProgress (3): 25 kB | 44/482 kB | 41/786 kBProgress (3): 25 kB | 44/482 kB | 44/786 kBProgress (3): 25 kB | 47/482 kB | 44/786 kBProgress (3): 25 kB | 47/482 kB | 47/786 kB                                           Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar (25 kB at 43 kB/s)
+Progress (2): 49/482 kB | 47/786 kBProgress (2): 49/482 kB | 49/786 kBProgress (2): 52/482 kB | 49/786 kBProgress (2): 52/482 kB | 52/786 kBProgress (2): 55/482 kB | 52/786 kBProgress (2): 55/482 kB | 55/786 kBProgress (2): 58/482 kB | 55/786 kBProgress (2): 58/482 kB | 58/786 kBProgress (2): 60/482 kB | 58/786 kBProgress (2): 60/482 kB | 60/786 kBProgress (2): 63/482 kB | 60/786 kBProgress (2): 63/482 kB | 63/786 kBProgress (2): 66/482 kB | 63/786 kBProgress (2): 66/482 kB | 66/786 kBProgress (2): 70/482 kB | 66/786 kBProgress (2): 74/482 kB | 66/786 kBProgress (2): 78/482 kB | 66/786 kBProgress (2): 82/482 kB | 66/786 kBProgress (2): 82/482 kB | 70/786 kBProgress (2): 82/482 kB | 74/786 kBProgress (2): 82/482 kB | 78/786 kBProgress (2): 82/482 kB | 82/786 kBProgress (2): 86/482 kB | 82/786 kBProgress (2): 90/482 kB | 82/786 kBProgress (2): 94/482 kB | 82/786 kBProgress (2): 99/482 kB | 82/786 kBProgress (2): 99/482 kB | 86/786 kBProgress (2): 99/482 kB | 90/786 kBProgress (2): 99/482 kB | 94/786 kBProgress (2): 99/482 kB | 99/786 kBProgress (2): 99/482 kB | 103/786 kBProgress (2): 99/482 kB | 107/786 kBProgress (2): 99/482 kB | 109/786 kBProgress (2): 103/482 kB | 109/786 kBProgress (2): 107/482 kB | 109/786 kBProgress (2): 111/482 kB | 109/786 kBProgress (2): 115/482 kB | 109/786 kBProgress (2): 115/482 kB | 113/786 kBProgress (2): 115/482 kB | 117/786 kBProgress (2): 115/482 kB | 121/786 kBProgress (2): 115/482 kB | 125/786 kBProgress (2): 119/482 kB | 125/786 kBProgress (2): 123/482 kB | 125/786 kBProgress (2): 127/482 kB | 125/786 kBProgress (2): 131/482 kB | 125/786 kBProgress (2): 131/482 kB | 130/786 kBProgress (2): 131/482 kB | 134/786 kBProgress (2): 131/482 kB | 138/786 kBProgress (2): 131/482 kB | 142/786 kBProgress (2): 135/482 kB | 142/786 kBProgress (2): 140/482 kB | 142/786 kBProgress (2): 144/482 kB | 142/786 kBProgress (2): 148/482 kB | 142/786 kBProgress (2): 152/482 kB | 142/786 kBProgress (2): 152/482 kB | 146/786 kBProgress (2): 156/482 kB | 146/786 kBProgress (2): 156/482 kB | 150/786 kBProgress (2): 160/482 kB | 150/786 kBProgress (2): 160/482 kB | 154/786 kBProgress (2): 164/482 kB | 154/786 kBProgress (2): 164/482 kB | 158/786 kBProgress (2): 164/482 kB | 162/786 kBProgress (2): 164/482 kB | 166/786 kBProgress (2): 164/482 kB | 171/786 kBProgress (2): 164/482 kB | 175/786 kBProgress (2): 168/482 kB | 175/786 kBProgress (2): 172/482 kB | 175/786 kBProgress (2): 176/482 kB | 175/786 kBProgress (2): 180/482 kB | 175/786 kBProgress (2): 185/482 kB | 175/786 kBProgress (2): 185/482 kB | 179/786 kBProgress (2): 189/482 kB | 179/786 kBProgress (2): 189/482 kB | 183/786 kBProgress (2): 193/482 kB | 183/786 kBProgress (2): 193/482 kB | 187/786 kBProgress (2): 197/482 kB | 187/786 kBProgress (2): 197/482 kB | 191/786 kBProgress (2): 197/482 kB | 195/786 kBProgress (2): 197/482 kB | 199/786 kBProgress (2): 197/482 kB | 203/786 kBProgress (2): 197/482 kB | 207/786 kBProgress (2): 201/482 kB | 207/786 kBProgress (2): 205/482 kB | 207/786 kBProgress (2): 209/482 kB | 207/786 kBProgress (2): 213/482 kB | 207/786 kBProgress (2): 213/482 kB | 211/786 kBProgress (2): 213/482 kB | 216/786 kBProgress (2): 213/482 kB | 220/786 kBProgress (2): 213/482 kB | 224/786 kBProgress (2): 217/482 kB | 224/786 kBProgress (2): 221/482 kB | 224/786 kBProgress (2): 226/482 kB | 224/786 kBProgress (2): 230/482 kB | 224/786 kBProgress (2): 234/482 kB | 224/786 kBProgress (2): 238/482 kB | 224/786 kBProgress (2): 242/482 kB | 224/786 kBProgress (2): 246/482 kB | 224/786 kBProgress (2): 246/482 kB | 228/786 kBProgress (2): 246/482 kB | 232/786 kBProgress (2): 246/482 kB | 236/786 kBProgress (2): 246/482 kB | 240/786 kBProgress (2): 250/482 kB | 240/786 kBProgress (2): 254/482 kB | 240/786 kBProgress (2): 258/482 kB | 240/786 kBProgress (2): 262/482 kB | 240/786 kBProgress (2): 262/482 kB | 244/786 kBProgress (2): 262/482 kB | 248/786 kBProgress (2): 262/482 kB | 252/786 kBProgress (2): 262/482 kB | 257/786 kBProgress (2): 267/482 kB | 257/786 kBProgress (2): 271/482 kB | 257/786 kBProgress (2): 275/482 kB | 257/786 kBProgress (2): 279/482 kB | 257/786 kBProgress (2): 279/482 kB | 261/786 kBProgress (2): 279/482 kB | 265/786 kBProgress (2): 279/482 kB | 269/786 kBProgress (2): 279/482 kB | 273/786 kBProgress (2): 283/482 kB | 273/786 kBProgress (2): 287/482 kB | 273/786 kBProgress (2): 291/482 kB | 273/786 kBProgress (2): 295/482 kB | 273/786 kBProgress (2): 295/482 kB | 277/786 kBProgress (2): 295/482 kB | 281/786 kBProgress (2): 295/482 kB | 285/786 kBProgress (2): 295/482 kB | 289/786 kBProgress (2): 299/482 kB | 289/786 kBProgress (2): 303/482 kB | 289/786 kBProgress (2): 307/482 kB | 289/786 kBProgress (2): 312/482 kB | 289/786 kBProgress (2): 312/482 kB | 293/786 kBProgress (2): 312/482 kB | 298/786 kBProgress (2): 312/482 kB | 302/786 kBProgress (2): 312/482 kB | 306/786 kBProgress (2): 312/482 kB | 310/786 kBProgress (2): 316/482 kB | 310/786 kBProgress (2): 316/482 kB | 314/786 kBProgress (2): 320/482 kB | 314/786 kBProgress (2): 320/482 kB | 318/786 kBProgress (2): 324/482 kB | 318/786 kBProgress (2): 324/482 kB | 322/786 kBProgress (2): 328/482 kB | 322/786 kBProgress (2): 328/482 kB | 326/786 kBProgress (2): 328/482 kB | 328/786 kBProgress (2): 332/482 kB | 328/786 kBProgress (2): 336/482 kB | 328/786 kBProgress (2): 340/482 kB | 328/786 kBProgress (2): 344/482 kB | 328/786 kBProgress (2): 344/482 kB | 332/786 kBProgress (2): 344/482 kB | 337/786 kBProgress (2): 344/482 kB | 341/786 kBProgress (2): 344/482 kB | 345/786 kBProgress (2): 348/482 kB | 345/786 kBProgress (2): 353/482 kB | 345/786 kBProgress (2): 357/482 kB | 345/786 kBProgress (2): 361/482 kB | 345/786 kBProgress (2): 361/482 kB | 349/786 kBProgress (2): 361/482 kB | 353/786 kBProgress (2): 361/482 kB | 357/786 kBProgress (2): 361/482 kB | 361/786 kBProgress (2): 365/482 kB | 361/786 kBProgress (2): 369/482 kB | 361/786 kBProgress (2): 373/482 kB | 361/786 kBProgress (2): 377/482 kB | 361/786 kBProgress (2): 377/482 kB | 365/786 kBProgress (2): 377/482 kB | 369/786 kBProgress (2): 377/482 kB | 373/786 kBProgress (2): 377/482 kB | 378/786 kBProgress (2): 381/482 kB | 378/786 kBProgress (2): 385/482 kB | 378/786 kBProgress (2): 389/482 kB | 378/786 kBProgress (2): 393/482 kB | 378/786 kBProgress (2): 393/482 kB | 382/786 kBProgress (2): 393/482 kB | 386/786 kBProgress (2): 393/482 kB | 390/786 kBProgress (2): 393/482 kB | 394/786 kBProgress (2): 398/482 kB | 394/786 kBProgress (2): 402/482 kB | 394/786 kBProgress (2): 406/482 kB | 394/786 kBProgress (2): 410/482 kB | 394/786 kBProgress (2): 410/482 kB | 398/786 kBProgress (2): 410/482 kB | 402/786 kBProgress (2): 410/482 kB | 406/786 kBProgress (2): 410/482 kB | 410/786 kBProgress (2): 414/482 kB | 410/786 kBProgress (2): 418/482 kB | 410/786 kBProgress (2): 422/482 kB | 410/786 kBProgress (2): 426/482 kB | 410/786 kBProgress (2): 426/482 kB | 414/786 kBProgress (2): 426/482 kB | 418/786 kBProgress (2): 426/482 kB | 423/786 kBProgress (2): 426/482 kB | 427/786 kBProgress (2): 430/482 kB | 427/786 kBProgress (2): 434/482 kB | 427/786 kBProgress (2): 439/482 kB | 427/786 kBProgress (2): 443/482 kB | 427/786 kBProgress (2): 443/482 kB | 431/786 kBProgress (2): 443/482 kB | 435/786 kBProgress (2): 443/482 kB | 439/786 kBProgress (2): 443/482 kB | 443/786 kBProgress (2): 447/482 kB | 443/786 kBProgress (2): 451/482 kB | 443/786 kBProgress (2): 455/482 kB | 443/786 kBProgress (2): 459/482 kB | 443/786 kBProgress (2): 459/482 kB | 447/786 kBProgress (2): 459/482 kB | 451/786 kBProgress (2): 459/482 kB | 455/786 kBProgress (2): 459/482 kB | 459/786 kBProgress (2): 463/482 kB | 459/786 kBProgress (2): 467/482 kB | 459/786 kBProgress (2): 471/482 kB | 459/786 kBProgress (2): 475/482 kB | 459/786 kBProgress (2): 480/482 kB | 459/786 kBProgress (2): 482 kB | 459/786 kB    Progress (2): 482 kB | 464/786 kBProgress (2): 482 kB | 468/786 kBProgress (2): 482 kB | 472/786 kBProgress (2): 482 kB | 476/786 kBProgress (2): 482 kB | 480/786 kBProgress (2): 482 kB | 484/786 kBProgress (2): 482 kB | 488/786 kBProgress (2): 482 kB | 492/786 kBProgress (2): 482 kB | 496/786 kBProgress (2): 482 kB | 500/786 kBProgress (2): 482 kB | 504/786 kBProgress (2): 482 kB | 509/786 kBProgress (2): 482 kB | 513/786 kBProgress (2): 482 kB | 517/786 kBProgress (2): 482 kB | 521/786 kBProgress (2): 482 kB | 525/786 kBProgress (2): 482 kB | 529/786 kBProgress (2): 482 kB | 533/786 kBProgress (2): 482 kB | 537/786 kBProgress (2): 482 kB | 541/786 kBProgress (2): 482 kB | 545/786 kBProgress (2): 482 kB | 550/786 kBProgress (2): 482 kB | 554/786 kBProgress (2): 482 kB | 558/786 kBProgress (2): 482 kB | 562/786 kBProgress (2): 482 kB | 566/786 kBProgress (2): 482 kB | 570/786 kBProgress (2): 482 kB | 574/786 kBProgress (2): 482 kB | 578/786 kBProgress (2): 482 kB | 582/786 kBProgress (2): 482 kB | 586/786 kBProgress (2): 482 kB | 591/786 kBProgress (2): 482 kB | 595/786 kBProgress (2): 482 kB | 599/786 kBProgress (2): 482 kB | 603/786 kBProgress (2): 482 kB | 607/786 kBProgress (2): 482 kB | 611/786 kBProgress (2): 482 kB | 615/786 kBProgress (2): 482 kB | 619/786 kBProgress (2): 482 kB | 623/786 kBProgress (2): 482 kB | 627/786 kBProgress (2): 482 kB | 631/786 kBProgress (2): 482 kB | 636/786 kBProgress (2): 482 kB | 640/786 kBProgress (2): 482 kB | 644/786 kBProgress (2): 482 kB | 648/786 kBProgress (2): 482 kB | 652/786 kBProgress (2): 482 kB | 656/786 kBProgress (2): 482 kB | 660/786 kBProgress (2): 482 kB | 664/786 kBProgress (2): 482 kB | 668/786 kBProgress (2): 482 kB | 672/786 kBProgress (2): 482 kB | 677/786 kBProgress (2): 482 kB | 681/786 kBProgress (2): 482 kB | 685/786 kBProgress (2): 482 kB | 689/786 kBProgress (2): 482 kB | 693/786 kBProgress (2): 482 kB | 697/786 kBProgress (2): 482 kB | 701/786 kBProgress (2): 482 kB | 705/786 kBProgress (2): 482 kB | 709/786 kBProgress (2): 482 kB | 713/786 kBProgress (2): 482 kB | 717/786 kBProgress (2): 482 kB | 722/786 kBProgress (2): 482 kB | 726/786 kBProgress (2): 482 kB | 730/786 kBProgress (2): 482 kB | 734/786 kBProgress (2): 482 kB | 738/786 kBProgress (2): 482 kB | 742/786 kBProgress (2): 482 kB | 746/786 kBProgress (2): 482 kB | 750/786 kBProgress (2): 482 kB | 754/786 kBProgress (2): 482 kB | 758/786 kBProgress (2): 482 kB | 763/786 kBProgress (2): 482 kB | 767/786 kBProgress (2): 482 kB | 771/786 kBProgress (2): 482 kB | 775/786 kBProgress (2): 482 kB | 779/786 kBProgress (2): 482 kB | 783/786 kBProgress (2): 482 kB | 786 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/log4j/log4j/1.2.16/log4j-1.2.16.jar (482 kB at 455 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/netty/netty/3.2.2.Final/netty-3.2.2.Final.jar (786 kB at 671 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ efflux ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ efflux ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ efflux ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 40 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ efflux ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ efflux ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ efflux ---
+[WARNING] useSystemClassloader setting has no effect when not forking
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.biasedbit.efflux.packet.SourceDescriptionPacketTest
+82ca000b0000004501056b61726d6102044561726c070b48657920637261626d616e000000000046010552616e647900
+82ca00080000004501056b61726d6102044561726c00000000000046010552616e647900
+82ca00080000004501056b61726d6102044561726c00000000000046010552616e647900
+simple encoding length: 36
+compound encoding length: 44
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.biasedbit.efflux.packet.ControlPacketTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.biasedbit.efflux.packet.ReceiverReportPacketTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.biasedbit.efflux.packet.SourceChunkTest
+encoded readable bytes: 40
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.biasedbit.efflux.packet.SourceChunkItemsTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.biasedbit.efflux.packet.DataPacketTest
+packet = DataPacket{V=V2, X=false, CC=0, M=true, PT=8, SN=2, TS=69, SSRC=69, CSRCs=null, data=5 bytes}
+a088000200000045000000454545454545000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002f
+decoded = DataPacket{V=V2, X=false, CC=0, M=true, PT=8, SN=2, TS=69, SSRC=69, CSRCs=null, data=5 bytes}
+DataPacket{V=V2, X=false, CC=0, M=true, PT=34, SN=4664, TS=1248975, SSRC=1337740449, CSRCs=null, data=1133 bytes}
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.biasedbit.efflux.packet.SenderReportPacketTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.biasedbit.efflux.packet.ByePacketTest
+a2cb000f000000450000004615536f206c6f6e672c20637275656c20776f726c642e00000000000000000000000000000000000000000000000000000000001c
+a2cb0010000000450000004615536f206c6f6e672c20637275656c20776f726c642e00000000000000000000000000000000000000000000000000000000000000000020
+82cb0008000000450000004615536f206c6f6e672c20637275656c20776f726c642e0000
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.biasedbit.efflux.session.MultiParticipantSessionTest
+2021-11-27 11:24:39,070|DEBUG|Data & Control channels bound for RtpSession with id id.
+2021-11-27 11:24:39,075|DEBUG|RtpSession with id id terminated.
+Session terminated: RtpSession.terminate() called
+2021-11-27 11:24:39,078|DEBUG|Data & Control channels bound for RtpSession with id id.
+2021-11-27 11:24:39,079|TRACE|Discarded out of order packet from RtpParticipantInfo{ssrc=69} in session with id id (last SN was 11, packet SN was 10).
+2021-11-27 11:24:39,080|DEBUG|RtpSession with id id terminated.
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+
+Results :
+
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.598 s
+[INFO] Finished at: 2021-11-27T11:24:39+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.factor45.efflux:efflux:jar:0.4.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 96, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 117, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 182, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml
+[WARNING] Could not transfer metadata org.apache.maven.plugins:maven-jxr-plugin/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-jxr-plugin/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.7/maven-javadoc-plugin-2.7.pom
+Progress (1): 2.7/16 kBProgress (1): 5.5/16 kBProgress (1): 8.2/16 kBProgress (1): 11/16 kB Progress (1): 14/16 kBProgress (1): 16 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.7/maven-javadoc-plugin-2.7.pom (16 kB at 18 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/17/maven-plugins-17.pom
+Progress (1): 2.7/13 kBProgress (1): 5.5/13 kBProgress (1): 8.2/13 kBProgress (1): 11/13 kB Progress (1): 13 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/17/maven-plugins-17.pom (13 kB at 9.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.7/maven-javadoc-plugin-2.7.jar
+Progress (1): 2.7/274 kBProgress (1): 5.5/274 kBProgress (1): 8.2/274 kBProgress (1): 11/274 kB Progress (1): 14/274 kBProgress (1): 16/274 kBProgress (1): 19/274 kBProgress (1): 22/274 kBProgress (1): 25/274 kBProgress (1): 27/274 kBProgress (1): 30/274 kBProgress (1): 33/274 kBProgress (1): 37/274 kBProgress (1): 41/274 kBProgress (1): 45/274 kBProgress (1): 49/274 kBProgress (1): 53/274 kBProgress (1): 57/274 kBProgress (1): 62/274 kBProgress (1): 66/274 kBProgress (1): 70/274 kBProgress (1): 74/274 kBProgress (1): 78/274 kBProgress (1): 82/274 kBProgress (1): 86/274 kBProgress (1): 90/274 kBProgress (1): 94/274 kBProgress (1): 98/274 kBProgress (1): 103/274 kBProgress (1): 107/274 kBProgress (1): 111/274 kBProgress (1): 115/274 kBProgress (1): 119/274 kBProgress (1): 123/274 kBProgress (1): 127/274 kBProgress (1): 131/274 kBProgress (1): 135/274 kBProgress (1): 139/274 kBProgress (1): 143/274 kBProgress (1): 148/274 kBProgress (1): 152/274 kBProgress (1): 156/274 kBProgress (1): 160/274 kBProgress (1): 164/274 kBProgress (1): 168/274 kBProgress (1): 172/274 kBProgress (1): 176/274 kBProgress (1): 180/274 kBProgress (1): 184/274 kBProgress (1): 189/274 kBProgress (1): 193/274 kBProgress (1): 197/274 kBProgress (1): 201/274 kBProgress (1): 205/274 kBProgress (1): 209/274 kBProgress (1): 213/274 kBProgress (1): 217/274 kBProgress (1): 221/274 kBProgress (1): 225/274 kBProgress (1): 230/274 kBProgress (1): 234/274 kBProgress (1): 238/274 kBProgress (1): 242/274 kBProgress (1): 246/274 kBProgress (1): 250/274 kBProgress (1): 254/274 kBProgress (1): 258/274 kBProgress (1): 262/274 kBProgress (1): 266/274 kBProgress (1): 270/274 kBProgress (1): 274 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.7/maven-javadoc-plugin-2.7.jar (274 kB at 397 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-idea-plugin/2.2/maven-idea-plugin-2.2.pom
+Progress (1): 4.1/14 kBProgress (1): 8.2/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-idea-plugin/2.2/maven-idea-plugin-2.2.pom (14 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/11/maven-plugins-11.pom
+Progress (1): 4.1/10 kBProgress (1): 8.2/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/11/maven-plugins-11.pom (10 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-idea-plugin/2.2/maven-idea-plugin-2.2.jar
+Progress (1): 4.1/50 kBProgress (1): 8.2/50 kBProgress (1): 12/50 kB Progress (1): 16/50 kBProgress (1): 20/50 kBProgress (1): 25/50 kBProgress (1): 29/50 kBProgress (1): 33/50 kBProgress (1): 37/50 kBProgress (1): 41/50 kBProgress (1): 45/50 kBProgress (1): 49/50 kBProgress (1): 50 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-idea-plugin/2.2/maven-idea-plugin-2.2.jar (50 kB at 138 kB/s)
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/openclover/maven-metadata.xml
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[WARNING] Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+Downloading from maven-default-http-blocker: http://0.0.0.0/org/openclover/clover-maven-plugin/maven-metadata.xml
+[WARNING] Could not transfer metadata org.openclover:clover-maven-plugin/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/clover-maven-plugin/maven-metadata.xml
+[WARNING] org.openclover/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] org.apache.maven.plugins/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] org.codehaus.mojo/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[WARNING] org.openclover/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] org.apache.maven.plugins/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] org.codehaus.mojo/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[INFO] 
+[INFO] ---------------------< org.factor45.efflux:efflux >---------------------
+[INFO] Building efflux 0.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] org.openclover/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] org.apache.maven.plugins/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] org.codehaus.mojo/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ efflux ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ efflux ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 40 files (6 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 10 files (3 packages).
+[INFO] 41 test methods detected.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ efflux ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ efflux ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 40 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ efflux ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ efflux ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ efflux ---
+[WARNING] useSystemClassloader setting has no effect when not forking
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec
+Running com.biasedbit.efflux.packet.SourceDescriptionPacketTest
+82ca000b0000004501056b61726d6102044561726c070b48657920637261626d616e000000000046010552616e647900
+82ca00080000004501056b61726d6102044561726c00000000000046010552616e647900
+82ca00080000004501056b61726d6102044561726c00000000000046010552616e647900
+simple encoding length: 36
+compound encoding length: 44
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.biasedbit.efflux.packet.ControlPacketTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.biasedbit.efflux.packet.ReceiverReportPacketTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.biasedbit.efflux.packet.SourceChunkTest
+encoded readable bytes: 40
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.biasedbit.efflux.packet.SourceChunkItemsTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.biasedbit.efflux.packet.DataPacketTest
+DataPacket{V=V2, X=false, CC=0, M=true, PT=34, SN=4664, TS=1248975, SSRC=1337740449, CSRCs=null, data=1133 bytes}
+packet = DataPacket{V=V2, X=false, CC=0, M=true, PT=8, SN=2, TS=69, SSRC=69, CSRCs=null, data=5 bytes}
+a088000200000045000000454545454545000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002f
+decoded = DataPacket{V=V2, X=false, CC=0, M=true, PT=8, SN=2, TS=69, SSRC=69, CSRCs=null, data=5 bytes}
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.biasedbit.efflux.packet.SenderReportPacketTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.biasedbit.efflux.packet.ByePacketTest
+82cb0008000000450000004615536f206c6f6e672c20637275656c20776f726c642e0000
+a2cb000f000000450000004615536f206c6f6e672c20637275656c20776f726c642e00000000000000000000000000000000000000000000000000000000001c
+a2cb0010000000450000004615536f206c6f6e672c20637275656c20776f726c642e00000000000000000000000000000000000000000000000000000000000000000020
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.biasedbit.efflux.session.MultiParticipantSessionTest
+2021-11-27 11:24:47,035|DEBUG|Data & Control channels bound for RtpSession with id id.
+2021-11-27 11:24:47,039|DEBUG|RtpSession with id id terminated.
+Session terminated: RtpSession.terminate() called
+2021-11-27 11:24:47,040|DEBUG|Data & Control channels bound for RtpSession with id id.
+2021-11-27 11:24:47,041|TRACE|Discarded out of order packet from RtpParticipantInfo{ssrc=69} in session with id id (last SN was 11, packet SN was 10).
+2021-11-27 11:24:47,042|DEBUG|RtpSession with id id terminated.
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+
+Results :
+
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---------------------< org.factor45.efflux:efflux >---------------------
+[INFO] Building efflux 0.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] org.openclover/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] org.apache.maven.plugins/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] org.codehaus.mojo/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ efflux ---
+[INFO] 
+[INFO] ---------------------< org.factor45.efflux:efflux >---------------------
+[INFO] Building efflux 0.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] org.openclover/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.openclover/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/openclover/maven-metadata.xml
+[WARNING] org.apache.maven.plugins/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven.plugins/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/plugins/maven-metadata.xml
+[WARNING] org.codehaus.mojo/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.codehaus.mojo/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/codehaus/mojo/maven-metadata.xml
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ efflux ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn1538407045521396427resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.936 s
+[INFO] Finished at: 2021-11-27T11:24:51+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/40] com.biasedbit.efflux.packet.ByePacketTest#testDecode
+[test][2/40] com.biasedbit.efflux.packet.ByePacketTest#testDecode2
+[test][3/40] com.biasedbit.efflux.packet.ByePacketTest#testEncodeDecode
+[test][4/40] com.biasedbit.efflux.packet.ByePacketTest#testEncodeDecodeWithFixedBlockSize64
+[test][5/40] com.biasedbit.efflux.packet.ByePacketTest#testEncodeDecodeWithFixedBlockSize64AndCompound
+[test][6/40] com.biasedbit.efflux.packet.ControlPacketTest#testDecodeCompoundPacket
+[test][7/40] com.biasedbit.efflux.packet.DataPacketTest#testDecode
+[test][8/40] com.biasedbit.efflux.packet.DataPacketTest#testDecodeH263Packet
+[test][9/40] com.biasedbit.efflux.packet.DataPacketTest#testEncode
+[test][10/40] com.biasedbit.efflux.packet.DataPacketTest#testEncodeDecode
+[test][11/40] com.biasedbit.efflux.packet.DataPacketTest#testEncodeDecodeWithFixedBlockSize
+[test][12/40] com.biasedbit.efflux.packet.ReceiverReportPacketTest#testDecode
+[test][13/40] com.biasedbit.efflux.packet.SenderReportPacketTest#testDecode
+[test][14/40] com.biasedbit.efflux.packet.SenderReportPacketTest#testDecode2
+[test][15/40] com.biasedbit.efflux.packet.SenderReportPacketTest#testEncodeDecode
+[test][16/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testDecode
+[test][17/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncodeDecodeSimpleEmptyItem
+[test][18/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncodeDecodeSimpleItem
+[test][19/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncodeDecodeSimpleItemMaxLength
+[test][20/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncodeDecodeSimpleItemOverMaxLength
+[test][21/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncodeNull
+[test][22/40] com.biasedbit.efflux.packet.SourceChunkItemsTest#testEncoderDecodePrivItem
+[test][23/40] com.biasedbit.efflux.packet.SourceChunkTest#testEncodeDecode
+[test][24/40] com.biasedbit.efflux.packet.SourceDescriptionPacketTest#testDecode
+[test][25/40] com.biasedbit.efflux.packet.SourceDescriptionPacketTest#testDecode2
+[test][26/40] com.biasedbit.efflux.packet.SourceDescriptionPacketTest#testEncode
+[test][27/40] com.biasedbit.efflux.packet.SourceDescriptionPacketTest#testEncode2
+[test][28/40] com.biasedbit.efflux.packet.SourceDescriptionPacketTest#testEncodeAsPartOfCompound
+[test][29/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testAddReceiver
+[test][30/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testAssociationOfParticipantViaDataAddress
+[test][31/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testCleanup
+[test][32/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testFailAddReceiver
+[test][33/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testGetId
+[test][34/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testGetOrCreateParticipantFromDataPacket
+[test][35/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testGetOrCreateParticipantFromSdesChunk
+[test][36/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testNonAssociationOfParticipantViaDataAddress
+[test][37/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testRemoveReceiver
+[test][38/40] com.biasedbit.efflux.participant.DefaultParticipantDatabaseTest#testRemoveReceiver2
+[test][39/40] com.biasedbit.efflux.session.MultiParticipantSessionTest#testNewParticipantFromDataPacket
+[test][40/40] com.biasedbit.efflux.session.MultiParticipantSessionTest#testOutOfOrderDiscard
+[main][14/14] python parse_data.py
+  0%|          | 0/40 [00:00<?, ?it/s] 45%|████▌     | 18/40 [00:00<00:00, 178.58it/s] 90%|█████████ | 36/40 [00:00<00:00, 177.53it/s]100%|██████████| 40/40 [00:00<00:00, 176.42it/s]
+Done.

@@ -1,0 +1,1452 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/dius/java-faker repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.github.javafaker:javafaker >-------------------
+[INFO] Building Java Faker 1.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.7.0/maven-compiler-plugin-3.7.0.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.7.0/maven-compiler-plugin-3.7.0.pom (11 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.7.0/maven-compiler-plugin-3.7.0.jar
+Progress (1): 2.7/58 kBProgress (1): 5.5/58 kBProgress (1): 8.2/58 kBProgress (1): 11/58 kB Progress (1): 14/58 kBProgress (1): 16/58 kBProgress (1): 19/58 kBProgress (1): 22/58 kBProgress (1): 25/58 kBProgress (1): 27/58 kBProgress (1): 30/58 kBProgress (1): 33/58 kBProgress (1): 36/58 kBProgress (1): 38/58 kBProgress (1): 41/58 kBProgress (1): 44/58 kBProgress (1): 47/58 kBProgress (1): 49/58 kBProgress (1): 52/58 kBProgress (1): 56/58 kBProgress (1): 58 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.7.0/maven-compiler-plugin-3.7.0.jar (58 kB at 129 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.26/snakeyaml-1.26.pom
+Progress (1): 4.1/38 kBProgress (1): 8.2/38 kBProgress (1): 12/38 kB Progress (1): 16/38 kBProgress (1): 20/38 kBProgress (1): 25/38 kBProgress (1): 29/38 kBProgress (1): 33/38 kBProgress (1): 37/38 kBProgress (1): 38 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.26/snakeyaml-1.26.pom (38 kB at 124 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/github/mifmif/generex/1.0.2/generex-1.0.2.pom
+Progress (1): 4.1/11 kBProgress (1): 8.2/11 kBProgress (1): 11 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/com/github/mifmif/generex/1.0.2/generex-1.0.2.pom (11 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.pom
+Progress (1): 1.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.pom (1.1 kB at 3.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/reflections/reflections/0.9.11/reflections-0.9.11.pom
+Progress (1): 4.1/9.9 kBProgress (1): 8.2/9.9 kBProgress (1): 9.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/reflections/reflections/0.9.11/reflections-0.9.11.pom (9.9 kB at 33 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.pom
+Progress (1): 4.1/9.8 kBProgress (1): 8.2/9.8 kBProgress (1): 9.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.pom (9.8 kB at 33 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.pom
+Progress (1): 4.1/18 kBProgress (1): 8.2/18 kBProgress (1): 12/18 kB Progress (1): 16/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.pom (18 kB at 58 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.pom
+Progress (1): 4.1/10 kBProgress (1): 8.2/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.pom (10 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.3/byte-buddy-parent-1.9.3.pom
+Progress (1): 4.1/34 kBProgress (1): 8.2/34 kBProgress (1): 12/34 kB Progress (1): 16/34 kBProgress (1): 20/34 kBProgress (1): 25/34 kBProgress (1): 29/34 kBProgress (1): 33/34 kBProgress (1): 34 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.3/byte-buddy-parent-1.9.3.pom (34 kB at 110 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.pom
+Progress (1): 4.1/6.0 kBProgress (1): 6.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.pom (6.0 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.6/commons-validator-1.6.pom
+Progress (1): 4.1/12 kBProgress (1): 8.2/12 kBProgress (1): 12 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.6/commons-validator-1.6.pom (12 kB at 40 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.pom
+Progress (1): 4.1/14 kBProgress (1): 8.2/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.pom (14 kB at 48 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/33/commons-parent-33.pom
+Progress (1): 4.1/53 kBProgress (1): 8.2/53 kBProgress (1): 12/53 kB Progress (1): 16/53 kBProgress (1): 20/53 kBProgress (1): 25/53 kBProgress (1): 29/53 kBProgress (1): 33/53 kBProgress (1): 37/53 kBProgress (1): 41/53 kBProgress (1): 45/53 kBProgress (1): 49/53 kBProgress (1): 53 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/33/commons-parent-33.pom (53 kB at 166 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.pom
+Progress (1): 4.1/10 kBProgress (1): 8.2/10 kBProgress (1): 10 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.pom (10 kB at 34 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.26/snakeyaml-1.26-android.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/reflections/reflections/0.9.11/reflections-0.9.11.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+Progress (1): 4.1/14 kBProgress (1): 8.2/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar (14 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar
+Progress (1): 2.7/131 kBProgress (1): 5.5/131 kBProgress (2): 5.5/131 kB | 2.7/735 kBProgress (2): 8.2/131 kB | 2.7/735 kBProgress (2): 11/131 kB | 2.7/735 kB Progress (2): 11/131 kB | 5.5/735 kBProgress (2): 14/131 kB | 5.5/735 kBProgress (2): 14/131 kB | 8.2/735 kBProgress (2): 14/131 kB | 11/735 kB Progress (2): 14/131 kB | 14/735 kBProgress (2): 16/131 kB | 14/735 kBProgress (3): 16/131 kB | 14/735 kB | 2.7/304 kBProgress (3): 16/131 kB | 14/735 kB | 5.5/304 kBProgress (3): 16/131 kB | 14/735 kB | 8.2/304 kBProgress (3): 16/131 kB | 14/735 kB | 11/304 kB Progress (3): 16/131 kB | 14/735 kB | 14/304 kBProgress (3): 16/131 kB | 16/735 kB | 14/304 kBProgress (3): 19/131 kB | 16/735 kB | 14/304 kBProgress (4): 19/131 kB | 16/735 kB | 14/304 kB | 2.7/176 kBProgress (5): 19/131 kB | 16/735 kB | 14/304 kB | 2.7/176 kB | 4.1/565 kBProgress (5): 19/131 kB | 16/735 kB | 14/304 kB | 5.5/176 kB | 4.1/565 kBProgress (5): 19/131 kB | 16/735 kB | 14/304 kB | 5.5/176 kB | 8.2/565 kBProgress (5): 19/131 kB | 16/735 kB | 14/304 kB | 8.2/176 kB | 8.2/565 kBProgress (5): 19/131 kB | 19/735 kB | 14/304 kB | 8.2/176 kB | 8.2/565 kBProgress (5): 19/131 kB | 19/735 kB | 16/304 kB | 8.2/176 kB | 8.2/565 kBProgress (5): 19/131 kB | 19/735 kB | 16/304 kB | 8.2/176 kB | 12/565 kB Progress (5): 19/131 kB | 19/735 kB | 16/304 kB | 11/176 kB | 12/565 kB Progress (5): 19/131 kB | 19/735 kB | 16/304 kB | 11/176 kB | 16/565 kBProgress (5): 19/131 kB | 19/735 kB | 16/304 kB | 14/176 kB | 16/565 kBProgress (5): 22/131 kB | 19/735 kB | 16/304 kB | 14/176 kB | 16/565 kBProgress (5): 22/131 kB | 19/735 kB | 19/304 kB | 14/176 kB | 16/565 kBProgress (5): 22/131 kB | 22/735 kB | 19/304 kB | 14/176 kB | 16/565 kBProgress (5): 25/131 kB | 22/735 kB | 19/304 kB | 14/176 kB | 16/565 kBProgress (5): 25/131 kB | 22/735 kB | 19/304 kB | 16/176 kB | 16/565 kBProgress (5): 25/131 kB | 25/735 kB | 19/304 kB | 16/176 kB | 16/565 kBProgress (5): 25/131 kB | 25/735 kB | 19/304 kB | 16/176 kB | 20/565 kBProgress (5): 27/131 kB | 25/735 kB | 19/304 kB | 16/176 kB | 20/565 kBProgress (5): 27/131 kB | 25/735 kB | 22/304 kB | 16/176 kB | 20/565 kBProgress (5): 27/131 kB | 25/735 kB | 22/304 kB | 16/176 kB | 25/565 kBProgress (5): 27/131 kB | 25/735 kB | 22/304 kB | 19/176 kB | 25/565 kBProgress (5): 27/131 kB | 25/735 kB | 22/304 kB | 19/176 kB | 29/565 kBProgress (5): 27/131 kB | 25/735 kB | 25/304 kB | 19/176 kB | 29/565 kBProgress (5): 27/131 kB | 27/735 kB | 25/304 kB | 19/176 kB | 29/565 kBProgress (5): 27/131 kB | 27/735 kB | 25/304 kB | 19/176 kB | 33/565 kBProgress (5): 27/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 33/565 kBProgress (5): 30/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 33/565 kBProgress (5): 30/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 37/565 kBProgress (5): 30/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 41/565 kBProgress (5): 30/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 45/565 kBProgress (5): 30/131 kB | 27/735 kB | 25/304 kB | 22/176 kB | 49/565 kBProgress (5): 30/131 kB | 30/735 kB | 25/304 kB | 22/176 kB | 49/565 kBProgress (5): 30/131 kB | 30/735 kB | 27/304 kB | 22/176 kB | 49/565 kBProgress (5): 33/131 kB | 30/735 kB | 27/304 kB | 22/176 kB | 49/565 kBProgress (5): 33/131 kB | 30/735 kB | 27/304 kB | 25/176 kB | 49/565 kBProgress (5): 33/131 kB | 30/735 kB | 30/304 kB | 25/176 kB | 49/565 kBProgress (5): 33/131 kB | 30/735 kB | 30/304 kB | 27/176 kB | 49/565 kBProgress (5): 36/131 kB | 30/735 kB | 30/304 kB | 27/176 kB | 49/565 kBProgress (5): 36/131 kB | 33/735 kB | 30/304 kB | 27/176 kB | 49/565 kBProgress (5): 36/131 kB | 33/735 kB | 30/304 kB | 27/176 kB | 53/565 kBProgress (5): 36/131 kB | 36/735 kB | 30/304 kB | 27/176 kB | 53/565 kBProgress (5): 36/131 kB | 36/735 kB | 30/304 kB | 27/176 kB | 57/565 kBProgress (5): 36/131 kB | 36/735 kB | 30/304 kB | 27/176 kB | 61/565 kBProgress (5): 36/131 kB | 36/735 kB | 30/304 kB | 27/176 kB | 66/565 kBProgress (5): 36/131 kB | 36/735 kB | 33/304 kB | 27/176 kB | 66/565 kBProgress (5): 36/131 kB | 36/735 kB | 33/304 kB | 30/176 kB | 66/565 kBProgress (5): 38/131 kB | 36/735 kB | 33/304 kB | 30/176 kB | 66/565 kBProgress (5): 38/131 kB | 38/735 kB | 33/304 kB | 30/176 kB | 66/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 30/176 kB | 66/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 33/176 kB | 66/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 33/176 kB | 70/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 33/176 kB | 74/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 33/176 kB | 78/565 kBProgress (5): 38/131 kB | 38/735 kB | 36/304 kB | 33/176 kB | 82/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 33/176 kB | 82/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 36/176 kB | 82/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 82/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 86/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 90/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 94/565 kBProgress (5): 38/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 41/131 kB | 38/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 41/131 kB | 41/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 44/131 kB | 41/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 44/131 kB | 44/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 47/131 kB | 44/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 47/131 kB | 47/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 49/131 kB | 47/735 kB | 38/304 kB | 38/176 kB | 98/565 kBProgress (5): 49/131 kB | 47/735 kB | 41/304 kB | 38/176 kB | 98/565 kBProgress (5): 49/131 kB | 49/735 kB | 41/304 kB | 38/176 kB | 98/565 kBProgress (5): 49/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 98/565 kBProgress (5): 49/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 102/565 kBProgress (5): 49/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 106/565 kBProgress (5): 49/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 111/565 kBProgress (5): 49/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 115/565 kBProgress (5): 52/131 kB | 49/735 kB | 44/304 kB | 38/176 kB | 115/565 kBProgress (5): 52/131 kB | 49/735 kB | 47/304 kB | 38/176 kB | 115/565 kBProgress (5): 52/131 kB | 49/735 kB | 47/304 kB | 41/176 kB | 115/565 kBProgress (5): 52/131 kB | 49/735 kB | 47/304 kB | 44/176 kB | 115/565 kBProgress (5): 52/131 kB | 52/735 kB | 47/304 kB | 44/176 kB | 115/565 kBProgress (5): 55/131 kB | 52/735 kB | 47/304 kB | 44/176 kB | 115/565 kBProgress (5): 55/131 kB | 52/735 kB | 49/304 kB | 44/176 kB | 115/565 kBProgress (5): 55/131 kB | 55/735 kB | 49/304 kB | 44/176 kB | 115/565 kBProgress (5): 55/131 kB | 55/735 kB | 49/304 kB | 47/176 kB | 115/565 kBProgress (5): 58/131 kB | 55/735 kB | 49/304 kB | 47/176 kB | 115/565 kBProgress (5): 60/131 kB | 55/735 kB | 49/304 kB | 47/176 kB | 115/565 kBProgress (5): 60/131 kB | 55/735 kB | 49/304 kB | 49/176 kB | 115/565 kBProgress (5): 60/131 kB | 58/735 kB | 49/304 kB | 49/176 kB | 115/565 kBProgress (5): 60/131 kB | 58/735 kB | 49/304 kB | 49/176 kB | 119/565 kBProgress (5): 60/131 kB | 58/735 kB | 49/304 kB | 49/176 kB | 123/565 kBProgress (5): 60/131 kB | 58/735 kB | 49/304 kB | 49/176 kB | 127/565 kBProgress (5): 60/131 kB | 58/735 kB | 49/304 kB | 49/176 kB | 131/565 kBProgress (5): 60/131 kB | 58/735 kB | 52/304 kB | 49/176 kB | 131/565 kBProgress (5): 60/131 kB | 60/735 kB | 52/304 kB | 49/176 kB | 131/565 kBProgress (5): 63/131 kB | 60/735 kB | 52/304 kB | 49/176 kB | 131/565 kBProgress (5): 63/131 kB | 63/735 kB | 52/304 kB | 49/176 kB | 131/565 kBProgress (5): 63/131 kB | 63/735 kB | 55/304 kB | 49/176 kB | 131/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 49/176 kB | 131/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 52/176 kB | 131/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 52/176 kB | 135/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 52/176 kB | 139/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 52/176 kB | 143/565 kBProgress (5): 66/131 kB | 63/735 kB | 55/304 kB | 52/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 55/304 kB | 52/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 58/304 kB | 52/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 58/304 kB | 55/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 60/304 kB | 55/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 60/304 kB | 58/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 58/176 kB | 147/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 58/176 kB | 152/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 58/176 kB | 156/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 58/176 kB | 160/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 58/176 kB | 164/565 kBProgress (5): 66/131 kB | 66/735 kB | 63/304 kB | 60/176 kB | 164/565 kBProgress (5): 66/131 kB | 66/735 kB | 66/304 kB | 60/176 kB | 164/565 kBProgress (5): 66/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 164/565 kBProgress (5): 70/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 164/565 kBProgress (5): 74/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 164/565 kBProgress (5): 78/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 164/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 164/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 168/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 172/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 176/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 63/176 kB | 180/565 kBProgress (5): 82/131 kB | 66/735 kB | 66/304 kB | 66/176 kB | 180/565 kBProgress (5): 82/131 kB | 70/735 kB | 66/304 kB | 66/176 kB | 180/565 kBProgress (5): 82/131 kB | 74/735 kB | 66/304 kB | 66/176 kB | 180/565 kBProgress (5): 82/131 kB | 78/735 kB | 66/304 kB | 66/176 kB | 180/565 kBProgress (5): 82/131 kB | 82/735 kB | 66/304 kB | 66/176 kB | 180/565 kBProgress (5): 82/131 kB | 82/735 kB | 66/304 kB | 66/176 kB | 184/565 kBProgress (5): 82/131 kB | 82/735 kB | 66/304 kB | 66/176 kB | 188/565 kBProgress (5): 82/131 kB | 82/735 kB | 66/304 kB | 66/176 kB | 193/565 kBProgress (5): 82/131 kB | 82/735 kB | 66/304 kB | 66/176 kB | 197/565 kBProgress (5): 82/131 kB | 82/735 kB | 70/304 kB | 66/176 kB | 197/565 kBProgress (5): 82/131 kB | 82/735 kB | 74/304 kB | 66/176 kB | 197/565 kBProgress (5): 82/131 kB | 82/735 kB | 78/304 kB | 66/176 kB | 197/565 kBProgress (5): 82/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 197/565 kBProgress (5): 82/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 201/565 kBProgress (5): 86/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 201/565 kBProgress (5): 86/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 205/565 kBProgress (5): 90/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 205/565 kBProgress (5): 90/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 209/565 kBProgress (5): 94/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 209/565 kBProgress (5): 94/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 213/565 kBProgress (5): 99/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 213/565 kBProgress (5): 99/131 kB | 82/735 kB | 82/304 kB | 66/176 kB | 217/565 kBProgress (5): 99/131 kB | 86/735 kB | 82/304 kB | 66/176 kB | 217/565 kBProgress (5): 99/131 kB | 86/735 kB | 82/304 kB | 70/176 kB | 217/565 kBProgress (5): 99/131 kB | 90/735 kB | 82/304 kB | 70/176 kB | 217/565 kBProgress (5): 99/131 kB | 90/735 kB | 82/304 kB | 74/176 kB | 217/565 kBProgress (5): 99/131 kB | 94/735 kB | 82/304 kB | 74/176 kB | 217/565 kBProgress (5): 99/131 kB | 94/735 kB | 82/304 kB | 78/176 kB | 217/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 78/176 kB | 217/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 217/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 221/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 225/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 229/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 233/565 kBProgress (5): 99/131 kB | 99/735 kB | 82/304 kB | 82/176 kB | 238/565 kBProgress (5): 99/131 kB | 99/735 kB | 86/304 kB | 82/176 kB | 238/565 kBProgress (5): 99/131 kB | 99/735 kB | 86/304 kB | 82/176 kB | 242/565 kBProgress (5): 99/131 kB | 99/735 kB | 90/304 kB | 82/176 kB | 242/565 kBProgress (5): 99/131 kB | 99/735 kB | 90/304 kB | 82/176 kB | 246/565 kBProgress (5): 99/131 kB | 99/735 kB | 94/304 kB | 82/176 kB | 246/565 kBProgress (5): 99/131 kB | 99/735 kB | 94/304 kB | 82/176 kB | 250/565 kBProgress (5): 99/131 kB | 99/735 kB | 99/304 kB | 82/176 kB | 250/565 kBProgress (5): 103/131 kB | 99/735 kB | 99/304 kB | 82/176 kB | 250/565 kBProgress (5): 107/131 kB | 99/735 kB | 99/304 kB | 82/176 kB | 250/565 kBProgress (5): 111/131 kB | 99/735 kB | 99/304 kB | 82/176 kB | 250/565 kBProgress (5): 115/131 kB | 99/735 kB | 99/304 kB | 82/176 kB | 250/565 kBProgress (5): 115/131 kB | 99/735 kB | 99/304 kB | 86/176 kB | 250/565 kBProgress (5): 115/131 kB | 103/735 kB | 99/304 kB | 86/176 kB | 250/565 kBProgress (5): 115/131 kB | 103/735 kB | 99/304 kB | 90/176 kB | 250/565 kBProgress (5): 115/131 kB | 107/735 kB | 99/304 kB | 90/176 kB | 250/565 kBProgress (5): 115/131 kB | 107/735 kB | 99/304 kB | 94/176 kB | 250/565 kBProgress (5): 115/131 kB | 111/735 kB | 99/304 kB | 94/176 kB | 250/565 kBProgress (5): 115/131 kB | 111/735 kB | 99/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 99/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 103/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 107/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 111/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 115/304 kB | 99/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 115/304 kB | 103/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 115/304 kB | 107/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 115/304 kB | 111/176 kB | 250/565 kBProgress (5): 115/131 kB | 115/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 119/131 kB | 115/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 123/131 kB | 115/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 127/131 kB | 115/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 131 kB | 115/735 kB | 115/304 kB | 115/176 kB | 250/565 kB    Progress (5): 131 kB | 119/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 131 kB | 123/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 131 kB | 127/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 131 kB | 131/735 kB | 115/304 kB | 115/176 kB | 250/565 kBProgress (5): 131 kB | 131/735 kB | 115/304 kB | 115/176 kB | 254/565 kBProgress (5): 131 kB | 131/735 kB | 115/304 kB | 115/176 kB | 258/565 kBProgress (5): 131 kB | 131/735 kB | 115/304 kB | 115/176 kB | 262/565 kBProgress (5): 131 kB | 131/735 kB | 115/304 kB | 115/176 kB | 266/565 kBProgress (5): 131 kB | 131/735 kB | 119/304 kB | 115/176 kB | 266/565 kBProgress (5): 131 kB | 131/735 kB | 123/304 kB | 115/176 kB | 266/565 kBProgress (5): 131 kB | 131/735 kB | 127/304 kB | 115/176 kB | 266/565 kBProgress (5): 131 kB | 131/735 kB | 131/304 kB | 115/176 kB | 266/565 kBProgress (5): 131 kB | 131/735 kB | 131/304 kB | 115/176 kB | 270/565 kBProgress (5): 131 kB | 135/735 kB | 131/304 kB | 115/176 kB | 270/565 kBProgress (5): 131 kB | 135/735 kB | 131/304 kB | 115/176 kB | 274/565 kBProgress (5): 131 kB | 140/735 kB | 131/304 kB | 115/176 kB | 274/565 kBProgress (5): 131 kB | 140/735 kB | 131/304 kB | 115/176 kB | 279/565 kBProgress (5): 131 kB | 144/735 kB | 131/304 kB | 115/176 kB | 279/565 kBProgress (5): 131 kB | 144/735 kB | 131/304 kB | 115/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 115/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 119/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 123/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 127/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 283/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 287/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 291/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 295/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 299/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 303/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 307/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 311/565 kBProgress (5): 131 kB | 148/735 kB | 131/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 148/735 kB | 135/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 148/735 kB | 140/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 148/735 kB | 144/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 148/735 kB | 148/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 152/735 kB | 148/304 kB | 131/176 kB | 315/565 kBProgress (5): 131 kB | 152/735 kB | 148/304 kB | 135/176 kB | 315/565 kBProgress (5): 131 kB | 156/735 kB | 148/304 kB | 135/176 kB | 315/565 kBProgress (5): 131 kB | 156/735 kB | 148/304 kB | 140/176 kB | 315/565 kBProgress (5): 131 kB | 160/735 kB | 148/304 kB | 140/176 kB | 315/565 kBProgress (5): 131 kB | 160/735 kB | 148/304 kB | 144/176 kB | 315/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 144/176 kB | 315/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 315/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 319/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 324/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 328/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 332/565 kBProgress (5): 131 kB | 164/735 kB | 148/304 kB | 148/176 kB | 336/565 kBProgress (5): 131 kB | 168/735 kB | 148/304 kB | 148/176 kB | 336/565 kBProgress (5): 131 kB | 168/735 kB | 148/304 kB | 148/176 kB | 340/565 kBProgress (5): 131 kB | 172/735 kB | 148/304 kB | 148/176 kB | 340/565 kBProgress (5): 131 kB | 172/735 kB | 148/304 kB | 148/176 kB | 344/565 kBProgress (5): 131 kB | 176/735 kB | 148/304 kB | 148/176 kB | 344/565 kBProgress (5): 131 kB | 176/735 kB | 148/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 148/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 152/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 156/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 160/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 148/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 152/176 kB | 348/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 152/176 kB | 352/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 156/176 kB | 352/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 156/176 kB | 356/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 160/176 kB | 356/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 160/176 kB | 360/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 360/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 365/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 369/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 373/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 377/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 381/565 kBProgress (5): 131 kB | 180/735 kB | 164/304 kB | 164/176 kB | 385/565 kBProgress (5): 131 kB | 185/735 kB | 164/304 kB | 164/176 kB | 385/565 kBProgress (5): 131 kB | 185/735 kB | 164/304 kB | 164/176 kB | 389/565 kBProgress (5): 131 kB | 189/735 kB | 164/304 kB | 164/176 kB | 389/565 kBProgress (5): 131 kB | 189/735 kB | 164/304 kB | 164/176 kB | 393/565 kBProgress (5): 131 kB | 193/735 kB | 164/304 kB | 164/176 kB | 393/565 kBProgress (5): 131 kB | 193/735 kB | 164/304 kB | 164/176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 164/304 kB | 164/176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 164/304 kB | 168/176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 164/304 kB | 172/176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 168/304 kB | 172/176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 168/304 kB | 176 kB | 397/565 kB    Progress (5): 131 kB | 197/735 kB | 172/304 kB | 176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 176/304 kB | 176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 397/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 401/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 406/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 410/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 414/565 kBProgress (5): 131 kB | 197/735 kB | 180/304 kB | 176 kB | 418/565 kBProgress (5): 131 kB | 201/735 kB | 180/304 kB | 176 kB | 418/565 kBProgress (5): 131 kB | 201/735 kB | 180/304 kB | 176 kB | 422/565 kBProgress (5): 131 kB | 205/735 kB | 180/304 kB | 176 kB | 422/565 kBProgress (5): 131 kB | 205/735 kB | 180/304 kB | 176 kB | 426/565 kBProgress (5): 131 kB | 209/735 kB | 180/304 kB | 176 kB | 426/565 kBProgress (5): 131 kB | 209/735 kB | 180/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 180/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 185/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 189/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 193/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 430/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 434/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 438/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 442/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 446/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 451/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 455/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 459/565 kBProgress (5): 131 kB | 213/735 kB | 197/304 kB | 176 kB | 463/565 kBProgress (5): 131 kB | 217/735 kB | 197/304 kB | 176 kB | 463/565 kBProgress (5): 131 kB | 221/735 kB | 197/304 kB | 176 kB | 463/565 kBProgress (5): 131 kB | 226/735 kB | 197/304 kB | 176 kB | 463/565 kBProgress (5): 131 kB | 230/735 kB | 197/304 kB | 176 kB | 463/565 kBProgress (5): 131 kB | 230/735 kB | 197/304 kB | 176 kB | 467/565 kBProgress (5): 131 kB | 230/735 kB | 201/304 kB | 176 kB | 467/565 kBProgress (5): 131 kB | 230/735 kB | 201/304 kB | 176 kB | 471/565 kBProgress (5): 131 kB | 230/735 kB | 205/304 kB | 176 kB | 471/565 kBProgress (5): 131 kB | 230/735 kB | 209/304 kB | 176 kB | 471/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 471/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 475/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 479/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 483/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 487/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 492/565 kBProgress (5): 131 kB | 230/735 kB | 213/304 kB | 176 kB | 496/565 kBProgress (5): 131 kB | 234/735 kB | 213/304 kB | 176 kB | 496/565 kBProgress (5): 131 kB | 238/735 kB | 213/304 kB | 176 kB | 496/565 kBProgress (5): 131 kB | 242/735 kB | 213/304 kB | 176 kB | 496/565 kBProgress (5): 131 kB | 246/735 kB | 213/304 kB | 176 kB | 496/565 kBProgress (5): 131 kB | 246/735 kB | 213/304 kB | 176 kB | 500/565 kBProgress (5): 131 kB | 246/735 kB | 213/304 kB | 176 kB | 504/565 kBProgress (5): 131 kB | 246/735 kB | 213/304 kB | 176 kB | 508/565 kBProgress (5): 131 kB | 246/735 kB | 213/304 kB | 176 kB | 512/565 kBProgress (5): 131 kB | 246/735 kB | 217/304 kB | 176 kB | 512/565 kBProgress (5): 131 kB | 246/735 kB | 221/304 kB | 176 kB | 512/565 kBProgress (5): 131 kB | 246/735 kB | 226/304 kB | 176 kB | 512/565 kBProgress (5): 131 kB | 246/735 kB | 230/304 kB | 176 kB | 512/565 kBProgress (5): 131 kB | 246/735 kB | 230/304 kB | 176 kB | 516/565 kBProgress (5): 131 kB | 246/735 kB | 230/304 kB | 176 kB | 520/565 kBProgress (5): 131 kB | 246/735 kB | 230/304 kB | 176 kB | 524/565 kBProgress (5): 131 kB | 246/735 kB | 230/304 kB | 176 kB | 528/565 kBProgress (5): 131 kB | 250/735 kB | 230/304 kB | 176 kB | 528/565 kBProgress (5): 131 kB | 254/735 kB | 230/304 kB | 176 kB | 528/565 kBProgress (5): 131 kB | 258/735 kB | 230/304 kB | 176 kB | 528/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 528/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 532/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 537/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 541/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 545/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 549/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 553/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 557/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 561/565 kBProgress (5): 131 kB | 262/735 kB | 230/304 kB | 176 kB | 565 kB    Progress (5): 131 kB | 267/735 kB | 230/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 271/735 kB | 230/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 275/735 kB | 230/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 279/735 kB | 230/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 279/735 kB | 234/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 279/735 kB | 238/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 279/735 kB | 242/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 279/735 kB | 246/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 283/735 kB | 246/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 287/735 kB | 246/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 291/735 kB | 246/304 kB | 176 kB | 565 kBProgress (5): 131 kB | 295/735 kB | 246/304 kB | 176 kB | 565 kB                                                                Downloaded from central: https://repo.maven.apache.org/maven2/org/reflections/reflections/0.9.11/reflections-0.9.11.jar (131 kB at 158 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.jar
+Progress (4): 299/735 kB | 246/304 kB | 176 kB | 565 kBProgress (4): 303/735 kB | 246/304 kB | 176 kB | 565 kBProgress (4): 307/735 kB | 246/304 kB | 176 kB | 565 kBProgress (4): 312/735 kB | 246/304 kB | 176 kB | 565 kBProgress (4): 312/735 kB | 250/304 kB | 176 kB | 565 kBProgress (4): 312/735 kB | 254/304 kB | 176 kB | 565 kBProgress (4): 312/735 kB | 258/304 kB | 176 kB | 565 kBProgress (4): 312/735 kB | 262/304 kB | 176 kB | 565 kBProgress (4): 316/735 kB | 262/304 kB | 176 kB | 565 kBProgress (4): 320/735 kB | 262/304 kB | 176 kB | 565 kBProgress (4): 324/735 kB | 262/304 kB | 176 kB | 565 kBProgress (4): 328/735 kB | 262/304 kB | 176 kB | 565 kBProgress (4): 328/735 kB | 267/304 kB | 176 kB | 565 kBProgress (4): 328/735 kB | 271/304 kB | 176 kB | 565 kBProgress (4): 328/735 kB | 275/304 kB | 176 kB | 565 kBProgress (4): 328/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 332/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 336/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 340/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 344/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 348/735 kB | 279/304 kB | 176 kB | 565 kBProgress (4): 348/735 kB | 283/304 kB | 176 kB | 565 kBProgress (4): 353/735 kB | 283/304 kB | 176 kB | 565 kBProgress (4): 353/735 kB | 287/304 kB | 176 kB | 565 kBProgress (4): 357/735 kB | 287/304 kB | 176 kB | 565 kBProgress (4): 357/735 kB | 291/304 kB | 176 kB | 565 kBProgress (4): 361/735 kB | 291/304 kB | 176 kB | 565 kBProgress (4): 361/735 kB | 295/304 kB | 176 kB | 565 kBProgress (4): 361/735 kB | 299/304 kB | 176 kB | 565 kBProgress (4): 361/735 kB | 303/304 kB | 176 kB | 565 kBProgress (4): 361/735 kB | 304 kB | 176 kB | 565 kB    Progress (4): 365/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 369/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 373/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 377/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 381/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 385/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 389/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 393/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 398/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 402/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 406/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 410/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 414/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 418/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 422/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 426/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 430/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 434/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 439/735 kB | 304 kB | 176 kB | 565 kBProgress (4): 443/735 kB | 304 kB | 176 kB | 565 kB                                                   Downloaded from central: https://repo.maven.apache.org/maven2/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar (176 kB at 200 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.jar
+Progress (3): 447/735 kB | 304 kB | 565 kBProgress (3): 451/735 kB | 304 kB | 565 kBProgress (3): 455/735 kB | 304 kB | 565 kBProgress (3): 459/735 kB | 304 kB | 565 kBProgress (3): 463/735 kB | 304 kB | 565 kBProgress (3): 467/735 kB | 304 kB | 565 kBProgress (3): 471/735 kB | 304 kB | 565 kBProgress (3): 475/735 kB | 304 kB | 565 kBProgress (3): 480/735 kB | 304 kB | 565 kBProgress (3): 484/735 kB | 304 kB | 565 kBProgress (3): 488/735 kB | 304 kB | 565 kBProgress (3): 492/735 kB | 304 kB | 565 kBProgress (3): 496/735 kB | 304 kB | 565 kBProgress (3): 500/735 kB | 304 kB | 565 kBProgress (3): 504/735 kB | 304 kB | 565 kBProgress (3): 508/735 kB | 304 kB | 565 kBProgress (3): 512/735 kB | 304 kB | 565 kBProgress (3): 516/735 kB | 304 kB | 565 kBProgress (3): 520/735 kB | 304 kB | 565 kBProgress (3): 525/735 kB | 304 kB | 565 kBProgress (3): 529/735 kB | 304 kB | 565 kBProgress (3): 533/735 kB | 304 kB | 565 kBProgress (3): 537/735 kB | 304 kB | 565 kBProgress (3): 541/735 kB | 304 kB | 565 kBProgress (3): 545/735 kB | 304 kB | 565 kBProgress (3): 548/735 kB | 304 kB | 565 kBProgress (3): 552/735 kB | 304 kB | 565 kBProgress (3): 556/735 kB | 304 kB | 565 kBProgress (3): 560/735 kB | 304 kB | 565 kBProgress (3): 564/735 kB | 304 kB | 565 kBProgress (3): 568/735 kB | 304 kB | 565 kBProgress (3): 572/735 kB | 304 kB | 565 kBProgress (3): 576/735 kB | 304 kB | 565 kBProgress (3): 580/735 kB | 304 kB | 565 kB                                          Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.23.4/mockito-core-2.23.4.jar (565 kB at 615 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.6/commons-validator-1.6.jar
+Progress (2): 584/735 kB | 304 kBProgress (2): 589/735 kB | 304 kBProgress (2): 593/735 kB | 304 kBProgress (2): 597/735 kB | 304 kBProgress (2): 601/735 kB | 304 kBProgress (2): 605/735 kB | 304 kBProgress (2): 609/735 kB | 304 kBProgress (2): 613/735 kB | 304 kBProgress (2): 617/735 kB | 304 kBProgress (2): 621/735 kB | 304 kBProgress (2): 625/735 kB | 304 kBProgress (2): 630/735 kB | 304 kBProgress (2): 634/735 kB | 304 kBProgress (2): 638/735 kB | 304 kBProgress (2): 642/735 kB | 304 kBProgress (2): 646/735 kB | 304 kBProgress (2): 650/735 kB | 304 kBProgress (2): 654/735 kB | 304 kBProgress (2): 658/735 kB | 304 kBProgress (2): 662/735 kB | 304 kBProgress (2): 666/735 kB | 304 kBProgress (2): 671/735 kB | 304 kBProgress (2): 675/735 kB | 304 kBProgress (2): 679/735 kB | 304 kBProgress (2): 683/735 kB | 304 kBProgress (2): 687/735 kB | 304 kBProgress (2): 691/735 kB | 304 kBProgress (2): 695/735 kB | 304 kBProgress (2): 699/735 kB | 304 kBProgress (2): 703/735 kB | 304 kBProgress (2): 707/735 kB | 304 kBProgress (2): 711/735 kB | 304 kBProgress (2): 716/735 kB | 304 kBProgress (2): 720/735 kB | 304 kBProgress (2): 724/735 kB | 304 kBProgress (2): 728/735 kB | 304 kBProgress (2): 732/735 kB | 304 kBProgress (2): 735 kB | 304 kB    Progress (3): 735 kB | 304 kB | 0/3.2 MBProgress (3): 735 kB | 304 kB | 0/3.2 MBProgress (3): 735 kB | 304 kB | 0/3.2 MBProgress (3): 735 kB | 304 kB | 0.1/3.2 MBProgress (3): 735 kB | 304 kB | 0.1/3.2 MBProgress (3): 735 kB | 304 kB | 0.1/3.2 MBProgress (3): 735 kB | 304 kB | 0.1/3.2 MBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 4.1/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 4.1/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 8.2/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 12/43 kB Progress (4): 735 kB | 304 kB | 0.1/3.2 MB | 16/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 20/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 25/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 29/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 33/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 37/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 41/43 kBProgress (4): 735 kB | 304 kB | 0.1/3.2 MB | 43 kB   Progress (4): 735 kB | 304 kB | 0.1/3.2 MB | 43 kBProgress (4): 735 kB | 304 kB | 0.2/3.2 MB | 43 kB                                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.26/snakeyaml-1.26-android.jar (304 kB at 287 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar
+Progress (4): 735 kB | 0.2/3.2 MB | 43 kB | 4.1/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 8.2/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 12/186 kB Progress (4): 735 kB | 0.2/3.2 MB | 43 kB | 16/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 20/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 25/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 29/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 33/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 37/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 41/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 45/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 49/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 53/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 57/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 61/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 66/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 70/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 74/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 78/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 82/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 86/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 90/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 94/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 98/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 102/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 106/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 111/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 115/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 119/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 123/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 127/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 131/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 135/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 139/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 143/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 147/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 152/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 156/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 160/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 164/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 168/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 172/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 176/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 180/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 184/186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 186 kB    Progress (4): 735 kB | 0.2/3.2 MB | 43 kB | 186 kBProgress (4): 735 kB | 0.2/3.2 MB | 43 kB | 186 kB                                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar (735 kB at 654 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar
+Progress (3): 0.2/3.2 MB | 43 kB | 186 kBProgress (3): 0.2/3.2 MB | 43 kB | 186 kBProgress (3): 0.2/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.3/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.4/3.2 MB | 43 kB | 186 kBProgress (3): 0.5/3.2 MB | 43 kB | 186 kBProgress (3): 0.5/3.2 MB | 43 kB | 186 kBProgress (3): 0.5/3.2 MB | 43 kB | 186 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 4.1/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 8.2/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 12/234 kB Progress (4): 0.5/3.2 MB | 43 kB | 186 kB | 16/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 20/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 25/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 29/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 33/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 37/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 41/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 45/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 49/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 53/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 57/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 61/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 66/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 70/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 74/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 78/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 82/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 86/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 90/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 94/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 98/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 102/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 106/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 111/234 kBProgress (4): 0.5/3.2 MB | 43 kB | 186 kB | 115/234 kB                                                      Downloaded from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.6/commons-validator-1.6.jar (186 kB at 152 kB/s)
+Progress (3): 0.5/3.2 MB | 43 kB | 119/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 123/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 127/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 131/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 135/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 139/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 143/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 147/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 152/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 156/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 160/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 164/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 168/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 172/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 176/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 180/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 184/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 188/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 193/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 197/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 201/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 205/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 209/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 213/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 217/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 221/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 225/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 229/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 233/234 kBProgress (3): 0.5/3.2 MB | 43 kB | 234 kB    Progress (3): 0.5/3.2 MB | 43 kB | 234 kBProgress (3): 0.5/3.2 MB | 43 kB | 234 kB                                         Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.3/byte-buddy-agent-1.9.3.jar (43 kB at 35 kB/s)
+Progress (2): 0.5/3.2 MB | 234 kBProgress (2): 0.6/3.2 MB | 234 kBProgress (2): 0.6/3.2 MB | 234 kBProgress (2): 0.6/3.2 MB | 234 kBProgress (3): 0.6/3.2 MB | 234 kB | 4.1/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 8.2/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 8.2/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 12/146 kB Progress (3): 0.6/3.2 MB | 234 kB | 16/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 20/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 25/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 29/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 33/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 37/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 41/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 45/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 49/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 53/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 57/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 57/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 61/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 66/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 70/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 70/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 74/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 78/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 82/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 86/146 kBProgress (3): 0.6/3.2 MB | 234 kB | 90/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 90/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 94/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 98/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 102/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 106/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 111/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 115/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 119/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 123/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 127/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 131/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 135/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 139/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 143/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 143/146 kBProgress (3): 0.7/3.2 MB | 234 kB | 146 kB    Progress (3): 0.7/3.2 MB | 234 kB | 146 kBProgress (3): 0.7/3.2 MB | 234 kB | 146 kBProgress (3): 0.7/3.2 MB | 234 kB | 146 kBProgress (3): 0.7/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.8/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 0.9/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.0/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.1/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.2/3.2 MB | 234 kB | 146 kBProgress (3): 1.3/3.2 MB | 234 kB | 146 kBProgress (3): 1.3/3.2 MB | 234 kB | 146 kB                                          Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar (234 kB at 168 kB/s)
+Progress (2): 1.3/3.2 MB | 146 kBProgress (2): 1.3/3.2 MB | 146 kBProgress (2): 1.3/3.2 MB | 146 kBProgress (2): 1.3/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.4/3.2 MB | 146 kBProgress (2): 1.5/3.2 MB | 146 kBProgress (2): 1.5/3.2 MB | 146 kBProgress (2): 1.5/3.2 MB | 146 kBProgress (2): 1.5/3.2 MB | 146 kBProgress (2): 1.5/3.2 MB | 146 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar (146 kB at 104 kB/s)
+Progress (1): 1.5/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.6/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.7/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.8/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 1.9/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.0/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.1/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.2/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.3/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.4/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.5/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.6/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.7/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.8/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 2.9/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.0/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.1/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2/3.2 MBProgress (1): 3.2 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.3/byte-buddy-1.9.3.jar (3.2 MB at 1.9 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ javafaker ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ javafaker ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ javafaker ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 223 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ javafaker ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/0.9.2/plexus-java-0.9.2.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/0.9.2/plexus-java-0.9.2.pom (2.4 kB at 8.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/0.9.2/plexus-languages-0.9.2.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/0.9.2/plexus-languages-0.9.2.pom (2.3 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_BETA/asm-6.0_BETA.pom
+Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_BETA/asm-6.0_BETA.pom (1.9 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/6.0_BETA/asm-parent-6.0_BETA.pom
+Progress (1): 4.1/5.5 kBProgress (1): 5.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/6.0_BETA/asm-parent-6.0_BETA.pom (5.5 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.8.2/plexus-compiler-api-2.8.2.pom
+Progress (1): 867 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.8.2/plexus-compiler-api-2.8.2.pom (867 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.8.2/plexus-compiler-2.8.2.pom
+Progress (1): 4.1/4.9 kBProgress (1): 4.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.8.2/plexus-compiler-2.8.2.pom (4.9 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.2/plexus-compiler-manager-2.8.2.pom
+Progress (1): 692 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.2/plexus-compiler-manager-2.8.2.pom (692 B at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.2/plexus-compiler-javac-2.8.2.pom
+Progress (1): 771 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.2/plexus-compiler-javac-2.8.2.pom (771 B at 2.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.8.2/plexus-compilers-2.8.2.pom
+Progress (1): 1.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.8.2/plexus-compilers-2.8.2.pom (1.3 kB at 4.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/0.9.2/plexus-java-0.9.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_BETA/asm-6.0_BETA.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.8.2/plexus-compiler-api-2.8.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.2/plexus-compiler-manager-2.8.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.2/plexus-compiler-javac-2.8.2.jar
+Progress (1): 4.1/56 kBProgress (1): 8.2/56 kBProgress (1): 12/56 kB Progress (1): 16/56 kBProgress (1): 20/56 kBProgress (1): 25/56 kBProgress (1): 29/56 kBProgress (1): 33/56 kBProgress (1): 37/56 kBProgress (2): 37/56 kB | 4.1/4.7 kBProgress (2): 41/56 kB | 4.1/4.7 kBProgress (2): 45/56 kB | 4.1/4.7 kBProgress (2): 49/56 kB | 4.1/4.7 kBProgress (2): 49/56 kB | 4.7 kB    Progress (2): 53/56 kB | 4.7 kBProgress (2): 56 kB | 4.7 kB   Progress (3): 56 kB | 4.7 kB | 4.1/20 kBProgress (4): 56 kB | 4.7 kB | 4.1/20 kB | 4.1/26 kBProgress (4): 56 kB | 4.7 kB | 8.2/20 kB | 4.1/26 kBProgress (4): 56 kB | 4.7 kB | 12/20 kB | 4.1/26 kB Progress (4): 56 kB | 4.7 kB | 12/20 kB | 8.2/26 kBProgress (4): 56 kB | 4.7 kB | 12/20 kB | 12/26 kB Progress (4): 56 kB | 4.7 kB | 12/20 kB | 16/26 kBProgress (4): 56 kB | 4.7 kB | 16/20 kB | 16/26 kBProgress (4): 56 kB | 4.7 kB | 20 kB | 16/26 kB   Progress (4): 56 kB | 4.7 kB | 20 kB | 20/26 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 20/26 kB | 4.1/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 25/26 kB | 4.1/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 25/26 kB | 8.2/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 8.2/31 kB   Progress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 12/31 kB Progress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 16/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 20/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 25/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 29/31 kBProgress (5): 56 kB | 4.7 kB | 20 kB | 26 kB | 31 kB                                                       Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.2/plexus-compiler-javac-2.8.2.jar (20 kB at 69 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.2/plexus-compiler-manager-2.8.2.jar (4.7 kB at 16 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_BETA/asm-6.0_BETA.jar (56 kB at 186 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.8.2/plexus-compiler-api-2.8.2.jar (26 kB at 87 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/0.9.2/plexus-java-0.9.2.jar (31 kB at 103 kB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 101 source files to /Users/seyoung/data/repo/target/classes
+[INFO] /Users/seyoung/data/repo/src/main/java/com/github/javafaker/service/FakeValuesService.java: /Users/seyoung/data/repo/src/main/java/com/github/javafaker/service/FakeValuesService.java uses unchecked or unsafe operations.
+[INFO] /Users/seyoung/data/repo/src/main/java/com/github/javafaker/service/FakeValuesService.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ javafaker ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ javafaker ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 110 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ javafaker ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.javafaker.FinanceTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.349 sec
+Running com.github.javafaker.DogTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Running com.github.javafaker.JobTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.javafaker.FileTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running com.github.javafaker.UniversityTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.javafaker.PhoneNumberTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.374 sec
+Running com.github.javafaker.LebowskiTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.javafaker.ShakespeareTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.HackerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.SpaceTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.javafaker.DiseaseTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.74 sec
+Running com.github.javafaker.AppTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.javafaker.InternetTest
+Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.534 sec
+Running com.github.javafaker.GenderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.CatTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.AnimalTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.WeatherTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.HarryPotterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.GameOfThronesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.javafaker.DateAndTimeTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+Running com.github.javafaker.CryptoTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.integration.UkLocalDirectivesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.github.javafaker.SuperheroTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.AquaTeenHungerForceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.RockBandTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.ColorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.PokemonTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.MedicalTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.github.javafaker.MatzTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.LoremTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.javafaker.PhotographyTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.javafaker.DemographicTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.NumberTest
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 0.75 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.918918918918919 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.9 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.9032258064516129 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.8533333333333334 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.9195402298850575 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.8839285714285714 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.904 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.8978102189781022 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.9 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.8888888888888888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.8628571428571429 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.8663101604278075 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.8915094339622641 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.8977777777777778 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.8734177215189873 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.896 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.8893129770992366 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.8618181818181818 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.867595818815331 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.8766666666666667 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.907051282051282 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.9015384615384615 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.8902077151335311 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.9171428571428571 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.8922651933701657 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.896 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.8552971576227391 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.875 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8737864077669902 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.8917647058823529 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.8901601830663616 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.8888888888888888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.8852813852813853 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.8757894736842106 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.891170431211499 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 1.0 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.918918918918919 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.84 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.9032258064516129 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.8666666666666667 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.896551724137931 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.86 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.8928571428571429 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.864 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.8467153284671532 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.86 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.9074074074074074 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.8742857142857143 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.8877005347593583 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.86 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.910377358490566 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.9066666666666666 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.8776371308016878 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.916 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.8587786259541985 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.8989547038327527 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.89 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.8942307692307693 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.8523076923076923 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.887240356083086 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.9057142857142857 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.8812154696132597 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.896 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.8708010335917312 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.8775 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8859223300970874 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.8964705882352941 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.8718535469107551 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.8917748917748918 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.8726899383983573 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 1.0 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.8918918918918919 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.8 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.9032258064516129 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.9466666666666667 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.8620689655172413 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.91 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.8571428571428571 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.872 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.8978102189781022 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.8950617283950617 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.8971428571428571 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.8983957219251337 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.8632075471698113 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.8977777777777778 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.9029535864978903 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.8740458015267175 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.9054545454545454 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.8606271777003485 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.8933333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.8846153846153846 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.9107692307692308 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.8783382789317508 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.8628571428571429 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.8674033149171271 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.904 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.8837209302325582 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.8775 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8859223300970874 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.8894117647058823 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.8672768878718535 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.8888888888888888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.8701298701298701 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.8989473684210526 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.9014373716632443 percent unique.
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.388 sec
+Running com.github.javafaker.ZeldaTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.StarTrekTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.EsportsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.RelationshipTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.SlackEmojiTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.HitchhikersGuideToTheGalaxyTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.CodeTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.752 sec
+Running com.github.javafaker.LordOfTheRingsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.AddressTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.555 sec
+Running com.github.javafaker.DragonBallTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.NameTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+Running com.github.javafaker.ElderScrollsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.github.javafaker.AncientTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.TwinPeaksTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.FakerTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running com.github.javafaker.AvatarTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.BuffyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.ArtistTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.FriendsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.BackToTheFutureTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.NationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.github.javafaker.CurrencyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.CoinTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.EnglandFootBallTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.MusicTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.OptionsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.TeamTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.CommerceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.BookTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.javafaker.BusinessTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.CompanyTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running com.github.javafaker.RobinTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.HobbitTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.BasketballTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running com.github.javafaker.BojackHorsemanTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running com.github.javafaker.matchers.IsANumberTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.matchers.IsStringWithContentsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.KaamelottTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.service.RandomServiceTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.javafaker.service.FakeValuesGroupingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.service.FakeValuesServiceTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec
+Running com.github.javafaker.service.FakeValuesTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.javafaker.FunnyNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.ChuckNorrisTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.AviationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.HowIMetYourMotherTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.YodaTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.DuneTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.445 sec
+Running com.github.javafaker.BoolTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.idnumbers.SwedishIdNumberTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.ProgrammingLanguageTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.PrincessBrideTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.StockTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.javafaker.FoodTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.javafaker.EducatorTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.OverwatchTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.javafaker.BeerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.WitcherTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.javafaker.BarcodeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.RandomFakerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.LeagueOfLegendsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.javafaker.HipsterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.SipTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.github.javafaker.StarCraftTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.RickAndMortyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.CountryTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.github.javafaker.IdNumberTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.208 sec
+
+Results :
+
+Tests run: 577, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.912 s
+[INFO] Finished at: 2021-11-27T13:15:27+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/eluder/coveralls/coveralls-maven-plugin/4.3.0/coveralls-maven-plugin-4.3.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eluder/coveralls/coveralls-maven-plugin/4.3.0/coveralls-maven-plugin-4.3.0.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eluder/eluder-parent/8/eluder-parent-8.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eluder/eluder-parent/8/eluder-parent-8.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eluder/coveralls/coveralls-maven-plugin/4.3.0/coveralls-maven-plugin-4.3.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eluder/coveralls/coveralls-maven-plugin/4.3.0/coveralls-maven-plugin-4.3.0.jar (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/failsafe-maven-plugin/2.4.3-alpha-1/failsafe-maven-plugin-2.4.3-alpha-1.pom
+Progress (1): 2.7/7.8 kBProgress (1): 5.5/7.8 kBProgress (1): 7.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/failsafe-maven-plugin/2.4.3-alpha-1/failsafe-maven-plugin-2.4.3-alpha-1.pom (7.8 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/21/mojo-parent-21.pom
+Progress (1): 2.7/19 kBProgress (1): 5.5/19 kBProgress (1): 8.2/19 kBProgress (1): 11/19 kB Progress (1): 14/19 kBProgress (1): 16/19 kBProgress (1): 19 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/21/mojo-parent-21.pom (19 kB at 60 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/failsafe-maven-plugin/2.4.3-alpha-1/failsafe-maven-plugin-2.4.3-alpha-1.jar
+Progress (1): 2.7/39 kBProgress (1): 5.5/39 kBProgress (1): 8.2/39 kBProgress (1): 11/39 kB Progress (1): 14/39 kBProgress (1): 16/39 kBProgress (1): 19/39 kBProgress (1): 22/39 kBProgress (1): 25/39 kBProgress (1): 27/39 kBProgress (1): 30/39 kBProgress (1): 33/39 kBProgress (1): 36/39 kBProgress (1): 39 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/failsafe-maven-plugin/2.4.3-alpha-1/failsafe-maven-plugin-2.4.3-alpha-1.jar (39 kB at 95 kB/s)
+[INFO] 
+[INFO] -------------------< com.github.javafaker:javafaker >-------------------
+[INFO] Building Java Faker 1.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ javafaker ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ javafaker ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 101 files (4 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 110 files (6 packages).
+[INFO] 571 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ javafaker ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ javafaker ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 223 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ javafaker ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 101 source files to /Users/seyoung/data/repo/target/classes
+[INFO] /Users/seyoung/data/repo/target/clover/src-instrumented/com/github/javafaker/service/FakeValuesService.java: /Users/seyoung/data/repo/target/clover/src-instrumented/com/github/javafaker/service/FakeValuesService.java uses unchecked or unsafe operations.
+[INFO] /Users/seyoung/data/repo/target/clover/src-instrumented/com/github/javafaker/service/FakeValuesService.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ javafaker ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ javafaker ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 110 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ javafaker ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.javafaker.FinanceTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.504 sec
+Running com.github.javafaker.DogTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running com.github.javafaker.JobTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.github.javafaker.FileTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Running com.github.javafaker.UniversityTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.PhoneNumberTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.518 sec
+Running com.github.javafaker.LebowskiTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.javafaker.ShakespeareTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.javafaker.HackerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.github.javafaker.SpaceTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Running com.github.javafaker.DiseaseTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.289 sec
+Running com.github.javafaker.AppTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.github.javafaker.InternetTest
+Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.292 sec
+Running com.github.javafaker.GenderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.CatTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.github.javafaker.AnimalTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.WeatherTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.javafaker.HarryPotterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.GameOfThronesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running com.github.javafaker.DateAndTimeTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.393 sec
+Running com.github.javafaker.CryptoTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.javafaker.integration.UkLocalDirectivesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.javafaker.SuperheroTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.javafaker.AquaTeenHungerForceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.RockBandTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.ColorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.PokemonTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.javafaker.MedicalTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.github.javafaker.MatzTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.LoremTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+Running com.github.javafaker.PhotographyTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running com.github.javafaker.DemographicTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.NumberTest
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 1.0 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 1.0 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.8648648648648649 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.82 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.9032258064516129 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.9080459770114943 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.9 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.875 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.872 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.8905109489051095 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.9 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.8827160493827161 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.8971428571428571 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.9037433155080213 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.86 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.9056603773584906 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.919831223628692 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.86 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.8854961832061069 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.9018181818181819 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.8885017421602788 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.8633333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.9102564102564102 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.8953846153846153 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.8813056379821959 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.9085714285714286 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.8922651933701657 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.8853333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.8837209302325582 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.875 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8932038834951457 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.8847058823529412 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.9016018306636155 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.8933333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.9134199134199135 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.8926315789473684 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.8706365503080082 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 0.9166666666666666 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.8648648648648649 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.8709677419354839 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.8933333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.8275862068965517 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.85 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.8839285714285714 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.904 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.8248175182481752 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.9066666666666666 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.8827160493827161 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.8983957219251337 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.87 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.8632075471698113 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.9022222222222223 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.8776371308016878 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.9007633587786259 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.9018181818181819 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.8745644599303136 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.8833333333333333 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.8974358974358975 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.8769230769230769 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.884272997032641 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.8685714285714285 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.8756906077348067 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.8733850129198967 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.8825 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8689320388349514 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.8924485125858124 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.8866666666666667 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.8831168831168831 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.8947368421052632 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.9014373716632443 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -25 to 25 is 0.9166666666666666 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -50 to 50 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -75 to 75 is 0.972972972972973 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -100 to 100 is 0.9 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -125 to 125 is 0.8548387096774194 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -150 to 150 is 0.92 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -175 to 175 is 0.8850574712643678 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -200 to 200 is 0.89 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -225 to 225 is 0.8928571428571429 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -250 to 250 is 0.872 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -275 to 275 is 0.9124087591240876 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -300 to 300 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -325 to 325 is 0.8580246913580247 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -350 to 350 is 0.8857142857142857 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -375 to 375 is 0.8823529411764706 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -400 to 400 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -425 to 425 is 0.9198113207547169 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -450 to 450 is 0.8622222222222222 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -475 to 475 is 0.8438818565400844 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -500 to 500 is 0.892 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -525 to 525 is 0.8816793893129771 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -550 to 550 is 0.8981818181818182 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -575 to 575 is 0.8954703832752613 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -600 to 600 is 0.8966666666666666 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -625 to 625 is 0.8685897435897436 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -650 to 650 is 0.8953846153846153 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -675 to 675 is 0.8605341246290801 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -700 to 700 is 0.8742857142857143 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -725 to 725 is 0.9060773480662984 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -750 to 750 is 0.88 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -775 to 775 is 0.9043927648578811 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -800 to 800 is 0.89 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -825 to 825 is 0.8689320388349514 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -850 to 850 is 0.8658823529411764 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -875 to 875 is 0.8741418764302059 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -900 to 900 is 0.8888888888888888 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -925 to 925 is 0.8982683982683982 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -950 to 950 is 0.8610526315789474 percent unique.
+[main] INFO com.github.javafaker.NumberTest - Range -975 to 975 is 0.8870636550308009 percent unique.
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.813 sec
+Running com.github.javafaker.ZeldaTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.javafaker.StarTrekTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.EsportsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.RelationshipTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.github.javafaker.SlackEmojiTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.github.javafaker.HitchhikersGuideToTheGalaxyTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.github.javafaker.CodeTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.061 sec
+Running com.github.javafaker.LordOfTheRingsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.AddressTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.09 sec
+Running com.github.javafaker.DragonBallTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.NameTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.171 sec
+Running com.github.javafaker.ElderScrollsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.github.javafaker.AncientTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.TwinPeaksTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.FakerTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec
+Running com.github.javafaker.AvatarTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.BuffyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.github.javafaker.ArtistTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.FriendsTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.javafaker.BackToTheFutureTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.NationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running com.github.javafaker.CurrencyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.CoinTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.EnglandFootBallTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.MusicTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.OptionsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.TeamTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.github.javafaker.CommerceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.github.javafaker.BookTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.javafaker.BusinessTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.github.javafaker.CompanyTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec
+Running com.github.javafaker.RobinTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.HobbitTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.BasketballTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.291 sec
+Running com.github.javafaker.BojackHorsemanTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.202 sec
+Running com.github.javafaker.matchers.IsANumberTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.github.javafaker.matchers.IsStringWithContentsTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.KaamelottTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.service.RandomServiceTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.github.javafaker.service.FakeValuesGroupingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.github.javafaker.service.FakeValuesServiceTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.199 sec
+Running com.github.javafaker.service.FakeValuesTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Running com.github.javafaker.FunnyNameTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.ChuckNorrisTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.AviationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.HowIMetYourMotherTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.YodaTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.github.javafaker.DuneTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.963 sec
+Running com.github.javafaker.BoolTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.github.javafaker.idnumbers.SwedishIdNumberTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.ProgrammingLanguageTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.PrincessBrideTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.github.javafaker.StockTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.github.javafaker.FoodTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.github.javafaker.EducatorTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.OverwatchTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.github.javafaker.BeerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.github.javafaker.WitcherTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.github.javafaker.BarcodeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.github.javafaker.RandomFakerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.github.javafaker.LeagueOfLegendsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Running com.github.javafaker.HipsterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.github.javafaker.SipTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec
+Running com.github.javafaker.StarCraftTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.github.javafaker.RickAndMortyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.github.javafaker.CountryTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.github.javafaker.IdNumberTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.346 sec
+
+Results :
+
+Tests run: 577, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] -------------------< com.github.javafaker:javafaker >-------------------
+[INFO] Building Java Faker 1.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ javafaker ---
+[INFO] 
+[INFO] -------------------< com.github.javafaker:javafaker >-------------------
+[INFO] Building Java Faker 1.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ javafaker ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn1824239822567934078resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:26 min
+[INFO] Finished at: 2021-11-27T13:17:54+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/571] com.github.javafaker.AddressTest#testCity
+[test][2/571] com.github.javafaker.AddressTest#testCityName
+[test][3/571] com.github.javafaker.AddressTest#testCityWithLocaleFranceAndSeed
+[test][4/571] com.github.javafaker.AddressTest#testCountry
+[test][5/571] com.github.javafaker.AddressTest#testCountryCode
+[test][6/571] com.github.javafaker.AddressTest#testCountyByZipCode
+[test][7/571] com.github.javafaker.AddressTest#testFullAddress
+[test][8/571] com.github.javafaker.AddressTest#testHungarianZipCodeByState
+[test][9/571] com.github.javafaker.AddressTest#testLatitude
+[test][10/571] com.github.javafaker.AddressTest#testLongitude
+[test][11/571] com.github.javafaker.AddressTest#testState
+[test][12/571] com.github.javafaker.AddressTest#testStreetAddressIncludeSecondary
+[test][13/571] com.github.javafaker.AddressTest#testStreetAddressIsANumber
+[test][14/571] com.github.javafaker.AddressTest#testStreetAddressStartsWithNumber
+[test][15/571] com.github.javafaker.AddressTest#testStreetPrefix
+[test][16/571] com.github.javafaker.AddressTest#testTimeZone
+[test][17/571] com.github.javafaker.AddressTest#testZipCodeByState
+[test][18/571] com.github.javafaker.AncientTest#god
+[test][19/571] com.github.javafaker.AncientTest#hero
+[test][20/571] com.github.javafaker.AncientTest#primordial
+[test][21/571] com.github.javafaker.AncientTest#titan
+[test][22/571] com.github.javafaker.AnimalTest#name
+[test][23/571] com.github.javafaker.AppTest#testAuthor
+[test][24/571] com.github.javafaker.AppTest#testName
+[test][25/571] com.github.javafaker.AppTest#testVersion
+[test][26/571] com.github.javafaker.AquaTeenHungerForceTest#character
+[test][27/571] com.github.javafaker.ArtistTest#name
+[test][28/571] com.github.javafaker.AvatarTest#testAvatar
+[test][29/571] com.github.javafaker.AviationTest#aircraft
+[test][30/571] com.github.javafaker.AviationTest#airport
+[test][31/571] com.github.javafaker.AviationTest#metar
+[test][32/571] com.github.javafaker.BackToTheFutureTest#character
+[test][33/571] com.github.javafaker.BackToTheFutureTest#date
+[test][34/571] com.github.javafaker.BackToTheFutureTest#quote
+[test][35/571] com.github.javafaker.BarcodeTest#data
+[test][36/571] com.github.javafaker.BarcodeTest#type
+[test][37/571] com.github.javafaker.BarcodeTest#typeAndData
+[test][38/571] com.github.javafaker.BasketballTest#testCoaches
+[test][39/571] com.github.javafaker.BasketballTest#testCoachesWith10000Times
+[test][40/571] com.github.javafaker.BasketballTest#testPlayers
+[test][41/571] com.github.javafaker.BasketballTest#testPlayersWith10000Times
+[test][42/571] com.github.javafaker.BasketballTest#testPositions
+[test][43/571] com.github.javafaker.BasketballTest#testPositionsWith10000Times
+[test][44/571] com.github.javafaker.BasketballTest#testTeams
+[test][45/571] com.github.javafaker.BasketballTest#testTeamsWith10000Times
+[test][46/571] com.github.javafaker.BeerTest#testHop
+[test][47/571] com.github.javafaker.BeerTest#testMalt
+[test][48/571] com.github.javafaker.BeerTest#testName
+[test][49/571] com.github.javafaker.BeerTest#testStyle
+[test][50/571] com.github.javafaker.BeerTest#testYeast
+[test][51/571] com.github.javafaker.BojackHorsemanTest#testCharacters1
+[test][52/571] com.github.javafaker.BojackHorsemanTest#testCharactersWith10000Times
+[test][53/571] com.github.javafaker.BojackHorsemanTest#testQuotes1
+[test][54/571] com.github.javafaker.BojackHorsemanTest#testQuotesWith10000Times
+[test][55/571] com.github.javafaker.BojackHorsemanTest#testTongueTwisters1
+[test][56/571] com.github.javafaker.BojackHorsemanTest#testTongueTwistersWith10000Times
+[test][57/571] com.github.javafaker.BookTest#testAuthor
+[test][58/571] com.github.javafaker.BookTest#testGenre
+[test][59/571] com.github.javafaker.BookTest#testPublisher
+[test][60/571] com.github.javafaker.BookTest#testTitle
+[test][61/571] com.github.javafaker.BoolTest#testBool
+[test][62/571] com.github.javafaker.BuffyTest#testBigBads
+[test][63/571] com.github.javafaker.BuffyTest#testCelebrities
+[test][64/571] com.github.javafaker.BuffyTest#testCharacters
+[test][65/571] com.github.javafaker.BuffyTest#testEpisodes
+[test][66/571] com.github.javafaker.BuffyTest#testQuotes
+[test][67/571] com.github.javafaker.BusinessTest#creditCardExpiry
+[test][68/571] com.github.javafaker.BusinessTest#creditCardNumber
+[test][69/571] com.github.javafaker.BusinessTest#creditCardType
+[test][70/571] com.github.javafaker.CatTest#breed
+[test][71/571] com.github.javafaker.CatTest#name
+[test][72/571] com.github.javafaker.CatTest#registry
+[test][73/571] com.github.javafaker.ChuckNorrisTest#testFact
+[test][74/571] com.github.javafaker.CodeTest#asin
+[test][75/571] com.github.javafaker.CodeTest#ean13
+[test][76/571] com.github.javafaker.CodeTest#ean8
+[test][77/571] com.github.javafaker.CodeTest#gtin13
+[test][78/571] com.github.javafaker.CodeTest#gtin8
+[test][79/571] com.github.javafaker.CodeTest#imei
+[test][80/571] com.github.javafaker.CodeTest#isbn10DefaultIsNoSeparator
+[test][81/571] com.github.javafaker.CodeTest#isbn13DefaultIsNoSeparator
+[test][82/571] com.github.javafaker.CodeTest#testIsbn10
+[test][83/571] com.github.javafaker.CodeTest#testIsbn13
+[test][84/571] com.github.javafaker.CodeTest#testOverrides
+[test][85/571] com.github.javafaker.CoinTest#coinFlip
+[test][86/571] com.github.javafaker.ColorTest#testHex
+[test][87/571] com.github.javafaker.ColorTest#testHexNoHashSign
+[test][88/571] com.github.javafaker.ColorTest#testName
+[test][89/571] com.github.javafaker.CommerceTest#testColor
+[test][90/571] com.github.javafaker.CommerceTest#testDepartment
+[test][91/571] com.github.javafaker.CommerceTest#testMaterial
+[test][92/571] com.github.javafaker.CommerceTest#testPrice
+[test][93/571] com.github.javafaker.CommerceTest#testPriceMinMax
+[test][94/571] com.github.javafaker.CommerceTest#testProductName
+[test][95/571] com.github.javafaker.CommerceTest#testPromotionCode
+[test][96/571] com.github.javafaker.CommerceTest#testPromotionCodeDigits
+[test][97/571] com.github.javafaker.CompanyTest#testBs
+[test][98/571] com.github.javafaker.CompanyTest#testBuzzword
+[test][99/571] com.github.javafaker.CompanyTest#testCatchPhrase
+[test][100/571] com.github.javafaker.CompanyTest#testIndustry
+[test][101/571] com.github.javafaker.CompanyTest#testLogo
+[test][102/571] com.github.javafaker.CompanyTest#testName
+[test][103/571] com.github.javafaker.CompanyTest#testProfession
+[test][104/571] com.github.javafaker.CompanyTest#testSuffix
+[test][105/571] com.github.javafaker.CompanyTest#testUrl
+[test][106/571] com.github.javafaker.CountryTest#testCapital
+[test][107/571] com.github.javafaker.CountryTest#testCode2
+[test][108/571] com.github.javafaker.CountryTest#testCode3
+[test][109/571] com.github.javafaker.CountryTest#testCurrency
+[test][110/571] com.github.javafaker.CountryTest#testCurrencyCode
+[test][111/571] com.github.javafaker.CountryTest#testFlag
+[test][112/571] com.github.javafaker.CountryTest#testName
+[test][113/571] com.github.javafaker.CryptoTest#testMd5
+[test][114/571] com.github.javafaker.CryptoTest#testSha1
+[test][115/571] com.github.javafaker.CryptoTest#testSha256
+[test][116/571] com.github.javafaker.CryptoTest#testSha512
+[test][117/571] com.github.javafaker.CurrencyTest#testCode
+[test][118/571] com.github.javafaker.CurrencyTest#testName
+[test][119/571] com.github.javafaker.DateAndTimeTest#testBetween
+[test][120/571] com.github.javafaker.DateAndTimeTest#testBetweenThenLargerThanNow
+[test][121/571] com.github.javafaker.DateAndTimeTest#testBirthday
+[test][122/571] com.github.javafaker.DateAndTimeTest#testBirthdayWithAges
+[test][123/571] com.github.javafaker.DateAndTimeTest#testFutureDate
+[test][124/571] com.github.javafaker.DateAndTimeTest#testFutureDateWithMinimum
+[test][125/571] com.github.javafaker.DateAndTimeTest#testPastDate
+[test][126/571] com.github.javafaker.DateAndTimeTest#testPastDateWithMinimum
+[test][127/571] com.github.javafaker.DateAndTimeTest#testPastDateWithReferenceDate
+[test][128/571] com.github.javafaker.DemographicTest#demonym
+[test][129/571] com.github.javafaker.DemographicTest#educationalAttainment
+[test][130/571] com.github.javafaker.DemographicTest#maritalStatus
+[test][131/571] com.github.javafaker.DemographicTest#race
+[test][132/571] com.github.javafaker.DemographicTest#sex
+[test][133/571] com.github.javafaker.DiseaseTest#testDermatolory
+[test][134/571] com.github.javafaker.DiseaseTest#testDermatoloryWith10000Times
+[test][135/571] com.github.javafaker.DiseaseTest#testGynecologyAndObstetrics
+[test][136/571] com.github.javafaker.DiseaseTest#testGynecologyAndObstetricsWith10000Times
+[test][137/571] com.github.javafaker.DiseaseTest#testInternalDisease
+[test][138/571] com.github.javafaker.DiseaseTest#testInternalDiseaseWith10000Times
+[test][139/571] com.github.javafaker.DiseaseTest#testNeurology
+[test][140/571] com.github.javafaker.DiseaseTest#testNeurologyWith10000Times
+[test][141/571] com.github.javafaker.DiseaseTest#testOphthalmologyAndOtorhinolaryngology
+[test][142/571] com.github.javafaker.DiseaseTest#testOphthalmologyAndOtorhinolaryngologyWith10000Times
+[test][143/571] com.github.javafaker.DiseaseTest#testPaediatrics
+[test][144/571] com.github.javafaker.DiseaseTest#testPaediatricsWith10000Times
+[test][145/571] com.github.javafaker.DiseaseTest#testSurgery
+[test][146/571] com.github.javafaker.DiseaseTest#testSurgeryWith10000Times
+[test][147/571] com.github.javafaker.DogTest#age
+[test][148/571] com.github.javafaker.DogTest#breed
+[test][149/571] com.github.javafaker.DogTest#coatLength
+[test][150/571] com.github.javafaker.DogTest#gender
+[test][151/571] com.github.javafaker.DogTest#memePhrase
+[test][152/571] com.github.javafaker.DogTest#name
+[test][153/571] com.github.javafaker.DogTest#size
+[test][154/571] com.github.javafaker.DogTest#sound
+[test][155/571] com.github.javafaker.DragonBallTest#character
+[test][156/571] com.github.javafaker.DuneTest#character
+[test][157/571] com.github.javafaker.DuneTest#planet
+[test][158/571] com.github.javafaker.DuneTest#quote
+[test][159/571] com.github.javafaker.DuneTest#randomQuote
+[test][160/571] com.github.javafaker.DuneTest#randomSaying
+[test][161/571] com.github.javafaker.DuneTest#saying
+[test][162/571] com.github.javafaker.DuneTest#title
+[test][163/571] com.github.javafaker.EducatorTest#testCampus
+[test][164/571] com.github.javafaker.EducatorTest#testCourse
+[test][165/571] com.github.javafaker.EducatorTest#testSecondarySchool
+[test][166/571] com.github.javafaker.EducatorTest#testUniversity
+[test][167/571] com.github.javafaker.ElderScrollsTest#testCity
+[test][168/571] com.github.javafaker.ElderScrollsTest#testCreature
+[test][169/571] com.github.javafaker.ElderScrollsTest#testDragon
+[test][170/571] com.github.javafaker.ElderScrollsTest#testFirstName
+[test][171/571] com.github.javafaker.ElderScrollsTest#testLastName
+[test][172/571] com.github.javafaker.ElderScrollsTest#testQuote
+[test][173/571] com.github.javafaker.ElderScrollsTest#testRace
+[test][174/571] com.github.javafaker.ElderScrollsTest#testRegion
+[test][175/571] com.github.javafaker.EnglandFootBallTest#testLeague
+[test][176/571] com.github.javafaker.EnglandFootBallTest#testTeam
+[test][177/571] com.github.javafaker.EsportsTest#event
+[test][178/571] com.github.javafaker.EsportsTest#game
+[test][179/571] com.github.javafaker.EsportsTest#league
+[test][180/571] com.github.javafaker.EsportsTest#player
+[test][181/571] com.github.javafaker.EsportsTest#team
+[test][182/571] com.github.javafaker.FakerTest#badExpressionCouldntCoerce
+[test][183/571] com.github.javafaker.FakerTest#badExpressionTooFewArgs
+[test][184/571] com.github.javafaker.FakerTest#badExpressionTooManyArgs
+[test][185/571] com.github.javafaker.FakerTest#bothifyShouldGenerateLettersAndNumbers
+[test][186/571] com.github.javafaker.FakerTest#expression
+[test][187/571] com.github.javafaker.FakerTest#fakerInstanceCanBeAcquiredViaUtilityMethods
+[test][188/571] com.github.javafaker.FakerTest#letterifyShouldGenerateLetters
+[test][189/571] com.github.javafaker.FakerTest#letterifyShouldGenerateUpperCaseLetters
+[test][190/571] com.github.javafaker.FakerTest#letterifyShouldLeaveNonSpecialCharactersAlone
+[test][191/571] com.github.javafaker.FakerTest#numberBetweenRepeated
+[test][192/571] com.github.javafaker.FakerTest#numerifyShouldGenerateNumbers
+[test][193/571] com.github.javafaker.FakerTest#numerifyShouldLeaveNonSpecialCharactersAlone
+[test][194/571] com.github.javafaker.FakerTest#regexifyShouldGenerateAlternations
+[test][195/571] com.github.javafaker.FakerTest#regexifyShouldGenerateBasicCharacterClasses
+[test][196/571] com.github.javafaker.FakerTest#regexifyShouldGenerateBracketsQuantifiers
+[test][197/571] com.github.javafaker.FakerTest#regexifyShouldGenerateBracketsQuantifiersOnAlternations
+[test][198/571] com.github.javafaker.FakerTest#regexifyShouldGenerateBracketsQuantifiersOnBasicCharacterClasses
+[test][199/571] com.github.javafaker.FakerTest#regexifyShouldGenerateBracketsQuantifiersOnCharacterClassRanges
+[test][200/571] com.github.javafaker.FakerTest#regexifyShouldGenerateCharacterClassRanges
+[test][201/571] com.github.javafaker.FakerTest#regexifyShouldGenerateEscapedCharacters
+[test][202/571] com.github.javafaker.FakerTest#regexifyShouldGenerateLetters
+[test][203/571] com.github.javafaker.FakerTest#regexifyShouldGenerateMinMaxQuantifiers
+[test][204/571] com.github.javafaker.FakerTest#regexifyShouldGenerateMultipleCharacterClassRanges
+[test][205/571] com.github.javafaker.FakerTest#regexifyShouldGenerateNumbers
+[test][206/571] com.github.javafaker.FakerTest#regexifyShouldGenerateSameValueForFakerWithSameSeed
+[test][207/571] com.github.javafaker.FakerTest#regexifyShouldGenerateSingleCharacterQuantifiers
+[test][208/571] com.github.javafaker.FakerTest#resolveShouldReturnValueThatExists
+[test][209/571] com.github.javafaker.FakerTest#resolveShouldThrowExceptionWhenPropertyDoesntExist
+[test][210/571] com.github.javafaker.FileTest#testExtension
+[test][211/571] com.github.javafaker.FileTest#testFileName
+[test][212/571] com.github.javafaker.FileTest#testFileNameSpecifyDir
+[test][213/571] com.github.javafaker.FileTest#testFileNameSpecifyExtension
+[test][214/571] com.github.javafaker.FileTest#testFileNameSpecifyName
+[test][215/571] com.github.javafaker.FileTest#testFileNameSpecifySeparator
+[test][216/571] com.github.javafaker.FileTest#testMimeTypeFormat
+[test][217/571] com.github.javafaker.FinanceTest#bic
+[test][218/571] com.github.javafaker.FinanceTest#creditCard
+[test][219/571] com.github.javafaker.FinanceTest#creditCardWithType
+[test][220/571] com.github.javafaker.FinanceTest#iban
+[test][221/571] com.github.javafaker.FinanceTest#ibanWithCountryCode
+[test][222/571] com.github.javafaker.FoodTest#dish
+[test][223/571] com.github.javafaker.FoodTest#fruit
+[test][224/571] com.github.javafaker.FoodTest#ingredient
+[test][225/571] com.github.javafaker.FoodTest#measurement
+[test][226/571] com.github.javafaker.FoodTest#spice
+[test][227/571] com.github.javafaker.FoodTest#sushi
+[test][228/571] com.github.javafaker.FoodTest#vegetable
+[test][229/571] com.github.javafaker.FriendsTest#character
+[test][230/571] com.github.javafaker.FriendsTest#location
+[test][231/571] com.github.javafaker.FriendsTest#quote
+[test][232/571] com.github.javafaker.FunnyNameTest#name
+[test][233/571] com.github.javafaker.GameOfThronesTest#character
+[test][234/571] com.github.javafaker.GameOfThronesTest#city
+[test][235/571] com.github.javafaker.GameOfThronesTest#dragon
+[test][236/571] com.github.javafaker.GameOfThronesTest#house
+[test][237/571] com.github.javafaker.GameOfThronesTest#quote
+[test][238/571] com.github.javafaker.GenderTest#binaryTypes
+[test][239/571] com.github.javafaker.GenderTest#shortBinaryTypes
+[test][240/571] com.github.javafaker.GenderTest#types
+[test][241/571] com.github.javafaker.HackerTest#testAbbreviation
+[test][242/571] com.github.javafaker.HackerTest#testAdjective
+[test][243/571] com.github.javafaker.HackerTest#testIngverb
+[test][244/571] com.github.javafaker.HackerTest#testNoun
+[test][245/571] com.github.javafaker.HackerTest#testVerb
+[test][246/571] com.github.javafaker.HarryPotterTest#book
+[test][247/571] com.github.javafaker.HarryPotterTest#character
+[test][248/571] com.github.javafaker.HarryPotterTest#house
+[test][249/571] com.github.javafaker.HarryPotterTest#location
+[test][250/571] com.github.javafaker.HarryPotterTest#quote
+[test][251/571] com.github.javafaker.HarryPotterTest#spell
+[test][252/571] com.github.javafaker.HipsterTest#word
+[test][253/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#character
+[test][254/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#location
+[test][255/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#marvinQuote
+[test][256/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#planet
+[test][257/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#quote
+[test][258/571] com.github.javafaker.HitchhikersGuideToTheGalaxyTest#specie
+[test][259/571] com.github.javafaker.HobbitTest#character
+[test][260/571] com.github.javafaker.HobbitTest#location
+[test][261/571] com.github.javafaker.HobbitTest#quote
+[test][262/571] com.github.javafaker.HobbitTest#thorinsCompany
+[test][263/571] com.github.javafaker.HowIMetYourMotherTest#catchPhrase
+[test][264/571] com.github.javafaker.HowIMetYourMotherTest#character
+[test][265/571] com.github.javafaker.HowIMetYourMotherTest#highFive
+[test][266/571] com.github.javafaker.HowIMetYourMotherTest#quote
+[test][267/571] com.github.javafaker.IdNumberTest#testInvalid
+[test][268/571] com.github.javafaker.IdNumberTest#testInvalidSwedishSsn
+[test][269/571] com.github.javafaker.IdNumberTest#testSsnValid
+[test][270/571] com.github.javafaker.IdNumberTest#testValid
+[test][271/571] com.github.javafaker.IdNumberTest#testValidSwedishSsn
+[test][272/571] com.github.javafaker.InternetTest#testAvatar
+[test][273/571] com.github.javafaker.InternetTest#testDomainName
+[test][274/571] com.github.javafaker.InternetTest#testDomainSuffix
+[test][275/571] com.github.javafaker.InternetTest#testDomainWord
+[test][276/571] com.github.javafaker.InternetTest#testEmailAddress
+[test][277/571] com.github.javafaker.InternetTest#testEmailAddressDoesNotIncludeAccentsInTheLocalPart
+[test][278/571] com.github.javafaker.InternetTest#testEmailAddressWithLocalPartParameter
+[test][279/571] com.github.javafaker.InternetTest#testFarsiIDNs
+[test][280/571] com.github.javafaker.InternetTest#testImage
+[test][281/571] com.github.javafaker.InternetTest#testImageWithExplicitParams
+[test][282/571] com.github.javafaker.InternetTest#testIpV4Address
+[test][283/571] com.github.javafaker.InternetTest#testIpV4Cidr
+[test][284/571] com.github.javafaker.InternetTest#testIpV6
+[test][285/571] com.github.javafaker.InternetTest#testIpV6Cidr
+[test][286/571] com.github.javafaker.InternetTest#testMacAddress
+[test][287/571] com.github.javafaker.InternetTest#testPassword
+[test][288/571] com.github.javafaker.InternetTest#testPasswordIncludeDigit
+[test][289/571] com.github.javafaker.InternetTest#testPasswordMinLengthMaxLength
+[test][290/571] com.github.javafaker.InternetTest#testPasswordMinLengthMaxLengthIncludeUpperCase
+[test][291/571] com.github.javafaker.InternetTest#testPasswordMinLengthMaxLengthIncludeUpperCaseIncludeSpecial
+[test][292/571] com.github.javafaker.InternetTest#testPasswordMinLengthMaxLengthIncludeUpperCaseIncludeSpecialIncludeDigit
+[test][293/571] com.github.javafaker.InternetTest#testPrivateIpV4Address
+[test][294/571] com.github.javafaker.InternetTest#testPublicIpV4Address
+[test][295/571] com.github.javafaker.InternetTest#testSafeEmailAddress
+[test][296/571] com.github.javafaker.InternetTest#testSafeEmailAddressDoesNotIncludeAccentsInTheLocalPart
+[test][297/571] com.github.javafaker.InternetTest#testSafeEmailAddressWithLocalPartParameter
+[test][298/571] com.github.javafaker.InternetTest#testSlug
+[test][299/571] com.github.javafaker.InternetTest#testSlugWithNull
+[test][300/571] com.github.javafaker.InternetTest#testSlugWithParams
+[test][301/571] com.github.javafaker.InternetTest#testUrl
+[test][302/571] com.github.javafaker.InternetTest#testUserAgent
+[test][303/571] com.github.javafaker.InternetTest#testUuid
+[test][304/571] com.github.javafaker.JobTest#field
+[test][305/571] com.github.javafaker.JobTest#keySkills
+[test][306/571] com.github.javafaker.JobTest#position
+[test][307/571] com.github.javafaker.JobTest#seniority
+[test][308/571] com.github.javafaker.JobTest#title
+[test][309/571] com.github.javafaker.KaamelottTest#testCharacter
+[test][310/571] com.github.javafaker.KaamelottTest#testQuote
+[test][311/571] com.github.javafaker.LeagueOfLegendsTest#champion
+[test][312/571] com.github.javafaker.LeagueOfLegendsTest#location
+[test][313/571] com.github.javafaker.LeagueOfLegendsTest#masteries
+[test][314/571] com.github.javafaker.LeagueOfLegendsTest#quote
+[test][315/571] com.github.javafaker.LeagueOfLegendsTest#rank
+[test][316/571] com.github.javafaker.LeagueOfLegendsTest#summonerSpell
+[test][317/571] com.github.javafaker.LebowskiTest#actor
+[test][318/571] com.github.javafaker.LebowskiTest#character
+[test][319/571] com.github.javafaker.LebowskiTest#quote
+[test][320/571] com.github.javafaker.LordOfTheRingsTest#character
+[test][321/571] com.github.javafaker.LordOfTheRingsTest#location
+[test][322/571] com.github.javafaker.LoremTest#shouldCreateFixedLengthString
+[test][323/571] com.github.javafaker.LoremTest#testCharacter
+[test][324/571] com.github.javafaker.LoremTest#testCharacterIncludeUpperCase
+[test][325/571] com.github.javafaker.LoremTest#testCharacters
+[test][326/571] com.github.javafaker.LoremTest#testCharactersIncludeUpperCase
+[test][327/571] com.github.javafaker.LoremTest#testCharactersMinimumMaximumLength
+[test][328/571] com.github.javafaker.LoremTest#testCharactersMinimumMaximumLengthIncludeUppercase
+[test][329/571] com.github.javafaker.LoremTest#testCharactersMinimumMaximumLengthIncludeUppercaseIncludeDigit
+[test][330/571] com.github.javafaker.LoremTest#testCharactersWithLength
+[test][331/571] com.github.javafaker.LoremTest#testCharactersWithLengthIncludeUppercase
+[test][332/571] com.github.javafaker.LoremTest#testSentence
+[test][333/571] com.github.javafaker.LoremTest#testSentenceFixedNumberOfWords
+[test][334/571] com.github.javafaker.LoremTest#testSentenceWithWordCount
+[test][335/571] com.github.javafaker.LoremTest#testSentenceWithWordCountAndRandomWordsToAdd
+[test][336/571] com.github.javafaker.LoremTest#testWords
+[test][337/571] com.github.javafaker.LoremTest#wordShouldNotBeNullOrEmpty
+[test][338/571] com.github.javafaker.MatzTest#quote
+[test][339/571] com.github.javafaker.MedicalTest#testDiseaseName
+[test][340/571] com.github.javafaker.MedicalTest#testHospitalName
+[test][341/571] com.github.javafaker.MedicalTest#testMedicineName
+[test][342/571] com.github.javafaker.MedicalTest#testSymptom
+[test][343/571] com.github.javafaker.MusicTest#chord
+[test][344/571] com.github.javafaker.MusicTest#genre
+[test][345/571] com.github.javafaker.MusicTest#instrument
+[test][346/571] com.github.javafaker.MusicTest#key
+[test][347/571] com.github.javafaker.NameTest#testBloodGroup
+[test][348/571] com.github.javafaker.NameTest#testFirstName
+[test][349/571] com.github.javafaker.NameTest#testFullName
+[test][350/571] com.github.javafaker.NameTest#testLastName
+[test][351/571] com.github.javafaker.NameTest#testName
+[test][352/571] com.github.javafaker.NameTest#testNameWithMiddle
+[test][353/571] com.github.javafaker.NameTest#testNameWithMiddleDoesNotHaveRepeatedName
+[test][354/571] com.github.javafaker.NameTest#testPrefix
+[test][355/571] com.github.javafaker.NameTest#testSuffix
+[test][356/571] com.github.javafaker.NameTest#testTitle
+[test][357/571] com.github.javafaker.NameTest#testUsername
+[test][358/571] com.github.javafaker.NameTest#testUsernameWithSpaces
+[test][359/571] com.github.javafaker.NationTest#capitalCity
+[test][360/571] com.github.javafaker.NationTest#flag
+[test][361/571] com.github.javafaker.NationTest#language
+[test][362/571] com.github.javafaker.NationTest#nationality
+[test][363/571] com.github.javafaker.NumberTest#numberBetweenIntIntRandomizationQuality
+[test][364/571] com.github.javafaker.NumberTest#numberBetweenIntIntZeroMinMax
+[test][365/571] com.github.javafaker.NumberTest#numberBetweenLongLongRandomizationQuality
+[test][366/571] com.github.javafaker.NumberTest#numberBetweenLongLongZeroMinMax
+[test][367/571] com.github.javafaker.NumberTest#randomDoubleRandomizationQuality
+[test][368/571] com.github.javafaker.NumberTest#testDigit
+[test][369/571] com.github.javafaker.NumberTest#testDigits
+[test][370/571] com.github.javafaker.NumberTest#testIntNumberBetweenRepeated
+[test][371/571] com.github.javafaker.NumberTest#testLongBetweenOneAndThree
+[test][372/571] com.github.javafaker.NumberTest#testLongNumberBetweenRepeated
+[test][373/571] com.github.javafaker.NumberTest#testNumberBetween
+[test][374/571] com.github.javafaker.NumberTest#testNumberBetweenOneAndThree
+[test][375/571] com.github.javafaker.NumberTest#testRandomDigit
+[test][376/571] com.github.javafaker.NumberTest#testRandomDigitNotZero
+[test][377/571] com.github.javafaker.NumberTest#testRandomDouble
+[test][378/571] com.github.javafaker.NumberTest#testRandomDoubleMaxEqualsMin
+[test][379/571] com.github.javafaker.NumberTest#testRandomNumber
+[test][380/571] com.github.javafaker.NumberTest#testRandomNumberWithGivenDigitsStrict
+[test][381/571] com.github.javafaker.NumberTest#testRandomNumberWithSingleDigitStrict
+[test][382/571] com.github.javafaker.NumberTest#testRandomNumberWithZeroDigitsStrict
+[test][383/571] com.github.javafaker.OptionsTest#testNextArrayElement
+[test][384/571] com.github.javafaker.OptionsTest#testNextListElement
+[test][385/571] com.github.javafaker.OptionsTest#testOptionWithArray
+[test][386/571] com.github.javafaker.OptionsTest#testOptionWithEnum
+[test][387/571] com.github.javafaker.OptionsTest#testOptionWithVarargsInteger
+[test][388/571] com.github.javafaker.OptionsTest#testOptionWithVarargsString
+[test][389/571] com.github.javafaker.OverwatchTest#hero
+[test][390/571] com.github.javafaker.OverwatchTest#location
+[test][391/571] com.github.javafaker.OverwatchTest#quote
+[test][392/571] com.github.javafaker.PhoneNumberTest#testCellPhone
+[test][393/571] com.github.javafaker.PhoneNumberTest#testCellPhone_enUS
+[test][394/571] com.github.javafaker.PhoneNumberTest#testExtension
+[test][395/571] com.github.javafaker.PhoneNumberTest#testPhoneNumber
+[test][396/571] com.github.javafaker.PhoneNumberTest#testPhone_esMx
+[test][397/571] com.github.javafaker.PhoneNumberTest#testSubscriberNumber
+[test][398/571] com.github.javafaker.PhoneNumberTest#testSubscriberNumberWithLength
+[test][399/571] com.github.javafaker.PhotographyTest#brand
+[test][400/571] com.github.javafaker.PhotographyTest#camera
+[test][401/571] com.github.javafaker.PhotographyTest#genre
+[test][402/571] com.github.javafaker.PhotographyTest#imageTag
+[test][403/571] com.github.javafaker.PhotographyTest#iso
+[test][404/571] com.github.javafaker.PhotographyTest#lens
+[test][405/571] com.github.javafaker.PhotographyTest#shutter
+[test][406/571] com.github.javafaker.PhotographyTest#testAperture
+[test][407/571] com.github.javafaker.PhotographyTest#testTerm
+[test][408/571] com.github.javafaker.PokemonTest#location
+[test][409/571] com.github.javafaker.PokemonTest#name
+[test][410/571] com.github.javafaker.PrincessBrideTest#character
+[test][411/571] com.github.javafaker.PrincessBrideTest#quote
+[test][412/571] com.github.javafaker.ProgrammingLanguageTest#creator
+[test][413/571] com.github.javafaker.ProgrammingLanguageTest#name
+[test][414/571] com.github.javafaker.RandomFakerTest#testEmailRandomnessCanBeControlled
+[test][415/571] com.github.javafaker.RandomFakerTest#testLetterifyRandomnessCanBeControlled
+[test][416/571] com.github.javafaker.RandomFakerTest#testNameRandomnessCanBeControlled
+[test][417/571] com.github.javafaker.RandomFakerTest#testNumerifyRandomnessCanBeControlled
+[test][418/571] com.github.javafaker.RelationshipTest#anyTest
+[test][419/571] com.github.javafaker.RelationshipTest#anyWithIllegalAccessExceptionThrown
+[test][420/571] com.github.javafaker.RelationshipTest#anyWithIllegalArgumentExceptionThrown
+[test][421/571] com.github.javafaker.RelationshipTest#anyWithInvocationTargetExceptionThrown
+[test][422/571] com.github.javafaker.RelationshipTest#anyWithSecurityExceptionThrown
+[test][423/571] com.github.javafaker.RelationshipTest#directTest
+[test][424/571] com.github.javafaker.RelationshipTest#extendedTest
+[test][425/571] com.github.javafaker.RelationshipTest#inLawTest
+[test][426/571] com.github.javafaker.RelationshipTest#parentTest
+[test][427/571] com.github.javafaker.RelationshipTest#siblingTest
+[test][428/571] com.github.javafaker.RelationshipTest#spouseTest
+[test][429/571] com.github.javafaker.RickAndMortyTest#character
+[test][430/571] com.github.javafaker.RickAndMortyTest#location
+[test][431/571] com.github.javafaker.RickAndMortyTest#quote
+[test][432/571] com.github.javafaker.RobinTest#quote
+[test][433/571] com.github.javafaker.RockBandTest#name
+[test][434/571] com.github.javafaker.ShakespeareTest#testAsYouLikeItQuote
+[test][435/571] com.github.javafaker.ShakespeareTest#testHamletQuote
+[test][436/571] com.github.javafaker.ShakespeareTest#testKingRichardIIIQuote
+[test][437/571] com.github.javafaker.ShakespeareTest#testRomeoAndJulietQuote
+[test][438/571] com.github.javafaker.SipTest#bodyBytes_isNotNull
+[test][439/571] com.github.javafaker.SipTest#bodyString_returnAValidSdpBodyString
+[test][440/571] com.github.javafaker.SipTest#clientErrorResponseCode_Codereturn3DigitIntBetween400And499
+[test][441/571] com.github.javafaker.SipTest#clientErrorResponsePhrase_returnAnyNonDigitString
+[test][442/571] com.github.javafaker.SipTest#contentType_returnLowerCaseTwoWordsSepereatedBySlashMinimum3And4Chars
+[test][443/571] com.github.javafaker.SipTest#globalErrorResponseCode_Codereturn3DigitIntBetween600And699
+[test][444/571] com.github.javafaker.SipTest#globalErrorResponsePhrase_returnAnyNonDigitString
+[test][445/571] com.github.javafaker.SipTest#messagingPort_return4DigitIntBetween1000And9999
+[test][446/571] com.github.javafaker.SipTest#method_returnUpperCaseWithMinimum3Chars
+[test][447/571] com.github.javafaker.SipTest#nameAddress_returnValidNameAddressString
+[test][448/571] com.github.javafaker.SipTest#provisionalResponseCode_return3DigitIntBetween100And199
+[test][449/571] com.github.javafaker.SipTest#provisionalResponsePhrase_returnAnyNonDigitString
+[test][450/571] com.github.javafaker.SipTest#redirectResponseCode_Codereturn3DigitIntBetween300And399
+[test][451/571] com.github.javafaker.SipTest#redirectResponsePhrase_returnAnyNonDigitString
+[test][452/571] com.github.javafaker.SipTest#rtpPort_returnPositiveEvenInt
+[test][453/571] com.github.javafaker.SipTest#serverErrorResponseCode_Codereturn3DigitIntBetween500And599
+[test][454/571] com.github.javafaker.SipTest#serverErrorResponsePhrase_returnAnyNonDigitString
+[test][455/571] com.github.javafaker.SipTest#successResponsePhrase_returnAnyNonDigitString
+[test][456/571] com.github.javafaker.SipTest#successResponse_Codereturn3DigitIntBetween200And299
+[test][457/571] com.github.javafaker.SlackEmojiTest#activity
+[test][458/571] com.github.javafaker.SlackEmojiTest#celebration
+[test][459/571] com.github.javafaker.SlackEmojiTest#custom
+[test][460/571] com.github.javafaker.SlackEmojiTest#emoji
+[test][461/571] com.github.javafaker.SlackEmojiTest#food_and_drink
+[test][462/571] com.github.javafaker.SlackEmojiTest#nature
+[test][463/571] com.github.javafaker.SlackEmojiTest#objects_and_symbols
+[test][464/571] com.github.javafaker.SlackEmojiTest#people
+[test][465/571] com.github.javafaker.SlackEmojiTest#travel_and_places
+[test][466/571] com.github.javafaker.SpaceTest#agency
+[test][467/571] com.github.javafaker.SpaceTest#agencyAbbreviation
+[test][468/571] com.github.javafaker.SpaceTest#company
+[test][469/571] com.github.javafaker.SpaceTest#constellation
+[test][470/571] com.github.javafaker.SpaceTest#distanceMeasurement
+[test][471/571] com.github.javafaker.SpaceTest#galaxy
+[test][472/571] com.github.javafaker.SpaceTest#meteorite
+[test][473/571] com.github.javafaker.SpaceTest#moon
+[test][474/571] com.github.javafaker.SpaceTest#nasaSpaceCraft
+[test][475/571] com.github.javafaker.SpaceTest#nebula
+[test][476/571] com.github.javafaker.SpaceTest#planet
+[test][477/571] com.github.javafaker.SpaceTest#star
+[test][478/571] com.github.javafaker.SpaceTest#starCluster
+[test][479/571] com.github.javafaker.StarCraftTest#testBuilding
+[test][480/571] com.github.javafaker.StarCraftTest#testCharacter
+[test][481/571] com.github.javafaker.StarCraftTest#testPlanet
+[test][482/571] com.github.javafaker.StarCraftTest#testUnit
+[test][483/571] com.github.javafaker.StarTrekTest#character
+[test][484/571] com.github.javafaker.StarTrekTest#klingon
+[test][485/571] com.github.javafaker.StarTrekTest#location
+[test][486/571] com.github.javafaker.StarTrekTest#specie
+[test][487/571] com.github.javafaker.StarTrekTest#villain
+[test][488/571] com.github.javafaker.StockTest#testNYSE
+[test][489/571] com.github.javafaker.StockTest#testNasdaq
+[test][490/571] com.github.javafaker.SuperheroTest#testDescriptor
+[test][491/571] com.github.javafaker.SuperheroTest#testName
+[test][492/571] com.github.javafaker.SuperheroTest#testPower
+[test][493/571] com.github.javafaker.SuperheroTest#testPrefix
+[test][494/571] com.github.javafaker.SuperheroTest#testSuffix
+[test][495/571] com.github.javafaker.TeamTest#testCreature
+[test][496/571] com.github.javafaker.TeamTest#testName
+[test][497/571] com.github.javafaker.TeamTest#testSport
+[test][498/571] com.github.javafaker.TeamTest#testState
+[test][499/571] com.github.javafaker.TeamTest#testStateWithZaLocale
+[test][500/571] com.github.javafaker.TwinPeaksTest#character
+[test][501/571] com.github.javafaker.TwinPeaksTest#location
+[test][502/571] com.github.javafaker.TwinPeaksTest#quote
+[test][503/571] com.github.javafaker.UniversityTest#testName
+[test][504/571] com.github.javafaker.UniversityTest#testPrefix
+[test][505/571] com.github.javafaker.UniversityTest#testSuffix
+[test][506/571] com.github.javafaker.WeatherTest#description
+[test][507/571] com.github.javafaker.WeatherTest#temperatureCelsius
+[test][508/571] com.github.javafaker.WeatherTest#temperatureCelsiusInRange
+[test][509/571] com.github.javafaker.WeatherTest#temperatureFahrenheit
+[test][510/571] com.github.javafaker.WeatherTest#temperatureFahrenheitInRange
+[test][511/571] com.github.javafaker.WitcherTest#testCharacter
+[test][512/571] com.github.javafaker.WitcherTest#testLocation
+[test][513/571] com.github.javafaker.WitcherTest#testMonster
+[test][514/571] com.github.javafaker.WitcherTest#testQuote
+[test][515/571] com.github.javafaker.WitcherTest#testSchool
+[test][516/571] com.github.javafaker.WitcherTest#testWitcher
+[test][517/571] com.github.javafaker.YodaTest#quote
+[test][518/571] com.github.javafaker.ZeldaTest#character
+[test][519/571] com.github.javafaker.ZeldaTest#game
+[test][520/571] com.github.javafaker.idnumbers.SwedishIdNumberTest#invalid
+[test][521/571] com.github.javafaker.idnumbers.SwedishIdNumberTest#valid
+[test][522/571] com.github.javafaker.integration.UkLocalDirectivesTest#resolvesDirectivesOnlyInYmlFile
+[test][523/571] com.github.javafaker.matchers.IsANumberTest#testBlankIsNotANumber
+[test][524/571] com.github.javafaker.matchers.IsANumberTest#testEmptyStringIsNotANumber
+[test][525/571] com.github.javafaker.matchers.IsANumberTest#testNumberShouldBeANumber
+[test][526/571] com.github.javafaker.matchers.IsANumberTest#testOtherCharsIsNotANumber
+[test][527/571] com.github.javafaker.matchers.IsStringWithContentsTest#emptyStringShouldFail
+[test][528/571] com.github.javafaker.matchers.IsStringWithContentsTest#nullStringShouldFail
+[test][529/571] com.github.javafaker.matchers.IsStringWithContentsTest#stringShouldPass
+[test][530/571] com.github.javafaker.matchers.IsStringWithContentsTest#whiteSpaceShouldFail
+[test][531/571] com.github.javafaker.service.FakeValuesGroupingTest#handlesMultipleFakeValues
+[test][532/571] com.github.javafaker.service.FakeValuesGroupingTest#handlesOneFakeValue
+[test][533/571] com.github.javafaker.service.FakeValuesServiceTest#FakeValuesServiceWithNullLocaleTest
+[test][534/571] com.github.javafaker.service.FakeValuesServiceTest#bothify2Args
+[test][535/571] com.github.javafaker.service.FakeValuesServiceTest#expressionCompletelyUnresolvable
+[test][536/571] com.github.javafaker.service.FakeValuesServiceTest#expressionWithFourArguments
+[test][537/571] com.github.javafaker.service.FakeValuesServiceTest#expressionWithInvalidFakerObject
+[test][538/571] com.github.javafaker.service.FakeValuesServiceTest#expressionWithValidFakerObjectButInvalidMethod
+[test][539/571] com.github.javafaker.service.FakeValuesServiceTest#expressionWithValidFakerObjectValidMethodInvalidArgs
+[test][540/571] com.github.javafaker.service.FakeValuesServiceTest#fetchObjectShouldReturnValue
+[test][541/571] com.github.javafaker.service.FakeValuesServiceTest#fetchShouldReturnValue
+[test][542/571] com.github.javafaker.service.FakeValuesServiceTest#fetchStringShouldReturnValue
+[test][543/571] com.github.javafaker.service.FakeValuesServiceTest#futureDateExpression
+[test][544/571] com.github.javafaker.service.FakeValuesServiceTest#pastDateExpression
+[test][545/571] com.github.javafaker.service.FakeValuesServiceTest#regexifyDirective
+[test][546/571] com.github.javafaker.service.FakeValuesServiceTest#regexifyDirective2
+[test][547/571] com.github.javafaker.service.FakeValuesServiceTest#regexifySlashFormatDirective
+[test][548/571] com.github.javafaker.service.FakeValuesServiceTest#resolveKeyToPropertyWithAList
+[test][549/571] com.github.javafaker.service.FakeValuesServiceTest#resolveKeyToPropertyWithAPropertyWithAnObject
+[test][550/571] com.github.javafaker.service.FakeValuesServiceTest#resolveKeyToPropertyWithAPropertyWithoutAnObject
+[test][551/571] com.github.javafaker.service.FakeValuesServiceTest#resolveKeyWithMultiplePropertiesShouldJoinResults
+[test][552/571] com.github.javafaker.service.FakeValuesServiceTest#resolveUsingTheSameKeyTwice
+[test][553/571] com.github.javafaker.service.FakeValuesServiceTest#safeFetchShouldReturnEmptyStringWhenPropertyDoesntExist
+[test][554/571] com.github.javafaker.service.FakeValuesServiceTest#safeFetchShouldReturnSimpleList
+[test][555/571] com.github.javafaker.service.FakeValuesServiceTest#safeFetchShouldReturnValueInList
+[test][556/571] com.github.javafaker.service.FakeValuesServiceTest#testLocaleChain
+[test][557/571] com.github.javafaker.service.FakeValuesServiceTest#testLocaleChainEnglish
+[test][558/571] com.github.javafaker.service.FakeValuesServiceTest#testLocaleChainLanguageOnly
+[test][559/571] com.github.javafaker.service.FakeValuesTest#getAValueDoesNotReturnAValue
+[test][560/571] com.github.javafaker.service.FakeValuesTest#getAValueForHebrewLocale
+[test][561/571] com.github.javafaker.service.FakeValuesTest#getAValueFromALocaleThatCantBeLoaded
+[test][562/571] com.github.javafaker.service.FakeValuesTest#getAValueReturnsAValue
+[test][563/571] com.github.javafaker.service.FakeValuesTest#getAValueWithANonEnglishFile
+[test][564/571] com.github.javafaker.service.FakeValuesTest#supportsPathIsFalseWhenValueIsNotTheSame
+[test][565/571] com.github.javafaker.service.FakeValuesTest#supportsPathIsTrueWithTheSameValueAsThePath
+[test][566/571] com.github.javafaker.service.RandomServiceTest#testDefaultHex
+[test][567/571] com.github.javafaker.service.RandomServiceTest#testHex
+[test][568/571] com.github.javafaker.service.RandomServiceTest#testIntInRange
+[test][569/571] com.github.javafaker.service.RandomServiceTest#testLongMaxBoundary
+[test][570/571] com.github.javafaker.service.RandomServiceTest#testLongWithinBoundary
+[test][571/571] com.github.javafaker.service.RandomServiceTest#testPositiveBoundariesOnly
+[main][14/14] python parse_data.py
+  0%|          | 0/571 [00:00<?, ?it/s]  2%|▏         | 10/571 [00:00<00:05, 97.03it/s]  4%|▎         | 21/571 [00:00<00:05, 98.40it/s]  6%|▌         | 32/571 [00:00<00:05, 99.28it/s]  8%|▊         | 43/571 [00:00<00:05, 100.13it/s]  9%|▉         | 54/571 [00:00<00:05, 99.91it/s]  11%|█         | 64/571 [00:00<00:05, 97.85it/s] 13%|█▎        | 74/571 [00:00<00:05, 97.11it/s] 15%|█▍        | 85/571 [00:00<00:05, 97.13it/s] 17%|█▋        | 95/571 [00:00<00:04, 97.48it/s] 18%|█▊        | 105/571 [00:01<00:04, 96.56it/s] 20%|██        | 115/571 [00:01<00:04, 95.37it/s] 22%|██▏       | 125/571 [00:01<00:04, 94.48it/s] 24%|██▎       | 135/571 [00:01<00:04, 95.80it/s] 25%|██▌       | 145/571 [00:01<00:04, 94.56it/s] 27%|██▋       | 155/571 [00:01<00:04, 93.47it/s] 29%|██▉       | 165/571 [00:01<00:04, 92.25it/s] 31%|███       | 175/571 [00:01<00:04, 93.49it/s] 32%|███▏      | 185/571 [00:01<00:04, 91.51it/s] 34%|███▍      | 195/571 [00:02<00:04, 90.28it/s] 36%|███▌      | 205/571 [00:02<00:03, 91.82it/s] 38%|███▊      | 215/571 [00:02<00:03, 90.15it/s] 39%|███▉      | 225/571 [00:02<00:03, 88.76it/s] 41%|████      | 235/571 [00:02<00:03, 87.52it/s] 43%|████▎     | 245/571 [00:02<00:03, 89.48it/s] 44%|████▍     | 254/571 [00:02<00:03, 86.76it/s] 46%|████▌     | 264/571 [00:02<00:03, 85.36it/s] 48%|████▊     | 274/571 [00:02<00:03, 87.51it/s] 50%|████▉     | 283/571 [00:03<00:03, 84.71it/s] 51%|█████     | 292/571 [00:03<00:03, 85.39it/s] 53%|█████▎    | 301/571 [00:03<00:03, 82.98it/s] 54%|█████▍    | 310/571 [00:03<00:03, 81.09it/s] 56%|█████▌    | 319/571 [00:03<00:03, 83.42it/s] 57%|█████▋    | 328/571 [00:03<00:02, 81.19it/s] 59%|█████▉    | 337/571 [00:03<00:02, 83.03it/s] 61%|██████    | 346/571 [00:03<00:02, 80.45it/s] 62%|██████▏   | 355/571 [00:03<00:02, 82.62it/s] 64%|██████▎   | 364/571 [00:04<00:02, 79.60it/s] 65%|██████▌   | 373/571 [00:04<00:02, 81.58it/s] 67%|██████▋   | 382/571 [00:04<00:02, 78.64it/s] 68%|██████▊   | 391/571 [00:04<00:02, 76.45it/s] 70%|███████   | 400/571 [00:04<00:02, 79.00it/s] 71%|███████▏  | 408/571 [00:04<00:02, 75.39it/s] 73%|███████▎  | 417/571 [00:04<00:01, 77.91it/s] 75%|███████▍  | 426/571 [00:04<00:01, 75.50it/s] 76%|███████▌  | 434/571 [00:04<00:01, 76.55it/s] 78%|███████▊  | 443/571 [00:05<00:01, 74.00it/s] 79%|███████▉  | 452/571 [00:05<00:01, 76.62it/s] 81%|████████  | 460/571 [00:05<00:01, 73.15it/s] 82%|████████▏ | 468/571 [00:05<00:01, 74.67it/s] 84%|████████▎ | 477/571 [00:05<00:01, 76.93it/s] 85%|████████▍ | 485/571 [00:05<00:01, 73.06it/s] 86%|████████▋ | 493/571 [00:05<00:01, 74.65it/s] 88%|████████▊ | 501/571 [00:05<00:00, 70.89it/s] 89%|████████▉ | 509/571 [00:06<00:00, 73.22it/s] 91%|█████████ | 517/571 [00:06<00:00, 74.52it/s] 92%|█████████▏| 525/571 [00:06<00:00, 70.25it/s] 94%|█████████▎| 534/571 [00:06<00:00, 73.85it/s] 95%|█████████▍| 542/571 [00:06<00:00, 70.11it/s] 96%|█████████▋| 550/571 [00:06<00:00, 72.41it/s] 98%|█████████▊| 558/571 [00:06<00:00, 74.18it/s] 99%|█████████▉| 566/571 [00:06<00:00, 70.44it/s]100%|██████████| 571/571 [00:06<00:00, 83.03it/s]
+except: com.github.javafaker.service.RandomServiceTest#testDefaultHex
+except: com.github.javafaker.service.RandomServiceTest#testHex
+except: com.github.javafaker.service.RandomServiceTest#testIntInRange
+except: com.github.javafaker.service.RandomServiceTest#testLongMaxBoundary
+except: com.github.javafaker.service.RandomServiceTest#testLongWithinBoundary
+except: com.github.javafaker.service.RandomServiceTest#testPositiveBoundariesOnly
+Done.

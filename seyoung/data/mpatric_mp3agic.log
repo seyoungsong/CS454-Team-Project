@@ -1,0 +1,806 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/mpatric/mp3agic repo
+Cloning into 'repo'...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /root/apache-maven-3.8.4
+Java version: 1.8.0_312, vendor: Temurin, runtime: /root/jdk8u312-b07/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.10.0-9-amd64", arch: "amd64", family: "unix"
+[main][5/14] git --version
+git version 2.30.2
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.mpatric:mp3agic >-------------------------
+[INFO] Building mp3agic 0.9.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.10.4/maven-javadoc-plugin-2.10.4.pom
+Progress (1): 2.7/16 kBProgress (1): 5.5/16 kBProgress (1): 8.2/16 kBProgress (1): 11/16 kB Progress (1): 14/16 kBProgress (1): 16 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.10.4/maven-javadoc-plugin-2.10.4.pom (16 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.10.4/maven-javadoc-plugin-2.10.4.jar
+Progress (1): 2.7/415 kBProgress (1): 5.5/415 kBProgress (1): 8.2/415 kBProgress (1): 11/415 kB Progress (1): 14/415 kBProgress (1): 16/415 kBProgress (1): 19/415 kBProgress (1): 22/415 kBProgress (1): 25/415 kBProgress (1): 27/415 kBProgress (1): 30/415 kBProgress (1): 33/415 kBProgress (1): 36/415 kBProgress (1): 38/415 kBProgress (1): 41/415 kBProgress (1): 44/415 kBProgress (1): 47/415 kBProgress (1): 49/415 kBProgress (1): 53/415 kBProgress (1): 58/415 kBProgress (1): 62/415 kBProgress (1): 66/415 kBProgress (1): 70/415 kBProgress (1): 74/415 kBProgress (1): 78/415 kBProgress (1): 82/415 kBProgress (1): 86/415 kBProgress (1): 90/415 kBProgress (1): 94/415 kBProgress (1): 99/415 kBProgress (1): 103/415 kBProgress (1): 107/415 kBProgress (1): 111/415 kBProgress (1): 115/415 kBProgress (1): 119/415 kBProgress (1): 123/415 kBProgress (1): 127/415 kBProgress (1): 131/415 kBProgress (1): 135/415 kBProgress (1): 139/415 kBProgress (1): 144/415 kBProgress (1): 148/415 kBProgress (1): 152/415 kBProgress (1): 156/415 kBProgress (1): 160/415 kBProgress (1): 164/415 kBProgress (1): 168/415 kBProgress (1): 172/415 kBProgress (1): 176/415 kBProgress (1): 180/415 kBProgress (1): 185/415 kBProgress (1): 189/415 kBProgress (1): 193/415 kBProgress (1): 197/415 kBProgress (1): 201/415 kBProgress (1): 205/415 kBProgress (1): 209/415 kBProgress (1): 213/415 kBProgress (1): 217/415 kBProgress (1): 221/415 kBProgress (1): 225/415 kBProgress (1): 230/415 kBProgress (1): 234/415 kBProgress (1): 238/415 kBProgress (1): 242/415 kBProgress (1): 246/415 kBProgress (1): 250/415 kBProgress (1): 254/415 kBProgress (1): 258/415 kBProgress (1): 262/415 kBProgress (1): 266/415 kBProgress (1): 271/415 kBProgress (1): 275/415 kBProgress (1): 279/415 kBProgress (1): 283/415 kBProgress (1): 287/415 kBProgress (1): 291/415 kBProgress (1): 295/415 kBProgress (1): 299/415 kBProgress (1): 303/415 kBProgress (1): 307/415 kBProgress (1): 312/415 kBProgress (1): 316/415 kBProgress (1): 320/415 kBProgress (1): 324/415 kBProgress (1): 328/415 kBProgress (1): 332/415 kBProgress (1): 336/415 kBProgress (1): 340/415 kBProgress (1): 344/415 kBProgress (1): 348/415 kBProgress (1): 352/415 kBProgress (1): 357/415 kBProgress (1): 361/415 kBProgress (1): 365/415 kBProgress (1): 369/415 kBProgress (1): 373/415 kBProgress (1): 377/415 kBProgress (1): 381/415 kBProgress (1): 385/415 kBProgress (1): 389/415 kBProgress (1): 393/415 kBProgress (1): 398/415 kBProgress (1): 402/415 kBProgress (1): 406/415 kBProgress (1): 410/415 kBProgress (1): 414/415 kBProgress (1): 415 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/2.10.4/maven-javadoc-plugin-2.10.4.jar (415 kB at 563 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.6.0/maven-compiler-plugin-3.6.0.pom
+Progress (1): 4.1/11 kBProgress (1): 8.2/11 kBProgress (1): 11 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.6.0/maven-compiler-plugin-3.6.0.pom (11 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.6.0/maven-compiler-plugin-3.6.0.jar
+Progress (1): 4.1/55 kBProgress (1): 8.2/55 kBProgress (1): 12/55 kB Progress (1): 16/55 kBProgress (1): 20/55 kBProgress (1): 25/55 kBProgress (1): 29/55 kBProgress (1): 33/55 kBProgress (1): 37/55 kBProgress (1): 41/55 kBProgress (1): 45/55 kBProgress (1): 49/55 kBProgress (1): 53/55 kBProgress (1): 55 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.6.0/maven-compiler-plugin-3.6.0.jar (55 kB at 194 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/nl/jqno/equalsverifier/equalsverifier/2.3.2/equalsverifier-2.3.2.pom
+Progress (1): 4.1/14 kBProgress (1): 8.2/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/nl/jqno/equalsverifier/equalsverifier/2.3.2/equalsverifier-2.3.2.pom (14 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/nl/jqno/equalsverifier/equalsverifier/2.3.2/equalsverifier-2.3.2.jar
+Progress (1): 0/3.3 MBProgress (1): 0/3.3 MBProgress (1): 0/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/nl/jqno/equalsverifier/equalsverifier/2.3.2/equalsverifier-2.3.2.jar (3.3 MB at 4.3 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mp3agic ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ mp3agic ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mp3agic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /root/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ mp3agic ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_ALPHA/asm-6.0_ALPHA.pom
+Progress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_ALPHA/asm-6.0_ALPHA.pom (1.9 kB at 7.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/6.0_ALPHA/asm-parent-6.0_ALPHA.pom
+Progress (1): 4.1/5.5 kBProgress (1): 5.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/6.0_ALPHA/asm-parent-6.0_ALPHA.pom (5.5 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.1/plexus-compiler-manager-2.8.1.pom
+Progress (1): 713 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.1/plexus-compiler-manager-2.8.1.pom (713 B at 2.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.1/plexus-compiler-javac-2.8.1.pom
+Progress (1): 794 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.1/plexus-compiler-javac-2.8.1.pom (794 B at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.8.1/plexus-compilers-2.8.1.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.8.1/plexus-compilers-2.8.1.pom (1.4 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_ALPHA/asm-6.0_ALPHA.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.1/plexus-compiler-manager-2.8.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.1/plexus-compiler-javac-2.8.1.jar
+Progress (1): 4.1/56 kBProgress (1): 8.2/56 kBProgress (1): 12/56 kB Progress (1): 16/56 kBProgress (1): 20/56 kBProgress (1): 25/56 kBProgress (1): 29/56 kBProgress (1): 33/56 kBProgress (1): 37/56 kBProgress (1): 41/56 kBProgress (1): 45/56 kBProgress (1): 49/56 kBProgress (1): 53/56 kBProgress (1): 56 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/6.0_ALPHA/asm-6.0_ALPHA.jar (56 kB at 200 kB/s)
+Progress (1): 2.7/20 kBProgress (1): 5.5/20 kBProgress (1): 8.2/20 kBProgress (1): 11/20 kB Progress (1): 14/20 kBProgress (1): 16/20 kBProgress (1): 19/20 kBProgress (1): 20 kB   Progress (2): 20 kB | 2.7/4.7 kBProgress (2): 20 kB | 4.7 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.8.1/plexus-compiler-javac-2.8.1.jar (20 kB at 35 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.8.1/plexus-compiler-manager-2.8.1.jar (4.7 kB at 7.8 kB/s)
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 37 source files to /root/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mp3agic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 23 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ mp3agic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /root/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ mp3agic ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.mpatric.mp3agic.ID3v2TextFrameDataTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec - in com.mpatric.mp3agic.ID3v2TextFrameDataTest
+Running com.mpatric.mp3agic.ID3v2UrlFrameDataTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in com.mpatric.mp3agic.ID3v2UrlFrameDataTest
+Running com.mpatric.mp3agic.ID3v2PopmFrameDataTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v2PopmFrameDataTest
+Running com.mpatric.mp3agic.BufferToolsTest
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in com.mpatric.mp3agic.BufferToolsTest
+Running com.mpatric.mp3agic.ID3v24TagTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v24TagTest
+Running com.mpatric.mp3agic.NotSupportedExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.NotSupportedExceptionTest
+Running com.mpatric.mp3agic.ID3v2ChapterFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in com.mpatric.mp3agic.ID3v2ChapterFrameDataTest
+Running com.mpatric.mp3agic.UnsupportedTagExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.UnsupportedTagExceptionTest
+Running com.mpatric.mp3agic.ID3v1TagTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v1TagTest
+Running com.mpatric.mp3agic.ID3v2WWWFrameDataTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v2WWWFrameDataTest
+Running com.mpatric.mp3agic.ID3v2ObseleteFrameTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v2ObseleteFrameTest
+Running com.mpatric.mp3agic.ID3v2PictureFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.ID3v2PictureFrameDataTest
+Running com.mpatric.mp3agic.ID3v2TagTest
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in com.mpatric.mp3agic.ID3v2TagTest
+Running com.mpatric.mp3agic.ID3v2CommentFrameDataTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in com.mpatric.mp3agic.ID3v2CommentFrameDataTest
+Running com.mpatric.mp3agic.BaseExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.BaseExceptionTest
+Running com.mpatric.mp3agic.TestHelper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.TestHelper
+Running com.mpatric.mp3agic.VersionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.VersionTest
+Running com.mpatric.mp3agic.Mp3FileTest
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec - in com.mpatric.mp3agic.Mp3FileTest
+Running com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest
+Running com.mpatric.mp3agic.MutableIntegerTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.MutableIntegerTest
+Running com.mpatric.mp3agic.MpegFrameTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in com.mpatric.mp3agic.MpegFrameTest
+Running com.mpatric.mp3agic.ID3v1GenresTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v1GenresTest
+Running com.mpatric.mp3agic.ID3WrapperTest
+Tests run: 107, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec - in com.mpatric.mp3agic.ID3WrapperTest
+Running com.mpatric.mp3agic.ID3v2FrameSetTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.227 sec - in com.mpatric.mp3agic.ID3v2FrameSetTest
+Running com.mpatric.mp3agic.InvalidDataExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.InvalidDataExceptionTest
+Running com.mpatric.mp3agic.FileWrapperTest
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in com.mpatric.mp3agic.FileWrapperTest
+Running com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest
+Running com.mpatric.mp3agic.ID3v22TagTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.ID3v22TagTest
+Running com.mpatric.mp3agic.ID3v2FrameTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.2 sec - in com.mpatric.mp3agic.ID3v2FrameTest
+Running com.mpatric.mp3agic.EncodedTextTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in com.mpatric.mp3agic.EncodedTextTest
+
+Results :
+
+Tests run: 495, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.638 s
+[INFO] Finished at: 2021-11-27T07:37:49Z
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.mpatric:mp3agic >-------------------------
+[INFO] Building mp3agic 0.9.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mp3agic ---
+[INFO] Deleting /root/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ mp3agic ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/root/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 37 files (1 package).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/root/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 30 files (1 package).
+[INFO] 495 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ mp3agic ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mp3agic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /root/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ mp3agic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 37 source files to /root/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mp3agic ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 23 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ mp3agic ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /root/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ mp3agic ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.mpatric.mp3agic.ID3v2TextFrameDataTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in com.mpatric.mp3agic.ID3v2TextFrameDataTest
+Running com.mpatric.mp3agic.ID3v2UrlFrameDataTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec - in com.mpatric.mp3agic.ID3v2UrlFrameDataTest
+Running com.mpatric.mp3agic.ID3v2PopmFrameDataTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in com.mpatric.mp3agic.ID3v2PopmFrameDataTest
+Running com.mpatric.mp3agic.BufferToolsTest
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec - in com.mpatric.mp3agic.BufferToolsTest
+Running com.mpatric.mp3agic.ID3v24TagTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.ID3v24TagTest
+Running com.mpatric.mp3agic.NotSupportedExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in com.mpatric.mp3agic.NotSupportedExceptionTest
+Running com.mpatric.mp3agic.ID3v2ChapterFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in com.mpatric.mp3agic.ID3v2ChapterFrameDataTest
+Running com.mpatric.mp3agic.UnsupportedTagExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.UnsupportedTagExceptionTest
+Running com.mpatric.mp3agic.ID3v1TagTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in com.mpatric.mp3agic.ID3v1TagTest
+Running com.mpatric.mp3agic.ID3v2WWWFrameDataTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.ID3v2WWWFrameDataTest
+Running com.mpatric.mp3agic.ID3v2ObseleteFrameTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in com.mpatric.mp3agic.ID3v2ObseleteFrameTest
+Running com.mpatric.mp3agic.ID3v2PictureFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in com.mpatric.mp3agic.ID3v2PictureFrameDataTest
+Running com.mpatric.mp3agic.ID3v2TagTest
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec - in com.mpatric.mp3agic.ID3v2TagTest
+Running com.mpatric.mp3agic.ID3v2CommentFrameDataTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec - in com.mpatric.mp3agic.ID3v2CommentFrameDataTest
+Running com.mpatric.mp3agic.BaseExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.BaseExceptionTest
+Running com.mpatric.mp3agic.TestHelper
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in com.mpatric.mp3agic.TestHelper
+Running com.mpatric.mp3agic.VersionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in com.mpatric.mp3agic.VersionTest
+Running com.mpatric.mp3agic.Mp3FileTest
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+src/test/resources/v1andv23andcustomtags.mp3
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec - in com.mpatric.mp3agic.Mp3FileTest
+Running com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec - in com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest
+Running com.mpatric.mp3agic.MutableIntegerTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in com.mpatric.mp3agic.MutableIntegerTest
+Running com.mpatric.mp3agic.MpegFrameTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in com.mpatric.mp3agic.MpegFrameTest
+Running com.mpatric.mp3agic.ID3v1GenresTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in com.mpatric.mp3agic.ID3v1GenresTest
+Running com.mpatric.mp3agic.ID3WrapperTest
+Tests run: 107, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec - in com.mpatric.mp3agic.ID3WrapperTest
+Running com.mpatric.mp3agic.ID3v2FrameSetTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 sec - in com.mpatric.mp3agic.ID3v2FrameSetTest
+Running com.mpatric.mp3agic.InvalidDataExceptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in com.mpatric.mp3agic.InvalidDataExceptionTest
+Running com.mpatric.mp3agic.FileWrapperTest
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+src/test/resources/notags.mp3
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.FileWrapperTest
+Running com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest
+Running com.mpatric.mp3agic.ID3v22TagTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in com.mpatric.mp3agic.ID3v22TagTest
+Running com.mpatric.mp3agic.ID3v2FrameTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.229 sec - in com.mpatric.mp3agic.ID3v2FrameTest
+Running com.mpatric.mp3agic.EncodedTextTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in com.mpatric.mp3agic.EncodedTextTest
+
+Results :
+
+Tests run: 495, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------< com.mpatric:mp3agic >-------------------------
+[INFO] Building mp3agic 0.9.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ mp3agic ---
+[INFO] 
+[INFO] ------------------------< com.mpatric:mp3agic >-------------------------
+[INFO] Building mp3agic 0.9.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ mp3agic ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /tmp/mvn8877507480350601113resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/root/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/root/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/root/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.997 s
+[INFO] Finished at: 2021-11-27T07:37:57Z
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/495] com.mpatric.mp3agic.BaseExceptionTest#generatesCorrectDetailedMessageForChainedBaseExceptions
+[test][2/495] com.mpatric.mp3agic.BaseExceptionTest#generatesCorrectDetailedMessageForChainedExceptionsWithOtherExceptionInMix
+[test][3/495] com.mpatric.mp3agic.BaseExceptionTest#generatesCorrectDetailedMessageForSingleException
+[test][4/495] com.mpatric.mp3agic.BufferToolsTest#ReturnsMinusOneWhenNoSingleTerminator
+[test][5/495] com.mpatric.mp3agic.BufferToolsTest#convertsBufferContainingHighAscii
+[test][6/495] com.mpatric.mp3agic.BufferToolsTest#findsDoubleTerminator
+[test][7/495] com.mpatric.mp3agic.BufferToolsTest#findsDoubleTerminatorWhenFirstElement
+[test][8/495] com.mpatric.mp3agic.BufferToolsTest#findsDoubleTerminatorWhenLastElement
+[test][9/495] com.mpatric.mp3agic.BufferToolsTest#findsFirstDoubleTerminator
+[test][10/495] com.mpatric.mp3agic.BufferToolsTest#findsFirstDoubleTerminatorAfterFromIndex
+[test][11/495] com.mpatric.mp3agic.BufferToolsTest#findsFirstDoubleTerminatorOnAnEvenByte
+[test][12/495] com.mpatric.mp3agic.BufferToolsTest#findsFirstSingleTerminator
+[test][13/495] com.mpatric.mp3agic.BufferToolsTest#findsFirstSingleTerminatorAfterFromIndex
+[test][14/495] com.mpatric.mp3agic.BufferToolsTest#findsNotFindDoubleTerminatorIfNotOnEvenByte
+[test][15/495] com.mpatric.mp3agic.BufferToolsTest#findsSingleTerminator
+[test][16/495] com.mpatric.mp3agic.BufferToolsTest#findsSingleTerminatorWhenFirstElement
+[test][17/495] com.mpatric.mp3agic.BufferToolsTest#findsSingleTerminatorWhenLastElement
+[test][18/495] com.mpatric.mp3agic.BufferToolsTest#returnsMinusOneWhenNoDoubleTerminator
+[test][19/495] com.mpatric.mp3agic.BufferToolsTest#shouldConvertNonAsciiCharactersToQuestionMarksInString
+[test][20/495] com.mpatric.mp3agic.BufferToolsTest#shouldConvertStringToBufferAndBack
+[test][21/495] com.mpatric.mp3agic.BufferToolsTest#shouldConvertSubstringToBufferAndBack
+[test][22/495] com.mpatric.mp3agic.BufferToolsTest#shouldConvertUnicodeStringToBufferAndBack
+[test][23/495] com.mpatric.mp3agic.BufferToolsTest#shouldConvertUnicodeSubstringToBufferAndBack
+[test][24/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyBuffersWithValidOffsetsAndLengths
+[test][25/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyStringToEndOfByteBuffer
+[test][26/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyStringToStartOfByteBuffer
+[test][27/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopySubstringToMiddleOfByteBuffer
+[test][28/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopySubstringToStartOfByteBuffer
+[test][29/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyUnicodeStringToEndOfByteBuffer
+[test][30/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyUnicodeStringToStartOfByteBuffer
+[test][31/495] com.mpatric.mp3agic.BufferToolsTest#shouldCopyUnicodeSubstringToStartOfByteBuffer
+[test][32/495] com.mpatric.mp3agic.BufferToolsTest#shouldDetermineSynchronisationSizesCorrectly
+[test][33/495] com.mpatric.mp3agic.BufferToolsTest#shouldDetermineUnsynchronisationSizesCorrectly
+[test][34/495] com.mpatric.mp3agic.BufferToolsTest#shouldExtractBitsCorrectly
+[test][35/495] com.mpatric.mp3agic.BufferToolsTest#shouldExtractStringFromEndOfBuffer
+[test][36/495] com.mpatric.mp3agic.BufferToolsTest#shouldExtractStringFromMiddleOfBuffer
+[test][37/495] com.mpatric.mp3agic.BufferToolsTest#shouldExtractStringFromStartOfBuffer
+[test][38/495] com.mpatric.mp3agic.BufferToolsTest#shouldExtractUnicodeStringFromMiddleOfBuffer
+[test][39/495] com.mpatric.mp3agic.BufferToolsTest#shouldPackAndUnpackIntegerBackToOriginalValue
+[test][40/495] com.mpatric.mp3agic.BufferToolsTest#shouldPackAndUnpackSynchsafeIntegerBackToOriginalValue
+[test][41/495] com.mpatric.mp3agic.BufferToolsTest#shouldPackIntegerCorrectly
+[test][42/495] com.mpatric.mp3agic.BufferToolsTest#shouldPackSynchsafeIntegersCorrectly
+[test][43/495] com.mpatric.mp3agic.BufferToolsTest#shouldPadRightWithNullCharacters
+[test][44/495] com.mpatric.mp3agic.BufferToolsTest#shouldRaiseExceptionWhenCopyingStringIntoByteBufferWithDestinationOffsetOutOfRange
+[test][45/495] com.mpatric.mp3agic.BufferToolsTest#shouldRaiseExceptionWhenCopyingStringIntoByteBufferWithLengthOutOfRange
+[test][46/495] com.mpatric.mp3agic.BufferToolsTest#shouldRaiseExceptionWhenCopyingStringIntoByteBufferWithOffsetOutOfRange
+[test][47/495] com.mpatric.mp3agic.BufferToolsTest#shouldReplaceTokensWithSpecifiedStrings
+[test][48/495] com.mpatric.mp3agic.BufferToolsTest#shouldReturnOriginalBufferIfNoUnynchronisationOrSynchronisationIsRequired
+[test][49/495] com.mpatric.mp3agic.BufferToolsTest#shouldReturnOriginalStringForSubstitutionWithEmptyString
+[test][50/495] com.mpatric.mp3agic.BufferToolsTest#shouldReturnOriginalStringIfTokenToSubstituteDoesNotExistInString
+[test][51/495] com.mpatric.mp3agic.BufferToolsTest#shouldRightPadStringsCorrectly
+[test][52/495] com.mpatric.mp3agic.BufferToolsTest#shouldRightPadUnicodeStringsCorrectly
+[test][53/495] com.mpatric.mp3agic.BufferToolsTest#shouldRightTrimStringsCorrectly
+[test][54/495] com.mpatric.mp3agic.BufferToolsTest#shouldRightTrimUnicodeStringsCorrectly
+[test][55/495] com.mpatric.mp3agic.BufferToolsTest#shouldSetBitsInBytesCorrectly
+[test][56/495] com.mpatric.mp3agic.BufferToolsTest#shouldSubstituteEmptyStringWhenDestinationStringIsNull
+[test][57/495] com.mpatric.mp3agic.BufferToolsTest#shouldThrowAnExceptionWhenConvertingStringToBytesWithLengthOutOfRange
+[test][58/495] com.mpatric.mp3agic.BufferToolsTest#shouldThrowAnExceptionWhenConvertingStringToBytesWithOffsetOutOfRange
+[test][59/495] com.mpatric.mp3agic.BufferToolsTest#shouldThrowExceptionForLengthExtendingBeyondEndOfArray
+[test][60/495] com.mpatric.mp3agic.BufferToolsTest#shouldThrowExceptionForOffsetAfterEndOfArray
+[test][61/495] com.mpatric.mp3agic.BufferToolsTest#shouldThrowExceptionForOffsetBeforeStartOfArray
+[test][62/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnpackIntegerCorrectly
+[test][63/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnpackSynchsafeIntegersCorrectly
+[test][64/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnsynchroniseThenSynchroniseBufferFullOfFFsCorrectly
+[test][65/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnsynchroniseThenSynchroniseBufferMinimalBufferCorrectly
+[test][66/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnsynchroniseThenSynchroniseFF00BytesCorrectly
+[test][67/495] com.mpatric.mp3agic.BufferToolsTest#shouldUnsynchroniseThenSynchroniseFFExBytesCorrectly
+[test][68/495] com.mpatric.mp3agic.BufferToolsTest#throwsExceptionWhenCopyingBufferWithInvalidOffsetAndOrLength
+[test][69/495] com.mpatric.mp3agic.EncodedTextTest#UTF16ShouldDecodeBEWhenSpecifiedInBOM
+[test][70/495] com.mpatric.mp3agic.EncodedTextTest#shouldConstructFromStringOrBytes
+[test][71/495] com.mpatric.mp3agic.EncodedTextTest#shouldDetectUTF16BEEncodingFromBytesWithBOM
+[test][72/495] com.mpatric.mp3agic.EncodedTextTest#shouldDetectUTF16EncodingFromBytesWithBOM
+[test][73/495] com.mpatric.mp3agic.EncodedTextTest#shouldDetectUTF8EncodingFromBytesWithBOM
+[test][74/495] com.mpatric.mp3agic.EncodedTextTest#shouldEncodeAndDecodeISO8859_1Text
+[test][75/495] com.mpatric.mp3agic.EncodedTextTest#shouldEncodeAndDecodeUTF16BEText
+[test][76/495] com.mpatric.mp3agic.EncodedTextTest#shouldEncodeAndDecodeUTF16Text
+[test][77/495] com.mpatric.mp3agic.EncodedTextTest#shouldEncodeAndDecodeUTF8Text
+[test][78/495] com.mpatric.mp3agic.EncodedTextTest#shouldHandleBacktickCharacterInString
+[test][79/495] com.mpatric.mp3agic.EncodedTextTest#shouldInferISO8859_1EncodingFromBytesWithNoBOM
+[test][80/495] com.mpatric.mp3agic.EncodedTextTest#shouldReturnNullWhenDecodingInvalidString
+[test][81/495] com.mpatric.mp3agic.EncodedTextTest#shouldStillReturnBytesWhenDataIsEmpty
+[test][82/495] com.mpatric.mp3agic.EncodedTextTest#shouldStillReturnBytesWhenStringIsEmpty
+[test][83/495] com.mpatric.mp3agic.EncodedTextTest#shouldStillReturnBytesWhenUnicodeDataIsEmpty
+[test][84/495] com.mpatric.mp3agic.EncodedTextTest#shouldStillReturnBytesWhenUnicodeStringIsEmpty
+[test][85/495] com.mpatric.mp3agic.EncodedTextTest#shouldThrowAnExceptionWhenAttemptingToTranscodeToACharacterSetWithUnmappableCharacters
+[test][86/495] com.mpatric.mp3agic.EncodedTextTest#shouldThrowExceptionWhenEncodingWithInvalidCharacterSet
+[test][87/495] com.mpatric.mp3agic.EncodedTextTest#shouldThrowExceptionWhenTranscodingWithInvalidCharacterSet
+[test][88/495] com.mpatric.mp3agic.EncodedTextTest#shouldTranscodeFromOneEncodingToAnother
+[test][89/495] com.mpatric.mp3agic.EncodedTextTest#shouldUseAppropriateEncodingWhenConstructingFromStringOnly
+[test][90/495] com.mpatric.mp3agic.FileWrapperTest#shouldFailForMalformedFilename
+[test][91/495] com.mpatric.mp3agic.FileWrapperTest#shouldFailForNonExistentFile
+[test][92/495] com.mpatric.mp3agic.FileWrapperTest#shouldFailForNullFilename
+[test][93/495] com.mpatric.mp3agic.FileWrapperTest#shouldFailForNullFilenameFile
+[test][94/495] com.mpatric.mp3agic.FileWrapperTest#shouldFailForNullPath
+[test][95/495] com.mpatric.mp3agic.FileWrapperTest#shouldReadValidFile
+[test][96/495] com.mpatric.mp3agic.FileWrapperTest#shouldReadValidFilename
+[test][97/495] com.mpatric.mp3agic.FileWrapperTest#shouldReadValidPath
+[test][98/495] com.mpatric.mp3agic.ID3WrapperTest#clearCopyrightDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][99/495] com.mpatric.mp3agic.ID3WrapperTest#clearEncoderDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][100/495] com.mpatric.mp3agic.ID3WrapperTest#clearsCommentFrameOnV2Tag
+[test][101/495] com.mpatric.mp3agic.ID3WrapperTest#clearsCommentOnV1Tag
+[test][102/495] com.mpatric.mp3agic.ID3WrapperTest#clearsCopyrightFrameOnV2Tag
+[test][103/495] com.mpatric.mp3agic.ID3WrapperTest#clearsEncoderFrameOnV2Tag
+[test][104/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumArtistReturnsNullIfV2TagDoesNotExist
+[test][105/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumArtistReturnsV2TagsAlbumArtist
+[test][106/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumImageReturnsNullIfV2TagDoesNotExist
+[test][107/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumImageReturnsV2TagsAlbumImage
+[test][108/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumReturnsNullIfBothTagsDoNotExist
+[test][109/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumReturnsV1TagsAlbumIfV2TagDoesNotExist
+[test][110/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumReturnsV1TagsAlbumIfV2TagsAlbumDoesNotExist
+[test][111/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumReturnsV1TagsAlbumIfV2TagsAlbumIsEmpty
+[test][112/495] com.mpatric.mp3agic.ID3WrapperTest#getAlbumReturnsV2TagsAlbumBeforeV1TagsAlbum
+[test][113/495] com.mpatric.mp3agic.ID3WrapperTest#getArtistReturnsNullIfBothTagsDoNotExist
+[test][114/495] com.mpatric.mp3agic.ID3WrapperTest#getArtistReturnsV1TagsArtistIfV2TagDoesNotExist
+[test][115/495] com.mpatric.mp3agic.ID3WrapperTest#getArtistReturnsV1TagsArtistIfV2TagsArtistDoesNotExist
+[test][116/495] com.mpatric.mp3agic.ID3WrapperTest#getArtistReturnsV1TagsArtistIfV2TagsArtistIsEmpty
+[test][117/495] com.mpatric.mp3agic.ID3WrapperTest#getArtistReturnsV2TagsArtistBeforeV1TagsArtist
+[test][118/495] com.mpatric.mp3agic.ID3WrapperTest#getCommentReturnsNullIfBothTagsDoNotExist
+[test][119/495] com.mpatric.mp3agic.ID3WrapperTest#getCommentReturnsV1TagsCommentIfV2TagDoesNotExist
+[test][120/495] com.mpatric.mp3agic.ID3WrapperTest#getCommentReturnsV1TagsCommentIfV2TagsCommentDoesNotExist
+[test][121/495] com.mpatric.mp3agic.ID3WrapperTest#getCommentReturnsV1TagsCommentIfV2TagsCommentIsEmpty
+[test][122/495] com.mpatric.mp3agic.ID3WrapperTest#getCommentReturnsV2TagsCommentBeforeV1TagsComment
+[test][123/495] com.mpatric.mp3agic.ID3WrapperTest#getComposerReturnsNullIfV2TagDoesNotExist
+[test][124/495] com.mpatric.mp3agic.ID3WrapperTest#getComposerReturnsV2TagsComposer
+[test][125/495] com.mpatric.mp3agic.ID3WrapperTest#getCopyrightReturnsNullIfV2TagDoesNotExist
+[test][126/495] com.mpatric.mp3agic.ID3WrapperTest#getCopyrightReturnsV2TagsCopyright
+[test][127/495] com.mpatric.mp3agic.ID3WrapperTest#getEncoderReturnsNullIfV2TagDoesNotExist
+[test][128/495] com.mpatric.mp3agic.ID3WrapperTest#getEncoderReturnsV2TagsEncoder
+[test][129/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreDescriptionReturnsNullIfBothTagsDoNotExist
+[test][130/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreDescriptionReturnsV1TagsGenreDescriptionIfV2TagDoesNotExist
+[test][131/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreDescriptionReturnsV2TagsGenreDescriptionBeforeV1TagsGenreDescription
+[test][132/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreReturnsNegativeOneIfBothTagsDoNotExist
+[test][133/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreReturnsV1TagsGenreIfV2TagDoesNotExist
+[test][134/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreReturnsV1TagsGenreIfV2TagsGenreIsNegativeOne
+[test][135/495] com.mpatric.mp3agic.ID3WrapperTest#getGenreReturnsV2TagsGenreBeforeV1TagsGenre
+[test][136/495] com.mpatric.mp3agic.ID3WrapperTest#getLyricsReturnsNullIfV2TagDoesNotExist
+[test][137/495] com.mpatric.mp3agic.ID3WrapperTest#getLyricsReturnsV2TagsLyrics
+[test][138/495] com.mpatric.mp3agic.ID3WrapperTest#getOriginalArtistReturnsNullIfV2TagDoesNotExist
+[test][139/495] com.mpatric.mp3agic.ID3WrapperTest#getOriginalArtistReturnsV2TagsOriginalArtist
+[test][140/495] com.mpatric.mp3agic.ID3WrapperTest#getTitleReturnsNullIfBothTagsDoNotExist
+[test][141/495] com.mpatric.mp3agic.ID3WrapperTest#getTitleReturnsV1TagsTitleIfV2TagDoesNotExist
+[test][142/495] com.mpatric.mp3agic.ID3WrapperTest#getTitleReturnsV1TagsTitleIfV2TagsTitleDoesNotExist
+[test][143/495] com.mpatric.mp3agic.ID3WrapperTest#getTitleReturnsV1TagsTitleIfV2TagsTitleIsEmpty
+[test][144/495] com.mpatric.mp3agic.ID3WrapperTest#getTitleReturnsV2TagsTitleBeforeV1TagsTitle
+[test][145/495] com.mpatric.mp3agic.ID3WrapperTest#getTrackReturnsNullIfBothTagsDoNotExist
+[test][146/495] com.mpatric.mp3agic.ID3WrapperTest#getTrackReturnsV1TagsTrackIfV2TagDoesNotExist
+[test][147/495] com.mpatric.mp3agic.ID3WrapperTest#getTrackReturnsV1TagsTrackIfV2TagsTrackDoesNotExist
+[test][148/495] com.mpatric.mp3agic.ID3WrapperTest#getTrackReturnsV1TagsTrackIfV2TagsTrackIsEmpty
+[test][149/495] com.mpatric.mp3agic.ID3WrapperTest#getTrackReturnsV2TagsTrackBeforeV1TagsTrack
+[test][150/495] com.mpatric.mp3agic.ID3WrapperTest#getUrlReturnsNullIfV2TagDoesNotExist
+[test][151/495] com.mpatric.mp3agic.ID3WrapperTest#getUrlReturnsV2TagsUrl
+[test][152/495] com.mpatric.mp3agic.ID3WrapperTest#getYearReturnsNullIfBothTagsDoNotExist
+[test][153/495] com.mpatric.mp3agic.ID3WrapperTest#getYearReturnsV1TagsYearIfV2TagDoesNotExist
+[test][154/495] com.mpatric.mp3agic.ID3WrapperTest#getYearReturnsV1TagsYearIfV2TagsYearDoesNotExist
+[test][155/495] com.mpatric.mp3agic.ID3WrapperTest#getYearReturnsV1TagsYearIfV2TagsYearIsEmpty
+[test][156/495] com.mpatric.mp3agic.ID3WrapperTest#getYearReturnsV2TagsYearBeforeV1TagsYear
+[test][157/495] com.mpatric.mp3agic.ID3WrapperTest#returnsNullV1Tag
+[test][158/495] com.mpatric.mp3agic.ID3WrapperTest#returnsNullV2Tag
+[test][159/495] com.mpatric.mp3agic.ID3WrapperTest#returnsV1Tag
+[test][160/495] com.mpatric.mp3agic.ID3WrapperTest#returnsV2Tag
+[test][161/495] com.mpatric.mp3agic.ID3WrapperTest#setAlbumArtistDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][162/495] com.mpatric.mp3agic.ID3WrapperTest#setAlbumDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][163/495] com.mpatric.mp3agic.ID3WrapperTest#setAlbumImageDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][164/495] com.mpatric.mp3agic.ID3WrapperTest#setArtistDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][165/495] com.mpatric.mp3agic.ID3WrapperTest#setCommentDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][166/495] com.mpatric.mp3agic.ID3WrapperTest#setComposerDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][167/495] com.mpatric.mp3agic.ID3WrapperTest#setCopyrightDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][168/495] com.mpatric.mp3agic.ID3WrapperTest#setEncoderDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][169/495] com.mpatric.mp3agic.ID3WrapperTest#setGenreDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][170/495] com.mpatric.mp3agic.ID3WrapperTest#setLyricsDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][171/495] com.mpatric.mp3agic.ID3WrapperTest#setOriginalArtistDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][172/495] com.mpatric.mp3agic.ID3WrapperTest#setTitleDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][173/495] com.mpatric.mp3agic.ID3WrapperTest#setTrackDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][174/495] com.mpatric.mp3agic.ID3WrapperTest#setUrlDoesNotThrowExceptionWhenV2TagDoesNotExist
+[test][175/495] com.mpatric.mp3agic.ID3WrapperTest#setYearDoesNotThrowExceptionWhenBothTagsDoNotExist
+[test][176/495] com.mpatric.mp3agic.ID3WrapperTest#setsAlbumArtistOnV2Tag
+[test][177/495] com.mpatric.mp3agic.ID3WrapperTest#setsAlbumImageOnV2Tag
+[test][178/495] com.mpatric.mp3agic.ID3WrapperTest#setsAlbumOnBothV1AndV2Tags
+[test][179/495] com.mpatric.mp3agic.ID3WrapperTest#setsAlbumOnV1TagOnly
+[test][180/495] com.mpatric.mp3agic.ID3WrapperTest#setsAlbumOnV2TagOnly
+[test][181/495] com.mpatric.mp3agic.ID3WrapperTest#setsArtistOnBothV1AndV2Tags
+[test][182/495] com.mpatric.mp3agic.ID3WrapperTest#setsArtistOnV1TagOnly
+[test][183/495] com.mpatric.mp3agic.ID3WrapperTest#setsArtistOnV2TagOnly
+[test][184/495] com.mpatric.mp3agic.ID3WrapperTest#setsCommentOnBothV1AndV2Tags
+[test][185/495] com.mpatric.mp3agic.ID3WrapperTest#setsCommentOnV1TagOnly
+[test][186/495] com.mpatric.mp3agic.ID3WrapperTest#setsCommentOnV2TagOnly
+[test][187/495] com.mpatric.mp3agic.ID3WrapperTest#setsComposerOnV2Tag
+[test][188/495] com.mpatric.mp3agic.ID3WrapperTest#setsCopyrightOnV2Tag
+[test][189/495] com.mpatric.mp3agic.ID3WrapperTest#setsEncoderOnV2Tag
+[test][190/495] com.mpatric.mp3agic.ID3WrapperTest#setsGenreOnBothV1AndV2Tags
+[test][191/495] com.mpatric.mp3agic.ID3WrapperTest#setsGenreOnV1TagOnly
+[test][192/495] com.mpatric.mp3agic.ID3WrapperTest#setsGenreOnV2TagOnly
+[test][193/495] com.mpatric.mp3agic.ID3WrapperTest#setsLyricsOnV2Tag
+[test][194/495] com.mpatric.mp3agic.ID3WrapperTest#setsOriginalArtistOnV2Tag
+[test][195/495] com.mpatric.mp3agic.ID3WrapperTest#setsTitleOnBothV1AndV2Tags
+[test][196/495] com.mpatric.mp3agic.ID3WrapperTest#setsTitleOnV1TagOnly
+[test][197/495] com.mpatric.mp3agic.ID3WrapperTest#setsTitleOnV2TagOnly
+[test][198/495] com.mpatric.mp3agic.ID3WrapperTest#setsTrackOnBothV1AndV2Tags
+[test][199/495] com.mpatric.mp3agic.ID3WrapperTest#setsTrackOnV1TagOnly
+[test][200/495] com.mpatric.mp3agic.ID3WrapperTest#setsTrackOnV2TagOnly
+[test][201/495] com.mpatric.mp3agic.ID3WrapperTest#setsUrlOnV2Tag
+[test][202/495] com.mpatric.mp3agic.ID3WrapperTest#setsYearOnBothV1AndV2Tags
+[test][203/495] com.mpatric.mp3agic.ID3WrapperTest#setsYearOnV1TagOnly
+[test][204/495] com.mpatric.mp3agic.ID3WrapperTest#setsYearOnV2TagOnly
+[test][205/495] com.mpatric.mp3agic.ID3v1GenresTest#ignoresCase
+[test][206/495] com.mpatric.mp3agic.ID3v1GenresTest#returnsCorrectGenreIdForFirstExistentGenre
+[test][207/495] com.mpatric.mp3agic.ID3v1GenresTest#returnsCorrectGenreIdForLastExistentGenre
+[test][208/495] com.mpatric.mp3agic.ID3v1GenresTest#returnsCorrectGenreIdForPolka
+[test][209/495] com.mpatric.mp3agic.ID3v1GenresTest#returnsMinusOneForNonExistentGenre
+[test][210/495] com.mpatric.mp3agic.ID3v1TagTest#shouldConvertTagToBytesAndBackToEquivalentTag
+[test][211/495] com.mpatric.mp3agic.ID3v1TagTest#shouldExtractMaximumLengthFieldsFromValid10Tag
+[test][212/495] com.mpatric.mp3agic.ID3v1TagTest#shouldExtractMaximumLengthFieldsFromValid11Tag
+[test][213/495] com.mpatric.mp3agic.ID3v1TagTest#shouldExtractTrimmedFieldsFromValid11TagWithNullspace
+[test][214/495] com.mpatric.mp3agic.ID3v1TagTest#shouldExtractTrimmedFieldsFromValid11TagWithWhitespace
+[test][215/495] com.mpatric.mp3agic.ID3v1TagTest#shouldGenerateValidTagBuffer
+[test][216/495] com.mpatric.mp3agic.ID3v1TagTest#shouldGenerateValidTagBufferWithHighGenreAndTrackNumber
+[test][217/495] com.mpatric.mp3agic.ID3v1TagTest#shouldReadTagFieldsFromMp3
+[test][218/495] com.mpatric.mp3agic.ID3v1TagTest#shouldReturnEmptyTrackIfNotSetOn11Tag
+[test][219/495] com.mpatric.mp3agic.ID3v1TagTest#shouldThrowExceptionForTagBufferTooLong
+[test][220/495] com.mpatric.mp3agic.ID3v1TagTest#shouldThrowExceptionForTagBufferTooShort
+[test][221/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveAlbumArtist
+[test][222/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveBPM
+[test][223/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveCompilation
+[test][224/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveDate
+[test][225/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveGrouping
+[test][226/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveItunesComment
+[test][227/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveKey
+[test][228/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrieveLyrics
+[test][229/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrievePartOfSet
+[test][230/495] com.mpatric.mp3agic.ID3v22TagTest#shouldStoreAndRetrievePublisher
+[test][231/495] com.mpatric.mp3agic.ID3v22TagTest#shouldUnpackAndPackOffCompressionBit
+[test][232/495] com.mpatric.mp3agic.ID3v22TagTest#shouldUnpackAndPackOffUnsynchronizationBit
+[test][233/495] com.mpatric.mp3agic.ID3v22TagTest#shouldUnpackAndPackOnCompressionBit
+[test][234/495] com.mpatric.mp3agic.ID3v22TagTest#shouldUnpackAndPackOnUnsynchronizationBit
+[test][235/495] com.mpatric.mp3agic.ID3v24TagTest#shouldSetGenreDescription
+[test][236/495] com.mpatric.mp3agic.ID3v24TagTest#shouldStoreAndRetrieveRecordingTime
+[test][237/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#equalIfIdIsNullOnBoth
+[test][238/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#equalObjectsHaveSameHashCode
+[test][239/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#equalsItself
+[test][240/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsEndOffset
+[test][241/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsEndTime
+[test][242/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsId
+[test][243/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsStartOffset
+[test][244/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsStartTime
+[test][245/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#getsAndSetsSubframes
+[test][246/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#hashCodeIsConsistent
+[test][247/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfEndOffsetNotEqual
+[test][248/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfEndTimeNotEqual
+[test][249/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfIdIsNullOnOne
+[test][250/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfIdNotEqual
+[test][251/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfOneHasSubframes
+[test][252/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfStartOffsetNotEqual
+[test][253/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfStartTimeNotEqual
+[test][254/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][255/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualToDifferentClass
+[test][256/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#notEqualToNull
+[test][257/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][258/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][259/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#toStringOnFullFrameData
+[test][260/495] com.mpatric.mp3agic.ID3v2ChapterFrameDataTest#toStringOnMostlyEmptyFrameData
+[test][261/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#equalIfIdIsNullOnBoth
+[test][262/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#equalObjectsHaveSameHashCode
+[test][263/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#equalsItself
+[test][264/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#getsAndSetsChildren
+[test][265/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#getsAndSetsId
+[test][266/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#getsAndSetsIsOrdered
+[test][267/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#getsAndSetsIsRoot
+[test][268/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#getsAndSetsSubframes
+[test][269/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#hashCodeIsConsistent
+[test][270/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfChildrenNotEqual
+[test][271/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfChildrenNullOnOne
+[test][272/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfIdIsNullOnOne
+[test][273/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfIdNotEqual
+[test][274/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfIsOrderedNotEqual
+[test][275/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfIsRootNotEqual
+[test][276/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfOneDoeNotHaveChildren
+[test][277/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfOneHasSubframes
+[test][278/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][279/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualToDifferentClass
+[test][280/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#notEqualToNull
+[test][281/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][282/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][283/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#toStringOnFullFrameData
+[test][284/495] com.mpatric.mp3agic.ID3v2ChapterTOCFrameDataTest#toStringOnMostlyEmptyFrameData
+[test][285/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#constructorThrowsErrorWhenEncodingsDoNotMatch
+[test][286/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#convertsEmptyFrameDataToBytesAndBack
+[test][287/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#convertsFrameDataWithNoCommentToBytesAndBack
+[test][288/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#convertsFrameDataWithNoDescriptionAndCommentIsUnicodeToBytesAndBack
+[test][289/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#convertsFrameDataWithNoDescriptionToBytesAndBack
+[test][290/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#convertsFrameDataWithNoLanguageToBytesAndBack
+[test][291/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#equalIfCommentIsNullOnBoth
+[test][292/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#equalIfDescriptionIsNullOnBoth
+[test][293/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#equalIfLanguageIsNullOnBoth
+[test][294/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#equalObjectsHaveSameHashCode
+[test][295/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#equalsItself
+[test][296/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#getsAndSetsComment
+[test][297/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#getsAndSetsDescription
+[test][298/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#getsAndSetsLanguage
+[test][299/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#hashCodeIsConsistent
+[test][300/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfCommentIsNullOnOne
+[test][301/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfCommentNotEqual
+[test][302/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfDescriptionIsNullOnOne
+[test][303/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfDescriptionNotEqual
+[test][304/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfLanguageIsNullOnOne
+[test][305/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfLanguageNotEqual
+[test][306/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][307/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualToDifferentClass
+[test][308/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#notEqualToNull
+[test][309/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][310/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][311/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#shouldConvertFrameDataWithBlankDescriptionAndLanguageToBytesAndBackToEquivalentObject
+[test][312/495] com.mpatric.mp3agic.ID3v2CommentFrameDataTest#shouldConvertFrameDataWithUnicodeToBytesAndBackToEquivalentObject
+[test][313/495] com.mpatric.mp3agic.ID3v2FrameSetTest#shouldCorrectlyImplementHashCodeAndEquals
+[test][314/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldCorrectlyImplementHashCodeAndEquals
+[test][315/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldCorrectlyUnpackHeader
+[test][316/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldPackAndUnpackHeaderToGiveEquivalentObject
+[test][317/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldReadValid32CFrame
+[test][318/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldReadValid32TFrame
+[test][319/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldReadValid32WFrame
+[test][320/495] com.mpatric.mp3agic.ID3v2FrameTest#shouldStoreAndRetrieveData
+[test][321/495] com.mpatric.mp3agic.ID3v2ObseleteFrameTest#shouldReadValid32ObseleteTFrame
+[test][322/495] com.mpatric.mp3agic.ID3v2ObseleteFrameTest#shouldReadValidLong32ObseleteTFrame
+[test][323/495] com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][324/495] com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest#shouldReadFrameData
+[test][325/495] com.mpatric.mp3agic.ID3v2ObseletePictureFrameDataTest#shouldReadFrameDataWithUnicodeDescription
+[test][326/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#equalIfDescriptionIsNullOnBoth
+[test][327/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#equalIfImageDataIsNullOnBoth
+[test][328/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#equalIfMimeTypeIsNullOnBoth
+[test][329/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#equalObjectsHaveSameHashCode
+[test][330/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#equalsItself
+[test][331/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#getsAndSetsDescription
+[test][332/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#getsAndSetsImageData
+[test][333/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#getsAndSetsMimeType
+[test][334/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#getsAndSetsPictureType
+[test][335/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#hashCodeIsConsistent
+[test][336/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfDescriptionIsNullOnOne
+[test][337/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfDescriptionNotEqual
+[test][338/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfImageDataNotEqual
+[test][339/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfImageDataNullOnOne
+[test][340/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfMimeTypeIsNullOnOne
+[test][341/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfMimeTypeNotEqual
+[test][342/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfPictureTypeNotEqual
+[test][343/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][344/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualToDifferentClass
+[test][345/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#notEqualToNull
+[test][346/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][347/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][348/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#shouldConvertFrameDataWithUnicodeDescriptionToBytesAndBackToEquivalentObject
+[test][349/495] com.mpatric.mp3agic.ID3v2PictureFrameDataTest#shouldUnsynchroniseAndSynchroniseDataWhenPackingAndUnpacking
+[test][350/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#ID3v2PopmFrameDataIsNotEqualNull
+[test][351/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#ID3v2PopmFrameDataIsNotEqualOtherType
+[test][352/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#ID3v2PopmFrameDataIsNotEqualOtherWithDifferentAddress
+[test][353/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#ID3v2PopmFrameDataIsNotEqualOtherWithDifferentRating
+[test][354/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#ID3v2PopmFrameDataIsNotEqualOtherWithNullAddress
+[test][355/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#canGetLength
+[test][356/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#canPackFrameData
+[test][357/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#canSetAndGetAddress
+[test][358/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#canSetAndGetRating
+[test][359/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#hashCodeOfTwoDifferentObjectsAreDifferent
+[test][360/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#sameObjectsAreEquals
+[test][361/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturn1StarRating
+[test][362/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturn2StarRating
+[test][363/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturn3StarRating
+[test][364/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturn4StarRating
+[test][365/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturn5StarRating
+[test][366/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturnAddress
+[test][367/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#shouldReturnMinus1ForInvalidRating
+[test][368/495] com.mpatric.mp3agic.ID3v2PopmFrameDataTest#twoEquivalentObjectsAreEquals
+[test][369/495] com.mpatric.mp3agic.ID3v2TagTest#shouldCalculateCorrectDataLengthsFromHeaderBlock
+[test][370/495] com.mpatric.mp3agic.ID3v2TagTest#shouldConvert23TagToBytesAndBackToEquivalentTag
+[test][371/495] com.mpatric.mp3agic.ID3v2TagTest#shouldConvert24TagWithFooterToBytesAndBackToEquivalentTag
+[test][372/495] com.mpatric.mp3agic.ID3v2TagTest#shouldConvert24TagWithPaddingToBytesAndBackToEquivalentTag
+[test][373/495] com.mpatric.mp3agic.ID3v2TagTest#shouldExtractChapterTOCAndChapterFramesFromMp3
+[test][374/495] com.mpatric.mp3agic.ID3v2TagTest#shouldExtractChapterTOCFramesFromMp3
+[test][375/495] com.mpatric.mp3agic.ID3v2TagTest#shouldExtractGenreDescriptionFromCombinedGenreStringsCorrectly
+[test][376/495] com.mpatric.mp3agic.ID3v2TagTest#shouldExtractGenreNumberFromCombinedGenreStringsCorrectly
+[test][377/495] com.mpatric.mp3agic.ID3v2TagTest#shouldGetCommentAndItunesComment
+[test][378/495] com.mpatric.mp3agic.ID3v2TagTest#shouldIgnoreInvalidWmpRatingOnWrite
+[test][379/495] com.mpatric.mp3agic.ID3v2TagTest#shouldInitialiseFromHeaderBlockWithValidHeaders
+[test][380/495] com.mpatric.mp3agic.ID3v2TagTest#shouldNotUsePaddingOnA24TagIfItHasAFooter
+[test][381/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadBPM
+[test][382/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadCombinedGenreInTag
+[test][383/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadFloatingPointBPM
+[test][384/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadFloatingPointBPMWithCommaDelimiter
+[test][385/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadFramesFromMp3With32Tag
+[test][386/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadFramesFromMp3WithObselete32Tag
+[test][387/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadId3v2WithFooter
+[test][388/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadTagFieldsFromMp3With24tag
+[test][389/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadTagFieldsFromMp3With32tag
+[test][390/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadTagFieldsFromMp3With32tagResavedByMp3tagWithUTF16Encoding
+[test][391/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadTagFieldsFromMp3WithObselete32tag
+[test][392/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadTagFieldsWithUnicodeDataFromMp3
+[test][393/495] com.mpatric.mp3agic.ID3v2TagTest#shouldReadWmpRating
+[test][394/495] com.mpatric.mp3agic.ID3v2TagTest#shouldRemoveAlbumImageFrame
+[test][395/495] com.mpatric.mp3agic.ID3v2TagTest#shouldSetCombinedGenreOnTag
+[test][396/495] com.mpatric.mp3agic.ID3v2TagTest#shouldSetTagFieldsWithUnicodeDataAndSpecifiedEncodingCorrectly
+[test][397/495] com.mpatric.mp3agic.ID3v2TagTest#shouldSortId3TagsAlphabetically
+[test][398/495] com.mpatric.mp3agic.ID3v2TagTest#shouldThrowExceptionForNonSupportedVersionInId3v2HeaderBlock
+[test][399/495] com.mpatric.mp3agic.ID3v2TagTest#shouldWriteWmpRating
+[test][400/495] com.mpatric.mp3agic.ID3v2TagTest#testSetGenreDescriptionOn23Tag
+[test][401/495] com.mpatric.mp3agic.ID3v2TagTest#testSetGenreDescriptionOn23TagWithUnknownGenre
+[test][402/495] com.mpatric.mp3agic.ID3v2TagTest#testSetGenreDescriptionOn24Tag
+[test][403/495] com.mpatric.mp3agic.ID3v2TagTest#testSetGenreDescriptionOn24TagWithUnknownGenre
+[test][404/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#equalIfTextIsNullOnBoth
+[test][405/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#equalObjectsHaveSameHashCode
+[test][406/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#equalsItself
+[test][407/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#getsAndSetsDescription
+[test][408/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#hashCodeIsConsistent
+[test][409/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#notEqualIfTextIsNullOnOne
+[test][410/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#notEqualIfTextNotEqual
+[test][411/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][412/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#notEqualToDifferentClass
+[test][413/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#notEqualToNull
+[test][414/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][415/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][416/495] com.mpatric.mp3agic.ID3v2TextFrameDataTest#shouldConvertFrameDataWithUnicodeToBytesAndBackToEquivalentObject
+[test][417/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#equalIfDescriptionIsNullOnBoth
+[test][418/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#equalIfUrlIsNullOnBoth
+[test][419/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#equalObjectsHaveSameHashCode
+[test][420/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#equalsItself
+[test][421/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#getsAndSetsDescription
+[test][422/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#getsAndSetsUrl
+[test][423/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#hashCodeIsConsistent
+[test][424/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualIfDescriptionIsNullOnOne
+[test][425/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualIfDescriptionNotEqual
+[test][426/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualIfIdUrlNullOnOne
+[test][427/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualIfUnsynchronizationNotEqual
+[test][428/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualIfUrlNotEqual
+[test][429/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualToDifferentClass
+[test][430/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#notEqualToNull
+[test][431/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#shouldConsiderTwoEquivalentObjectsEqual
+[test][432/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#shouldConvertFrameDataToBytesAndBackToEquivalentObject
+[test][433/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#shouldConvertFrameDataWithNoDescriptionToBytesAndBackToEquivalentObject
+[test][434/495] com.mpatric.mp3agic.ID3v2UrlFrameDataTest#shouldConvertFrameDataWithUnicodeDescriptionToBytesAndBackToEquivalentObject
+[test][435/495] com.mpatric.mp3agic.ID3v2WWWFrameDataTest#getsAndSetsId
+[test][436/495] com.mpatric.mp3agic.InvalidDataExceptionTest#constructorWithMessage
+[test][437/495] com.mpatric.mp3agic.InvalidDataExceptionTest#constructorWithMessageAndCause
+[test][438/495] com.mpatric.mp3agic.InvalidDataExceptionTest#defaultConstructor
+[test][439/495] com.mpatric.mp3agic.Mp3FileTest#shouldFindProbableStartOfMpegFramesWithPrescan
+[test][440/495] com.mpatric.mp3agic.Mp3FileTest#shouldFindProbableStartOfMpegFramesWithPrescanForFileConstructor
+[test][441/495] com.mpatric.mp3agic.Mp3FileTest#shouldIgnoreIncompleteMpegFrame
+[test][442/495] com.mpatric.mp3agic.Mp3FileTest#shouldIgnoreIncompleteMpegFrameForFileConstructor
+[test][443/495] com.mpatric.mp3agic.Mp3FileTest#shouldInitialiseProperlyWhenNotScanningFile
+[test][444/495] com.mpatric.mp3agic.Mp3FileTest#shouldInitialiseProperlyWhenNotScanningFileForFileConstructor
+[test][445/495] com.mpatric.mp3agic.Mp3FileTest#shouldLoadAndCheckMp3ContainingUnicodeFields
+[test][446/495] com.mpatric.mp3agic.Mp3FileTest#shouldLoadMp3WithCustomTag
+[test][447/495] com.mpatric.mp3agic.Mp3FileTest#shouldLoadMp3WithFakeStartAndEndFrames
+[test][448/495] com.mpatric.mp3agic.Mp3FileTest#shouldLoadMp3WithId3Tags
+[test][449/495] com.mpatric.mp3agic.Mp3FileTest#shouldLoadMp3WithNoTags
+[test][450/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveCustomTag
+[test][451/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveCustomTagForFileConstructor
+[test][452/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v1AndId3v2AndCustomTags
+[test][453/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v1AndId3v2AndCustomTagsForFileConstructor
+[test][454/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v1Tag
+[test][455/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v1TagForFileConstructor
+[test][456/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v2Tag
+[test][457/495] com.mpatric.mp3agic.Mp3FileTest#shouldRemoveId3v2TagForFileConstructor
+[test][458/495] com.mpatric.mp3agic.Mp3FileTest#shouldSaveLoadedMp3WhichIsEquivalentToOriginal
+[test][459/495] com.mpatric.mp3agic.Mp3FileTest#shouldSaveLoadedMp3WithUnicodeFieldsWhichIsEquivalentToOriginal
+[test][460/495] com.mpatric.mp3agic.Mp3FileTest#shouldThrowExceptionForFileThatIsNotAnMp3
+[test][461/495] com.mpatric.mp3agic.Mp3FileTest#shouldThrowExceptionForFileThatIsNotAnMp3ForFileConstructor
+[test][462/495] com.mpatric.mp3agic.Mp3FileTest#shouldThrowExceptionIfSavingMp3WithSameNameAsSourceFile
+[test][463/495] com.mpatric.mp3agic.Mp3FileTest#shouldThrowExceptionIfSavingMp3WithSameNameAsSourceFileForFileConstructor
+[test][464/495] com.mpatric.mp3agic.MpegFrameTest#shouldExtractValidFields
+[test][465/495] com.mpatric.mp3agic.MpegFrameTest#shouldExtractValidMpegVersion1Header
+[test][466/495] com.mpatric.mp3agic.MpegFrameTest#shouldProcessValidMpegVersion2Header
+[test][467/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForFreeBitrate
+[test][468/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForInvalidBitrate
+[test][469/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForInvalidFrameSync
+[test][470/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForInvalidMpegLayer
+[test][471/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForInvalidMpegVersion
+[test][472/495] com.mpatric.mp3agic.MpegFrameTest#shouldThrowExceptionForInvalidSampleRate
+[test][473/495] com.mpatric.mp3agic.MpegFrameTest#testBitwiseLeftShiftOperationsOnLong
+[test][474/495] com.mpatric.mp3agic.MpegFrameTest#testBitwiseRightShiftOperationsOnLong
+[test][475/495] com.mpatric.mp3agic.MpegFrameTest#testShiftingByteIntoBiggerNumber
+[test][476/495] com.mpatric.mp3agic.MutableIntegerTest#equalIfValueEqual
+[test][477/495] com.mpatric.mp3agic.MutableIntegerTest#equalObjectsHaveSameHashCode
+[test][478/495] com.mpatric.mp3agic.MutableIntegerTest#equalsItself
+[test][479/495] com.mpatric.mp3agic.MutableIntegerTest#hashCodeIsConsistent
+[test][480/495] com.mpatric.mp3agic.MutableIntegerTest#incrementsValue
+[test][481/495] com.mpatric.mp3agic.MutableIntegerTest#initializesValue
+[test][482/495] com.mpatric.mp3agic.MutableIntegerTest#notEqualIfValueNotEqual
+[test][483/495] com.mpatric.mp3agic.MutableIntegerTest#notEqualToDifferentClass
+[test][484/495] com.mpatric.mp3agic.MutableIntegerTest#notEqualToNull
+[test][485/495] com.mpatric.mp3agic.MutableIntegerTest#setsValue
+[test][486/495] com.mpatric.mp3agic.NotSupportedExceptionTest#constructorWithMessage
+[test][487/495] com.mpatric.mp3agic.NotSupportedExceptionTest#constructorWithMessageAndCause
+[test][488/495] com.mpatric.mp3agic.NotSupportedExceptionTest#defaultConstructor
+[test][489/495] com.mpatric.mp3agic.TestHelper#shouldConvertBytesToHexAndBack
+[test][490/495] com.mpatric.mp3agic.UnsupportedTagExceptionTest#constructorWithMessage
+[test][491/495] com.mpatric.mp3agic.UnsupportedTagExceptionTest#constructorWithMessageAndCause
+[test][492/495] com.mpatric.mp3agic.UnsupportedTagExceptionTest#defaultConstructor
+[test][493/495] com.mpatric.mp3agic.VersionTest#returnsUrl
+[test][494/495] com.mpatric.mp3agic.VersionTest#returnsVersion
+[test][495/495] com.mpatric.mp3agic.VersionTest#returnsVersionAndUrlAsString
+[main][14/14] python parse_data.py
+  0%|          | 0/495 [00:00<?, ?it/s]  1%|          | 5/495 [00:00<00:09, 49.88it/s]  2%|▏         | 11/495 [00:00<00:09, 49.75it/s]  3%|▎         | 17/495 [00:00<00:09, 51.06it/s]  5%|▍         | 23/495 [00:00<00:09, 52.22it/s]  6%|▌         | 29/495 [00:00<00:08, 52.59it/s]  7%|▋         | 35/495 [00:00<00:08, 52.72it/s]  8%|▊         | 41/495 [00:00<00:08, 51.32it/s]  9%|▉         | 47/495 [00:00<00:08, 52.45it/s] 11%|█         | 54/495 [00:01<00:08, 54.37it/s] 12%|█▏        | 60/495 [00:01<00:07, 55.26it/s] 13%|█▎        | 66/495 [00:01<00:07, 56.25it/s] 15%|█▍        | 72/495 [00:01<00:07, 55.02it/s] 16%|█▌        | 78/495 [00:01<00:07, 55.92it/s] 17%|█▋        | 84/495 [00:01<00:07, 55.69it/s] 18%|█▊        | 90/495 [00:01<00:07, 56.32it/s] 19%|█▉        | 96/495 [00:01<00:07, 56.79it/s] 21%|██        | 102/495 [00:01<00:07, 55.76it/s] 22%|██▏       | 108/495 [00:01<00:06, 56.23it/s] 23%|██▎       | 114/495 [00:02<00:06, 55.32it/s] 24%|██▍       | 120/495 [00:02<00:06, 55.39it/s] 25%|██▌       | 126/495 [00:02<00:06, 55.47it/s] 27%|██▋       | 132/495 [00:02<00:06, 54.33it/s] 28%|██▊       | 138/495 [00:02<00:06, 54.60it/s] 29%|██▉       | 144/495 [00:02<00:06, 53.89it/s] 30%|███       | 150/495 [00:02<00:06, 54.82it/s] 32%|███▏      | 156/495 [00:02<00:06, 55.58it/s] 33%|███▎      | 162/495 [00:02<00:06, 54.83it/s] 34%|███▍      | 168/495 [00:03<00:05, 55.84it/s] 35%|███▌      | 174/495 [00:03<00:05, 55.61it/s] 36%|███▋      | 180/495 [00:03<00:05, 56.28it/s] 38%|███▊      | 186/495 [00:03<00:05, 56.72it/s] 39%|███▉      | 192/495 [00:03<00:05, 56.00it/s] 40%|████      | 198/495 [00:03<00:05, 55.51it/s] 41%|████      | 204/495 [00:03<00:05, 53.60it/s] 42%|████▏     | 210/495 [00:03<00:05, 54.33it/s] 44%|████▎     | 216/495 [00:03<00:05, 54.50it/s] 45%|████▍     | 222/495 [00:04<00:05, 52.37it/s] 46%|████▌     | 228/495 [00:04<00:05, 52.98it/s] 47%|████▋     | 234/495 [00:04<00:04, 52.84it/s] 48%|████▊     | 240/495 [00:04<00:04, 54.14it/s] 50%|████▉     | 246/495 [00:04<00:04, 54.29it/s] 51%|█████     | 252/495 [00:04<00:04, 53.35it/s] 52%|█████▏    | 258/495 [00:04<00:04, 54.07it/s] 53%|█████▎    | 264/495 [00:04<00:04, 53.21it/s] 55%|█████▍    | 270/495 [00:04<00:04, 54.32it/s] 56%|█████▌    | 276/495 [00:05<00:04, 54.46it/s] 57%|█████▋    | 282/495 [00:05<00:03, 54.09it/s] 58%|█████▊    | 288/495 [00:05<00:03, 54.69it/s] 59%|█████▉    | 294/495 [00:05<00:03, 53.94it/s] 61%|██████    | 300/495 [00:05<00:03, 54.39it/s] 62%|██████▏   | 306/495 [00:05<00:03, 54.69it/s] 63%|██████▎   | 312/495 [00:05<00:03, 54.14it/s] 64%|██████▍   | 318/495 [00:05<00:03, 54.57it/s] 65%|██████▌   | 324/495 [00:05<00:03, 51.97it/s] 67%|██████▋   | 330/495 [00:06<00:03, 51.68it/s] 68%|██████▊   | 336/495 [00:06<00:03, 48.95it/s] 69%|██████▉   | 342/495 [00:06<00:03, 50.62it/s] 70%|███████   | 348/495 [00:06<00:02, 52.09it/s] 72%|███████▏  | 354/495 [00:06<00:02, 51.18it/s] 73%|███████▎  | 360/495 [00:06<00:02, 52.11it/s] 74%|███████▍  | 366/495 [00:06<00:02, 52.46it/s] 75%|███████▌  | 372/495 [00:06<00:02, 49.76it/s] 76%|███████▋  | 378/495 [00:07<00:02, 51.27it/s] 78%|███████▊  | 384/495 [00:07<00:02, 51.60it/s] 79%|███████▉  | 390/495 [00:07<00:01, 52.87it/s] 80%|████████  | 396/495 [00:07<00:01, 54.13it/s] 81%|████████  | 402/495 [00:07<00:01, 53.96it/s] 82%|████████▏ | 408/495 [00:07<00:01, 54.07it/s] 84%|████████▎ | 414/495 [00:07<00:01, 54.00it/s] 85%|████████▍ | 420/495 [00:07<00:01, 53.67it/s] 86%|████████▌ | 426/495 [00:07<00:01, 54.34it/s] 87%|████████▋ | 432/495 [00:08<00:01, 53.50it/s] 88%|████████▊ | 438/495 [00:08<00:01, 53.50it/s] 90%|████████▉ | 444/495 [00:08<00:01, 47.59it/s] 91%|█████████ | 449/495 [00:08<00:00, 46.17it/s] 92%|█████████▏| 455/495 [00:08<00:00, 48.34it/s] 93%|█████████▎| 461/495 [00:08<00:00, 49.77it/s] 94%|█████████▍| 467/495 [00:08<00:00, 49.58it/s] 96%|█████████▌| 473/495 [00:08<00:00, 50.53it/s] 97%|█████████▋| 479/495 [00:08<00:00, 49.91it/s] 98%|█████████▊| 485/495 [00:09<00:00, 50.40it/s] 99%|█████████▉| 491/495 [00:09<00:00, 51.05it/s]100%|██████████| 495/495 [00:09<00:00, 53.13it/s]
+Done.

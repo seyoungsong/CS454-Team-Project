@@ -53,26 +53,19 @@ git version 2.33.1
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.fasterxml.uuid.UUIDTest
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.uuid.UUIDTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.uuid.UUIDTest
 [INFO] Running com.fasterxml.uuid.UUIDComparatorTest
 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.uuid.UUIDComparatorTest
 [INFO] Running com.fasterxml.uuid.UUIDTimerTest
-[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -516888785070127290, last 0
-[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -516888785070127290, last 0
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.fasterxml.uuid.UUIDTimerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.uuid.UUIDTimerTest
 [INFO] Running com.fasterxml.uuid.EthernetAddressTest
-[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.uuid.EthernetAddressTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.uuid.EthernetAddressTest
 [INFO] Running com.fasterxml.uuid.UUIDGeneratorTest
 [main] WARN com.fasterxml.uuid.UUIDTimer - Timestamp over-run: need to reinitialize random sequence
 [main] WARN com.fasterxml.uuid.UUIDTimer - Timestamp over-run: need to reinitialize random sequence
-[ERROR] Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.173 s <<< FAILURE! - in com.fasterxml.uuid.UUIDGeneratorTest
-[ERROR] testGenerateTimeBasedUUIDWithEthernetAddress(com.fasterxml.uuid.UUIDGeneratorTest)  Time elapsed: 0.022 s  <<< FAILURE!
-junit.framework.AssertionFailedError: UUID timestamp: 1637953695633 was not before the end time: 1637953695632
-	at com.fasterxml.uuid.UUIDGeneratorTest.checkUUIDArrayForCorrectCreationTime(UUIDGeneratorTest.java:539)
-	at com.fasterxml.uuid.UUIDGeneratorTest.testGenerateTimeBasedUUIDWithEthernetAddress(UUIDGeneratorTest.java:230)
-
-[ERROR] testGenerateTimeBasedUUID(com.fasterxml.uuid.UUIDGeneratorTest)  Time elapsed: 0.025 s  <<< FAILURE!
-junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not before the end time: 1637953695737
+[ERROR] Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.229 s <<< FAILURE! - in com.fasterxml.uuid.UUIDGeneratorTest
+[ERROR] testGenerateTimeBasedUUID(com.fasterxml.uuid.UUIDGeneratorTest)  Time elapsed: 0.022 s  <<< FAILURE!
+junit.framework.AssertionFailedError: UUID timestamp: 1637977812734 was not before the end time: 1637977812733
 	at com.fasterxml.uuid.UUIDGeneratorTest.checkUUIDArrayForCorrectCreationTime(UUIDGeneratorTest.java:539)
 	at com.fasterxml.uuid.UUIDGeneratorTest.testGenerateTimeBasedUUID(UUIDGeneratorTest.java:181)
 
@@ -82,16 +75,15 @@ junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not befo
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   UUIDGeneratorTest.testGenerateTimeBasedUUID:181->checkUUIDArrayForCorrectCreationTime:539 UUID timestamp: 1637953695738 was not before the end time: 1637953695737
-[ERROR]   UUIDGeneratorTest.testGenerateTimeBasedUUIDWithEthernetAddress:230->checkUUIDArrayForCorrectCreationTime:539 UUID timestamp: 1637953695633 was not before the end time: 1637953695632
+[ERROR]   UUIDGeneratorTest.testGenerateTimeBasedUUID:181->checkUUIDArrayForCorrectCreationTime:539 UUID timestamp: 1637977812734 was not before the end time: 1637977812733
 [INFO] 
-[ERROR] Tests run: 46, Failures: 2, Errors: 0, Skipped: 0
+[ERROR] Tests run: 46, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.528 s
-[INFO] Finished at: 2021-11-27T04:08:16+09:00
+[INFO] Total time:  3.042 s
+[INFO] Finished at: 2021-11-27T10:50:13+09:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project java-uuid-generator: There are test failures.
 [ERROR] 
@@ -156,19 +148,17 @@ junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not befo
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.fasterxml.uuid.UUIDTest
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in com.fasterxml.uuid.UUIDTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s - in com.fasterxml.uuid.UUIDTest
 [INFO] Running com.fasterxml.uuid.UUIDComparatorTest
 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.uuid.UUIDComparatorTest
 [INFO] Running com.fasterxml.uuid.UUIDTimerTest
-[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -4688798631642329565, last 0
-[main] WARN com.fasterxml.uuid.UUIDTimer - System time going backwards! (got value -4688798631642329565, last 0
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.uuid.UUIDTimerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in com.fasterxml.uuid.UUIDTimerTest
 [INFO] Running com.fasterxml.uuid.EthernetAddressTest
-[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.uuid.EthernetAddressTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in com.fasterxml.uuid.EthernetAddressTest
 [INFO] Running com.fasterxml.uuid.UUIDGeneratorTest
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.259 s - in com.fasterxml.uuid.UUIDGeneratorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.414 s - in com.fasterxml.uuid.UUIDGeneratorTest
 [INFO] Running com.fasterxml.uuid.SimpleGenerationTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.uuid.SimpleGenerationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.uuid.SimpleGenerationTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -187,7 +177,7 @@ junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not befo
 [INFO] 
 [INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ java-uuid-generator ---
 [INFO] Using default-clover-report descriptor.
-[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn8701403944045024977resource
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn5181855202878354670resource
 [INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
 [INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
 [INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
@@ -196,8 +186,8 @@ junit.framework.AssertionFailedError: UUID timestamp: 1637953695738 was not befo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.168 s
-[INFO] Finished at: 2021-11-27T04:08:21+09:00
+[INFO] Total time:  6.784 s
+[INFO] Finished at: 2021-11-27T10:50:20+09:00
 [INFO] ------------------------------------------------------------------------
 [main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
 [main][11/14] python identify_tests.py
@@ -251,5 +241,5 @@ Done.
 [test][45/46] com.fasterxml.uuid.UUIDTimerTest#testGetTimestampReproducible
 [test][46/46] com.fasterxml.uuid.UUIDTimerTest#testSecureRandomUUIDTimerConstructor
 [main][14/14] python parse_data.py
-  0%|          | 0/46 [00:00<?, ?it/s] 59%|█████▊    | 27/46 [00:00<00:00, 266.65it/s]100%|██████████| 46/46 [00:00<00:00, 270.54it/s]
+  0%|          | 0/46 [00:00<?, ?it/s] 61%|██████    | 28/46 [00:00<00:00, 270.79it/s]100%|██████████| 46/46 [00:00<00:00, 273.87it/s]
 Done.

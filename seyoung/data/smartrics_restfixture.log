@@ -1,0 +1,621 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/smartrics/restfixture repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< smartrics.restfixture:smartrics-RestFixture >-------------
+[INFO] Building RestFixture 4.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/fitnesse/fitnesse/20151230/fitnesse-20151230.pom
+Progress (1): 2.7/3.1 kBProgress (1): 3.1 kB                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/fitnesse/fitnesse/20151230/fitnesse-20151230.pom (3.1 kB at 1.4 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmlparser/2.1/htmlparser-2.1.pom
+Progress (1): 1.9 kB                    Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmlparser/2.1/htmlparser-2.1.pom (1.9 kB at 2.0 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/HTMLParserProject/2.1/HTMLParserProject-2.1.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/HTMLParserProject/2.1/HTMLParserProject-2.1.pom (12 kB at 13 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmllexer/2.1/htmllexer-2.1.pom
+Progress (1): 978 B                   Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmllexer/2.1/htmllexer-2.1.pom (978 B at 1.0 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/json/json/20140107/json-20140107.pom
+Progress (1): 2.7/4.2 kBProgress (1): 4.2 kB                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/json/json/20140107/json-20140107.pom (4.2 kB at 4.4 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+Progress (1): 2.7/2.8 kBProgress (1): 2.8 kB                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom (2.8 kB at 2.7 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/smartrics/restfixture/smartrics-RestClient/2.2/smartrics-RestClient-2.2.pom
+Progress (1): 2.7/9.0 kBProgress (1): 5.5/9.0 kBProgress (1): 8.2/9.0 kBProgress (1): 9.0 kB                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/smartrics/restfixture/smartrics-RestClient/2.2/smartrics-RestClient-2.2.pom (9.0 kB at 9.4 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.pom
+Progress (1): 2.7 kB                    Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.pom (2.7 kB at 2.8 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-parent/1.6.6/slf4j-parent-1.6.6.pom
+Progress (1): 2.7/13 kBProgress (1): 5.5/13 kBProgress (1): 8.2/13 kBProgress (1): 11/13 kB Progress (1): 13 kB                      Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-parent/1.6.6/slf4j-parent-1.6.6.pom (13 kB at 14 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.pom
+Progress (1): 1.3 kB                    Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.pom (1.3 kB at 1.0 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/codehaus/jettison/jettison/1.3.2/jettison-1.3.2.pom
+Progress (1): 4.1/4.3 kBProgress (1): 4.3 kB                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/codehaus/jettison/jettison/1.3.2/jettison-1.3.2.pom (4.3 kB at 4.6 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/stax/stax-api/1.0.1/stax-api-1.0.1.pom
+Progress (1): 1.5 kB                    Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/stax/stax-api/1.0.1/stax-api-1.0.1.pom (1.5 kB at 1.6 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream/1.4.10-java7/xstream-1.4.10-java7.pom
+Progress (1): 4.1/16 kBProgress (1): 8.2/16 kBProgress (1): 12/16 kB Progress (1): 16 kB                      Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream/1.4.10-java7/xstream-1.4.10-java7.pom (16 kB at 16 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom
+Progress (1): 4.1/35 kBProgress (1): 8.2/35 kBProgress (1): 12/35 kB Progress (1): 16/35 kBProgress (1): 20/35 kBProgress (1): 25/35 kBProgress (1): 29/35 kBProgress (1): 33/35 kBProgress (1): 35 kB                      Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom (35 kB at 35 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.pom
+Progress (1): 2.8 kB                    Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.pom (2.8 kB at 2.9 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-parent/1.7.13/slf4j-parent-1.7.13.pom
+Progress (1): 4.1/13 kBProgress (1): 8.2/13 kBProgress (1): 12/13 kB Progress (1): 13 kB                      Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-parent/1.7.13/slf4j-parent-1.7.13.pom (13 kB at 14 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/fitnesse/fitnesse/20151230/fitnesse-20151230.jar
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmlparser/2.1/htmlparser-2.1.jar
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmllexer/2.1/htmllexer-2.1.jar
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/json/json/20140107/json-20140107.jar
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
+Progress (1): 0/3.3 MBProgress (1): 0/3.3 MBProgress (1): 0/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.1/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.2/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.3/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.4/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.5/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.6/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.7/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.8/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 0.9/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.0/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.1/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.2/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.3/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.4/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.5/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.6/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.7/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.8/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 1.9/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.0/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.1/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.2/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.3/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.4/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.5/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.6/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.7/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.8/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 2.9/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.0/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.1/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.2/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3/3.3 MBProgress (1): 3.3 MB    Progress (2): 3.3 MB | 2.7/65 kBProgress (2): 3.3 MB | 5.5/65 kBProgress (2): 3.3 MB | 8.2/65 kBProgress (2): 3.3 MB | 11/65 kB Progress (2): 3.3 MB | 14/65 kBProgress (2): 3.3 MB | 16/65 kBProgress (3): 3.3 MB | 16/65 kB | 2.7/72 kBProgress (3): 3.3 MB | 16/65 kB | 5.5/72 kBProgress (3): 3.3 MB | 16/65 kB | 8.2/72 kBProgress (3): 3.3 MB | 16/65 kB | 11/72 kB Progress (4): 3.3 MB | 16/65 kB | 11/72 kB | 2.7/34 kBProgress (4): 3.3 MB | 16/65 kB | 11/72 kB | 5.5/34 kBProgress (4): 3.3 MB | 16/65 kB | 11/72 kB | 8.2/34 kBProgress (4): 3.3 MB | 19/65 kB | 11/72 kB | 8.2/34 kBProgress (4): 3.3 MB | 19/65 kB | 14/72 kB | 8.2/34 kBProgress (4): 3.3 MB | 19/65 kB | 14/72 kB | 11/34 kB Progress (4): 3.3 MB | 19/65 kB | 14/72 kB | 14/34 kBProgress (4): 3.3 MB | 22/65 kB | 14/72 kB | 14/34 kBProgress (5): 3.3 MB | 22/65 kB | 14/72 kB | 14/34 kB | 2.7/139 kBProgress (5): 3.3 MB | 22/65 kB | 14/72 kB | 14/34 kB | 5.5/139 kBProgress (5): 3.3 MB | 22/65 kB | 14/72 kB | 14/34 kB | 8.2/139 kBProgress (5): 3.3 MB | 22/65 kB | 14/72 kB | 16/34 kB | 8.2/139 kBProgress (5): 3.3 MB | 22/65 kB | 16/72 kB | 16/34 kB | 8.2/139 kBProgress (5): 3.3 MB | 25/65 kB | 16/72 kB | 16/34 kB | 8.2/139 kBProgress (5): 3.3 MB | 25/65 kB | 16/72 kB | 16/34 kB | 11/139 kB Progress (5): 3.3 MB | 25/65 kB | 16/72 kB | 19/34 kB | 11/139 kBProgress (5): 3.3 MB | 25/65 kB | 19/72 kB | 19/34 kB | 11/139 kBProgress (5): 3.3 MB | 25/65 kB | 19/72 kB | 19/34 kB | 14/139 kBProgress (5): 3.3 MB | 27/65 kB | 19/72 kB | 19/34 kB | 14/139 kBProgress (5): 3.3 MB | 27/65 kB | 19/72 kB | 22/34 kB | 14/139 kBProgress (5): 3.3 MB | 30/65 kB | 19/72 kB | 22/34 kB | 14/139 kBProgress (5): 3.3 MB | 30/65 kB | 22/72 kB | 22/34 kB | 14/139 kBProgress (5): 3.3 MB | 30/65 kB | 22/72 kB | 25/34 kB | 14/139 kBProgress (5): 3.3 MB | 30/65 kB | 22/72 kB | 25/34 kB | 16/139 kBProgress (5): 3.3 MB | 30/65 kB | 22/72 kB | 27/34 kB | 16/139 kBProgress (5): 3.3 MB | 30/65 kB | 25/72 kB | 27/34 kB | 16/139 kBProgress (5): 3.3 MB | 30/65 kB | 25/72 kB | 30/34 kB | 16/139 kBProgress (5): 3.3 MB | 30/65 kB | 25/72 kB | 30/34 kB | 19/139 kBProgress (5): 3.3 MB | 33/65 kB | 25/72 kB | 30/34 kB | 19/139 kBProgress (5): 3.3 MB | 36/65 kB | 25/72 kB | 30/34 kB | 19/139 kBProgress (5): 3.3 MB | 36/65 kB | 25/72 kB | 33/34 kB | 19/139 kBProgress (5): 3.3 MB | 36/65 kB | 27/72 kB | 33/34 kB | 19/139 kBProgress (5): 3.3 MB | 36/65 kB | 27/72 kB | 33/34 kB | 22/139 kBProgress (5): 3.3 MB | 36/65 kB | 27/72 kB | 34 kB | 22/139 kB   Progress (5): 3.3 MB | 38/65 kB | 27/72 kB | 34 kB | 22/139 kBProgress (5): 3.3 MB | 38/65 kB | 30/72 kB | 34 kB | 22/139 kBProgress (5): 3.3 MB | 38/65 kB | 30/72 kB | 34 kB | 25/139 kBProgress (5): 3.3 MB | 38/65 kB | 33/72 kB | 34 kB | 25/139 kBProgress (5): 3.3 MB | 38/65 kB | 36/72 kB | 34 kB | 25/139 kBProgress (5): 3.3 MB | 38/65 kB | 36/72 kB | 34 kB | 27/139 kBProgress (5): 3.3 MB | 38/65 kB | 36/72 kB | 34 kB | 30/139 kBProgress (5): 3.3 MB | 38/65 kB | 38/72 kB | 34 kB | 30/139 kBProgress (5): 3.3 MB | 38/65 kB | 38/72 kB | 34 kB | 33/139 kBProgress (5): 3.3 MB | 38/65 kB | 38/72 kB | 34 kB | 36/139 kBProgress (5): 3.3 MB | 38/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 41/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 44/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 47/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 49/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 52/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 55/65 kB | 38/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 55/65 kB | 41/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 55/65 kB | 44/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 58/65 kB | 44/72 kB | 34 kB | 38/139 kBProgress (5): 3.3 MB | 58/65 kB | 44/72 kB | 34 kB | 41/139 kBProgress (5): 3.3 MB | 58/65 kB | 47/72 kB | 34 kB | 41/139 kBProgress (5): 3.3 MB | 60/65 kB | 47/72 kB | 34 kB | 41/139 kBProgress (5): 3.3 MB | 60/65 kB | 47/72 kB | 34 kB | 44/139 kBProgress (5): 3.3 MB | 63/65 kB | 47/72 kB | 34 kB | 44/139 kBProgress (5): 3.3 MB | 63/65 kB | 49/72 kB | 34 kB | 44/139 kBProgress (5): 3.3 MB | 63/65 kB | 49/72 kB | 34 kB | 47/139 kBProgress (5): 3.3 MB | 65 kB | 49/72 kB | 34 kB | 47/139 kB   Progress (5): 3.3 MB | 65 kB | 52/72 kB | 34 kB | 47/139 kBProgress (5): 3.3 MB | 65 kB | 52/72 kB | 34 kB | 49/139 kBProgress (5): 3.3 MB | 65 kB | 55/72 kB | 34 kB | 49/139 kBProgress (5): 3.3 MB | 65 kB | 55/72 kB | 34 kB | 52/139 kBProgress (5): 3.3 MB | 65 kB | 58/72 kB | 34 kB | 52/139 kBProgress (5): 3.3 MB | 65 kB | 58/72 kB | 34 kB | 55/139 kBProgress (5): 3.3 MB | 65 kB | 60/72 kB | 34 kB | 55/139 kBProgress (5): 3.3 MB | 65 kB | 63/72 kB | 34 kB | 55/139 kBProgress (5): 3.3 MB | 65 kB | 63/72 kB | 34 kB | 58/139 kBProgress (5): 3.3 MB | 65 kB | 66/72 kB | 34 kB | 58/139 kBProgress (5): 3.3 MB | 65 kB | 66/72 kB | 34 kB | 60/139 kBProgress (5): 3.3 MB | 65 kB | 66/72 kB | 34 kB | 63/139 kBProgress (5): 3.3 MB | 65 kB | 66/72 kB | 34 kB | 66/139 kBProgress (5): 3.3 MB | 65 kB | 70/72 kB | 34 kB | 66/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 66/139 kB   Progress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 70/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 74/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 78/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 82/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 86/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 90/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 94/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 99/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 103/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 107/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 111/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 115/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 119/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 123/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 127/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 131/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 135/139 kBProgress (5): 3.3 MB | 65 kB | 72 kB | 34 kB | 139 kB                                                         Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/fitnesse/fitnesse/20151230/fitnesse-20151230.jar (3.3 MB at 2.0 MB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/smartrics/restfixture/smartrics-RestClient/2.2/smartrics-RestClient-2.2.jar
+Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar (34 kB at 18 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar
+Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/json/json/20140107/json-20140107.jar (65 kB at 32 kB/s)
+Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmllexer/2.1/htmllexer-2.1.jar (72 kB at 36 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/codehaus/jettison/jettison/1.3.2/jettison-1.3.2.jar
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/stax/stax-api/1.0.1/stax-api-1.0.1.jar
+Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/htmlparser/htmlparser/2.1/htmlparser-2.1.jar (139 kB at 63 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream/1.4.10-java7/xstream-1.4.10-java7.jar
+Progress (1): 4.1/22 kBProgress (1): 8.2/22 kBProgress (1): 12/22 kB Progress (1): 16/22 kBProgress (1): 20/22 kBProgress (1): 22 kB   Progress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.1/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.2/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.3/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.4/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.5/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.6/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.7/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.8/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 0.9/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.0/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.1/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.2/1.3 MBProgress (2): 22 kB | 1.3/1.3 MBProgress (2): 22 kB | 1.3 MB    Progress (3): 22 kB | 1.3 MB | 2.7/27 kBProgress (3): 22 kB | 1.3 MB | 5.5/27 kBProgress (3): 22 kB | 1.3 MB | 8.2/27 kBProgress (3): 22 kB | 1.3 MB | 11/27 kB Progress (3): 22 kB | 1.3 MB | 14/27 kBProgress (3): 22 kB | 1.3 MB | 16/27 kBProgress (3): 22 kB | 1.3 MB | 19/27 kBProgress (3): 22 kB | 1.3 MB | 22/27 kBProgress (4): 22 kB | 1.3 MB | 22/27 kB | 4.1/78 kBProgress (4): 22 kB | 1.3 MB | 22/27 kB | 8.2/78 kBProgress (4): 22 kB | 1.3 MB | 22/27 kB | 12/78 kB Progress (4): 22 kB | 1.3 MB | 22/27 kB | 16/78 kBProgress (4): 22 kB | 1.3 MB | 25/27 kB | 16/78 kBProgress (4): 22 kB | 1.3 MB | 25/27 kB | 20/78 kBProgress (4): 22 kB | 1.3 MB | 25/27 kB | 25/78 kBProgress (4): 22 kB | 1.3 MB | 25/27 kB | 29/78 kBProgress (4): 22 kB | 1.3 MB | 25/27 kB | 33/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 33/78 kB   Progress (4): 22 kB | 1.3 MB | 27 kB | 37/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 41/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 45/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 49/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 53/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 57/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 61/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 66/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 70/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 74/78 kBProgress (4): 22 kB | 1.3 MB | 27 kB | 78 kB                                               Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/smartrics/restfixture/smartrics-RestClient/2.2/smartrics-RestClient-2.2.jar (22 kB at 8.1 kB/s)
+Downloading from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar
+Progress (4): 1.3 MB | 27 kB | 78 kB | 4.1/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 8.2/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 12/556 kB Progress (4): 1.3 MB | 27 kB | 78 kB | 16/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 20/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 25/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 29/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 33/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 37/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 41/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 45/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 49/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 53/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 57/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 61/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 66/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 70/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 74/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 78/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 82/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 86/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 90/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 94/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 98/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 102/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 106/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 111/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 115/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 119/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 123/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 127/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 131/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 135/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 139/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 143/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 147/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 152/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 156/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 160/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 164/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 168/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 172/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 176/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 180/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 184/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 188/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 193/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 197/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 201/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 205/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 209/556 kBProgress (4): 1.3 MB | 27 kB | 78 kB | 213/556 kB                                                 Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar (1.3 MB at 426 kB/s)
+Progress (3): 27 kB | 78 kB | 217/556 kBProgress (3): 27 kB | 78 kB | 221/556 kBProgress (3): 27 kB | 78 kB | 225/556 kBProgress (3): 27 kB | 78 kB | 229/556 kBProgress (3): 27 kB | 78 kB | 233/556 kBProgress (3): 27 kB | 78 kB | 238/556 kBProgress (3): 27 kB | 78 kB | 242/556 kBProgress (3): 27 kB | 78 kB | 246/556 kBProgress (3): 27 kB | 78 kB | 250/556 kBProgress (3): 27 kB | 78 kB | 254/556 kBProgress (3): 27 kB | 78 kB | 258/556 kBProgress (3): 27 kB | 78 kB | 262/556 kBProgress (3): 27 kB | 78 kB | 266/556 kBProgress (3): 27 kB | 78 kB | 270/556 kBProgress (3): 27 kB | 78 kB | 274/556 kBProgress (3): 27 kB | 78 kB | 279/556 kBProgress (3): 27 kB | 78 kB | 283/556 kBProgress (3): 27 kB | 78 kB | 287/556 kBProgress (3): 27 kB | 78 kB | 291/556 kBProgress (3): 27 kB | 78 kB | 295/556 kBProgress (3): 27 kB | 78 kB | 299/556 kBProgress (3): 27 kB | 78 kB | 303/556 kBProgress (3): 27 kB | 78 kB | 307/556 kBProgress (3): 27 kB | 78 kB | 311/556 kBProgress (3): 27 kB | 78 kB | 315/556 kBProgress (3): 27 kB | 78 kB | 319/556 kBProgress (3): 27 kB | 78 kB | 324/556 kBProgress (3): 27 kB | 78 kB | 328/556 kB                                        Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/codehaus/jettison/jettison/1.3.2/jettison-1.3.2.jar (78 kB at 25 kB/s)
+Progress (2): 27 kB | 332/556 kBProgress (2): 27 kB | 336/556 kBProgress (2): 27 kB | 340/556 kBProgress (2): 27 kB | 344/556 kBProgress (2): 27 kB | 348/556 kBProgress (2): 27 kB | 352/556 kBProgress (2): 27 kB | 356/556 kBProgress (2): 27 kB | 360/556 kBProgress (2): 27 kB | 365/556 kBProgress (2): 27 kB | 369/556 kBProgress (2): 27 kB | 373/556 kBProgress (2): 27 kB | 377/556 kBProgress (2): 27 kB | 381/556 kBProgress (2): 27 kB | 385/556 kBProgress (2): 27 kB | 389/556 kBProgress (2): 27 kB | 393/556 kBProgress (2): 27 kB | 397/556 kBProgress (2): 27 kB | 401/556 kBProgress (2): 27 kB | 406/556 kBProgress (2): 27 kB | 410/556 kBProgress (2): 27 kB | 414/556 kBProgress (2): 27 kB | 418/556 kBProgress (2): 27 kB | 422/556 kBProgress (2): 27 kB | 426/556 kBProgress (2): 27 kB | 430/556 kBProgress (2): 27 kB | 434/556 kBProgress (2): 27 kB | 438/556 kBProgress (2): 27 kB | 442/556 kB                                Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/stax/stax-api/1.0.1/stax-api-1.0.1.jar (27 kB at 8.6 kB/s)
+Progress (1): 446/556 kBProgress (1): 451/556 kBProgress (1): 455/556 kBProgress (1): 459/556 kBProgress (1): 463/556 kBProgress (1): 467/556 kBProgress (1): 471/556 kBProgress (1): 475/556 kBProgress (1): 479/556 kBProgress (1): 483/556 kBProgress (1): 487/556 kBProgress (1): 492/556 kBProgress (1): 496/556 kBProgress (1): 500/556 kBProgress (1): 504/556 kBProgress (1): 508/556 kBProgress (1): 511/556 kBProgress (1): 515/556 kBProgress (1): 519/556 kBProgress (1): 523/556 kBProgress (1): 527/556 kBProgress (1): 532/556 kBProgress (1): 536/556 kBProgress (1): 540/556 kBProgress (1): 544/556 kBProgress (1): 548/556 kBProgress (1): 552/556 kBProgress (1): 556 kB    Progress (2): 556 kB | 4.1/33 kBProgress (2): 556 kB | 8.2/33 kBProgress (2): 556 kB | 12/33 kB Progress (2): 556 kB | 16/33 kBProgress (2): 556 kB | 20/33 kBProgress (2): 556 kB | 25/33 kBProgress (2): 556 kB | 29/33 kBProgress (2): 556 kB | 33/33 kBProgress (2): 556 kB | 33 kB                               Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/com/thoughtworks/xstream/xstream/1.4.10-java7/xstream-1.4.10-java7.jar (556 kB at 154 kB/s)
+Downloaded from ossrh: https://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar (33 kB at 8.8 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ smartrics-RestFixture ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ smartrics-RestFixture ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ smartrics-RestFixture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ smartrics-RestFixture ---
+[INFO] Compiling 50 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ smartrics-RestFixture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ smartrics-RestFixture ---
+[INFO] Compiling 32 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ smartrics-RestFixture ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running smartrics.rest.fitnesse.fixture.RestFixtureFitTest
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+Running smartrics.rest.fitnesse.fixture.PartsFactoryTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running smartrics.rest.fitnesse.fixture.SlimFormatterTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureSlimFitTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureTest
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.312 sec
+Running smartrics.rest.fitnesse.fixture.FitFormatterTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running smartrics.rest.fitnesse.fixture.support.SlimCellTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.UrlTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.LetBodyHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running smartrics.rest.fitnesse.fixture.support.ToolsTest
+[Fatal Error] :1:8: XML 문서 구조는 동일한 엔티티에서 시작되고 끝나야 합니다.
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.VariablesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.support.FitCellTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.376 sec
+Running smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running smartrics.rest.fitnesse.fixture.support.ConfigTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running smartrics.rest.fitnesse.fixture.support.SlimVariablesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.http.DeleteMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running smartrics.rest.fitnesse.fixture.support.http.GetMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running smartrics.rest.fitnesse.fixture.support.http.PostMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.support.http.PutMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.LetBodyJsHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.support.ContentTypeTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureConfigTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 290, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.790 s
+[INFO] Finished at: 2021-11-27T12:36:33+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/1.2.1/exec-maven-plugin-1.2.1.pom
+Progress (1): 2.7/7.7 kBProgress (1): 5.5/7.7 kBProgress (1): 7.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/1.2.1/exec-maven-plugin-1.2.1.pom (7.7 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/1.2.1/exec-maven-plugin-1.2.1.jar
+Progress (1): 2.7/38 kBProgress (1): 5.5/38 kBProgress (1): 8.2/38 kBProgress (1): 11/38 kB Progress (1): 14/38 kBProgress (1): 16/38 kBProgress (1): 19/38 kBProgress (1): 22/38 kBProgress (1): 25/38 kBProgress (1): 27/38 kBProgress (1): 30/38 kBProgress (1): 33/38 kBProgress (1): 36/38 kBProgress (1): 38 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/exec-maven-plugin/1.2.1/exec-maven-plugin-1.2.1.jar (38 kB at 109 kB/s)
+[INFO] 
+[INFO] ------------< smartrics.restfixture:smartrics-RestFixture >-------------
+[INFO] Building RestFixture 4.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ smartrics-RestFixture ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ smartrics-RestFixture ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 50 files (3 packages).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 32 files (3 packages).
+[INFO] 290 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ smartrics-RestFixture ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ smartrics-RestFixture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ smartrics-RestFixture ---
+[INFO] Compiling 50 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ smartrics-RestFixture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ smartrics-RestFixture ---
+[INFO] Compiling 32 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ smartrics-RestFixture ---
+[INFO] Surefire report directory: /Users/seyoung/data/repo/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running smartrics.rest.fitnesse.fixture.RestFixtureFitTest
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec
+Running smartrics.rest.fitnesse.fixture.PartsFactoryTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running smartrics.rest.fitnesse.fixture.SlimFormatterTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureSlimFitTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureTest
+Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.331 sec
+Running smartrics.rest.fitnesse.fixture.FitFormatterTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running smartrics.rest.fitnesse.fixture.support.SlimCellTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running smartrics.rest.fitnesse.fixture.support.UrlTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.support.LetBodyHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running smartrics.rest.fitnesse.fixture.support.ToolsTest
+[Fatal Error] :1:8: XML 문서 구조는 동일한 엔티티에서 시작되고 끝나야 합니다.
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running smartrics.rest.fitnesse.fixture.support.VariablesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running smartrics.rest.fitnesse.fixture.support.FitCellTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Running smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.538 sec
+Running smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running smartrics.rest.fitnesse.fixture.support.ConfigTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running smartrics.rest.fitnesse.fixture.support.SlimVariablesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running smartrics.rest.fitnesse.fixture.support.http.DeleteMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running smartrics.rest.fitnesse.fixture.support.http.GetMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.support.http.PostMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.support.http.PutMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running smartrics.rest.fitnesse.fixture.support.LetBodyJsHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running smartrics.rest.fitnesse.fixture.support.ContentTypeTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running smartrics.rest.fitnesse.fixture.RestFixtureConfigTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 290, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------< smartrics.restfixture:smartrics-RestFixture >-------------
+[INFO] Building RestFixture 4.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ smartrics-RestFixture ---
+[INFO] 
+[INFO] ------------< smartrics.restfixture:smartrics-RestFixture >-------------
+[INFO] Building RestFixture 4.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ smartrics-RestFixture ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn868764650713359977resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.920 s
+[INFO] Finished at: 2021-11-27T12:36:42+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#delegatesCallToCheck
+[test][2/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#delegatesCallToException
+[test][3/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fromRawIsSimplyABypassAsAllHandlingIsDoneByTheParse
+[test][4/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fullyRendersRight_noActualIfDisplayActualIsFalse
+[test][5/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fullyRendersRight_withActualIfDisplayActualIsTrue
+[test][6/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fullyRendersWrong_noActualIfDisplayActualIsFalse_errorsDisplayedIfAny
+[test][7/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fullyRendersWrong_noActualIfDisplayActualIsFalse_noErrorsDisplayedIfNone
+[test][8/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#fullyRendersWrong_withActualIfDisplayActualIsTrue
+[test][9/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#greyCellAreSpansWithAnAssignedClass
+[test][10/290] smartrics.rest.fitnesse.fixture.FitFormatterTest#rendersTextAsHtmlLink
+[test][11/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsASlimFormatterForFITRunner
+[test][12/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsASlimFormatterForSLIMRunner
+[test][13/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithDefaultURIFactory
+[test][14/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithEscapedSquareBracketsInUri
+[test][15/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithNewURIFactory
+[test][16/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithSquareBracketsInUri
+[test][17/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithStandardUri
+[test][18/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestClientWithoutSquareBracketsInUri
+[test][19/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#buildsRestRequest
+[test][20/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#cannotBuildACellFormatterForANullRunner
+[test][21/290] smartrics.rest.fitnesse.fixture.PartsFactoryTest#cantBuildACellFormatterForNonFitOrSlimRunner
+[test][22/290] smartrics.rest.fitnesse.fixture.RestFixtureConfigTest#mustStoreDataInNamedConfigWhoseNameIsNotPassedHenceUsingDefault_FitVersion
+[test][23/290] smartrics.rest.fitnesse.fixture.RestFixtureConfigTest#mustStoreDataInNamedConfigWhoseNameIsPassedAsFirstArgToTheFixture
+[test][24/290] smartrics.rest.fitnesse.fixture.RestFixtureFitTest#mustNotifyCallerThatBaseUrlAsFixtureArgIsMandatory
+[test][25/290] smartrics.rest.fitnesse.fixture.RestFixtureFitTest#mustSetBodyOnRequestWhenPosting
+[test][26/290] smartrics.rest.fitnesse.fixture.RestFixtureFitTest#mustSetConfigNameToDefaultWhenNotSpecifiedAsSecondOptionalParameter_FIT
+[test][27/290] smartrics.rest.fitnesse.fixture.RestFixtureFitTest#mustSetConfigNameToSpecifiedValueIfOptionalSecondParameterIsSpecified_FIT
+[test][28/290] smartrics.rest.fitnesse.fixture.RestFixtureSlimFitTest#mustLeaveCellsForSetXMethodsIgnored
+[test][29/290] smartrics.rest.fitnesse.fixture.RestFixtureSlimFitTest#mustSetConfigNameToDefaultWhenNotSpecifiedAsSecondOptionalParameter_SLIM
+[test][30/290] smartrics.rest.fitnesse.fixture.RestFixtureSlimFitTest#mustSetConfigNameToSpecifiedValueIfOptionalSecondParameterIsSpecified_SLIM
+[test][31/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#addHeaderExplicitlyWithSubstitutions
+[test][32/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#constructingWithOneArgShoudlBeTheSUTUri
+[test][33/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#constructingWithOneArgShoudlStripAnyTagAndSetTheSUTUri
+[test][34/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#constructingWithOneFailsIfArgIsNotAnUri
+[test][35/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowAddingHeaders
+[test][36/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowAddingMultipleHeaders
+[test][37/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowGlobalStorageOfValuesExtractedViaRegexFromHeader
+[test][38/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowGlobalStorageOfValuesExtractedViaXPathFromBody
+[test][39/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowMultilineHeadersWhenSettingHeaders
+[test][40/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowRegexesWhenLetIsInvokedOnHeaders
+[test][41/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowSetOfFileNameForFileUpload
+[test][42/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowSetOfMultipartFileNameForFileUpload
+[test][43/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowSetOfMultipartFileParameterNameForFileUpload
+[test][44/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowSettingHeaders
+[test][45/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustAllowStorageOfValuesExtractedViaXPathsReturningStringValues
+[test][46/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustCaptureErrorsOnExpectationsAndDisplayThemInTheSameCell
+[test][47/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustEvalJavascriptStringsWithEval
+[test][48/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteAllHttpVerbSupported
+[test][49/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecutePOSTWithFileUploadWhenFileParamNameIsDefault
+[test][50/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVariableSubstitutionOnBodyForNextRequest
+[test][51/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbByOverridingBaseUriIfRowResourceIsAbsoluteUri
+[test][52/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnBody_JSON
+[test][53/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnBody_TEXT
+[test][54/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnBody_TEXTWithHtml
+[test][55/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnBody_XML
+[test][56/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnEachResponsePart_ExpectationsMatched
+[test][57/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnEachResponsePart_ExpectationsNotMatched
+[test][58/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithExcpectationsSetOnHeaders
+[test][59/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExecuteVerbOnAUriWithNoExcpectationsOnRestResponseParts
+[test][60/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExpandSymbolSetWithLetWhenSettingHeaders
+[test][61/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExpandSymbolWhenSettingHeaders
+[test][62/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExpandSymbolsWhenSettingMultilineHeaders
+[test][63/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustExpectOnlySupportedVerbOnFirstCell
+[test][64/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustMatchRequestsWithNoBodyExpressedAsNoBodyString
+[test][65/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotSetValueOnSymbolMapIfVariableNameStartsWith$
+[test][66/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotifyClientIfExpectedBodyCellHasNotBeenSpecified
+[test][67/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotifyClientIfExpectedHeadersCellHasNotBeenSpecified
+[test][68/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotifyClientIfExpectedStatusCodeCellHasNotBeenSpecified
+[test][69/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotifyClientIfHTTPVerbInFirstCellIsNotSupported
+[test][70/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustNotifyExceptionsWhenEvalJavascriptStrings
+[test][71/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustRenderSymbolValueWhenSettingHeaders
+[test][72/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReplaceVariablesInExpectedContentOfLetCell
+[test][73/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportAsExceptionWhenAttemptingToSetMissingMultipartFileName
+[test][74/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportAsExceptionWhenSettingMissingFileName
+[test][75/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportAsRTEWhenSettingAMissingBody
+[test][76/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportAsRTEWhenSettingAMissingHeader
+[test][77/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportAsRTEWhenSettingMissingMultipartFileParameterName
+[test][78/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportToTheUserIfLetCantFindTheHandlerToHandleTheDesiredExpression
+[test][79/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustReportToTheUserIfLetCellsAreMissing
+[test][80/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSetConfigNameToDefaultWhenNotSpecifiedAsSecondOptionalParameter_SLIM
+[test][81/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSetConfigNameToSpecifiedValueIfOptionalSecondParameterIsSpecified_SLIM
+[test][82/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSetValiueOnSymbolMapAsJsonStringIfSourceIsJs
+[test][83/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSetValueOnSymbolMapAsPlainBodyIfSourceIsPlainBody
+[test][84/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSetValueOnSymbolMapAsXmlStringIfSourceIsBodyAsXml
+[test][85/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustSplitQueryOnFirstQuestionMark
+[test][86/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustUseDefaultHeadersIfDefinedOnNamedConfig
+[test][87/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#mustUseValueOnSymbolMapEvenIfNotSetViaVariables
+[test][88/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#setBaseUrlExplicitly
+[test][89/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#setBodyShouldNotRenderEncodedSymbols
+[test][90/290] smartrics.rest.fitnesse.fixture.RestFixtureTest#setBodyShouldRenderResolvedSymbols
+[test][91/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayFailOnCheckIfExpectedAndActualMatch_whenDisplayingActual
+[test][92/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayFailOnCheckIfExpectedAndActualMatch_whenNotDisplayingActual
+[test][93/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayGrayedActualOnCheckIfNoExpectedIsSpecified
+[test][94/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayNothingOnCheckIfNoExpectedIsSpecifiedAndActualIsNullOrEmpty
+[test][95/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayPassOnCheckIfExpectedAndActualMatch
+[test][96/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayPassOnCheckIfExpectedAndActualMatch_whenDisplayingActual
+[test][97/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldDisplayXmlDataInActual
+[test][98/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldRenderExceptionsAsSlimErrorCellWithStackTracesInCode
+[test][99/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldRenderLinksAsGreyed
+[test][100/290] smartrics.rest.fitnesse.fixture.SlimFormatterTest#shouldRenderLinksAsGreyedInAbsoluteFormat
+[test][101/290] smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest#jsonContentTypeReturnsJSONBodyTypeAdapter
+[test][102/290] smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest#nullContentTypeThrowsException
+[test][103/290] smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest#textContentTypeReturnsXPathBodyTypeAdapter
+[test][104/290] smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest#unknownContentTypeReturnsXPathBodyTypeAdapter
+[test][105/290] smartrics.rest.fitnesse.fixture.support.BodyTypeAdapterFactoryTest#xmlContentTypeReturnsXPathBodyTypeAdapter
+[test][106/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustAddConfigDataToANamedConfig
+[test][107/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustAddConfigDataToDefaultConfigIfConfigNameIsNull
+[test][108/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustAddToDefaultNamedConfigWhenConfigNameIsNotAvailable
+[test][109/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustClearDefaultConfig
+[test][110/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustClearDefaultNamedConfigIfConfigNameIsNull
+[test][111/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustClearNamedConfig
+[test][112/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustContainAtLeastNameInStringRepresentation
+[test][113/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustGetDataParsedAsBoolean
+[test][114/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustGetDataParsedAsInteger
+[test][115/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustGetDataParsedAsLong
+[test][116/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustGetDataParsedAsMap
+[test][117/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustInitializeNameOfConfigFromCtorInput
+[test][118/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustInitializeNameToDefaultIfGetterArgIsNull
+[test][119/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustReturnDefaultForRequestsOnExistentNamedConfigsWithNonExistentKey
+[test][120/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustReturnNullForRequestsOnDefaultNamedConfigsWithNonExistentKey
+[test][121/290] smartrics.rest.fitnesse.fixture.support.ConfigTest#mustReturnNullForRequestsOnExistentNamedConfigsWithNonExistentKey
+[test][122/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnCorrectTypeAndCharsetGivenApplicationTextWithCharset
+[test][123/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnCorrectTypeGivenApplicationJson
+[test][124/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnCorrectTypeGivenApplicationText
+[test][125/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnCorrectTypeGivenApplicationXml
+[test][126/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnDefaultGivenAnythingElse
+[test][127/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldReturnDefaultGivenEmptyHeaders
+[test][128/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldSetupInternalStateFromConfig
+[test][129/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldSetupTheContentTypeToAdaptersMapViaConfig
+[test][130/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldUseDefaultSystemCharsetIfCharsetNotParseableAndDefaultNotSpecifiedViaProperty
+[test][131/290] smartrics.rest.fitnesse.fixture.support.ContentTypeTest#shouldUseSpecifieDefaultCharsetProperty
+[test][132/290] smartrics.rest.fitnesse.fixture.support.FitCellTest#shouldBeAbleToOverrideTheContent
+[test][133/290] smartrics.rest.fitnesse.fixture.support.FitCellTest#testAddBodyAppendsContentToExisting
+[test][134/290] smartrics.rest.fitnesse.fixture.support.FitCellTest#testConstruction
+[test][135/290] smartrics.rest.fitnesse.fixture.support.FitCellTest#textAndBodyAreEquivalent
+[test][136/290] smartrics.rest.fitnesse.fixture.support.FitCellTest#wrappedObjectIsTheStringUsedForConstruction
+[test][137/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#actualHeadersMustBeASupersetOfExpectedHeaders
+[test][138/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#actualHeadersShouldntBeASupersetOfExpectedHeaders
+[test][139/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldIdentifyContentObjectsWithNoBodyAsBeingEqual
+[test][140/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldMatchHeadersWithRegex
+[test][141/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldNotifyClientOfBadHeaderSyntax
+[test][142/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldParseHeadersInHtmlFormatAsProperListOfHeaders
+[test][143/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldParseHeadersInHtmlFormatWithMultipleColonsAsProperListOfHeaders
+[test][144/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldParseHeadersInHtmlFormatWithQuestionMarksAndEqualsInString_ISSUE_129
+[test][145/290] smartrics.rest.fitnesse.fixture.support.HeadersTypeAdapterTest#shouldTransformACollectionOfHeadersIntoAHtmlString
+[test][146/290] smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest#mustNotSetCredentialsIfBothConfigValueAreNotAvailable
+[test][147/290] smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest#mustSetDefaultProxyPortIfNotSuppliedWithProxyHost
+[test][148/290] smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest#mustSetDefaultsForNotSuppliedConfigValues
+[test][149/290] smartrics.rest.fitnesse.fixture.support.HttpClientBuilderTest#mustSetValuesAsOfThoseSuppliedInConfig
+[test][150/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#returnsFalseWhenJsonbodyDoesntHaveAnArrayButExpressionDoesContainArray
+[test][151/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shoudlParseNoJsonIntoAnEmptyList
+[test][152/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shoudlParseStringWithXPathInHtmlIntoAProperList
+[test][153/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldConvertJSONToXML
+[test][154/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldCorrectlyEvaluateExpressionsWithComparisons
+[test][155/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldIdentifyAsEqualsIfExpectedObjectIsAJavascriptExpressionInActual
+[test][156/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldIdentifyContentObjectsWithNoBodyAsBeingEqual
+[test][157/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldReturnItsStringRepresentationAsPrintableHTML
+[test][158/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldReturnItsStringRepresentationAsPrintableHTMLEvenWhenEmpty
+[test][159/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldStoreNotFoundMessageForEveryJSonExpressionNotFoundForEqualityCheck
+[test][160/290] smartrics.rest.fitnesse.fixture.support.JSONBodyTypeAdapterTest#shouldThrowExceptionIfExpectationsAreValidXPathExpression
+[test][161/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#removeOptimisationIfExpressionLargerThanThreshold
+[test][162/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#removeOptimisationIfResponseLargerThanThreshold
+[test][163/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldEvalExpressionsForLargeContentJson
+[test][164/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldHandleNullReturnedByJsEvaluation
+[test][165/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldHandleNullReturnedByStringJsEvaluation
+[test][166/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldNotProvideLastResponseBodyInJsContextIfResponseIsNull
+[test][167/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseBodyAsJsonForContentThatLooksLikeJsonInJsContext
+[test][168/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseBodyAsJsonForJsonContentTypeInJsContext
+[test][169/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseBodyInJsContext
+[test][170/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseHeadersInJsContext
+[test][171/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseResourceInJsContext
+[test][172/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseStatusCodeInJsContext
+[test][173/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseStatusTextInJsContext
+[test][174/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideLastResponseTxIdInJsContext
+[test][175/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldProvideSymbolMapInJsContext
+[test][176/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldSetTheThresholdLimitTo0IfNegative
+[test][177/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldSetTheThresholdLimitTo64KIfInvalid
+[test][178/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldSetTheThresholdLimitToTheConfiguredValue
+[test][179/290] smartrics.rest.fitnesse.fixture.support.JavascriptWrapperTest#shouldTrapJavascriptErrorAndWrapThemInErrors
+[test][180/290] smartrics.rest.fitnesse.fixture.support.LetBodyHandlerTest#shouldExecXPaths
+[test][181/290] smartrics.rest.fitnesse.fixture.support.LetBodyHandlerTest#shouldHandleExpressionsReturningNull
+[test][182/290] smartrics.rest.fitnesse.fixture.support.LetBodyHandlerTest#shouldHandleJsBodyWithXPaths
+[test][183/290] smartrics.rest.fitnesse.fixture.support.LetBodyJsHandlerTest#shouldHandleExpressionsReturningNull
+[test][184/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#fromRawStringDelegatesToParse
+[test][185/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#fromRawStringMapsCheckedExceptionsOfParseIntoRuntimeException
+[test][186/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustAllowStoringOfErrors
+[test][187/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustAllowStoringOfTheInstanceOfTheCellContent
+[test][188/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustDisallowAddToTheErrorsList
+[test][189/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustDisallowOpsOnTheErrorsList
+[test][190/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustDisallowRemoveFromTheErrorsList
+[test][191/290] smartrics.rest.fitnesse.fixture.support.RestDataTypeAdapterTest#mustReturnStringRepresentationOfTheCellContent
+[test][192/290] smartrics.rest.fitnesse.fixture.support.SlimCellTest#shouldBeAbleToOverrideTheContent
+[test][193/290] smartrics.rest.fitnesse.fixture.support.SlimCellTest#testAddBodyAppendsContentToExisting
+[test][194/290] smartrics.rest.fitnesse.fixture.support.SlimCellTest#testConstruction
+[test][195/290] smartrics.rest.fitnesse.fixture.support.SlimCellTest#textAndBodyAreEquivalent
+[test][196/290] smartrics.rest.fitnesse.fixture.support.SlimCellTest#wrappedObjectIsTheStringUsedForConstruction
+[test][197/290] smartrics.rest.fitnesse.fixture.support.SlimVariablesTest#setSymbolsAreReturned
+[test][198/290] smartrics.rest.fitnesse.fixture.support.SlimVariablesTest#setToNullAssignsNull
+[test][199/290] smartrics.rest.fitnesse.fixture.support.SlimVariablesTest#setToNullRepresentationAssignsNull
+[test][200/290] smartrics.rest.fitnesse.fixture.support.SlimVariablesTest#symbolsCanBeSet
+[test][201/290] smartrics.rest.fitnesse.fixture.support.SlimVariablesTest#unsetSymbolsReturnNull
+[test][202/290] smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest#expectedShouldBeTreatedAsRegularExpression
+[test][203/290] smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest#shouldNotEqualiseIfExpectedOrActualAreNull
+[test][204/290] smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest#shouldParseStatusCodesAsTrimmedStrings
+[test][205/290] smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest#shouldRenderCellContentAsStrings
+[test][206/290] smartrics.rest.fitnesse.fixture.support.StatusCodeTypeAdapterTest#whenExpectedIsNotMatchedAnErrorShouldBeAdded
+[test][207/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldConvertAnyString
+[test][208/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldConvertEmptyString
+[test][209/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldConvertNullString
+[test][210/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldEqualsTwoEqualStrings
+[test][211/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldEqualsTwoNullStrings
+[test][212/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldParseAnyString
+[test][213/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldParseEmptyString
+[test][214/290] smartrics.rest.fitnesse.fixture.support.StringTypeAdapterTest#shouldParseNullString
+[test][215/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldConvertTextToXmlUsingTextTag
+[test][216/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldEqualiseIfBothHaveCRLF
+[test][217/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldMatchRegexExpressions
+[test][218/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldNotEqualiseIfExpectedOrActualAreNull
+[test][219/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldNotEqualiseIfOneHasCRLF
+[test][220/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldParseTextAsTrimmedStrings
+[test][221/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#shouldRenderCellContentAsStrings
+[test][222/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#whenExpectedIsNotMatchedAnErrorShouldBeAdded
+[test][223/290] smartrics.rest.fitnesse.fixture.support.TextBodyTypeAdapterTest#whenExpectedIsNotMatchedAnErrorShouldBeAddedAlsoForPlainStringMatching
+[test][224/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#basicChecksOnMakeCollapsableItemWhenHtml
+[test][225/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#basicChecksOnMakeCollapsableItemWhenPlain
+[test][226/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#codeCoversionUsesCodeHtmlTag
+[test][227/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#dualityOfToAndFromHtml
+[test][228/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#mustMatchWhenRegexIsValidAndThereIsAMatch
+[test][229/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#mustNotMatchWhenRegexIsInvalidAndNotifyError
+[test][230/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#mustNotMatchWhenRegexIsValidAndThereIsNotAMatch
+[test][231/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldCheckIfAStringIsValidJson
+[test][232/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAMapIntoAStringRepresentation
+[test][233/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAMultilineStringIntoAMap
+[test][234/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAMultilineStringIntoAMapIgnoresEmptyLines
+[test][235/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAMultilineStringIntoAMapWhenEscapeSequenceIsNested
+[test][236/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAStringIntoAMap
+[test][237/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertAStringIntoAMapAndCleanHtmlTagsFromValues
+[test][238/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldConvertJsonToXml
+[test][239/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractTextFromSimpleTag
+[test][240/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsBoolean
+[test][241/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNodeLists
+[test][242/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNodelistWithGenericNamespace
+[test][243/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNumber
+[test][244/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNumberWithDefaultNamespace
+[test][245/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNumberWithDefaultNamespace2
+[test][246/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsNumberWithGenericNamespace
+[test][247/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentAsStrings
+[test][248/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldExtractXPathsFromXmlDocumentWithNestedGenericNamespace
+[test][249/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldNotifyCallerWhenXPathIsWrong
+[test][250/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldNotifyCallerWhenXmlCannotBeParsed
+[test][251/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldNotifyCallerWhenXmlIsWrong
+[test][252/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldReadAnInputStreamToAString
+[test][253/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldThrowRTEWhenWrappingAStringIntoAnInputStreamWithUnknownEncoding
+[test][254/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldThrowRTEWrappingInputStreamExceptionsWhenReadingInputStreamToAString
+[test][255/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldThrowWhenReadingInputStreamToAStringWhenTryingToEncodeWithUnknownEncoding
+[test][256/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldWrapAStringIntoAnInputStream
+[test][257/290] smartrics.rest.fitnesse.fixture.support.ToolsTest#shouldWrapTextInHtmlAnchor
+[test][258/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustAcceptWellFormedUrl
+[test][259/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustBuildUrlTailingPathToBaseUrl
+[test][260/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustExtractPartsIfUrlIsComplete
+[test][261/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustExtractPartsIfUrlIsCompleteWithNoPathTerminatingWithSlash
+[test][262/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustExtractPartsIfUrlIsCompleteWithNoPathTerminatingWithoutSlash
+[test][263/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustRejectEmptyStringUriRepresentations
+[test][264/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustRejectMalformedUrls
+[test][265/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustRejectNullPaths
+[test][266/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustRejectNullStringUriRepresentations
+[test][267/290] smartrics.rest.fitnesse.fixture.support.UrlTest#mustRejectUrlsWithNoHost
+[test][268/290] smartrics.rest.fitnesse.fixture.support.UrlTest#tailingSlashOnAUrlIsOptional
+[test][269/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#nonExistentVariablesAreNotReplaced
+[test][270/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#substitutingSymbolsContainingRegexSpecialCharsShouldWorkAsExpected_issue118
+[test][271/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesAreSubstitutedMultipleTimes
+[test][272/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesAreSubstitutedWithCurrentValueWhenHexLabelsAreIdentifiedWithinPercentSymbol
+[test][273/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesAreSubstitutedWithCurrentValueWhenLabelsAreIdentifiedWithinPercentSymbol
+[test][274/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesContainingNullAreSubWithEmptyValueSuppliedViaConfig
+[test][275/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesContainingNullAreSubWithStringNullByDefault
+[test][276/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesContainingNullAreSubWithValueSuppliedViaConfig
+[test][277/290] smartrics.rest.fitnesse.fixture.support.VariablesTest#variablesShoudBeStatic
+[test][278/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shoudlParseNoXPathsIntoAnEmptyList
+[test][279/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shoudlParseStringWithXPathInHtmlIntoAProperList
+[test][280/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldFailEqualityCheckIfAnyExpressionIsInvalid
+[test][281/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldIdentifyAsEqualsIfExpectedObjectIsAListOfXPathsAvailableInActual
+[test][282/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldIdentifyContentObjectsWithNoBodyAsBeingEqual
+[test][283/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldMatchXPathWithNamespaces
+[test][284/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldReturnItsStringRepresentationAsPrintableHTML
+[test][285/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldReturnItsStringRepresentationAsPrintableHTMLEvenWhenEmpty
+[test][286/290] smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapterTest#shouldStoreNotFoundMessageForEveryExpressionNotFoundForEqualityCheck
+[test][287/290] smartrics.rest.fitnesse.fixture.support.http.DeleteMethodTest#buildsUriThatAllowSquareBracketsInQueryString
+[test][288/290] smartrics.rest.fitnesse.fixture.support.http.GetMethodTest#buildsUriThatAllowSquareBracketsInQueryString
+[test][289/290] smartrics.rest.fitnesse.fixture.support.http.PostMethodTest#buildsUriThatAllowSquareBracketsInQueryString
+[test][290/290] smartrics.rest.fitnesse.fixture.support.http.PutMethodTest#buildsUriThatAllowSquareBracketsInQueryString
+[main][14/14] python parse_data.py
+  0%|          | 0/290 [00:00<?, ?it/s]  5%|▍         | 14/290 [00:00<00:01, 139.59it/s] 10%|▉         | 28/290 [00:00<00:01, 139.07it/s] 14%|█▍        | 42/290 [00:00<00:01, 139.17it/s] 19%|█▉        | 56/290 [00:00<00:01, 137.64it/s] 24%|██▍       | 71/290 [00:00<00:01, 137.97it/s] 30%|██▉       | 86/290 [00:00<00:01, 138.06it/s] 35%|███▍      | 101/290 [00:00<00:01, 137.84it/s] 40%|███▉      | 115/290 [00:00<00:01, 137.78it/s] 44%|████▍     | 129/290 [00:00<00:01, 137.52it/s] 49%|████▉     | 143/290 [00:01<00:01, 137.26it/s] 54%|█████▍    | 157/290 [00:01<00:00, 137.22it/s] 59%|█████▉    | 171/290 [00:01<00:00, 136.91it/s] 64%|██████▍   | 185/290 [00:01<00:00, 137.11it/s] 69%|██████▊   | 199/290 [00:01<00:00, 137.24it/s] 73%|███████▎  | 213/290 [00:01<00:00, 137.38it/s] 78%|███████▊  | 227/290 [00:01<00:00, 137.31it/s] 83%|████████▎ | 241/290 [00:01<00:00, 137.75it/s] 88%|████████▊ | 256/290 [00:01<00:00, 138.27it/s] 93%|█████████▎| 271/290 [00:01<00:00, 138.64it/s] 98%|█████████▊| 285/290 [00:02<00:00, 138.85it/s]100%|██████████| 290/290 [00:02<00:00, 138.12it/s]
+Done.

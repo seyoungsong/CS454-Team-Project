@@ -1,0 +1,462 @@
+[main][1/14] rm -rf repo clover clover.xml git.log tests.sh
+[main][2/14] git clone --depth 1 --recursive https://github.com/yegor256/xembly repo
+'repo'에 복제합니다...
+[main][3/14] java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)
+OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)
+[main][4/14] mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: /opt/homebrew/Cellar/maven/3.8.4/libexec
+Java version: 1.8.0_312, vendor: Azul Systems, Inc., runtime: /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
+Default locale: ko_KR, platform encoding: UTF-8
+OS name: "mac os x", version: "11.6", arch: "aarch64", family: "mac"
+[main][5/14] git --version
+git version 2.33.1
+[main][6/14] git --git-dir repo/.git config --get remote.origin.url > git.log
+[main][7/14] git --git-dir repo/.git log -n 1 --format=%ct%n%H >> git.log
+[main][8/14] mvn --file repo/pom.xml --fail-never clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.jcabi.incubator:xembly >---------------------
+[INFO] Building xembly 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ xembly ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (jcabi-build-number) @ xembly ---
+[INFO] ShortRevision tag detected. The value is '7'.
+[INFO] Executing: /bin/sh -c cd '/Users/seyoung/data/repo' && 'git' 'rev-parse' '--verify' '--short=7' 'HEAD'
+[INFO] Working directory: /Users/seyoung/data/repo
+[INFO] Storing buildNumber: 414be57 at timestamp: 2021-11-27T10:00:56
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create-timestamp (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- antlr4-maven-plugin:4.8-1:antlr4 (jcabi-antlr4) @ xembly ---
+[INFO] ANTLR 4: Processing source directory /Users/seyoung/data/repo/src/main/antlr4
+[INFO] Processing grammar: org/xembly/Xembly.g4
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ xembly ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ xembly ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ xembly ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ xembly ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ xembly ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.xembly.AddIfDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 s - in org.xembly.AddIfDirectiveTest
+[INFO] Running org.xembly.DirectivesTest
+[WARNING] Tests run: 17, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.059 s - in org.xembly.DirectivesTest
+[INFO] Running org.xembly.XsetDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.xembly.XsetDirectiveTest
+[INFO] Running org.xembly.CommentDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.xembly.CommentDirectiveTest
+[INFO] Running org.xembly.SetDirectiveTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.xembly.SetDirectiveTest
+[INFO] Running org.xembly.prof.XemblerProfTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.749 s - in org.xembly.prof.XemblerProfTest
+[INFO] Running org.xembly.PiDirectiveTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.xembly.PiDirectiveTest
+[INFO] Running org.xembly.SyntaxExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.xembly.SyntaxExceptionTest
+[INFO] Running org.xembly.StrictDirectiveTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in org.xembly.StrictDirectiveTest
+[INFO] Running org.xembly.XpathDirectiveTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.xembly.XpathDirectiveTest
+[INFO] Running org.xembly.RemoveDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.xembly.RemoveDirectiveTest
+[INFO] Running org.xembly.UpDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.xembly.UpDirectiveTest
+[INFO] Running org.xembly.AttrDirectiveTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.xembly.AttrDirectiveTest
+[INFO] Running org.xembly.ArgTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.xembly.ArgTest
+[INFO] Running org.xembly.DomStackTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.245 s - in org.xembly.DomStackTest
+[INFO] Running org.xembly.NsDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.xembly.NsDirectiveTest
+[INFO] Running org.xembly.prof.DirectivesProfTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in org.xembly.prof.DirectivesProfTest
+[INFO] Running org.xembly.AddDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.xembly.AddDirectiveTest
+[INFO] Running org.xembly.XemblerTest
+[WARNING] Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.025 s - in org.xembly.XemblerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 65, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) > generate-sources @ xembly >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create-timestamp (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- antlr4-maven-plugin:4.8-1:antlr4 (jcabi-antlr4) @ xembly ---
+[INFO] No grammars to process
+[INFO] ANTLR 4: Processing source directory /Users/seyoung/data/repo/src/main/antlr4
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) < generate-sources @ xembly <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) @ xembly ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] 
+Loading source files for package org.xembly...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_312
+Building tree for all the packages and classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.Cursor.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.Stack.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directives.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/ImpossibleModificationException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/SyntaxException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Xembler.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyBaseListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyLexer.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.ArgumentContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.DirectiveContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.DirectivesContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.LabelContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-frame.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-summary.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-tree.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/constant-values.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/serialized-form.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyBaseListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyLexer.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.DirectivesContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.DirectiveContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.ArgumentContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.LabelContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/ImpossibleModificationException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/SyntaxException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.Cursor.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.Stack.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Xembler.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directives.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-use.html...
+Building index for all the packages and classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/overview-tree.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/index-all.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/allclasses-frame.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/allclasses-noframe.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/index.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/help-doc.html...
+Note: Custom tags that could override future standard tags:  @todo, @checkstyle. To avoid potential overrides, use at least one period character (.) in custom tag names.
+Note: Custom tags that were not seen:  @todo, @checkstyle
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.508 s
+[INFO] Finished at: 2021-11-27T10:01:02+09:00
+[INFO] ------------------------------------------------------------------------
+[main][9/14] mvn --file repo/pom.xml --fail-never -Dmaven.clover.generateHtml=false clean clover:setup test clover:aggregate clover:clover
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.jcabi.incubator:xembly >---------------------
+[INFO] Building xembly 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ xembly ---
+[INFO] Deleting /Users/seyoung/data/repo/target
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:setup (default-cli) @ xembly ---
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Creating new database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 28 files (1 package).
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Updating existing database at '/Users/seyoung/data/repo/target/clover/clover.db'.
+[INFO] Processing files at 1.8 source level.
+[INFO] Clover all over. Instrumented 21 files (2 packages).
+[INFO] 63 test methods detected.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (jcabi-build-number) @ xembly ---
+[INFO] ShortRevision tag detected. The value is '7'.
+[INFO] Executing: /bin/sh -c cd '/Users/seyoung/data/repo' && 'git' 'rev-parse' '--verify' '--short=7' 'HEAD'
+[INFO] Working directory: /Users/seyoung/data/repo
+[INFO] Storing buildNumber: 414be57 at timestamp: 2021-11-27T10:01:05
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create-timestamp (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- antlr4-maven-plugin:4.8-1:antlr4 (jcabi-antlr4) @ xembly ---
+[INFO] ANTLR 4: Processing source directory /Users/seyoung/data/repo/src/main/antlr4
+[INFO] Processing grammar: org/xembly/Xembly.g4
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ xembly ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/seyoung/data/repo/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ xembly ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /Users/seyoung/data/repo/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ xembly ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ xembly ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/seyoung/data/repo/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ xembly ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.xembly.StrictDirectiveTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 s - in org.xembly.StrictDirectiveTest
+[INFO] Running org.xembly.XsetDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.xembly.XsetDirectiveTest
+[INFO] Running org.xembly.RemoveDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.xembly.RemoveDirectiveTest
+[INFO] Running org.xembly.AddDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.xembly.AddDirectiveTest
+[INFO] Running org.xembly.AddIfDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.xembly.AddIfDirectiveTest
+[INFO] Running org.xembly.AttrDirectiveTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in org.xembly.AttrDirectiveTest
+[INFO] Running org.xembly.prof.DirectivesProfTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.202 s - in org.xembly.prof.DirectivesProfTest
+[INFO] Running org.xembly.prof.XemblerProfTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.88 s - in org.xembly.prof.XemblerProfTest
+[INFO] Running org.xembly.XpathDirectiveTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in org.xembly.XpathDirectiveTest
+[INFO] Running org.xembly.DomStackTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.33 s - in org.xembly.DomStackTest
+[INFO] Running org.xembly.PiDirectiveTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in org.xembly.PiDirectiveTest
+[INFO] Running org.xembly.DirectivesTest
+[WARNING] Tests run: 17, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.061 s - in org.xembly.DirectivesTest
+[INFO] Running org.xembly.CommentDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.xembly.CommentDirectiveTest
+[INFO] Running org.xembly.ArgTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.xembly.ArgTest
+[INFO] Running org.xembly.XemblerTest
+[WARNING] Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.03 s - in org.xembly.XemblerTest
+[INFO] Running org.xembly.SyntaxExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.xembly.SyntaxExceptionTest
+[INFO] Running org.xembly.UpDirectiveTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.xembly.UpDirectiveTest
+[INFO] Running org.xembly.SetDirectiveTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.xembly.SetDirectiveTest
+[INFO] Running org.xembly.NsDirectiveTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.xembly.NsDirectiveTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 65, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) > generate-sources @ xembly >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create-timestamp (jcabi-build-number) @ xembly ---
+[INFO] 
+[INFO] --- antlr4-maven-plugin:4.8-1:antlr4 (jcabi-antlr4) @ xembly ---
+[INFO] No grammars to process
+[INFO] ANTLR 4: Processing source directory /Users/seyoung/data/repo/src/main/antlr4
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) < generate-sources @ xembly <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-javadoc-plugin:3.2.0:javadoc (javadoc-generate) @ xembly ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] 
+Loading source files for package org.xembly...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_312
+Building tree for all the packages and classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.Cursor.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directive.Stack.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directives.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Directives.__CLR4_4_15l5lkwh3xydz.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/ImpossibleModificationException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/ImpossibleModificationException.__CLR4_4_19p9pkwh3xyem.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/SyntaxException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/SyntaxException.__CLR4_4_1dadakwh3xyhj.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Xembler.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/Xembler.__CLR4_4_1e4e4kwh3xyi5.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyBaseListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyLexer.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.ArgumentContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.DirectiveContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.DirectivesContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/XemblyParser.LabelContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-frame.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-summary.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-tree.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/constant-values.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/serialized-form.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyBaseListener.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyLexer.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.DirectivesContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.DirectiveContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.ArgumentContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/XemblyParser.LabelContext.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/ImpossibleModificationException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/ImpossibleModificationException.__CLR4_4_19p9pkwh3xyem.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/SyntaxException.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/SyntaxException.__CLR4_4_1dadakwh3xyhj.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.Cursor.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directive.Stack.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Xembler.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Xembler.__CLR4_4_1e4e4kwh3xyi5.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directives.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/class-use/Directives.__CLR4_4_15l5lkwh3xydz.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/org/xembly/package-use.html...
+Building index for all the packages and classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/overview-tree.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/index-all.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /Users/seyoung/data/repo/target/site/apidocs/allclasses-frame.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/allclasses-noframe.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/index.html...
+Generating /Users/seyoung/data/repo/target/site/apidocs/help-doc.html...
+Note: Custom tags that could override future standard tags:  @todo, @checkstyle. To avoid potential overrides, use at least one period character (.) in custom tag names.
+Note: Custom tags that were not seen:  @todo, @checkstyle
+[INFO] 
+[INFO] ---------------------< com.jcabi.incubator:xembly >---------------------
+[INFO] Building xembly 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:aggregate (default-cli) @ xembly ---
+[INFO] 
+[INFO] ---------------------< com.jcabi.incubator:xembly >---------------------
+[INFO] Building xembly 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clover-maven-plugin:4.4.1:clover (default-cli) @ xembly ---
+[INFO] Using default-clover-report descriptor.
+[INFO] Using Clover report descriptor: /var/folders/c3/vd5gtpms4730p559wddlm0zw0000gn/T/mvn1659212046726170555resource
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Clover is enabled with initstring '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[INFO] Loading coverage database from: '/Users/seyoung/data/repo/target/clover/clover.db'
+[INFO] Writing report to '/Users/seyoung/data/repo/target/site/clover/clover.xml'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.541 s
+[INFO] Finished at: 2021-11-27T10:01:16+09:00
+[INFO] ------------------------------------------------------------------------
+[main][10/14] cp repo/target/site/clover/clover.xml ./clover.xml
+[main][11/14] python identify_tests.py
+Done.
+[main][12/14] mkdir -p clover
+[main][13/14] bash tests.sh
+[test][1/63] org.xembly.AddDirectiveTest#addsNodesToCurrentNodes
+[test][2/63] org.xembly.AddIfDirectiveTest#addsDomNodesDirectly
+[test][3/63] org.xembly.AddIfDirectiveTest#addsNodesToCurrentNodes
+[test][4/63] org.xembly.ArgTest#escapesAndUnescaped
+[test][5/63] org.xembly.ArgTest#rejectsToEscapeInvalidXmlChars
+[test][6/63] org.xembly.ArgTest#rejectsToUnEscapeInvalidXmlChars
+[test][7/63] org.xembly.AttrDirectiveTest#addsAttributesToCurrentNodes
+[test][8/63] org.xembly.AttrDirectiveTest#addsCaseSensitiveAttributesDirectly
+[test][9/63] org.xembly.AttrDirectiveTest#addsDomAttributesDirectly
+[test][10/63] org.xembly.CommentDirectiveTest#addsComment
+[test][11/63] org.xembly.DirectivesTest#addsComments
+[test][12/63] org.xembly.DirectivesTest#addsElementsCaseSensitively
+[test][13/63] org.xembly.DirectivesTest#addsMapOfValues
+[test][14/63] org.xembly.DirectivesTest#appendsDirs
+[test][15/63] org.xembly.DirectivesTest#appendsExistingNode
+[test][16/63] org.xembly.DirectivesTest#convertsToString
+[test][17/63] org.xembly.DirectivesTest#copiesExistingNode
+[test][18/63] org.xembly.DirectivesTest#ingoresEmptyInput
+[test][19/63] org.xembly.DirectivesTest#makesXmlDocument
+[test][20/63] org.xembly.DirectivesTest#parsesIncomingGrammar
+[test][21/63] org.xembly.DirectivesTest#performsFullScaleModifications
+[test][22/63] org.xembly.DirectivesTest#prefixesItemsWithNamespaces
+[test][23/63] org.xembly.DirectivesTest#pushesAndPopsCursor
+[test][24/63] org.xembly.DirectivesTest#throwsOnBrokenEscapedXmlContent
+[test][25/63] org.xembly.DirectivesTest#throwsOnBrokenGrammar
+[test][26/63] org.xembly.DirectivesTest#throwsOnBrokenXmlContent
+[test][27/63] org.xembly.DomStackTest#addsAndRetrieves
+[test][28/63] org.xembly.DomStackTest#throwsExceptionOnEmpty
+[test][29/63] org.xembly.NsDirectiveTest#setsNsAttr
+[test][30/63] org.xembly.PiDirectiveTest#addsProcessingInstructionsDirectlyToDom
+[test][31/63] org.xembly.PiDirectiveTest#addsProcessingInstructionsToDom
+[test][32/63] org.xembly.PiDirectiveTest#addsProcessingInstructionsToDomRoot
+[test][33/63] org.xembly.PiDirectiveTest#prependsProcessingInstructionsToDomRoot
+[test][34/63] org.xembly.RemoveDirectiveTest#removesCurrentNodes
+[test][35/63] org.xembly.RemoveDirectiveTest#removesDomNodesDirectly
+[test][36/63] org.xembly.SetDirectiveTest#rejectsContentWithInvalidXmlCharacters
+[test][37/63] org.xembly.SetDirectiveTest#setsTextContentOfNodes
+[test][38/63] org.xembly.SetDirectiveTest#setsTextDirectlyIntoDomNodes
+[test][39/63] org.xembly.StrictDirectiveTest#checksNumberOfCurrentNodes
+[test][40/63] org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsTooBig
+[test][41/63] org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsTooSmall
+[test][42/63] org.xembly.StrictDirectiveTest#failsWhenNumberOfCurrentNodesIsZero
+[test][43/63] org.xembly.SyntaxExceptionTest#instantiatesException
+[test][44/63] org.xembly.UpDirectiveTest#jumpsToParentsWhenTheyExist
+[test][45/63] org.xembly.UpDirectiveTest#throwsWhenNoParents
+[test][46/63] org.xembly.XemblerTest#escapesBrokenText
+[test][47/63] org.xembly.XemblerTest#makesChangesToDomDocument
+[test][48/63] org.xembly.XemblerTest#makesChangesToDomDocumentFromBuilder
+[test][49/63] org.xembly.XemblerTest#modifiesClonedNode
+[test][50/63] org.xembly.XemblerTest#printsXmlDocument
+[test][51/63] org.xembly.XemblerTest#removesAttribute
+[test][52/63] org.xembly.XemblerTest#removesRootNode
+[test][53/63] org.xembly.XemblerTest#rendersXmlDeclaration
+[test][54/63] org.xembly.XemblerTest#replacesRootNode
+[test][55/63] org.xembly.XpathDirectiveTest#findsNodesByXpathDirectly
+[test][56/63] org.xembly.XpathDirectiveTest#findsNodesInEmptyDom
+[test][57/63] org.xembly.XpathDirectiveTest#findsNodesWithXpathExpression
+[test][58/63] org.xembly.XpathDirectiveTest#findsRootInClonedNode
+[test][59/63] org.xembly.XpathDirectiveTest#ignoresEmptySearches
+[test][60/63] org.xembly.XsetDirectiveTest#setsTextContentOfNodes
+[test][61/63] org.xembly.XsetDirectiveTest#setsTextDirectlyIntoDomNodes
+[test][62/63] org.xembly.prof.DirectivesProfTest#parsesLongProgram
+[test][63/63] org.xembly.prof.XemblerProfTest#modifiesDom
+[main][14/14] python parse_data.py
+  0%|          | 0/63 [00:00<?, ?it/s] 70%|██████▉   | 44/63 [00:00<00:00, 436.27it/s]100%|██████████| 63/63 [00:00<00:00, 438.33it/s]
+Done.

@@ -102,6 +102,14 @@ In OpenClover, the minimum unit of time measurement is `0.001` seconds. Therefor
           ]
         }
       ]
+    },
+    {
+      // This is a test case with problems or exceptions in processing, so you can ignore it.
+      "name": "org.geojson.GeoJsonObjectVisitorTest#itShouldAdapter",
+      "package": "org.geojson",
+      "class": "GeoJsonObjectVisitorTest",
+      "method": "itShouldAdapter",
+      "exception": "KeyError('testsuccess')"
     }
   ]
 }

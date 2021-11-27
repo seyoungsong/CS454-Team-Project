@@ -1,4 +1,4 @@
-# Data
+# Data structure description
 
 In OpenClover, the minimum unit of time measurement is `0.001` seconds. Therefore, if the testing time is shorter than that, `duration` is marked as `0.0` seconds. However, using this value as it is can cause unnecessary confusion in the algorithm. Therefore, we will not use `0.0` seconds as it is, but use the value of `0.0005` seconds.
 

@@ -70,6 +70,9 @@ TODO
   - Comparison With Sequential Test Prioritization
   - Practical Concerns
   - Generalizability
+- Comments from Professor
+  - How long should the entire test take for there to be real gains in prioritization?
+  - The time gain from prioritization becomes smaller as the number of compute resources increases, so it may not be meaningful if you already have a lot of compute resources.
 
 # References
 

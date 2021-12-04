@@ -14,6 +14,7 @@ class PTP:
         self.coverage = []
         self.total_time = 0
         all_coverages = set()
+        self.filename = test_coverage["info"]["filename"]
         for test in test_coverage["data"]:
             if "duration" not in test:
                 continue

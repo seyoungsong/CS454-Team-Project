@@ -32,5 +32,5 @@ class SA:
             temperature = temperature * alpha
             if k % 50 == 0:
                 print((k, current_fitness))
-        return current
+        return current, current_fitness
 

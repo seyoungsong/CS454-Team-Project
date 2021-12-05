@@ -61,7 +61,9 @@ TODO
    - $1:4$
    - $1:1:1:1:4:4:4:4$
 
-| Computing Scenario                                 | relative performances $p$                        |
+\pagebreak
+
+| Computing Scenario                                 | Relative Performances                            |
 | -------------------------------------------------- | ------------------------------------------------ |
 | Sequential Test Prioritization                     | [1]                                              |
 | Parallel Test Prioritization ($c=2$)               | [1, 1]                                           |
@@ -72,6 +74,8 @@ TODO
 | Asymmetric Test Prioritization ($1:3$)             | [1, 3]                                           |
 | Asymmetric Test Prioritization ($1:4$)             | [1, 4]                                           |
 | Asymmetric Test Prioritization ($1:1:1:1:4:4:4:4$) | [1, 1, 1, 1, 4, 4, 4, 4]                         |
+
+Table: An example of computing scenarios
 
 ## 4.3. Subjects
 

@@ -84,34 +84,34 @@ TODO: Seyoung
 \pagebreak
 
 | **ID** | **Subjects**        | **SLOC** | **#Test** | **Time (s)** |
-| :----- | :------------------ | -------: | --------: | -----------: |
-| 0      | commons-cli         |     9053 |       192 |        3.064 |
-| 1      | dictomaton          |     4318 |        53 |       14.067 |
-| 2      | disklrucache        |     1921 |        61 |        2.364 |
-| 3      | efflux              |     5633 |        40 |        0.581 |
-| 4      | exp4j               |     5699 |       311 |       11.350 |
-| 5      | gdx-artemis         |     3607 |        35 |        0.483 |
-| 6      | geojson-jackson     |     1569 |        60 |        1.284 |
-| 7      | gson-fire           |     3566 |        91 |        3.249 |
-| 8      | jactor              |     6984 |        60 |       11.628 |
-| 9      | jadventure          |     5276 |        74 |        2.311 |
-| 10     | jarchivelib         |     2256 |        33 |        0.217 |
-| 11     | java-faker          |     8541 |       571 |       34.154 |
-| 12     | java-uuid-generator |     4321 |        46 |        0.937 |
-| 13     | javapoet            |     9874 |       346 |       15.323 |
-| 14     | jsonassert          |     3476 |       150 |        1.641 |
-| 15     | jumblr              |     2970 |       103 |        0.905 |
-| 16     | lastcalc            |     7271 |        34 |       13.672 |
-| 17     | low-gc-membuffers   |    13099 |        51 |        1.784 |
-| 18     | metrics             |     6493 |        76 |       43.964 |
-| 19     | mp3agic             |    10037 |       495 |        4.815 |
-| 20     | nv-websocket-client |     8617 |        73 |        1.014 |
-| 21     | protoparser         |     5545 |       171 |        4.752 |
-| 22     | restfixture         |     8243 |       290 |        6.716 |
-| 23     | skype-java-api      |     9749 |        24 |       15.720 |
-| 24     | stateless4j         |     2728 |        88 |        2.146 |
-| 25     | stream-lib          |     8756 |       142 |      443.206 |
-| 26     | xembly              |     3030 |        63 |        6.834 |
+| -----: | :------------------ | -------: | --------: | -----------: |
+|      1 | commons-cli         |     9053 |       192 |        3.064 |
+|      2 | dictomaton          |     4318 |        53 |       14.067 |
+|      3 | disklrucache        |     1921 |        61 |        2.364 |
+|      4 | efflux              |     5633 |        40 |        0.581 |
+|      5 | exp4j               |     5699 |       311 |       11.350 |
+|      6 | gdx-artemis         |     3607 |        35 |        0.483 |
+|      7 | geojson-jackson     |     1569 |        60 |        1.284 |
+|      8 | gson-fire           |     3566 |        91 |        3.249 |
+|      9 | jactor              |     6984 |        60 |       11.628 |
+|     10 | jadventure          |     5276 |        74 |        2.311 |
+|     11 | jarchivelib         |     2256 |        33 |        0.217 |
+|     12 | java-faker          |     8541 |       571 |       34.154 |
+|     13 | java-uuid-generator |     4321 |        46 |        0.937 |
+|     14 | javapoet            |     9874 |       346 |       15.323 |
+|     15 | jsonassert          |     3476 |       150 |        1.641 |
+|     16 | jumblr              |     2970 |       103 |        0.905 |
+|     17 | lastcalc            |     7271 |        34 |       13.672 |
+|     18 | low-gc-membuffers   |    13099 |        51 |        1.784 |
+|     19 | metrics             |     6493 |        76 |       43.964 |
+|     20 | mp3agic             |    10037 |       495 |        4.815 |
+|     21 | nv-websocket-client |     8617 |        73 |        1.014 |
+|     22 | protoparser         |     5545 |       171 |        4.752 |
+|     23 | restfixture         |     8243 |       290 |        6.716 |
+|     24 | skype-java-api      |     9749 |        24 |       15.720 |
+|     25 | stateless4j         |     2728 |        88 |        2.146 |
+|     26 | stream-lib          |     8756 |       142 |      443.206 |
+|     27 | xembly              |     3030 |        63 |        6.834 |
 
 Table: Open-source subjects from GitHub
 

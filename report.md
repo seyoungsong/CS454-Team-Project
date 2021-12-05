@@ -55,11 +55,23 @@ TODO
    - $c = \{1\}$
 2. Parallel Test Prioritization
    - $c = \{2, 4, 8, 16\}$
-3. Parallel Test Prioritization (Distributed System)
+3. Asymmetric Test Prioritization
    - $1:2$
    - $1:3$
    - $1:4$
    - $1:1:1:1:4:4:4:4$
+
+| Computing Scenario                                 | relative performances $p$                        |
+| -------------------------------------------------- | ------------------------------------------------ |
+| Sequential Test Prioritization                     | [1]                                              |
+| Parallel Test Prioritization ($c=2$)               | [1, 1]                                           |
+| Parallel Test Prioritization ($c=4$)               | [1, 1, 1, 1]                                     |
+| Parallel Test Prioritization ($c=8$)               | [1, 1, 1, 1, 1, 1, 1, 1]                         |
+| Parallel Test Prioritization ($c=16$)              | [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] |
+| Asymmetric Test Prioritization ($1:2$)             | [1, 2]                                           |
+| Asymmetric Test Prioritization ($1:3$)             | [1, 3]                                           |
+| Asymmetric Test Prioritization ($1:4$)             | [1, 4]                                           |
+| Asymmetric Test Prioritization ($1:1:1:1:4:4:4:4$) | [1, 1, 1, 1, 4, 4, 4, 4]                         |
 
 ## 4.3. Subjects
 

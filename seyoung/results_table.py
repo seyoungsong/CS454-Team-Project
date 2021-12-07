@@ -71,25 +71,29 @@ def get_avg(data: dict):
 
 def main():
     left_column = [
-        "",
-        "Sequential Test Prioritization",
-        "Parallel Test Prioritization ($c=2$)",
-        "Parallel Test Prioritization ($c=4$)",
-        "Parallel Test Prioritization ($c=8$)",
-        "Parallel Test Prioritization ($c=16$)",
-        "Asymmetric Test Prioritization ($1:2$)",
-        "Asymmetric Test Prioritization ($1:3$)",
-        "Asymmetric Test Prioritization ($1:4$)",
-        "Asymmetric Test Prioritization ($1:1:1:1:4:4:4:4$)",
+        "**Setting**",
+        "Sequential",
+        "Parallel ($c=2$)",
+        "Parallel ($c=4$)",
+        "Parallel ($c=8$)",
+        "Parallel ($c=16$)",
+        "Asymmetric ($1:2$)",
+        "Asymmetric ($1:3$)",
+        "Asymmetric ($1:4$)",
+        "Asymmetric ($1:1:1:1:4:4:4:4$)",
     ]
     results = [
         {
-            "algorithm": "**Genetic Algorithms**",
+            "algorithm": "**GA**",
             "file": "results/ga.json",
         },
         {
-            "algorithm": "**Simulated Annealing**",
+            "algorithm": "**SA**",
             "file": "results/sa.json",
+        },
+        {
+            "algorithm": "**AGA**",  # cost-aware greedy additional technique
+            "file": "results/caag.json",
         },
     ]
     lc = np.array(left_column)
@@ -102,8 +106,17 @@ def main():
         cc = np.array([algo] + list(avg[:, 1]))
         output = np.hstack([output, cc[:, None]])
 
+    F = output[1:, 1:]
+    line = F[0]
+    for line in F:
+        l = np.array([float(s) for s in line])
+        max_idx = l.argmax()
+        ss = line[max_idx]
+        line[max_idx] = f"**{ss}**"
+
     write_csv("results_table.csv", output)
 
 
+# https://www.convertcsv.com/csv-to-markdown.htm
 if __name__ == "__main__":
     main()

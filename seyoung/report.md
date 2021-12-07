@@ -3,7 +3,7 @@ title: Parallel Test Case Prioritization for Distributed System Using Search Alg
 author: |
   | Team 6
   | Seyoung Song, Subeom Park, Yoonho Nam, Azret Kenzhaliev
-papersize: A2
+papersize: A4
 geometry: margin=2cm
 fontsize: 12pt
 mainfont: Latin Modern Roman
@@ -121,17 +121,17 @@ TODO
 
 \pagebreak
 
-|                                                    | **Genetic Algorithms** | **Simulated Annealing** |
-| -------------------------------------------------- | ---------------------: | ----------------------: |
-| Sequential Test Prioritization                     |                  0.932 |                   0.868 |
-| Parallel Test Prioritization ($c=2$)               |                  0.964 |                   0.936 |
-| Parallel Test Prioritization ($c=4$)               |                  0.980 |                   0.966 |
-| Parallel Test Prioritization ($c=8$)               |                  0.987 |                   0.981 |
-| Parallel Test Prioritization ($c=16$)              |                  0.990 |                   0.988 |
-| Asymmetric Test Prioritization ($1:2$)             |                  0.976 |                   0.955 |
-| Asymmetric Test Prioritization ($1:3$)             |                  0.982 |                   0.963 |
-| Asymmetric Test Prioritization ($1:4$)             |                  0.985 |                   0.968 |
-| Asymmetric Test Prioritization ($1:1:1:1:4:4:4:4$) |                  0.995 |                   0.992 |
+| **Setting**                    |    **GA** | **SA** | **AGA** |
+| ------------------------------ | --------: | -----: | ------: |
+| Sequential                     | **0.932** |  0.868 |   0.876 |
+| Parallel ($c=2$)               | **0.964** |  0.936 |   0.937 |
+| Parallel ($c=4$)               | **0.980** |  0.966 |   0.966 |
+| Parallel ($c=8$)               | **0.987** |  0.981 |   0.981 |
+| Parallel ($c=16$)              | **0.990** |  0.988 |   0.988 |
+| Asymmetric ($1:2$)             | **0.976** |  0.955 |   0.958 |
+| Asymmetric ($1:3$)             | **0.982** |  0.963 |   0.968 |
+| Asymmetric ($1:4$)             | **0.985** |  0.968 |   0.975 |
+| Asymmetric ($1:1:1:1:4:4:4:4$) | **0.995** |  0.992 |   0.993 |
 
 # 5. Conclusion
 

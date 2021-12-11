@@ -1,5 +1,4 @@
-Parallel Test Case Prioritization for Distributed System Using Search
-Algorithms
+Parallel Test Case Prioritization for Distributed System Using Search Algorithms
 Team 6
 Seyoung Song, Subeom Park, Yoonho Nam, Azret Kenzhaliev
 
@@ -31,11 +30,8 @@ Experimental Design (by Seyoung)
 
 Research Questions
 
--   RQ1: Which algorithm is most effective in solving the parallel test
-    prioritization problem?
--   RQ2: How do the number of computing resources and the relative
-    performance between them influence the performance of the parallel
-    test prioritization techniques?
+-   RQ1: Which algorithm is most effective in solving the parallel test prioritization problem?
+-   RQ2: How do the number of computing resources and the relative performance between them influence the performance of the parallel test prioritization techniques?
 
 Subjects
 
@@ -83,32 +79,27 @@ Settings
     -   1 : 4
     -   1 : 1 : 1 : 1 : 4 : 4 : 4 : 4
 
-  -----------------------------------------------------------------------
-  Computing Scenario                   Relative Performances
-  ------------------------------------ ----------------------------------
-  Sequential Test Prioritization       [1]
+  -------------------------------------------------------------------------------------------------------------------
+  Computing Scenario                                               Relative Performances
+  ---------------------------------------------------------------- --------------------------------------------------
+  Sequential Test Prioritization                                   [1]
 
-  Parallel Test Prioritization (c = 2) [1, 1]
+  Parallel Test Prioritization (c = 2)                             [1, 1]
 
-  Parallel Test Prioritization (c = 4) [1, 1, 1, 1]
+  Parallel Test Prioritization (c = 4)                             [1, 1, 1, 1]
 
-  Parallel Test Prioritization (c = 8) [1, 1, 1, 1, 1, 1, 1, 1]
+  Parallel Test Prioritization (c = 8)                             [1, 1, 1, 1, 1, 1, 1, 1]
 
-  Parallel Test Prioritization         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-  (c = 16)                             1, 1, 1, 1, 1]
+  Parallel Test Prioritization (c = 16)                            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
-  Asymmetric Test Prioritization       [1, 2]
-  (1 : 2)                              
+  Asymmetric Test Prioritization (1 : 2)                           [1, 2]
 
-  Asymmetric Test Prioritization       [1, 3]
-  (1 : 3)                              
+  Asymmetric Test Prioritization (1 : 3)                           [1, 3]
 
-  Asymmetric Test Prioritization       [1, 4]
-  (1 : 4)                              
+  Asymmetric Test Prioritization (1 : 4)                           [1, 4]
 
-  Asymmetric Test Prioritization       [1, 1, 1, 1, 4, 4, 4, 4]
-  (1 : 1 : 1 : 1 : 4 : 4 : 4 : 4)      
-  -----------------------------------------------------------------------
+  Asymmetric Test Prioritization (1 : 1 : 1 : 1 : 4 : 4 : 4 : 4)   [1, 1, 1, 1, 4, 4, 4, 4]
+  -------------------------------------------------------------------------------------------------------------------
 
   : An example of computing scenarios
 
@@ -175,32 +166,17 @@ Conclusion
     -   Practical Concerns
     -   Generalizability
 -   Comments from Professor
-    -   How long should the entire test take for there to be real gains
-        in prioritization?
-    -   The time gain from prioritization becomes smaller as the number
-        of compute resources increases, so it may not be meaningful if
-        you already have a lot of compute resources.
+    -   How long should the entire test take for there to be real gains in prioritization?
+    -   The time gain from prioritization becomes smaller as the number of compute resources increases, so it may not be meaningful if you already have a lot of compute resources.
 
 References: [1]–[4]
 
 References
 
-[1] Z. Li, M. Harman, and R. M. Hierons, “Search algorithms for
-regression test case prioritization,” IIEEE Trans. Software Eng., vol.
-33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.
+[1] Z. Li, M. Harman, and R. M. Hierons, “Search algorithms for regression test case prioritization,” IIEEE Trans. Software Eng., vol. 33, no. 4, pp. 225–237, Apr. 2007, doi: 10.1109/TSE.2007.38.
 
-[2] J. Chen et al., “Optimizing test prioritization via test
-distribution analysis,” in Proceedings of the 2018 26th ACM joint
-meeting on european software engineering conference and symposium on the
-foundations of software engineering, Oct. 2018, pp. 656–667. doi:
-10.1145/3236024.3236053.
+[2] J. Chen et al., “Optimizing test prioritization via test distribution analysis,” in Proceedings of the 2018 26th ACM joint meeting on european software engineering conference and symposium on the foundations of software engineering, Oct. 2018, pp. 656–667. doi: 10.1145/3236024.3236053.
 
-[3] Q. Luo, K. Moran, L. Zhang, and D. Poshyvanyk, “How do static and
-dynamic test case prioritization techniques perform on modern software
-systems? An extensive study on GitHub projects,” IIEEE Trans. Software
-Eng., vol. 45, no. 11, pp. 1054–1080, Nov. 2019, doi:
-10.1109/TSE.2018.2822270.
+[3] Q. Luo, K. Moran, L. Zhang, and D. Poshyvanyk, “How do static and dynamic test case prioritization techniques perform on modern software systems? An extensive study on GitHub projects,” IIEEE Trans. Software Eng., vol. 45, no. 11, pp. 1054–1080, Nov. 2019, doi: 10.1109/TSE.2018.2822270.
 
-[4] J. Zhou, J. Chen, and D. Hao, “Parallel test prioritization,” ACM
-Trans. Softw. Eng. Methodol., vol. 31, no. 1, Sep. 2021, doi:
-10.1145/3471906.
+[4] J. Zhou, J. Chen, and D. Hao, “Parallel test prioritization,” ACM Trans. Softw. Eng. Methodol., vol. 31, no. 1, Sep. 2021, doi: 10.1145/3471906.

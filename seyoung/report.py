@@ -15,9 +15,10 @@ import subprocess
 
 
 def main():
-    md2pdf = "pandoc --standalone --pdf-engine=xelatex --from markdown --to pdf report.md -o report.pdf"
+    name = "report"
+    md2pdf = f"pandoc --standalone --citeproc --pdf-engine=xelatex --from markdown --to pdf {name}.md -o {name}.pdf"
     subprocess.run(md2pdf.split())
-    openpdf = "open report.pdf"
+    openpdf = f"open {name}.pdf"
     subprocess.run(openpdf.split())
     print("Done.")
 

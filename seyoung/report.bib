@@ -1,0 +1,72 @@
+
+@article{zhou_parallel_2021,
+  title        = {Parallel Test Prioritization},
+  volume       = {31},
+  issn         = {1049-331X},
+  url          = {https://doi.org/10.1145/3471906},
+  doi          = {10.1145/3471906},
+  abstract     = {Although regression testing is important to guarantee the software quality in software evolution, it suffers from the widely known cost problem. To address this problem, existing researchers made dedicated efforts on test prioritization, which optimizes the execution order of tests to detect faults earlier; while practitioners in industry leveraged more computing resources to save the time cost of regression testing. By combining these two orthogonal solutions, in this article, we define the problem of parallel test prioritization, which is to conduct test prioritization in the scenario of parallel test execution to reduce the cost of regression testing.Different from traditional sequential test prioritization, parallel test prioritization aims at generating a set of test sequences, each of which is allocated in an individual computing resource and executed in parallel. In particular, we propose eight parallel test prioritization techniques by adapting the existing four sequential test prioritization techniques, by including and excluding testing time in prioritization.To investigate the performance of the eight parallel test prioritization techniques, we conducted an extensive study on 54 open-source projects and a case study on 16 commercial projects from Baidu, a famous search service provider with 600M monthly active users. According to the two studies, parallel test prioritization does improve the efficiency of regression testing, and cost-aware additional parallel test prioritization technique significantly outperforms the other techniques, indicating that this technique is a good choice for practical parallel testing. Besides, we also investigated the influence of two external factors, the number of computing resources and time allowed for parallel testing, and find that more computing resources indeed improve the performance of parallel test prioritization. In addition, we investigated the influence of two more factors, test granularity and coverage criterion, and find that parallel test prioritization can still accelerate regression testing in parallel scenario. Moreover, we investigated the benefit of parallel test prioritization on the regression testing process of continuous integration, considering both the cumulative acceleration performance and the overhead of prioritization techniques, and the results demonstrate the superiority of parallel test prioritization.},
+  number       = {1},
+  journaltitle = {{ACM} Trans. Softw. Eng. Methodol.},
+  author       = {Zhou, Jianyi and Chen, Junjie and Hao, Dan},
+  date         = {2021-09},
+  note         = {Place: New York, {NY}, {USA}
+                  Publisher: Association for Computing Machinery},
+  keywords     = {parallel test prioritization, parallel testing, Test prioritiization},
+  file         = {Zhou 등 - 2022 - Parallel Test Prioritization.pdf:/Users/seyoung/Zotero/storage/IARQS4SG/Zhou 등 - 2022 - Parallel Test Prioritization.pdf:application/pdf}
+}
+
+@article{li_search_2007,
+  title        = {Search Algorithms for Regression Test Case Prioritization},
+  volume       = {33},
+  issn         = {0098-5589},
+  url          = {http://ieeexplore.ieee.org/document/4123325/},
+  doi          = {10.1109/TSE.2007.38},
+  abstract     = {Regression testing is an expensive, but important, process. Unfortunately, there may be insufficient resources to allow for the reexecution of all test cases during regression testing. In this situation, test case prioritization techniques aim to improve the effectiveness of regression testing by ordering the test cases so that the most beneficial are executed first. Previous work on regression test case prioritization has focused on Greedy Algorithms. However, it is known that these algorithms may produce suboptimal results because they may construct results that denote only local minima within the search space. By contrast, metaheuristic and evolutionary search algorithms aim to avoid such problems. This paper presents results from an empirical study of the application of several greedy, metaheuristic, and evolutionary search algorithms to six programs, ranging from 374 to 11,148 lines of code for three choices of fitness metric. The paper addresses the problems of choice of fitness metric, characterization of landscape modality, and determination of the most suitable search technique to apply. The empirical results replicate previous results concerning Greedy Algorithms. They shed light on the nature of the regression testing search space, indicating that it is multimodal. The results also show that Genetic Algorithms perform well, although Greedy approaches are surprisingly effective, given the multimodal nature of the landscape.},
+  pages        = {225--237},
+  number       = {4},
+  journaltitle = {{IEEE} Transactions on Software Engineering},
+  shortjournal = {{IIEEE} Trans. Software Eng.},
+  author       = {Li, Zheng and Harman, Mark and Hierons, Robert M.},
+  urldate      = {2021-10-31},
+  date         = {2007-04},
+  langid       = {english},
+  file         = {Li 등 - 2007 - Search Algorithms for Regression Test Case Priorit.pdf:/Users/seyoung/Zotero/storage/JE5T7Y24/Li 등 - 2007 - Search Algorithms for Regression Test Case Priorit.pdf:application/pdf}
+}
+
+@article{luo_how_2019,
+  title        = {How Do Static and Dynamic Test Case Prioritization Techniques Perform on Modern Software Systems? An Extensive Study on {GitHub} Projects},
+  volume       = {45},
+  issn         = {0098-5589, 1939-3520, 2326-3881},
+  url          = {https://ieeexplore.ieee.org/document/8329518/},
+  doi          = {10.1109/TSE.2018.2822270},
+  shorttitle   = {How Do Static and Dynamic Test Case Prioritization Techniques Perform on Modern Software Systems?},
+  abstract     = {Test Case Prioritization ({TCP}) is an increasingly important regression testing technique for reordering test cases according to a pre-deﬁned goal, particularly as agile practices gain adoption. To better understand these techniques, we perform the ﬁrst extensive study aimed at empirically evaluating four static {TCP} techniques, comparing them with state-of-research dynamic {TCP} techniques across several quality metrics. This study was performed on 58 real-word Java programs encompassing 714 {KLoC} and results in several notable observations. First, our results across two effectiveness metrics (the Average Percentage of Faults Detected {APFD} and the cost cognizant {APFDc}) illustrate that at test-class granularity, these metrics tend to correlate, but this correlation does not hold at test-method granularity. Second, our analysis shows that static techniques can be surprisingly effective, particularly when measured by {APFDc}. Third, we found that {TCP} techniques tend to perform better on larger programs, but that program size does not affect comparative performance measures between techniques. Fourth, software evolution does not signiﬁcantly impact comparative performance results between {TCP} techniques. Fifth, neither the number nor type of mutants utilized dramatically impact measures of {TCP} effectiveness under typical experimental settings. Finally, our similarity analysis illustrates that highly prioritized test cases tend to uncover dissimilar faults.},
+  pages        = {1054--1080},
+  number       = {11},
+  journaltitle = {{IEEE} Transactions on Software Engineering},
+  shortjournal = {{IIEEE} Trans. Software Eng.},
+  author       = {Luo, Qi and Moran, Kevin and Zhang, Lingming and Poshyvanyk, Denys},
+  urldate      = {2021-11-16},
+  date         = {2019-11-01},
+  langid       = {english},
+  file         = {Luo 등 - 2019 - How Do Static and Dynamic Test Case Prioritization.pdf:/Users/seyoung/Zotero/storage/IN48AK5P/Luo 등 - 2019 - How Do Static and Dynamic Test Case Prioritization.pdf:application/pdf}
+}
+
+@inproceedings{chen_optimizing_2018,
+  location   = {Lake Buena Vista {FL} {USA}},
+  title      = {Optimizing test prioritization via test distribution analysis},
+  isbn       = {978-1-4503-5573-5},
+  url        = {https://dl.acm.org/doi/10.1145/3236024.3236053},
+  doi        = {10.1145/3236024.3236053},
+  abstract   = {Test prioritization aims to detect regression faults faster via reordering test executions, and a large number of test prioritization techniques have been proposed accordingly. However, test prioritization e�ectiveness is usually measured in terms of the average percentage of faults detected concerned with the number of test executions, rather than the actual regression testing time, making it unclear which technique is optimal in actual regression testing time. To answer this question, this paper �rst conducts an empirical study to investigate the actual regression testing time of various prioritization techniques. The results reveal a number of practical guidelines. In particular, no prioritization technique can always perform optimal in practice.},
+  eventtitle = {{ESEC}/{FSE} '18: 26th {ACM} Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  pages      = {656--667},
+  booktitle  = {Proceedings of the 2018 26th {ACM} Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  publisher  = {{ACM}},
+  author     = {Chen, Junjie and Lou, Yiling and Zhang, Lingming and Zhou, Jianyi and Wang, Xiaoleng and Hao, Dan and Zhang, Lu},
+  urldate    = {2021-11-24},
+  date       = {2018-10-26},
+  langid     = {english},
+  file       = {Chen 등 - 2018 - Optimizing test prioritization via test distributi.pdf:/Users/seyoung/Zotero/storage/6XSJIZQH/Chen 등 - 2018 - Optimizing test prioritization via test distributi.pdf:application/pdf}
+}

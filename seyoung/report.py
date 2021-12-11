@@ -18,6 +18,8 @@ def main():
     name = "report"
     md2pdf = f"pandoc --standalone --citeproc --pdf-engine=xelatex --from markdown --to pdf {name}.md -o {name}.pdf"
     subprocess.run(md2pdf.split())
+    md2txt = f"pandoc --standalone --citeproc --pdf-engine=xelatex --from markdown --to plain {name}.md -o {name}.txt"
+    subprocess.run(md2txt.split())
     openpdf = f"open {name}.pdf"
     subprocess.run(openpdf.split())
     print("Done.")

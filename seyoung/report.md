@@ -9,6 +9,8 @@ citation-style: ieee
 link-citations: true
 # number section heading
 numbersections: true
+# table-of-contents
+toc: true
 # size
 papersize: A4
 geometry: margin=2cm
@@ -19,18 +21,22 @@ mathfont: Latin Modern Math
 monofont: Hack Nerd Font Mono
 CJKmainfont: Noto Serif CJK KR
 # abstract
-abstract: Abstract.
+abstract: TODO
 ---
 
 # Introduction
 
-cite: [@zhou_parallel_2021, @li_search_2007, @luo_how_2019, @chen_optimizing_2018]
+TODO: Seyoung
+
+References: [@li_search_2007; @chen_optimizing_2018; @luo_how_2019; @zhou_parallel_2021]
 
 - Regression Test Case Prioritization
 - Parallel Test Prioritization
 - Parallel Test Prioritization, but different CPU
 
 # Parallel Test Prioritization
+
+TODO: Subeom
 
 - Problem Description
 - Problem Definition
@@ -40,15 +46,15 @@ cite: [@zhou_parallel_2021, @li_search_2007, @luo_how_2019, @chen_optimizing_201
 
 ## Greedy Algorithms
 
-TODO
+TODO: Azret
 
 ## Simulated Annealing
 
-TODO
+TODO: Subeom
 
 ## Genetic Algorithms
 
-TODO
+TODO: Yoonho
 
 # Empirical Study
 
@@ -68,8 +74,6 @@ TODO
    - $1:3$
    - $1:4$
    - $1:1:1:1:4:4:4:4$
-
-\pagebreak
 
 | Computing Scenario                                 | Relative Performances                            |
 | :------------------------------------------------- | :----------------------------------------------- |
@@ -123,11 +127,11 @@ TODO: Seyoung
 
 Table: Open-source subjects from GitHub
 
+\pagebreak
+
 ## Results and Analysis
 
 TODO
-
-\pagebreak
 
 | **Setting**                    |    **GA** | **SA** | **AGA** |
 | ------------------------------ | --------: | -----: | ------: |

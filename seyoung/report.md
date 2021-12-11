@@ -21,7 +21,7 @@ mathfont: Latin Modern Math
 monofont: Hack Nerd Font Mono
 CJKmainfont: Noto Serif CJK KR
 # abstract
-abstract: Abstract
+abstract: Abstract (by Seyoung)
 ---
 
 # Introduction
@@ -30,9 +30,9 @@ abstract: Abstract
 - Parallel Test Prioritization
 - Parallel Test Prioritization, but different CPU
 
-# Parallel Test Prioritization (by Subeom)
+# Problem Description (by Subeom)
 
-TODO: describe the problem
+TODO: describe the problem (Parallel Test Prioritization)
 
 - Problem Description
 - Problem Definition

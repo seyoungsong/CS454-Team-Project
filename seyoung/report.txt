@@ -5,17 +5,13 @@ Seyoung Song, Subeom Park, Yoonho Nam, Azret Kenzhaliev
 
 Introduction
 
-TODO: Seyoung
-
-References: [1]–[4]
-
 -   Regression Test Case Prioritization
 -   Parallel Test Prioritization
 -   Parallel Test Prioritization, but different CPU
 
-Parallel Test Prioritization
+Parallel Test Prioritization (by Subeom)
 
-TODO: Subeom
+TODO: describe the problem
 
 -   Problem Description
 -   Problem Definition
@@ -23,19 +19,15 @@ TODO: Subeom
 
 Algorithms
 
-Greedy Algorithms
+TODO: describe your approach
 
-TODO: Azret
+Greedy Algorithms (by Azret)
 
-Simulated Annealing
+Simulated Annealing (by Subeom)
 
-TODO: Subeom
+Genetic Algorithms (by Yoonho)
 
-Genetic Algorithms
-
-TODO: Yoonho
-
-Empirical Study
+Experimental Design (by Seyoung)
 
 Research Questions
 
@@ -45,7 +37,41 @@ Research Questions
     performance between them influence the performance of the parallel
     test prioritization techniques?
 
-Experimental Design
+Subjects
+
+    ID Subjects                 SLOC   #Test   Time (s)
+  ---- --------------------- ------- ------- ----------
+     1 commons-cli              9053     192      3.064
+     2 dictomaton               4318      53     14.067
+     3 disklrucache             1921      61      2.364
+     4 efflux                   5633      40      0.581
+     5 exp4j                    5699     311     11.350
+     6 gdx-artemis              3607      35      0.483
+     7 geojson-jackson          1569      60      1.284
+     8 gson-fire                3566      91      3.249
+     9 jactor                   6984      60     11.628
+    10 jadventure               5276      74      2.311
+    11 jarchivelib              2256      33      0.217
+    12 java-faker               8541     571     34.154
+    13 java-uuid-generator      4321      46      0.937
+    14 javapoet                 9874     346     15.323
+    15 jsonassert               3476     150      1.641
+    16 jumblr                   2970     103      0.905
+    17 lastcalc                 7271      34     13.672
+    18 low-gc-membuffers       13099      51      1.784
+    19 metrics                  6493      76     43.964
+    20 mp3agic                 10037     495      4.815
+    21 nv-websocket-client      8617      73      1.014
+    22 protoparser              5545     171      4.752
+    23 restfixture              8243     290      6.716
+    24 skype-java-api           9749      24     15.720
+    25 stateless4j              2728      88      2.146
+    26 stream-lib               8756     142    443.206
+    27 xembly                   3030      63      6.834
+
+  : Open-source subjects from GitHub
+
+Settings
 
 1.  Sequential Test Prioritization
     -   c = {1}
@@ -118,45 +144,17 @@ Experimental Design
 
   : Settings for additional experiments
 
-Subjects
+Evaluation Results
 
-TODO: Seyoung
+TODO: describe the evaluation results
 
-    ID Subjects                 SLOC   #Test   Time (s)
-  ---- --------------------- ------- ------- ----------
-     1 commons-cli              9053     192      3.064
-     2 dictomaton               4318      53     14.067
-     3 disklrucache             1921      61      2.364
-     4 efflux                   5633      40      0.581
-     5 exp4j                    5699     311     11.350
-     6 gdx-artemis              3607      35      0.483
-     7 geojson-jackson          1569      60      1.284
-     8 gson-fire                3566      91      3.249
-     9 jactor                   6984      60     11.628
-    10 jadventure               5276      74      2.311
-    11 jarchivelib              2256      33      0.217
-    12 java-faker               8541     571     34.154
-    13 java-uuid-generator      4321      46      0.937
-    14 javapoet                 9874     346     15.323
-    15 jsonassert               3476     150      1.641
-    16 jumblr                   2970     103      0.905
-    17 lastcalc                 7271      34     13.672
-    18 low-gc-membuffers       13099      51      1.784
-    19 metrics                  6493      76     43.964
-    20 mp3agic                 10037     495      4.815
-    21 nv-websocket-client      8617      73      1.014
-    22 protoparser              5545     171      4.752
-    23 restfixture              8243     290      6.716
-    24 skype-java-api           9749      24     15.720
-    25 stateless4j              2728      88      2.146
-    26 stream-lib               8756     142    443.206
-    27 xembly                   3030      63      6.834
+Greedy Algorithms (by Azret)
 
-  : Open-source subjects from GitHub
+Simulated Annealing (by Subeom)
 
-Results and Analysis
+Genetic Algorithms (by Yoonho)
 
-TODO
+Comparison (by Seyoung)
 
   Setting                                           GA      SA     AGA
   -------------------------------------------- ------- ------- -------
@@ -182,6 +180,8 @@ Conclusion
     -   The time gain from prioritization becomes smaller as the number
         of compute resources increases, so it may not be meaningful if
         you already have a lot of compute resources.
+
+References: [1]–[4]
 
 References
 

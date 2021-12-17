@@ -9,15 +9,20 @@ performances = [
     [1],
     [1] * 2,
     [1] * 4,
-    [1] * 8,
-    [1] * 16,
-    [1, 2],
     [1, 3],
-    [1, 4],
-    [1, 1, 1, 1, 4, 4, 4, 4],
+    [1, 1, 2],
+    [2, 2],
+    [1] * 8,
+    [1, 7],
+    [2, 6],
+    [3, 5],
+    [4, 4],
+    [2, 2, 2, 2],
+    [1, 1, 3, 3],
+    [1] * 100,
 ]
 
-f = open("result4.txt", "w")
+f = open("result_SA.txt", "w")
 
 result_json = []
 
@@ -36,6 +41,9 @@ for data in json_data:
         f.write("performance: \n" + str(performance) + "\n")
         result_dict = dict()
         result_dict["scenario"] = performance
+        result_dict["TC"] = 1.5
+        print("TC: 1.5")
+        f.write("TC: 1.5\n")
         problem.update_performance(performance)
         sa_algorithm = sa.SA(problem)
         fittest, fitness = sa_algorithm.run(2000)
@@ -44,10 +52,12 @@ for data in json_data:
         result_dict["permutations"] = fittest.ppt
         result_dict["APSC_c"] = fitness
         results.append(result_dict)
+        print(fitness)
+        f.write(str(fitness) + "\n")
     data_dict["results"] = results
     result_json.append(data_dict)
 
 f.close()
 
-with open("result4.json", "w") as outfile:
+with open("result_SA.json", "w") as outfile:
     json.dump(result_json, outfile, indent=4)

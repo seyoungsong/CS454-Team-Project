@@ -20,10 +20,10 @@ class CUAG:
 
         # 2.3 Unified initialization for Parallel Test Prioritization
         for i in range(self.problem.num_test):
-            current_time = self.problem.times[i]
+            current_time = self.problem.times[i] / self.problem.performance[k - 1]
             if current_time >= self.problem.avg_time:
                 current.ppt[k - 1].append(i)
-                sequence_time[k - 1] += current_time / self.problem.performance[k - 1]
+                sequence_time[k - 1] += current_time
                 chosen[i] = True
                 large += 1
                 k -= 1

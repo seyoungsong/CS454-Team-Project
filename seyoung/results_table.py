@@ -28,26 +28,36 @@ def write_csv(filename: str, ll: list):
 
 def get_avg(data: dict):
     names = [
-        "Sequential Test Prioritization",
-        "Parallel Test Prioritization ($c=2$)",
-        "Parallel Test Prioritization ($c=4$)",
-        "Parallel Test Prioritization ($c=8$)",
-        "Parallel Test Prioritization ($c=16$)",
-        "Asymmetric Test Prioritization ($1:2$)",
-        "Asymmetric Test Prioritization ($1:3$)",
-        "Asymmetric Test Prioritization ($1:4$)",
-        "Asymmetric Test Prioritization ($1:1:1:1:4:4:4:4$)",
+        "Sequential ($c=1$)",
+        "Parallel ($c=2$)",
+        "Parallel ($c=4$)",
+        "Asymmetric ($1:3$)",
+        "Asymmetric ($1:1:2$)",
+        "Asymmetric ($2:2$)",
+        "Parallel ($c=8$)",
+        "Asymmetric ($1:7$)",
+        "Asymmetric ($2:6$)",
+        "Asymmetric ($3:5$)",
+        "Asymmetric ($4:4$)",
+        "Asymmetric ($2:2:2:2$)",
+        "Asymmetric ($1:1:3:3$)",
+        "Parallel ($c=100$)",
     ]
     scenarios = [
         [1],
         [1, 1],
         [1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 2],
         [1, 3],
-        [1, 4],
-        [1, 1, 1, 1, 4, 4, 4, 4],
+        [1, 1, 2],
+        [2, 2],
+        [1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 7],
+        [2, 6],
+        [3, 5],
+        [4, 4],
+        [2, 2, 2, 2],
+        [1, 1, 3, 3],
+        [1] * 100,
     ]
     output = {
         str(scenarios[i]): {"name": names[i], "APSC_c": [], "avg": "-1"}
@@ -59,6 +69,11 @@ def get_avg(data: dict):
         result = results[0]
         for result in results:
             scenario = str(result["scenario"])
+
+            # Azret [2] problem
+            if len(result["scenario"]) == 1 and result["scenario"][0] != 1:
+                scenario = str([1] * result["scenario"][0])
+
             APSC_c = result["APSC_c"]
             output[scenario]["APSC_c"].append(APSC_c)
     k = list(output.keys())[0]
@@ -71,37 +86,42 @@ def get_avg(data: dict):
 
 def main():
     left_column = [
-        "**Setting**",
-        "Sequential",
+        "**Scenario**",
+        "Sequential ($c=1$)",
         "Parallel ($c=2$)",
         "Parallel ($c=4$)",
-        "Parallel ($c=8$)",
-        "Parallel ($c=16$)",
-        "Asymmetric ($1:2$)",
         "Asymmetric ($1:3$)",
-        "Asymmetric ($1:4$)",
-        "Asymmetric ($1:1:1:1:4:4:4:4$)",
+        "Asymmetric ($1:1:2$)",
+        "Asymmetric ($2:2$)",
+        "Parallel ($c=8$)",
+        "Asymmetric ($1:7$)",
+        "Asymmetric ($2:6$)",
+        "Asymmetric ($3:5$)",
+        "Asymmetric ($4:4$)",
+        "Asymmetric ($2:2:2:2$)",
+        "Asymmetric ($1:1:3:3$)",
+        "Parallel ($c=100$)",
     ]
-    results = [
+    files = [
         {
             "algorithm": "**GA**",
-            "file": "results/ga.json",
+            "file": "results/ga2.json",
         },
         {
             "algorithm": "**SA**",
-            "file": "results/sa.json",
+            "file": "results/sa2.json",
         },
         {
-            "algorithm": "**AGA**",  # cost-aware greedy additional technique
-            "file": "results/caag.json",
+            "algorithm": "**CAAG**",  # cost-aware additional greedy
+            "file": "results/caag2.json",
         },
     ]
     lc = np.array(left_column)
-    result = results[0]
+    file = files[0]
     output = np.array(lc[:, None])
-    for result in results:
-        algo = result["algorithm"]
-        data = read_json(result["file"])
+    for file in files:
+        algo = file["algorithm"]
+        data = read_json(file["file"])
         avg = get_avg(data)
         cc = np.array([algo] + list(avg[:, 1]))
         output = np.hstack([output, cc[:, None]])

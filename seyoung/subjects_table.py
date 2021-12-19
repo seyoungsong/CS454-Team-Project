@@ -40,31 +40,37 @@ def total_duration(d: dict):
     return tm
 
 
-json_files = sorted(glob.glob("data/*.json"))
-outputs = []
-for json_file in json_files:
-    stem = Path(json_file).stem
-    sloc_file = f"sloc/{stem}.csv"
-    sloc = read_csv(sloc_file)
+def main():
+    json_files = sorted(glob.glob("data/*.json"))
+    outputs = []
+    for json_file in json_files:
+        stem = Path(json_file).stem
+        sloc_file = f"sloc/{stem}.csv"
+        sloc = read_csv(sloc_file)
 
-    d = read_json(json_file)
-    repo = d["info"]["github"]["repo"]
-    num_test = len(d["data"])
-    td = total_duration(d)
+        d = read_json(json_file)
+        repo = d["info"]["github"]["repo"]
+        num_test = len(d["data"])
+        td = total_duration(d)
 
-    # ID, Subjects, SLOC, TLOC, #Test, Time(s)
-    out = {
-        "ID": -1,
-        "Subjects": repo,
-        "SLOC": sloc,
-        "#Test": num_test,
-        "Time (s)": f"{td:.3f}",
-    }
-    outputs.append(out)
+        # ID, Subjects, SLOC, TLOC, #Test, Time(s)
+        out = {
+            "**ID**": -1,
+            "**Subjects**": repo,
+            "**SLOC**": f"{sloc:,}",
+            "**#Test**": f"{num_test:,}",
+            "**Time (s)**": f"{td:,.3f}",
+        }
+        outputs.append(out)
 
-outputs.sort(key=lambda x: x["Subjects"])
+    outputs.sort(key=lambda x: x["**Subjects**"])
 
-for i, o in enumerate(outputs):
-    o["ID"] = i + 1
+    for i, o in enumerate(outputs):
+        o["**ID**"] = i + 1
 
-write_csv("subjects_table.csv", outputs)
+    write_csv("subjects_table.csv", outputs)
+    print("Done.")
+
+
+if __name__ == "__main__":
+    main()
